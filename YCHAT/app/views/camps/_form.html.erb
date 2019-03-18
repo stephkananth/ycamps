@@ -1,0 +1,47 @@
+<%= form_with(model: camp, local: true) do |form| %>
+  <% if camp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(camp.errors.count, "error") %> prohibited this camp from being saved:</h2>
+
+      <ul>
+      <% camp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :camp_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :program %>
+    <%= form.text_field :program, id: :camp_program %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_date %>
+    <%= form.date_select :start_date, id: :camp_start_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_date %>
+    <%= form.date_select :end_date, id: :camp_end_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :active %>
+    <%= form.check_box :active, id: :camp_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location_id %>
+    <%= form.text_field :location_id, id: :camp_location_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
