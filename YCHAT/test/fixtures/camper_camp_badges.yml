@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  camp_badge: one
+  camper: one
+  completed: false
+
+two:
+  camp_badge: two
+  camper: two
+  completed: false

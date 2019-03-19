@@ -1,0 +1,27 @@
+<%= form_with(model: camp_badge, local: true) do |form| %>
+  <% if camp_badge.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(camp_badge.errors.count, "error") %> prohibited this camp_badge from being saved:</h2>
+
+      <ul>
+      <% camp_badge.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :badge_id %>
+    <%= form.text_field :badge_id, id: :camp_badge_badge_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :camp_id %>
+    <%= form.text_field :camp_id, id: :camp_badge_camp_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
