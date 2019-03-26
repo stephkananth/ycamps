@@ -5822,3 +5822,1348 @@ UserTest: test_: User should allow role to be set to "admin".
 --------------------------------------------------------------
   [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+BranchTest: test_: Branch should have many camps through locations. 
+--------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+BranchTest: test_: Within context should list locations in alphabetical order. 
+-------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 04:34:57.014250"], ["updated_at", "2019-03-26 04:34:57.014250"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 04:34:57.019526"], ["updated_at", "2019-03-26 04:34:57.019526"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 04:34:57.049446"], ["updated_at", "2019-03-26 04:34:57.049446"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------------------------------------------
+BranchTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-----------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 04:34:57.531019"], ["updated_at", "2019-03-26 04:34:57.531019"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 04:34:57.534177"], ["updated_at", "2019-03-26 04:34:57.534177"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+BranchTest: test_: Within context should list locations in alphabetical order. 
+-------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 04:35:35.384204"], ["updated_at", "2019-03-26 04:35:35.384204"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 04:35:35.388056"], ["updated_at", "2019-03-26 04:35:35.388056"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35m (2.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 04:35:35.410010"], ["updated_at", "2019-03-26 04:35:35.410010"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+BranchTest: test_: Branch should have many camps through locations. 
+--------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------------------------------------------
+BranchTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-----------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 04:35:35.827299"], ["updated_at", "2019-03-26 04:35:35.827299"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 04:35:35.831381"], ["updated_at", "2019-03-26 04:35:35.831381"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 04:36:27.796262"], ["updated_at", "2019-03-26 04:36:27.796262"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+BranchTest: test_: Branch should have many camps through locations. 
+--------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+BranchTest: test_: Branch should have many camps through locations. 
+--------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 04:37:49.716028"], ["updated_at", "2019-03-26 04:37:49.716028"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (2.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+BranchTest: test_: Branch should have many camps through locations. 
+--------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 04:38:08.600054"], ["updated_at", "2019-03-26 04:38:08.600054"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+BranchTest: test_: Branch should have many camps through locations. 
+--------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 04:38:56.258776"], ["updated_at", "2019-03-26 04:38:56.258776"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+BranchTest: test_: Branch should have many camps through locations. 
+--------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 04:39:04.377282"], ["updated_at", "2019-03-26 04:39:04.377282"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+BranchTest: test_: Branch should have many camps through locations. 
+--------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+BranchTest: test_: Within context should list locations in alphabetical order. 
+-------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 04:39:11.203661"], ["updated_at", "2019-03-26 04:39:11.203661"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 04:39:11.207636"], ["updated_at", "2019-03-26 04:39:11.207636"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------------------------------------------
+BranchTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-----------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 04:39:11.225273"], ["updated_at", "2019-03-26 04:39:11.225273"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 04:39:11.228592"], ["updated_at", "2019-03-26 04:39:11.228592"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 04:39:11.239624"], ["updated_at", "2019-03-26 04:39:11.239624"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+BranchTest: test_: Branch should have many camps through locations. 
+--------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+BranchTest: test_: Within context should list locations in alphabetical order. 
+-------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 04:43:59.697934"], ["updated_at", "2019-03-26 04:43:59.697934"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 04:43:59.703522"], ["updated_at", "2019-03-26 04:43:59.703522"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Avonworth"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Avonworth"], ["created_at", "2019-03-26 04:43:59.706612"], ["updated_at", "2019-03-26 04:43:59.706612"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Load (0.2ms)[0m  [1m[34mSELECT "branches".* FROM "branches" ORDER BY name[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.2ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 04:43:59.755389"], ["updated_at", "2019-03-26 04:43:59.755389"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------------------------------------------
+BranchTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-----------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 04:44:00.244124"], ["updated_at", "2019-03-26 04:44:00.244124"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 04:44:00.247672"], ["updated_at", "2019-03-26 04:44:00.247672"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Avonworth"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Avonworth"], ["created_at", "2019-03-26 04:44:00.251048"], ["updated_at", "2019-03-26 04:44:00.251048"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "avonworth"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+BranchTest: test_: Branch should have many camps through locations. 
+--------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 04:44:18.415310"], ["updated_at", "2019-03-26 04:44:18.415310"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+BranchTest: test_: Within context should list locations in alphabetical order. 
+-------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 04:44:18.797418"], ["updated_at", "2019-03-26 04:44:18.797418"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 04:44:18.800671"], ["updated_at", "2019-03-26 04:44:18.800671"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Avonworth"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Avonworth"], ["created_at", "2019-03-26 04:44:18.805586"], ["updated_at", "2019-03-26 04:44:18.805586"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT "branches".* FROM "branches" ORDER BY name[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------------------------------------------
+BranchTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-----------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 04:44:18.815305"], ["updated_at", "2019-03-26 04:44:18.815305"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 04:44:18.819204"], ["updated_at", "2019-03-26 04:44:18.819204"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Avonworth"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Avonworth"], ["created_at", "2019-03-26 04:44:18.822516"], ["updated_at", "2019-03-26 04:44:18.822516"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "avonworth"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------
+BranchTest: test_: Within context should list branch in alphabetical order. 
+----------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 16:52:11.987115"], ["updated_at", "2019-03-26 16:52:11.987115"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 16:52:11.992364"], ["updated_at", "2019-03-26 16:52:11.992364"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 16:52:11.995767"], ["updated_at", "2019-03-26 16:52:11.995767"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT "branches".* FROM "branches" ORDER BY name[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+BranchTest: test_: Branch should have many camps through locations. 
+--------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------------------------------------------
+BranchTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-----------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 16:52:12.042696"], ["updated_at", "2019-03-26 16:52:12.042696"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 16:52:12.050469"], ["updated_at", "2019-03-26 16:52:12.050469"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 16:52:12.058985"], ["updated_at", "2019-03-26 16:52:12.058985"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "north boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.2ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 16:52:12.607976"], ["updated_at", "2019-03-26 16:52:12.607976"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+BranchTest: test_: Branch should have many camps through locations. 
+--------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------
+BranchTest: test_: Within context should list branch in alphabetical order. 
+----------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 16:52:27.922504"], ["updated_at", "2019-03-26 16:52:27.922504"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 16:52:27.927857"], ["updated_at", "2019-03-26 16:52:27.927857"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 16:52:27.931671"], ["updated_at", "2019-03-26 16:52:27.931671"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT "branches".* FROM "branches" ORDER BY name[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------------------------------------------
+BranchTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-----------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 16:52:27.941664"], ["updated_at", "2019-03-26 16:52:27.941664"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 16:52:27.945040"], ["updated_at", "2019-03-26 16:52:27.945040"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 16:52:27.948718"], ["updated_at", "2019-03-26 16:52:27.948718"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "north boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.2ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 16:52:28.414633"], ["updated_at", "2019-03-26 16:52:28.414633"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+LocationTest: test_: Location should require unique value for name. 
+--------------------------------------------------------------------
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" ORDER BY "locations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "locations" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 16:52:49.773053"], ["updated_at", "2019-03-26 16:52:49.773053"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------
+LocationTest: test_: Within context should list locations in alphabetical order. 
+---------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette YMCA"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------------
+LocationTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-------------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette YMCA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+LocationTest: test_: Location should belong to branches. 
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------
+LocationTest: test_: Within context should list locations in alphabetical order. 
+---------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 16:54:12.781339"], ["updated_at", "2019-03-26 16:54:12.781339"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 16:54:12.786541"], ["updated_at", "2019-03-26 16:54:12.786541"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 16:54:12.789905"], ["updated_at", "2019-03-26 16:54:12.789905"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette YMCA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+LocationTest: test_: Location should belong to branches. 
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------------
+LocationTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-------------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 16:54:13.276999"], ["updated_at", "2019-03-26 16:54:13.276999"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 16:54:13.283517"], ["updated_at", "2019-03-26 16:54:13.283517"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 16:54:13.291302"], ["updated_at", "2019-03-26 16:54:13.291302"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette YMCA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+LocationTest: test_: Location should require unique value for name. 
+--------------------------------------------------------------------
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" ORDER BY "locations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "locations" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 16:54:13.312142"], ["updated_at", "2019-03-26 16:54:13.312142"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------------
+LocationTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-------------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 18:33:21.210181"], ["updated_at", "2019-03-26 18:33:21.210181"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 18:33:21.216036"], ["updated_at", "2019-03-26 18:33:21.216036"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 18:33:21.220761"], ["updated_at", "2019-03-26 18:33:21.220761"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette YMCA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+LocationTest: test_: Location should belong to branches. 
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+LocationTest: test_: Location should require unique value for name. 
+--------------------------------------------------------------------
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" ORDER BY "locations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "locations" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 18:33:21.797921"], ["updated_at", "2019-03-26 18:33:21.797921"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------
+LocationTest: test_: Within context should list locations in alphabetical order. 
+---------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 18:33:21.812323"], ["updated_at", "2019-03-26 18:33:21.812323"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 18:33:21.822126"], ["updated_at", "2019-03-26 18:33:21.822126"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 18:33:21.826450"], ["updated_at", "2019-03-26 18:33:21.826450"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette YMCA"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------
+LocationTest: test_: Within context should list locations in alphabetical order. 
+---------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 18:39:34.617369"], ["updated_at", "2019-03-26 18:39:34.617369"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 18:39:34.626957"], ["updated_at", "2019-03-26 18:39:34.626957"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 18:39:34.634347"], ["updated_at", "2019-03-26 18:39:34.634347"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------------
+LocationTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-------------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 18:39:34.663041"], ["updated_at", "2019-03-26 18:39:34.663041"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 18:39:34.668194"], ["updated_at", "2019-03-26 18:39:34.668194"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 18:39:34.675049"], ["updated_at", "2019-03-26 18:39:34.675049"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+LocationTest: test_: Location should require unique value for name. 
+--------------------------------------------------------------------
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" ORDER BY "locations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "locations" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 18:39:34.687827"], ["updated_at", "2019-03-26 18:39:34.687827"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+LocationTest: test_: Location should belong to branches. 
+---------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------
+LocationTest: test_: Within context should list locations in alphabetical order. 
+---------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 18:44:10.254319"], ["updated_at", "2019-03-26 18:44:10.254319"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 18:44:10.262758"], ["updated_at", "2019-03-26 18:44:10.262758"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 18:44:10.269019"], ["updated_at", "2019-03-26 18:44:10.269019"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+LocationTest: test_: Location should belong to branches. 
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+LocationTest: test_: Location should require unique value for name. 
+--------------------------------------------------------------------
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" ORDER BY "locations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 18:44:10.303640"], ["updated_at", "2019-03-26 18:44:10.303640"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------------
+LocationTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-------------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 18:44:10.855433"], ["updated_at", "2019-03-26 18:44:10.855433"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 18:44:10.858990"], ["updated_at", "2019-03-26 18:44:10.858990"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 18:44:10.862153"], ["updated_at", "2019-03-26 18:44:10.862153"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+LocationTest: test_: Location should require unique value for name. 
+--------------------------------------------------------------------
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" ORDER BY "locations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "locations" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 19:15:24.420178"], ["updated_at", "2019-03-26 19:15:24.420178"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------
+LocationTest: test_: Within context should list locations in alphabetical order. 
+---------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 19:15:24.945593"], ["updated_at", "2019-03-26 19:15:24.945593"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 19:15:24.949587"], ["updated_at", "2019-03-26 19:15:24.949587"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 19:15:24.952720"], ["updated_at", "2019-03-26 19:15:24.952720"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+LocationTest: test_: Location should belong to branches. 
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------------
+LocationTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-------------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 19:15:24.959550"], ["updated_at", "2019-03-26 19:15:24.959550"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 19:15:24.962596"], ["updated_at", "2019-03-26 19:15:24.962596"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 19:15:24.965563"], ["updated_at", "2019-03-26 19:15:24.965563"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+LocationTest: test_: Location should belong to branches. 
+---------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+LocationTest: test_: Location should require unique value for name. 
+--------------------------------------------------------------------
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" ORDER BY "locations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "locations" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 19:15:50.575032"], ["updated_at", "2019-03-26 19:15:50.575032"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (1.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------------
+LocationTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-------------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 19:15:51.088883"], ["updated_at", "2019-03-26 19:15:51.088883"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 19:15:51.092341"], ["updated_at", "2019-03-26 19:15:51.092341"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 19:15:51.095388"], ["updated_at", "2019-03-26 19:15:51.095388"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------
+LocationTest: test_: Within context should list locations in alphabetical order. 
+---------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 19:15:51.100295"], ["updated_at", "2019-03-26 19:15:51.100295"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 19:15:51.103705"], ["updated_at", "2019-03-26 19:15:51.103705"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 19:15:51.106654"], ["updated_at", "2019-03-26 19:15:51.106654"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+LocationTest: test_: Location should belong to branches. 
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------
+LocationTest: test_: Within context should list locations in alphabetical order. 
+---------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 19:17:00.794989"], ["updated_at", "2019-03-26 19:17:00.794989"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 19:17:00.799812"], ["updated_at", "2019-03-26 19:17:00.799812"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 19:17:00.803756"], ["updated_at", "2019-03-26 19:17:00.803756"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------------
+LocationTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-------------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 19:17:00.808889"], ["updated_at", "2019-03-26 19:17:00.808889"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 19:17:00.812141"], ["updated_at", "2019-03-26 19:17:00.812141"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 19:17:00.815719"], ["updated_at", "2019-03-26 19:17:00.815719"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+LocationTest: test_: Location should require unique value for name. 
+--------------------------------------------------------------------
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" ORDER BY "locations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 19:17:00.824832"], ["updated_at", "2019-03-26 19:17:00.824832"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+LocationTest: test_: Location should belong to branch. 
+-------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+LocationTest: test_: Location should require unique value for name. 
+--------------------------------------------------------------------
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" ORDER BY "locations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "locations" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 19:17:41.715787"], ["updated_at", "2019-03-26 19:17:41.715787"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------
+LocationTest: test_: Within context should list locations in alphabetical order. 
+---------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 19:17:42.198476"], ["updated_at", "2019-03-26 19:17:42.198476"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 19:17:42.202006"], ["updated_at", "2019-03-26 19:17:42.202006"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 19:17:42.205163"], ["updated_at", "2019-03-26 19:17:42.205163"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------------
+LocationTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-------------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 19:17:42.214781"], ["updated_at", "2019-03-26 19:17:42.214781"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 19:17:42.218246"], ["updated_at", "2019-03-26 19:17:42.218246"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 19:17:42.221503"], ["updated_at", "2019-03-26 19:17:42.221503"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------------
+LocationTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-------------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 19:17:49.587124"], ["updated_at", "2019-03-26 19:17:49.587124"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 19:17:49.593327"], ["updated_at", "2019-03-26 19:17:49.593327"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 19:17:49.597402"], ["updated_at", "2019-03-26 19:17:49.597402"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette YMCA"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Thelma Lovette YMCA"], ["branch_id", 1], ["created_at", "2019-03-26 19:17:49.607236"], ["updated_at", "2019-03-26 19:17:49.607236"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Olympus"], ["branch_id", 2], ["created_at", "2019-03-26 19:17:49.611281"], ["updated_at", "2019-03-26 19:17:49.611281"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Avonworth Community Park"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Avonworth Community Park"], ["branch_id", 3], ["created_at", "2019-03-26 19:17:49.615026"], ["updated_at", "2019-03-26 19:17:49.615026"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "avonworth community park"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 3]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+LocationTest: test_: Location should require unique value for name. 
+--------------------------------------------------------------------
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" ORDER BY "locations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "locations" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 19:17:49.635564"], ["updated_at", "2019-03-26 19:17:49.635564"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+LocationTest: test_: Location should belong to branch. 
+-------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------
+LocationTest: test_: Within context should list locations in alphabetical order. 
+---------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 19:17:50.047633"], ["updated_at", "2019-03-26 19:17:50.047633"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 19:17:50.050737"], ["updated_at", "2019-03-26 19:17:50.050737"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 19:17:50.053485"], ["updated_at", "2019-03-26 19:17:50.053485"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette YMCA"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Thelma Lovette YMCA"], ["branch_id", 1], ["created_at", "2019-03-26 19:17:50.057535"], ["updated_at", "2019-03-26 19:17:50.057535"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Olympus"], ["branch_id", 2], ["created_at", "2019-03-26 19:17:50.061019"], ["updated_at", "2019-03-26 19:17:50.061019"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Avonworth Community Park"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Avonworth Community Park"], ["branch_id", 3], ["created_at", "2019-03-26 19:17:50.064116"], ["updated_at", "2019-03-26 19:17:50.064116"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" ORDER BY name[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 3]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+LocationTest: test_: Location should belong to branch. 
+-------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------
+LocationTest: test_: Within context should list locations in alphabetical order. 
+---------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 19:18:36.876430"], ["updated_at", "2019-03-26 19:18:36.876430"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 19:18:36.881544"], ["updated_at", "2019-03-26 19:18:36.881544"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 19:18:36.884673"], ["updated_at", "2019-03-26 19:18:36.884673"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette YMCA"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Thelma Lovette YMCA"], ["branch_id", 1], ["created_at", "2019-03-26 19:18:36.898754"], ["updated_at", "2019-03-26 19:18:36.898754"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Olympus"], ["branch_id", 2], ["created_at", "2019-03-26 19:18:36.903192"], ["updated_at", "2019-03-26 19:18:36.903192"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Avonworth Community Park"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Avonworth Community Park"], ["branch_id", 3], ["created_at", "2019-03-26 19:18:36.906324"], ["updated_at", "2019-03-26 19:18:36.906324"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" ORDER BY name[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 3]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------------
+LocationTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-------------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 19:18:36.916342"], ["updated_at", "2019-03-26 19:18:36.916342"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 19:18:36.919413"], ["updated_at", "2019-03-26 19:18:36.919413"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 19:18:36.922485"], ["updated_at", "2019-03-26 19:18:36.922485"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette YMCA"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Thelma Lovette YMCA"], ["branch_id", 1], ["created_at", "2019-03-26 19:18:36.926096"], ["updated_at", "2019-03-26 19:18:36.926096"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Olympus"], ["branch_id", 2], ["created_at", "2019-03-26 19:18:36.929497"], ["updated_at", "2019-03-26 19:18:36.929497"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Avonworth Community Park"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Avonworth Community Park"], ["branch_id", 3], ["created_at", "2019-03-26 19:18:36.933337"], ["updated_at", "2019-03-26 19:18:36.933337"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "avonworth community park"], ["LIMIT", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 3]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+LocationTest: test_: Location should require unique value for name. 
+--------------------------------------------------------------------
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" ORDER BY "locations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 19:18:36.946442"], ["updated_at", "2019-03-26 19:18:36.946442"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------
+LocationTest: test_: Within context should list locations in alphabetical order. 
+---------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 19:19:13.741825"], ["updated_at", "2019-03-26 19:19:13.741825"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 19:19:13.746922"], ["updated_at", "2019-03-26 19:19:13.746922"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 19:19:13.749836"], ["updated_at", "2019-03-26 19:19:13.749836"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette YMCA"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Thelma Lovette YMCA"], ["branch_id", 1], ["created_at", "2019-03-26 19:19:13.773653"], ["updated_at", "2019-03-26 19:19:13.773653"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Olympus"], ["branch_id", 2], ["created_at", "2019-03-26 19:19:13.778912"], ["updated_at", "2019-03-26 19:19:13.778912"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Avonworth Community Park"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Avonworth Community Park"], ["branch_id", 3], ["created_at", "2019-03-26 19:19:13.782653"], ["updated_at", "2019-03-26 19:19:13.782653"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" ORDER BY name[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 3]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------------
+LocationTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-------------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 19:19:13.795894"], ["updated_at", "2019-03-26 19:19:13.795894"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 19:19:13.800501"], ["updated_at", "2019-03-26 19:19:13.800501"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 19:19:13.804046"], ["updated_at", "2019-03-26 19:19:13.804046"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette YMCA"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Thelma Lovette YMCA"], ["branch_id", 1], ["created_at", "2019-03-26 19:19:13.807946"], ["updated_at", "2019-03-26 19:19:13.807946"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Olympus"], ["branch_id", 2], ["created_at", "2019-03-26 19:19:13.811950"], ["updated_at", "2019-03-26 19:19:13.811950"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "Avonworth Community Park"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Avonworth Community Park"], ["branch_id", 3], ["created_at", "2019-03-26 19:19:13.815669"], ["updated_at", "2019-03-26 19:19:13.815669"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 3]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+LocationTest: test_: Location should belong to branch. 
+-------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+LocationTest: test_: Location should require unique value for name. 
+--------------------------------------------------------------------
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" ORDER BY "locations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "locations" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 19:19:14.305776"], ["updated_at", "2019-03-26 19:19:14.305776"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------------------------------------------
+BranchTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-----------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 19:19:22.323432"], ["updated_at", "2019-03-26 19:19:22.323432"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 19:19:22.328454"], ["updated_at", "2019-03-26 19:19:22.328454"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 19:19:22.331549"], ["updated_at", "2019-03-26 19:19:22.331549"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "north boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2019-03-26 19:19:22.765822"], ["updated_at", "2019-03-26 19:19:22.765822"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------
+BranchTest: test_: Within context should list branch in alphabetical order. 
+----------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Thelma Lovette"], ["created_at", "2019-03-26 19:19:22.774129"], ["updated_at", "2019-03-26 19:19:22.774129"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Olympus"], ["created_at", "2019-03-26 19:19:22.777539"], ["updated_at", "2019-03-26 19:19:22.777539"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "North Boroughs"], ["created_at", "2019-03-26 19:19:22.780793"], ["updated_at", "2019-03-26 19:19:22.780793"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT "branches".* FROM "branches" ORDER BY name[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+BranchTest: test_: Branch should have many camps through locations. 
+--------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m

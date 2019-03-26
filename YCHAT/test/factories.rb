@@ -9,4 +9,13 @@ FactoryBot.define do
     role "admin"
   end
 
+  factory :branch do
+    name "Thelma Lovette"
+  end
+
+  factory :location do
+    name "Thelma Lovette YMCA"
+    association :branch
+  end
+
 end
