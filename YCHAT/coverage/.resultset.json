@@ -61,16 +61,8 @@
         1,
         null
       ],
-      "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/models/branch.rb": [
+      "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/models/counselor.rb": [
         1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        2,
         1,
         null
       ],
@@ -79,7 +71,16 @@
         1,
         null
       ],
-      "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/models/location.rb": [
+      "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/models/user.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
         1,
         1,
         1,
@@ -89,12 +90,16 @@
         null,
         null,
         1,
+        null,
+        null,
         1,
-        null
-      ],
-      "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/models/camp.rb": [
+        0,
+        0,
+        null,
+        null,
+        null,
         1,
-        1,
+        0,
         null,
         null
       ],
@@ -109,18 +114,47 @@
         0,
         0
       ],
+      "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/models/camp.rb": [
+        0,
+        0,
+        null,
+        0
+      ],
       "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/models/camper_camp_badge_task.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/models/parent.rb": [
+      "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/models/location.rb": [
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        null,
+        null,
         0,
         0,
         0
       ],
-      "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/models/counselor.rb": [
+      "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/models/branch.rb": [
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0
+      ],
+      "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/models/parent.rb": [
+        0,
+        null,
         0,
         0,
         0
@@ -143,38 +177,6 @@
         0
       ],
       "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/models/skill.rb": [
-        0,
-        0
-      ],
-      "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/models/user.rb": [
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0,
-        null,
-        null,
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
         0,
         0
       ],
@@ -1275,6 +1277,6 @@
         0
       ]
     },
-    "timestamp": 1553627962
+    "timestamp": 1553637809
   }
 }
