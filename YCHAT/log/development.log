@@ -289,3 +289,19 @@ FOREIGN KEY ("task_id")
             FROM sqlite_temp_master
             WHERE name='index_tasks_on_badge_id' AND type='index'
 [0m
+Started GET "/" for 127.0.0.1 at 2019-03-21 15:31:25 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stephkananth/.rvm/gems/ruby-2.4.3/gems/railties-5.1.6.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stephkananth/.rvm/gems/ruby-2.4.3/gems/railties-5.1.6.2/lib/rails/templates/rails/welcome/index.html.erb (4.6ms)
+Completed 200 OK in 24ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/camps" for 127.0.0.1 at 2019-03-21 15:31:54 -0400
+Processing by CampsController#index as HTML
+  Rendering camps/index.html.erb within layouts/application
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT "camps".* FROM "camps"[0m
+  Rendered camps/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 1119ms (Views: 1104.9ms | ActiveRecord: 0.8ms)
+
+

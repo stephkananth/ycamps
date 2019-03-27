@@ -1,3 +1,20 @@
 class Location < ApplicationRecord
-  belongs_to :branch
+
+	# relationships
+	belongs_to :branch
+	has many :camps
+
+	# validations
+	validates_presence_of :branch_id
+	validates :name, presence: true, uniqueness: { case_sensitive: false }
+
+	# scopes
+	scope :alphabetical, -> { order('name') }
+
+	# callbacks
+
+	# public methods
+
+	# private methods
+	
 end
