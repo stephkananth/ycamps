@@ -16,5 +16,4 @@ class Badge < ApplicationRecord
 	# public methods
 
 	# private methods
-
 end

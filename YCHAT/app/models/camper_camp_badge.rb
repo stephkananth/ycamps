@@ -3,16 +3,20 @@ class CamperCampBadge < ApplicationRecord
   belongs_to :camp_badge
   belongs_to :camper
   has_many :camper_camp_badge_tasks
-	
+		
 	# validations
-	
+	validates_presence_of :camp_bdage_id, :camper_id
 
 	# scopes
+	scope :completed, -> { where(completed: true) }
+	scope :incomplete, -> { where(completed: false) }
 
 	# callbacks
 
 	# public methods
+	def is_completed
+		camper_camp_badge_tasks.completed.count == 4
+	end
 
 	# private methods
-
 end

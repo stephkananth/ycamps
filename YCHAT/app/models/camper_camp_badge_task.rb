@@ -11,6 +11,11 @@ class CamperCampBadgeTask < ApplicationRecord
 	scope :incomplete, -> { where(completed: false) }
 
 	# callbacks
+	after_update do
+		if camper_camp_badge.is_completed
+			camper_camp_badge.completed = true
+		end
+	end
 
 	# public methods
 
