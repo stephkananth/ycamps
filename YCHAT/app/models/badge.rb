@@ -2,7 +2,7 @@ class Badge < ApplicationRecord
 
 	# relationships
 	belongs_to :skill
-	has_many :camps
+	has_many :camp_badges
 
 	# validations
 	validates_presence_of :skill_id

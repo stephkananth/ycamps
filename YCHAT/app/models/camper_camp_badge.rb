@@ -5,7 +5,7 @@ class CamperCampBadge < ApplicationRecord
   has_many :camper_camp_badge_tasks
 		
 	# validations
-	validates_presence_of :camp_bdage_id, :camper_id
+	validates_presence_of :camp_badge_id, :camper_id
 
 	# scopes
 	scope :completed, -> { where(completed: true) }

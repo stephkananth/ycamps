@@ -1,7 +1,7 @@
 class Branch < ApplicationRecord
 	# relationships
 	has_many :locations
-	has many :camps, through: :locations
+	has_many :camps, through: :locations
 
 	# validations
 	validates :name, presence: true, uniqueness: { case_sensitive: false }

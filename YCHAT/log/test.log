@@ -1897,3 +1897,2353 @@ SkillTest: test_: Skill should require category to be set.
 SkillTest: test_: Skill should verify number of badges method works. 
 ---------------------------------------------------------------------
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+SkillTest: test_: Skill should have many badges. 
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+SkillTest: test_: Skill should require category to be set. 
+-----------------------------------------------------------
+  [1m[36mSkill Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+SkillTest: test_: Skill should require name to be set. 
+-------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------
+SkillTest: test_: Skill should verify number of badges method works. 
+---------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+SkillTest: test_: Skill should verify the alphabetical scope works. 
+--------------------------------------------------------------------
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY name[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+BranchTest: test_: Branch should require case sensitive unique value for name. 
+-------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+BranchTest: test_: Branch should have many camps through locations. 
+--------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+BranchTest: test_: Branch should require case sensitive unique value for name. 
+-------------------------------------------------------------------------------
+  [1m[36mBranch Load (2.0ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+BranchTest: test_: Branch should have many camps through locations. 
+--------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+BranchTest: test_: Branch should require case sensitive unique value for name. 
+-------------------------------------------------------------------------------
+  [1m[36mBranch Load (0.2ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBranch Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "MyString"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE "branches"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+BranchTest: test_: Branch should have many camps through locations. 
+--------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+BranchTest: test_: Branch should have many camps through locations. 
+--------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+BranchTest: test_: Branch should require case sensitive unique value for name. 
+-------------------------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "MyString"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE "branches"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+BranchTest: test_: Branch should have many camps through locations. 
+--------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+BranchTest: test_: Branch should require case sensitive unique value for name. 
+-------------------------------------------------------------------------------
+  [1m[36mBranch Load (0.2ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "MyString"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE "branches"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+BadgeTest: test_: Badge should belong to skill. 
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------
+BadgeTest: test_: Badge should require case sensitive unique value for name. 
+-----------------------------------------------------------------------------
+  [1m[36mBadge Load (0.1ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" ORDER BY "badges"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE LOWER("badges"."name") = LOWER(?) LIMIT ?[0m  [["name", "MyString"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+BadgeTest: test_: Badge should require skill_id to be set. 
+-----------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+BadgeTest: test_: Badge should have many camps. 
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+BadgeTest: test_: Badge should require name to be set. 
+-------------------------------------------------------
+  [1m[36mBadge Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+SkillTest: test_: Skill should have many badges. 
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+SkillTest: test_: Skill should require category to be set. 
+-----------------------------------------------------------
+  [1m[36mSkill Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+SkillTest: test_: Skill should verify the alphabetical scope works. 
+--------------------------------------------------------------------
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY name[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+SkillTest: test_: Skill should require name to be set. 
+-------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+SkillTest: test_: Skill should require category to be set. 
+-----------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+SkillTest: test_: Skill should require name to be set. 
+-------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+SkillTest: test_: Skill should verify the alphabetical scope works. 
+--------------------------------------------------------------------
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY name[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+SkillTest: test_: Skill should have many badges. 
+-------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+BranchTest: test_: Branch should have many camps through locations. 
+--------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+BranchTest: test_: Branch should require case sensitive unique value for name. 
+-------------------------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "MyString"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE "branches"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------
+BadgeTest: test_: Badge should require case sensitive unique value for name. 
+-----------------------------------------------------------------------------
+  [1m[36mBadge Load (0.2ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" ORDER BY "badges"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE LOWER("badges"."name") = LOWER(?) LIMIT ?[0m  [["name", "MyString"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+BadgeTest: test_: Badge should require skill_id to be set. 
+-----------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+BadgeTest: test_: Badge should belong to skill. 
+------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+BadgeTest: test_: Badge should require name to be set. 
+-------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+SkillTest: test_: Skill should have many badges. 
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+SkillTest: test_: Skill should require name to be set. 
+-------------------------------------------------------
+  [1m[36mSkill Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+SkillTest: test_: Skill should require category to be set. 
+-----------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+SkillTest: test_: Skill should verify the alphabetical scope works. 
+--------------------------------------------------------------------
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY name[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+BranchTest: test_: Branch should require case sensitive unique value for name. 
+-------------------------------------------------------------------------------
+  [1m[36mBranch Load (0.6ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "MyString"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE "branches"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BadgeTest: test_: Badge should have many camp_badges. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+BadgeTest: test_: Badge should require skill_id to be set. 
+-----------------------------------------------------------
+  [1m[36mBadge Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+BadgeTest: test_: Badge should belong to skill. 
+------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------
+BadgeTest: test_: Badge should require case sensitive unique value for name. 
+-----------------------------------------------------------------------------
+  [1m[36mBadge Load (0.1ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" ORDER BY "badges"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE LOWER("badges"."name") = LOWER(?) LIMIT ?[0m  [["name", "MyString"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+BadgeTest: test_: Badge should require name to be set. 
+-------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+BadgeTest: test_: Badge should belong to skill. 
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BadgeTest: test_: Badge should have many camp_badges. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------
+BadgeTest: test_: Badge should require case sensitive unique value for name. 
+-----------------------------------------------------------------------------
+  [1m[36mBadge Load (0.1ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" ORDER BY "badges"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE LOWER("badges"."name") = LOWER(?) LIMIT ?[0m  [["name", "MyString"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+BadgeTest: test_: Badge should require skill_id to be set. 
+-----------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+BadgeTest: test_: Badge should require name to be set. 
+-------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+SkillTest: test_: Skill should verify the alphabetical scope works. 
+--------------------------------------------------------------------
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY name[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+SkillTest: test_: Skill should have many badges. 
+-------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+SkillTest: test_: Skill should require category to be set. 
+-----------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+SkillTest: test_: Skill should require name to be set. 
+-------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE "branches"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+BranchTest: test_: Branch should require case sensitive unique value for name. 
+-------------------------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "MyString"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+SkillTest: test_: Skill should require category to be set. 
+-----------------------------------------------------------
+  [1m[36mSkill Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+SkillTest: test_: Skill should require name to be set. 
+-------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+SkillTest: test_: Skill should verify the alphabetical scope works. 
+--------------------------------------------------------------------
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY name[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+SkillTest: test_: Skill should have many badges. 
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------
+BadgeTest: test_: Badge should require unique value for name. 
+--------------------------------------------------------------
+  [1m[36mBadge Load (0.1ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" ORDER BY "badges"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBadge Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE LOWER("badges"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+BadgeTest: test_: Badge should belong to skill. 
+------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+BadgeTest: test_: Badge should require name to be set. 
+-------------------------------------------------------
+  [1m[36mBadge Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BadgeTest: test_: Badge should have many camp_badges. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+BadgeTest: test_: Badge should require skill_id to be set. 
+-----------------------------------------------------------
+  [1m[36mBadge Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+CampTest: test_: Camp should not allow end_date to be set to "bad". 
+--------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+CampTest: test_: Camp should require end_date to be set. 
+---------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+CampTest: test_: Camp should belong to location. 
+-------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+CampTest: test_: Camp should require program to be set. 
+--------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+CampTest: test_: Camp should require location_id to be set. 
+------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+CampTest: test_: Camp should require start_date to be set. 
+-----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+CampTest: test_: Camp should require name to be set. 
+-----------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+CampTest: test_: Camp should have many camp_badges. 
+----------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+CampTest: test_: Camp should not allow start_date to be set to "bad". 
+----------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE "branches"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+SkillTest: test_: Skill should require category to be set. 
+-----------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+SkillTest: test_: Skill should require name to be set. 
+-------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+SkillTest: test_: Skill should have many badges. 
+-------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+SkillTest: test_: Skill should verify the alphabetical scope works. 
+--------------------------------------------------------------------
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY name[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+CampTest: test_: Camp should have many camp_badges. 
+----------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+CampTest: test_: Camp should belong to location. 
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+CampTest: test_: Camp should require name to be set. 
+-----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+CampTest: test_: Camp should require program to be set. 
+--------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+CampTest: test_: Camp should require start_date to be set. 
+-----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+CampTest: test_: Camp should require end_date to be set. 
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+CampTest: test_: Camp should require location_id to be set. 
+------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE "branches"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BadgeTest: test_: Badge should have many camp_badges. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------
+BadgeTest: test_: Badge should require unique value for name. 
+--------------------------------------------------------------
+  [1m[36mBadge Load (0.1ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" ORDER BY "badges"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE LOWER("badges"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+BadgeTest: test_: Badge should belong to skill. 
+------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+BadgeTest: test_: Badge should require name to be set. 
+-------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+BadgeTest: test_: Badge should require skill_id to be set. 
+-----------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+CampTest: test_: Camp should belong to location. 
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+CampTest: test_: Camp should have many camp_badges. 
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE "branches"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+SkillTest: test_: Skill should require category to be set. 
+-----------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+SkillTest: test_: Skill should require name to be set. 
+-------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+SkillTest: test_: Skill should verify the alphabetical scope works. 
+--------------------------------------------------------------------
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY name[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+SkillTest: test_: Skill should have many badges. 
+-------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+BadgeTest: test_: Badge should require name to be set. 
+-------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+BadgeTest: test_: Badge should require skill_id to be set. 
+-----------------------------------------------------------
+  [1m[36mBadge Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+BadgeTest: test_: Badge should belong to skill. 
+------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BadgeTest: test_: Badge should have many camp_badges. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------
+BadgeTest: test_: Badge should require unique value for name. 
+--------------------------------------------------------------
+  [1m[36mBadge Load (0.1ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" ORDER BY "badges"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE LOWER("badges"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE "branches"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+CampTest: test_: Camp should require start_date to be set. 
+-----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+CampTest: test_: Camp should have many camp_badges. 
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+CampTest: test_: Camp should not allow end_date to be set to "bad". 
+--------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+CampTest: test_: Camp should require end_date to be set. 
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+CampTest: test_: Camp should not allow start_date to be set to "bad". 
+----------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+CampTest: test_: Camp should require program to be set. 
+--------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+CampTest: test_: Camp should belong to location. 
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+CampTest: test_: Camp should require location_id to be set. 
+------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+CampTest: test_: Camp should require name to be set. 
+-----------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+SkillTest: test_: Skill should require category to be set. 
+-----------------------------------------------------------
+  [1m[36mSkill Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+SkillTest: test_: Skill should verify the alphabetical scope works. 
+--------------------------------------------------------------------
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY name[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+SkillTest: test_: Skill should require name to be set. 
+-------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+SkillTest: test_: Skill should have many badges. 
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+BadgeTest: test_: Badge should require skill_id to be set. 
+-----------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BadgeTest: test_: Badge should have many camp_badges. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+BadgeTest: test_: Badge should belong to skill. 
+------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+BadgeTest: test_: Badge should require name to be set. 
+-------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------
+BadgeTest: test_: Badge should require unique value for name. 
+--------------------------------------------------------------
+  [1m[36mBadge Load (0.1ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" ORDER BY "badges"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBadge Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE LOWER("badges"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should belong to camper_camp_badge. 
+----------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should require camper_camp_badge_id to be set. 
+---------------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should require task_id to be set. 
+--------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should belong to task. 
+---------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should require camper_id to be set. 
+--------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should belong to camp_badge. 
+-------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should belong to camper. 
+---------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should require camp_badge_id to be set. 
+------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should have many camper_camp_badge_tasks. 
+--------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+BadgeTest: test_: Badge should belong to skill. 
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BadgeTest: test_: Badge should have many camp_badges. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------
+BadgeTest: test_: Badge should require unique value for name. 
+--------------------------------------------------------------
+  [1m[36mBadge Load (0.5ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" ORDER BY "badges"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE LOWER("badges"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+BadgeTest: test_: Badge should require name to be set. 
+-------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+BadgeTest: test_: Badge should require skill_id to be set. 
+-----------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+TaskTest: test_: Task should require skill_id to be set. 
+---------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+TaskTest: test_: Task should belong to badge. 
+----------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.7ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE "branches"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+SkillTest: test_: Skill should have many badges. 
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+SkillTest: test_: Skill should require category to be set. 
+-----------------------------------------------------------
+  [1m[36mSkill Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+SkillTest: test_: Skill should require name to be set. 
+-------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+SkillTest: test_: Skill should verify the alphabetical scope works. 
+--------------------------------------------------------------------
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY name[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should belong to camp_badge. 
+-------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should belong to counselor. 
+------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should require counselor_id to be set. 
+-----------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should require camp_badge_id to be set. 
+------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+LocationTest: test_: Location should require branch_id to be set. 
+------------------------------------------------------------------
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE "locations"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+LocationTest: test_: Location should require name to be set. 
+-------------------------------------------------------------
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE "locations"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+LocationTest: test_: Location should belong to branch. 
+-------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+CampTest: test_: Camp should have many camp_badges. 
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+CampTest: test_: Camp should not allow end_date to be set to "bad". 
+--------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+CampTest: test_: Camp should belong to location. 
+-------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+CampTest: test_: Camp should not allow start_date to be set to "bad". 
+----------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+CampTest: test_: Camp should require start_date to be set. 
+-----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+CampTest: test_: Camp should require end_date to be set. 
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+CampTest: test_: Camp should require name to be set. 
+-----------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+CampTest: test_: Camp should require program to be set. 
+--------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+CampTest: test_: Camp should require location_id to be set. 
+------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+BadgeTest: test_: Badge should belong to skill. 
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BadgeTest: test_: Badge should have many camp_badges. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------
+BadgeTest: test_: Badge should require unique value for name. 
+--------------------------------------------------------------
+  [1m[36mBadge Load (0.5ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" ORDER BY "badges"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE LOWER("badges"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+BadgeTest: test_: Badge should require skill_id to be set. 
+-----------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+BadgeTest: test_: Badge should require name to be set. 
+-------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should belong to task. 
+---------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should require camper_camp_badge_id to be set. 
+---------------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should belong to camper_camp_badge. 
+----------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should require task_id to be set. 
+--------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should belong to camp_badge. 
+-------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should belong to counselor. 
+------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should require camp_badge_id to be set. 
+------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should require counselor_id to be set. 
+-----------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should belong to camp_badge. 
+-------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should require camp_badge_id to be set. 
+------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should belong to camper. 
+---------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should have many camper_camp_badge_tasks. 
+--------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should require camper_id to be set. 
+--------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+TaskTest: test_: Task should belong to badge. 
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+TaskTest: test_: Task should require skill_id to be set. 
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+SkillTest: test_: Skill should require category to be set. 
+-----------------------------------------------------------
+  [1m[36mSkill Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+SkillTest: test_: Skill should require name to be set. 
+-------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+SkillTest: test_: Skill should verify the alphabetical scope works. 
+--------------------------------------------------------------------
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY name[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+SkillTest: test_: Skill should have many badges. 
+-------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[36mBranch Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE "branches"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+LocationTest: test_: Location should require name to be set. 
+-------------------------------------------------------------
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE "locations"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+LocationTest: test_: Location should require branch_id to be set. 
+------------------------------------------------------------------
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE "locations"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+LocationTest: test_: Location should belong to branch. 
+-------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should require camper_camp_badge_id to be set. 
+---------------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should require task_id to be set. 
+--------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should belong to camper_camp_badge. 
+----------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should belong to task. 
+---------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+SkillTest: test_: Skill should have many badges. 
+-------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+SkillTest: test_: Skill should verify the alphabetical scope works. 
+--------------------------------------------------------------------
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY name[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+SkillTest: test_: Skill should require name to be set. 
+-------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+SkillTest: test_: Skill should require category to be set. 
+-----------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+TaskTest: test_: Task should require skill_id to be set. 
+---------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+TaskTest: test_: Task should belong to badge. 
+----------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+LocationTest: test_: Location should require branch_id to be set. 
+------------------------------------------------------------------
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE "locations"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+LocationTest: test_: Location should belong to branch. 
+-------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+LocationTest: test_: Location should require name to be set. 
+-------------------------------------------------------------
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE "locations"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should belong to camp_badge. 
+-------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should have many camper_camp_badge_tasks. 
+--------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should require camp_badge_id to be set. 
+------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should require camper_id to be set. 
+--------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should belong to camper. 
+---------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should belong to camp_badge. 
+-------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should belong to counselor. 
+------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should require counselor_id to be set. 
+-----------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should require camp_badge_id to be set. 
+------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE "branches"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+BadgeTest: test_: Badge should require name to be set. 
+-------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+BadgeTest: test_: Badge should require skill_id to be set. 
+-----------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+BadgeTest: test_: Badge should belong to skill. 
+------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BadgeTest: test_: Badge should have many camp_badges. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------
+BadgeTest: test_: Badge should require unique value for name. 
+--------------------------------------------------------------
+  [1m[36mBadge Load (0.1ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" ORDER BY "badges"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE LOWER("badges"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+TaskTest: test_: Task should belong to badge. 
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+TaskTest: test_: Task should require skill_id to be set. 
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should belong to counselor. 
+------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should require camp_badge_id to be set. 
+------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should belong to camp_badge. 
+-------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should require counselor_id to be set. 
+-----------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+BadgeTest: test_: Badge should require name to be set. 
+-------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+BadgeTest: test_: Badge should belong to skill. 
+------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------
+BadgeTest: test_: Badge should require unique value for name. 
+--------------------------------------------------------------
+  [1m[36mBadge Load (0.1ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" ORDER BY "badges"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE LOWER("badges"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+BadgeTest: test_: Badge should require skill_id to be set. 
+-----------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BadgeTest: test_: Badge should have many camp_badges. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE "branches"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.2ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+SkillTest: test_: Skill should require category to be set. 
+-----------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+SkillTest: test_: Skill should require name to be set. 
+-------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+SkillTest: test_: Skill should verify the alphabetical scope works. 
+--------------------------------------------------------------------
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY name[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+SkillTest: test_: Skill should have many badges. 
+-------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should belong to task. 
+---------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should require camper_camp_badge_id to be set. 
+---------------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should belong to camper_camp_badge. 
+----------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should require task_id to be set. 
+--------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should belong to camp_badge. 
+-------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should have many camper_camp_badge_tasks. 
+--------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should belong to camper. 
+---------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should require camp_badge_id to be set. 
+------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should require camper_id to be set. 
+--------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+CampTest: test_: Camp should require end_date to be set. 
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+CampTest: test_: Camp should belong to location. 
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+CampTest: test_: Camp should not allow end_date to be set to "bad". 
+--------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+CampTest: test_: Camp should have many camp_badges. 
+----------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+CampTest: test_: Camp should require location_id to be set. 
+------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+CampTest: test_: Camp should require program to be set. 
+--------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+CampTest: test_: Camp should require start_date to be set. 
+-----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+CampTest: test_: Camp should require name to be set. 
+-----------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+CampTest: test_: Camp should not allow start_date to be set to "bad". 
+----------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+LocationTest: test_: Location should require name to be set. 
+-------------------------------------------------------------
+  [1m[36mLocation Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE "locations"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+LocationTest: test_: Location should belong to branch. 
+-------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+LocationTest: test_: Location should require branch_id to be set. 
+------------------------------------------------------------------
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE "locations"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+BadgeTest: test_: Badge should require skill_id to be set. 
+-----------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+BadgeTest: test_: Badge should belong to skill. 
+------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BadgeTest: test_: Badge should have many camp_badges. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+BadgeTest: test_: Badge should require name to be set. 
+-------------------------------------------------------
+  [1m[36mBadge Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------
+BadgeTest: test_: Badge should require unique value for name. 
+--------------------------------------------------------------
+  [1m[36mBadge Load (0.2ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" ORDER BY "badges"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE LOWER("badges"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should have many camper_camp_badge_tasks. 
+--------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should require camper_id to be set. 
+--------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should belong to camp_badge. 
+-------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should belong to camper. 
+---------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should require camp_badge_id to be set. 
+------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.2ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[36mBranch Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE "branches"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should belong to camp_badge. 
+-------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should require camp_badge_id to be set. 
+------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should require counselor_id to be set. 
+-----------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should belong to counselor. 
+------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+TaskTest: test_: Task should belong to badge. 
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+TaskTest: test_: Task should require skill_id to be set. 
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+LocationTest: test_: Location should belong to branch. 
+-------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+LocationTest: test_: Location should require branch_id to be set. 
+------------------------------------------------------------------
+  [1m[36mLocation Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE "locations"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+LocationTest: test_: Location should require name to be set. 
+-------------------------------------------------------------
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE "locations"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should belong to camper_camp_badge. 
+----------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should belong to task. 
+---------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should require camper_camp_badge_id to be set. 
+---------------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should require task_id to be set. 
+--------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+SkillTest: test_: Skill should have many badges. 
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+SkillTest: test_: Skill should require name to be set. 
+-------------------------------------------------------
+  [1m[36mSkill Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+SkillTest: test_: Skill should require category to be set. 
+-----------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+SkillTest: test_: Skill should verify the alphabetical scope works. 
+--------------------------------------------------------------------
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY name[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+SkillTest: test_: Skill should have many badges. 
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+SkillTest: test_: Skill should require category to be set. 
+-----------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+SkillTest: test_: Skill should require name to be set. 
+-------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+SkillTest: test_: Skill should verify the alphabetical scope works. 
+--------------------------------------------------------------------
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY name[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+TaskTest: test_: Task should belong to badge. 
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+TaskTest: test_: Task should require skill_id to be set. 
+---------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should require camp_badge_id to be set. 
+------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should belong to counselor. 
+------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should require counselor_id to be set. 
+-----------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should belong to camp_badge. 
+-------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should belong to camper_camp_badge. 
+----------------------------------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should require camper_camp_badge_id to be set. 
+---------------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should require task_id to be set. 
+--------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should belong to task. 
+---------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+LocationTest: test_: Location should require branch_id to be set. 
+------------------------------------------------------------------
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE "locations"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+LocationTest: test_: Location should require name to be set. 
+-------------------------------------------------------------
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE "locations"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+LocationTest: test_: Location should belong to branch. 
+-------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should require camper_id to be set. 
+--------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should belong to camp_badge. 
+-------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should belong to camper. 
+---------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should have many camper_camp_badge_tasks. 
+--------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should require camp_badge_id to be set. 
+------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+BadgeTest: test_: Badge should require name to be set. 
+-------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+BadgeTest: test_: Badge should belong to skill. 
+------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+BadgeTest: test_: Badge should require skill_id to be set. 
+-----------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------
+BadgeTest: test_: Badge should require unique value for name. 
+--------------------------------------------------------------
+  [1m[36mBadge Load (0.1ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" ORDER BY "badges"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE LOWER("badges"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BadgeTest: test_: Badge should have many camp_badges. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE "branches"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should require counselor_id to be set. 
+-----------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should belong to camp_badge. 
+-------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should belong to counselor. 
+------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should require camp_badge_id to be set. 
+------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should belong to camper. 
+---------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should have many camper_camp_badge_tasks. 
+--------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should require camp_badge_id to be set. 
+------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should require camper_id to be set. 
+--------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should belong to camp_badge. 
+-------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should belong to task. 
+---------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should require task_id to be set. 
+--------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should require camper_camp_badge_id to be set. 
+---------------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should belong to camper_camp_badge. 
+----------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+LocationTest: test_: Location should require branch_id to be set. 
+------------------------------------------------------------------
+  [1m[36mLocation Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE "locations"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+LocationTest: test_: Location should belong to branch. 
+-------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+LocationTest: test_: Location should require name to be set. 
+-------------------------------------------------------------
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE "locations"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+TaskTest: test_: Task should belong to badge. 
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+TaskTest: test_: Task should require skill_id to be set. 
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+BadgeTest: test_: Badge should belong to skill. 
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BadgeTest: test_: Badge should have many camp_badges. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------
+BadgeTest: test_: Badge should require unique value for name. 
+--------------------------------------------------------------
+  [1m[36mBadge Load (0.2ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" ORDER BY "badges"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE LOWER("badges"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+BadgeTest: test_: Badge should require skill_id to be set. 
+-----------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+BadgeTest: test_: Badge should require name to be set. 
+-------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+SkillTest: test_: Skill should have many badges. 
+-------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+SkillTest: test_: Skill should require name to be set. 
+-------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+SkillTest: test_: Skill should require category to be set. 
+-----------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+SkillTest: test_: Skill should verify the alphabetical scope works. 
+--------------------------------------------------------------------
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY name[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE "branches"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+TaskTest: test_: Task should belong to badge. 
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+SkillTest: test_: Skill should require name to be set. 
+-------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+SkillTest: test_: Skill should require category to be set. 
+-----------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+SkillTest: test_: Skill should verify the alphabetical scope works. 
+--------------------------------------------------------------------
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY name[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+SkillTest: test_: Skill should have many badges. 
+-------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should require camp_badge_id to be set. 
+------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should belong to camper. 
+---------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should have many camper_camp_badge_tasks. 
+--------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should belong to camp_badge. 
+-------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should require camper_id to be set. 
+--------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+BadgeTest: test_: Badge should require name to be set. 
+-------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BadgeTest: test_: Badge should have many camp_badges. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+BadgeTest: test_: Badge should belong to skill. 
+------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+BadgeTest: test_: Badge should require skill_id to be set. 
+-----------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------
+BadgeTest: test_: Badge should require unique value for name. 
+--------------------------------------------------------------
+  [1m[36mBadge Load (0.2ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" ORDER BY "badges"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE LOWER("badges"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE "branches"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should belong to counselor. 
+------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should belong to camp_badge. 
+-------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should require counselor_id to be set. 
+-----------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should require camp_badge_id to be set. 
+------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+LocationTest: test_: Location should belong to branch. 
+-------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+LocationTest: test_: Location should require branch_id to be set. 
+------------------------------------------------------------------
+  [1m[36mLocation Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE "locations"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+LocationTest: test_: Location should require name to be set. 
+-------------------------------------------------------------
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE "locations"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should require task_id to be set. 
+--------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should belong to camper_camp_badge. 
+----------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should belong to task. 
+---------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should require camper_camp_badge_id to be set. 
+---------------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should belong to camper_camp_badge. 
+----------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should belong to task. 
+---------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should require task_id to be set. 
+--------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should require camper_camp_badge_id to be set. 
+---------------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+BadgeTest: test_: Badge should belong to skill. 
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+BadgeTest: test_: Badge should require name to be set. 
+-------------------------------------------------------
+  [1m[36mBadge Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+BadgeTest: test_: Badge should require skill_id to be set. 
+-----------------------------------------------------------
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------
+BadgeTest: test_: Badge should require unique value for name. 
+--------------------------------------------------------------
+  [1m[36mBadge Load (0.1ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" ORDER BY "badges"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBadge Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE LOWER("badges"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+BadgeTest: test_: Badge should have many camp_badges. 
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+LocationTest: test_: Location should belong to branch. 
+-------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+LocationTest: test_: Location should require branch_id to be set. 
+------------------------------------------------------------------
+  [1m[36mLocation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE "locations"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+LocationTest: test_: Location should require name to be set. 
+-------------------------------------------------------------
+  [1m[36mLocation Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE "locations"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should belong to camp_badge. 
+-------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should belong to counselor. 
+------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should require camp_badge_id to be set. 
+------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should require counselor_id to be set. 
+-----------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (0.1ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER(?) LIMIT ?[0m  [["name", "mYsTRING"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[36mBranch Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE "branches"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should belong to camper. 
+---------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should require camper_id to be set. 
+--------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should belong to camp_badge. 
+-------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should have many camper_camp_badge_tasks. 
+--------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should require camp_badge_id to be set. 
+------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+SkillTest: test_: Skill should have many badges. 
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+SkillTest: test_: Skill should verify the alphabetical scope works. 
+--------------------------------------------------------------------
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY name[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+SkillTest: test_: Skill should require category to be set. 
+-----------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+SkillTest: test_: Skill should require name to be set. 
+-------------------------------------------------------
+  [1m[36mSkill Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+TaskTest: test_: Task should belong to badge. 
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m

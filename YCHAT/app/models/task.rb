@@ -3,7 +3,7 @@ class Task < ApplicationRecord
 	belongs_to :badge
 
 	# validations
-	validates_presence_of :skill_id
+	validates_presence_of(:skill_id)
 
 	# scopes
 	scope :in_order, -> { order('level') }
