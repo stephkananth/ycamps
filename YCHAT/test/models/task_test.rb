@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class TaskTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  should belong_to(:badge)
+
+  should validate_presence_of(:badge_id)
 end

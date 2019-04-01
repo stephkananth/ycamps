@@ -4,9 +4,9 @@
       <h2><%= pluralize(counselor.errors.count, "error") %> prohibited this counselor from being saved:</h2>
 
       <ul>
-      <% counselor.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% counselor.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>

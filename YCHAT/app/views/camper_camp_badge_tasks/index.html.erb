@@ -4,25 +4,25 @@
 
 <table>
   <thead>
-    <tr>
-      <th>Camper camp badge</th>
-      <th>Task</th>
-      <th>Completed</th>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th>Camper camp badge</th>
+    <th>Task</th>
+    <th>Completed</th>
+    <th colspan="3"></th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @camper_camp_badge_tasks.each do |camper_camp_badge_task| %>
-      <tr>
-        <td><%= camper_camp_badge_task.camper_camp_badge %></td>
-        <td><%= camper_camp_badge_task.task %></td>
-        <td><%= camper_camp_badge_task.completed %></td>
-        <td><%= link_to 'Show', camper_camp_badge_task %></td>
-        <td><%= link_to 'Edit', edit_camper_camp_badge_task_path(camper_camp_badge_task) %></td>
-        <td><%= link_to 'Destroy', camper_camp_badge_task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+  <% @camper_camp_badge_tasks.each do |camper_camp_badge_task| %>
+    <tr>
+      <td><%= camper_camp_badge_task.camper_camp_badge %></td>
+      <td><%= camper_camp_badge_task.task %></td>
+      <td><%= camper_camp_badge_task.completed %></td>
+      <td><%= link_to 'Show', camper_camp_badge_task %></td>
+      <td><%= link_to 'Edit', edit_camper_camp_badge_task_path(camper_camp_badge_task) %></td>
+      <td><%= link_to 'Destroy', camper_camp_badge_task, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+    </tr>
+  <% end %>
   </tbody>
 </table>
 

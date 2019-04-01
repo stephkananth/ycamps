@@ -1,11 +1,19 @@
 class Location < ApplicationRecord
-	belongs_to :branch
-	has_many :camps
+# relationships
+  has_many :camps
+  belongs_to :branch
 
-	# validations
-	validates :name, presence: true, uniqueness: { case_sensitive: false }
+  # validations
+  validates_presence_of :branch_id
+  validates :name, presence: true, uniqueness: {case_sensitive: false}
 
-	# scopes
-	scope :alphabetical, -> { order('name') }
-	scope :search, ->(term) { where('name LIKE ?', "#{term}%") }
+  # scopes
+  scope :alphabetical, -> {order('name')}
+  scope :search, ->(term) {where('name LIKE ?', "#{term}%")}
+
+# callbacks
+
+# public methods
+
+# private methods
 end

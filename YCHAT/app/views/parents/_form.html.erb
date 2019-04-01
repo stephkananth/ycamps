@@ -4,9 +4,9 @@
       <h2><%= pluralize(parent.errors.count, "error") %> prohibited this parent from being saved:</h2>
 
       <ul>
-      <% parent.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% parent.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>

@@ -17,7 +17,7 @@ class CamperCampBadgesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create camper_camp_badge" do
     assert_difference('CamperCampBadge.count') do
-      post camper_camp_badges_url, params: { camper_camp_badge: { camp_badge_id: @camper_camp_badge.camp_badge_id, camper_id: @camper_camp_badge.camper_id, completed: @camper_camp_badge.completed } }
+      post camper_camp_badges_url, params: {camper_camp_badge: {camp_badge_id: @camper_camp_badge.camp_badge_id, camper_id: @camper_camp_badge.camper_id, completed: @camper_camp_badge.completed}}
     end
 
     assert_redirected_to camper_camp_badge_url(CamperCampBadge.last)
@@ -34,7 +34,7 @@ class CamperCampBadgesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update camper_camp_badge" do
-    patch camper_camp_badge_url(@camper_camp_badge), params: { camper_camp_badge: { camp_badge_id: @camper_camp_badge.camp_badge_id, camper_id: @camper_camp_badge.camper_id, completed: @camper_camp_badge.completed } }
+    patch camper_camp_badge_url(@camper_camp_badge), params: {camper_camp_badge: {camp_badge_id: @camper_camp_badge.camp_badge_id, camper_id: @camper_camp_badge.camper_id, completed: @camper_camp_badge.completed}}
     assert_redirected_to camper_camp_badge_url(@camper_camp_badge)
   end
 

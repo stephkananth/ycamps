@@ -4,9 +4,9 @@
       <h2><%= pluralize(location.errors.count, "error") %> prohibited this location from being saved:</h2>
 
       <ul>
-      <% location.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% location.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>

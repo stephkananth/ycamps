@@ -17,7 +17,7 @@ class BadgesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create badge" do
     assert_difference('Badge.count') do
-      post badges_url, params: { badge: { description: @badge.description, level: @badge.level, name: @badge.name, skill_id: @badge.skill_id } }
+      post badges_url, params: {badge: {description: @badge.description, level: @badge.level, name: @badge.name, skill_id: @badge.skill_id}}
     end
 
     assert_redirected_to badge_url(Badge.last)
@@ -34,7 +34,7 @@ class BadgesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update badge" do
-    patch badge_url(@badge), params: { badge: { description: @badge.description, level: @badge.level, name: @badge.name, skill_id: @badge.skill_id } }
+    patch badge_url(@badge), params: {badge: {description: @badge.description, level: @badge.level, name: @badge.name, skill_id: @badge.skill_id}}
     assert_redirected_to badge_url(@badge)
   end
 

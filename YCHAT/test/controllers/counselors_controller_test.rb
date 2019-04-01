@@ -17,7 +17,7 @@ class CounselorsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create counselor" do
     assert_difference('Counselor.count') do
-      post counselors_url, params: { counselor: { active: @counselor.active, user_id: @counselor.user_id } }
+      post counselors_url, params: {counselor: {active: @counselor.active, user_id: @counselor.user_id}}
     end
 
     assert_redirected_to counselor_url(Counselor.last)
@@ -34,7 +34,7 @@ class CounselorsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update counselor" do
-    patch counselor_url(@counselor), params: { counselor: { active: @counselor.active, user_id: @counselor.user_id } }
+    patch counselor_url(@counselor), params: {counselor: {active: @counselor.active, user_id: @counselor.user_id}}
     assert_redirected_to counselor_url(@counselor)
   end
 

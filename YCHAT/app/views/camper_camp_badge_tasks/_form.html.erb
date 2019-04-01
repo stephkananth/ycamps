@@ -1,12 +1,13 @@
 <%= form_with(model: camper_camp_badge_task, local: true) do |form| %>
   <% if camper_camp_badge_task.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(camper_camp_badge_task.errors.count, "error") %> prohibited this camper_camp_badge_task from being saved:</h2>
+      <h2><%= pluralize(camper_camp_badge_task.errors.count, "error") %> prohibited this camper_camp_badge_task from
+        being saved:</h2>
 
       <ul>
-      <% camper_camp_badge_task.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% camper_camp_badge_task.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>

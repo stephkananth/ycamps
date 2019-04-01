@@ -17,7 +17,7 @@ class CampBadgesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create camp_badge" do
     assert_difference('CampBadge.count') do
-      post camp_badges_url, params: { camp_badge: { badge_id: @camp_badge.badge_id, camp_id: @camp_badge.camp_id } }
+      post camp_badges_url, params: {camp_badge: {badge_id: @camp_badge.badge_id, camp_id: @camp_badge.camp_id}}
     end
 
     assert_redirected_to camp_badge_url(CampBadge.last)
@@ -34,7 +34,7 @@ class CampBadgesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update camp_badge" do
-    patch camp_badge_url(@camp_badge), params: { camp_badge: { badge_id: @camp_badge.badge_id, camp_id: @camp_badge.camp_id } }
+    patch camp_badge_url(@camp_badge), params: {camp_badge: {badge_id: @camp_badge.badge_id, camp_id: @camp_badge.camp_id}}
     assert_redirected_to camp_badge_url(@camp_badge)
   end
 

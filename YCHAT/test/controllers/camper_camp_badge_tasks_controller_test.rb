@@ -17,7 +17,7 @@ class CamperCampBadgeTasksControllerTest < ActionDispatch::IntegrationTest
 
   test "should create camper_camp_badge_task" do
     assert_difference('CamperCampBadgeTask.count') do
-      post camper_camp_badge_tasks_url, params: { camper_camp_badge_task: { camper_camp_badge_id: @camper_camp_badge_task.camper_camp_badge_id, completed: @camper_camp_badge_task.completed, task_id: @camper_camp_badge_task.task_id } }
+      post camper_camp_badge_tasks_url, params: {camper_camp_badge_task: {camper_camp_badge_id: @camper_camp_badge_task.camper_camp_badge_id, completed: @camper_camp_badge_task.completed, task_id: @camper_camp_badge_task.task_id}}
     end
 
     assert_redirected_to camper_camp_badge_task_url(CamperCampBadgeTask.last)
@@ -34,7 +34,7 @@ class CamperCampBadgeTasksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update camper_camp_badge_task" do
-    patch camper_camp_badge_task_url(@camper_camp_badge_task), params: { camper_camp_badge_task: { camper_camp_badge_id: @camper_camp_badge_task.camper_camp_badge_id, completed: @camper_camp_badge_task.completed, task_id: @camper_camp_badge_task.task_id } }
+    patch camper_camp_badge_task_url(@camper_camp_badge_task), params: {camper_camp_badge_task: {camper_camp_badge_id: @camper_camp_badge_task.camper_camp_badge_id, completed: @camper_camp_badge_task.completed, task_id: @camper_camp_badge_task.task_id}}
     assert_redirected_to camper_camp_badge_task_url(@camper_camp_badge_task)
   end
 
