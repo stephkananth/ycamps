@@ -1,8 +1,8 @@
 class Location < ApplicationRecord
 
 	# relationships
-	belongs_to :branch
 	has_many :camps
+	belongs_to :branch
 
 	# validations
 	validates_presence_of :branch_id

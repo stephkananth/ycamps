@@ -2,7 +2,7 @@ class Camp < ApplicationRecord
 
 	# relationships
 	belongs_to :location
-	belongs_to :branch, through: :location
+	has_one :branch, through: :location
 	has_many :camp_badges
 	has_many :badges, through: :camp_badges
 	has_many :camper_camp_badges, through: :camp_badges
@@ -52,9 +52,9 @@ class Camp < ApplicationRecord
 	private
 
 	def camp_is_not_a_duplicate
-		return true if time_slot.nil? || start_date.nil? || location_id.nil?
+		return true if start_date.nil? || location_id.nil?
 		if already_exists?
-			errors.add(:time_slot, 'already exists for start date, time slot and location')
+			errors.add(:start_date, 'already exists for start date and location')
 		end
 	end
 

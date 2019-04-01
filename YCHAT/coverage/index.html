@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-04-01T09:46:04-04:00">2019-04-01T09:46:04-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-04-01T18:57:54-04:00">2019-04-01T18:57:54-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">7.56%</span></span>
+    (<span class="covered_percent"><span class="red">10.66%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.08
+         0.12
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>49</b> files in total.
-    <b>873</b> relevant lines. 
-    <span class="green"><b>66</b> lines covered</span> and
-    <span class="red"><b>807</b> lines missed </span>
+    <b>863</b> relevant lines. 
+    <span class="green"><b>92</b> lines covered</span> and
+    <span class="red"><b>771</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -422,12 +422,12 @@
       
       <tr>
         <td class="strong"><a href="#f1702c23f418764bffdf1bfe7e8f79f288a89f89" class="src_link" title="app/models/camp.rb">app/models/camp.rb</a></td>
-        <td class="red strong">0.0 %</td>
+        <td class="red strong">70.27 %</td>
         <td>65</td>
-        <td>47</td>
-        <td>0</td>
-        <td>47</td>
-        <td>0.0</td>
+        <td>37</td>
+        <td>26</td>
+        <td>11</td>
+        <td>0.9</td>
       </tr>
       
       <tr>
@@ -793,20 +793,20 @@
           <div class="file_list_container" id="Models">
   <h2>
     <span class="group_name">Models</span>
-    (<span class="covered_percent"><span class="red">52.38%</span></span>
+    (<span class="covered_percent"><span class="red">79.31%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.53
+         0.87
        </span>
     </span> hits/line)
   </h2>
   <a name="Models"></a>
   <div>
     <b>15</b> files in total.
-    <b>126</b> relevant lines. 
-    <span class="green"><b>66</b> lines covered</span> and
-    <span class="red"><b>60</b> lines missed </span>
+    <b>116</b> relevant lines. 
+    <span class="green"><b>92</b> lines covered</span> and
+    <span class="red"><b>24</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -854,12 +854,12 @@
       
       <tr>
         <td class="strong"><a href="#f1702c23f418764bffdf1bfe7e8f79f288a89f89" class="src_link" title="app/models/camp.rb">app/models/camp.rb</a></td>
-        <td class="red strong">0.0 %</td>
+        <td class="red strong">70.27 %</td>
         <td>65</td>
-        <td>47</td>
-        <td>0</td>
-        <td>47</td>
-        <td>0.0</td>
+        <td>37</td>
+        <td>26</td>
+        <td>11</td>
+        <td>0.9</td>
       </tr>
       
       <tr>
@@ -8743,19 +8743,19 @@
         <div class="source_table" id="f1702c23f418764bffdf1bfe7e8f79f288a89f89">
   <div class="header">
     <h3>app/models/camp.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
+    <h4><span class="red">70.27 %</span> covered</h4>
     <div>
-      <b>47</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>47</b> lines missed.</span>
+      <b>37</b> relevant lines. 
+      <span class="green"><b>26</b> lines covered</span> and
+      <span class="red"><b>11</b> lines missed.</span>
     </div>
   </div>
   
   <pre>
     <ol>
       
-        <li class="missed" data-hits="0" data-linenumber="1">
-          
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
           
           <code class="ruby">class Camp &lt; ApplicationRecord</code>
         </li>
@@ -8772,50 +8772,50 @@
           <code class="ruby">	# relationships</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="4">
-          
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
           <code class="ruby">	belongs_to :location</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	belongs_to :branch, through: :location</code>
+          <code class="ruby">	has_one :branch, through: :location</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="6">
-          
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
           
           <code class="ruby">	has_many :camp_badges</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
-          
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
           
           <code class="ruby">	has_many :badges, through: :camp_badges</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="8">
-          
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
           
           <code class="ruby">	has_many :camper_camp_badges, through: :camp_badges</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="9">
-          
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
           
           <code class="ruby">	has_many :campers, through: :camper_camp_badges</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="10">
-          
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
           
           <code class="ruby">	has_many :counselor_camp_badges, through: :camp_badges</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
-          
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
           
           <code class="ruby">	has_many :counselors, through: :counselor_camp_badges</code>
         </li>
@@ -8832,26 +8832,26 @@
           <code class="ruby">	# validations</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="14">
-          
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
           
           <code class="ruby">	validates_presence_of :location_id, :name, :program, :start_date, :end_date</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
-          
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
           
           <code class="ruby">	validates_date :start_date, on_or_after: -&gt; { Date.today }, on_or_after_message: &#39;cannot be in the past&#39;, on: :create</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="16">
-          
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
           
           <code class="ruby">	validates_date :end_date, on_or_after: :start_date</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="17">
-          
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
           
           <code class="ruby">	validate :camp_is_not_a_duplicate, on: :create</code>
         </li>
@@ -8868,26 +8868,26 @@
           <code class="ruby">	# scopes</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
-          
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
           
           <code class="ruby">	scope :alphabetical, -&gt; { order(&#39;name&#39;) }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
-          
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
           
           <code class="ruby">  	scope :chronological, -&gt; { order(&#39;start_date&#39;, &#39;end_date&#39;) }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="22">
-          
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
           
           <code class="ruby">  	scope :upcoming, -&gt; { where(&#39;start_date &gt;= ?&#39;, Date.today) }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="23">
-          
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
           
           <code class="ruby"> 	scope :past, -&gt; { where(&#39;end_date &lt; ?&#39;, Date.today) }</code>
         </li>
@@ -8904,8 +8904,8 @@
           <code class="ruby">	# callbacks</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="26">
-          
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
           
           <code class="ruby">	before_destroy do</code>
         </li>
@@ -8934,13 +8934,13 @@
           <code class="ruby">			throw(:abort)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">		end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby">	end</code>
@@ -8958,8 +8958,8 @@
           <code class="ruby">	# public methods</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="35">
-          
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
           
           <code class="ruby">	def already_exists?</code>
         </li>
@@ -8970,7 +8970,7 @@
           <code class="ruby">		Camp.where(location_id: location_id, name: name, program: program, start_date: start_date, end_date: end_date).size == 1</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="37">
+        <li class="never" data-hits="" data-linenumber="37">
           
           
           <code class="ruby">	end</code>
@@ -8982,8 +8982,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="39">
-          
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
           
           <code class="ruby">	def number_of_campers</code>
         </li>
@@ -8994,7 +8994,7 @@
           <code class="ruby">		campers.to_a.count</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby">	end</code>
@@ -9006,8 +9006,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="43">
-          
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
           
           <code class="ruby">	def number_of_counselors</code>
         </li>
@@ -9018,7 +9018,7 @@
           <code class="ruby">		counselors.to_a.count</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="45">
           
           
           <code class="ruby">	end</code>
@@ -9030,8 +9030,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="47">
-          
+        <li class="covered" data-hits="1" data-linenumber="47">
+          <span class="hits">1</span>
           
           <code class="ruby">	def camper_to_counselor_ratio</code>
         </li>
@@ -9042,7 +9042,7 @@
           <code class="ruby">		1.0 * number_of_counselors / number_of_counselors</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="49">
+        <li class="never" data-hits="" data-linenumber="49">
           
           
           <code class="ruby">	end</code>
@@ -9060,8 +9060,8 @@
           <code class="ruby">	# private methods</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="52">
-          
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
           
           <code class="ruby">	private</code>
         </li>
@@ -9072,16 +9072,16 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="54">
-          
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
           
           <code class="ruby">	def camp_is_not_a_duplicate</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="55">
+        <li class="covered" data-hits="7" data-linenumber="55">
+          <span class="hits">7</span>
           
-          
-          <code class="ruby">		return true if time_slot.nil? || start_date.nil? || location_id.nil?</code>
+          <code class="ruby">		return true if start_date.nil? || location_id.nil?</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="56">
@@ -9093,16 +9093,16 @@
         <li class="missed" data-hits="0" data-linenumber="57">
           
           
-          <code class="ruby">			errors.add(:time_slot, &#39;already exists for start date, time slot and location&#39;)</code>
+          <code class="ruby">			errors.add(:start_date, &#39;already exists for start date and location&#39;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="58">
+        <li class="never" data-hits="" data-linenumber="58">
           
           
           <code class="ruby">		end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="59">
+        <li class="never" data-hits="" data-linenumber="59">
           
           
           <code class="ruby">	end</code>
@@ -9114,8 +9114,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="61">
-          
+        <li class="covered" data-hits="1" data-linenumber="61">
+          <span class="hits">1</span>
           
           <code class="ruby">	def check_if_has_campers</code>
         </li>
@@ -9126,7 +9126,7 @@
           <code class="ruby">		errors.add(:base, &#39;Cannot be deleted because there are current registrations.&#39;) unless campers.empty?</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="63">
+        <li class="never" data-hits="" data-linenumber="63">
           
           
           <code class="ruby">	end</code>
@@ -9138,7 +9138,7 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="65">
+        <li class="never" data-hits="" data-linenumber="65">
           
           
           <code class="ruby">end</code>
@@ -10000,13 +10000,13 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">	belongs_to :branch</code>
+          <code class="ruby">	has_many :camps</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">	has_many :camps</code>
+          <code class="ruby">	belongs_to :branch</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -10333,7 +10333,7 @@
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">	validates_presence_of(:skill_id)</code>
+          <code class="ruby">	validates_presence_of(:badge_id)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
