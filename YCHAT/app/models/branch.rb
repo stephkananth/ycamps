@@ -1,17 +1,18 @@
 class Branch < ApplicationRecord
-	# relationships
-	has_many :locations
-	has_many :camps, through: :locations
+  # relationships
+  has_many :locations
+  has_many :camps, through: :locations
 
-	# validations
-	validates :name, presence: true, uniqueness: { case_sensitive: false }
+  # validations
+  validates :name, presence: true, uniqueness: {case_sensitive: false}
 
-	# scopes
-	scope :alphabetical, -> { order('name') }
+  # scopes
+  scope :alphabetical, -> {order('name')}
+  scope :search, ->(term) {where('name LIKE ?', "#{term}%")}
 
-	# callbacks
+  # callbacks
 
-	# public methods
+  # public methods
 
-	# private methods
+  # private methods
 end

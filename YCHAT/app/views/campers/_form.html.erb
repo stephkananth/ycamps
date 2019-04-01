@@ -4,9 +4,9 @@
       <h2><%= pluralize(camper.errors.count, "error") %> prohibited this camper from being saved:</h2>
 
       <ul>
-      <% camper.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% camper.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>

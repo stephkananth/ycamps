@@ -1,20 +1,21 @@
 class CounselorCampBadge < ApplicationRecord
-	# relationships
-	belongs_to :camp_badge
-	belongs_to :counselor
+  # relationships
+  belongs_to :camp_badge
+  belongs_to :counselor
 
-	# validations
-	validates_presence_of :camp_badge_id, :counselor_id
+  # validations
+  validates_presence_of :camp_badge_id, :counselor_id
   validate :counselor_is_not_already_assigned_to_camp, on: :create
   validate :counselor_is_not_already_assigned_to_another_camp_at_same_time, on: :create
 
-	# scopes
+  # scopes
 
-	# callbacks
+  # callbacks
 
-	# public methods
+  # public methods
 
-	# private methods
+  # private methods
+
   private
 
   def counselor_is_not_already_assigned_to_camp

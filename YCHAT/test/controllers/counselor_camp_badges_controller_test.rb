@@ -17,7 +17,7 @@ class CounselorCampBadgesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create counselor_camp_badge" do
     assert_difference('CounselorCampBadge.count') do
-      post counselor_camp_badges_url, params: { counselor_camp_badge: { camp_badge_id: @counselor_camp_badge.camp_badge_id, counselor_id: @counselor_camp_badge.counselor_id } }
+      post counselor_camp_badges_url, params: {counselor_camp_badge: {camp_badge_id: @counselor_camp_badge.camp_badge_id, counselor_id: @counselor_camp_badge.counselor_id}}
     end
 
     assert_redirected_to counselor_camp_badge_url(CounselorCampBadge.last)
@@ -34,7 +34,7 @@ class CounselorCampBadgesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update counselor_camp_badge" do
-    patch counselor_camp_badge_url(@counselor_camp_badge), params: { counselor_camp_badge: { camp_badge_id: @counselor_camp_badge.camp_badge_id, counselor_id: @counselor_camp_badge.counselor_id } }
+    patch counselor_camp_badge_url(@counselor_camp_badge), params: {counselor_camp_badge: {camp_badge_id: @counselor_camp_badge.camp_badge_id, counselor_id: @counselor_camp_badge.counselor_id}}
     assert_redirected_to counselor_camp_badge_url(@counselor_camp_badge)
   end
 

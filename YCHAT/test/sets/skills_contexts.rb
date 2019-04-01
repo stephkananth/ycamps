@@ -7,9 +7,9 @@ module Contexts
     end
 
     def delete_skills
-			@skill1.delete
-			@skill2.delete
-			@skill3.delete
+      @skill1.delete
+      @skill2.delete
+      @skill3.delete
     end
   end
 end

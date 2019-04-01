@@ -17,7 +17,7 @@ class CampersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create camper" do
     assert_difference('Camper.count') do
-      post campers_url, params: { camper: { active: @camper.active, first_name: @camper.first_name, last_name: @camper.last_name, parent_id: @camper.parent_id } }
+      post campers_url, params: {camper: {active: @camper.active, first_name: @camper.first_name, last_name: @camper.last_name, parent_id: @camper.parent_id}}
     end
 
     assert_redirected_to camper_url(Camper.last)
@@ -34,7 +34,7 @@ class CampersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update camper" do
-    patch camper_url(@camper), params: { camper: { active: @camper.active, first_name: @camper.first_name, last_name: @camper.last_name, parent_id: @camper.parent_id } }
+    patch camper_url(@camper), params: {camper: {active: @camper.active, first_name: @camper.first_name, last_name: @camper.last_name, parent_id: @camper.parent_id}}
     assert_redirected_to camper_url(@camper)
   end
 

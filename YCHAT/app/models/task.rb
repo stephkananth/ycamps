@@ -1,17 +1,16 @@
 class Task < ApplicationRecord
-	# relationships
-	belongs_to :badge
+  # relationships
+  belongs_to :badge
 
-	# validations
-	validates_presence_of(:badge_id)
+  # validations
+  validates_presence_of(:badge_id)
 
-	# scopes
-	scope :in_order, -> { order('level') }
+  # scopes
+  scope :in_order, -> {order('level')}
 
-	# callbacks
+  # callbacks
 
-	# public methods
+  # public methods
 
-	# private methods
-
+  # private methods
 end

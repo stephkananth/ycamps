@@ -17,7 +17,7 @@ class ParentsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create parent" do
     assert_difference('Parent.count') do
-      post parents_url, params: { parent: { active: @parent.active, user_id: @parent.user_id } }
+      post parents_url, params: {parent: {active: @parent.active, user_id: @parent.user_id}}
     end
 
     assert_redirected_to parent_url(Parent.last)
@@ -34,7 +34,7 @@ class ParentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update parent" do
-    patch parent_url(@parent), params: { parent: { active: @parent.active, user_id: @parent.user_id } }
+    patch parent_url(@parent), params: {parent: {active: @parent.active, user_id: @parent.user_id}}
     assert_redirected_to parent_url(@parent)
   end
 

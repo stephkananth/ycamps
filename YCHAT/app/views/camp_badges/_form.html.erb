@@ -4,9 +4,9 @@
       <h2><%= pluralize(camp_badge.errors.count, "error") %> prohibited this camp_badge from being saved:</h2>
 
       <ul>
-      <% camp_badge.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% camp_badge.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>

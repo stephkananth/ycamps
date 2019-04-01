@@ -17,7 +17,7 @@ class CampsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create camp" do
     assert_difference('Camp.count') do
-      post camps_url, params: { camp: { active: @camp.active, end_date: @camp.end_date, location_id: @camp.location_id, name: @camp.name, program: @camp.program, start_date: @camp.start_date } }
+      post camps_url, params: {camp: {active: @camp.active, end_date: @camp.end_date, location_id: @camp.location_id, name: @camp.name, program: @camp.program, start_date: @camp.start_date}}
     end
 
     assert_redirected_to camp_url(Camp.last)
@@ -34,7 +34,7 @@ class CampsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update camp" do
-    patch camp_url(@camp), params: { camp: { active: @camp.active, end_date: @camp.end_date, location_id: @camp.location_id, name: @camp.name, program: @camp.program, start_date: @camp.start_date } }
+    patch camp_url(@camp), params: {camp: {active: @camp.active, end_date: @camp.end_date, location_id: @camp.location_id, name: @camp.name, program: @camp.program, start_date: @camp.start_date}}
     assert_redirected_to camp_url(@camp)
   end
 
