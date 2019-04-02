@@ -14,7 +14,7 @@ class CamperCampBadge < ApplicationRecord
   # callbacks
 
   # public methods
-  def is_completed
+  def is_completed?
     camper_camp_badge_tasks.completed.count == 4
   end
 
