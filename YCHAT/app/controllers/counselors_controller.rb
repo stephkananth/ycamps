@@ -1,5 +1,5 @@
 class CounselorsController < ApplicationController
-  before_action :set_counselor, only: [:show, :edit, :update, :destroy]
+  before_action :set_counselor, only: %i[show edit update destroy]
 
   # GET /counselors
   # GET /counselors.json
@@ -9,8 +9,7 @@ class CounselorsController < ApplicationController
 
   # GET /counselors/1
   # GET /counselors/1.json
-  def show
-  end
+  def show; end
 
   # GET /counselors/new
   def new
@@ -18,8 +17,7 @@ class CounselorsController < ApplicationController
   end
 
   # GET /counselors/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /counselors
   # POST /counselors.json
@@ -28,11 +26,11 @@ class CounselorsController < ApplicationController
 
     respond_to do |format|
       if @counselor.save
-        format.html {redirect_to @counselor, notice: 'Counselor was successfully created.'}
-        format.json {render :show, status: :created, location: @counselor}
+        format.html { redirect_to @counselor, notice: 'Counselor was successfully created.' }
+        format.json { render :show, status: :created, location: @counselor }
       else
-        format.html {render :new}
-        format.json {render json: @counselor.errors, status: :unprocessable_entity}
+        format.html { render :new }
+        format.json { render json: @counselor.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -42,11 +40,11 @@ class CounselorsController < ApplicationController
   def update
     respond_to do |format|
       if @counselor.update(counselor_params)
-        format.html {redirect_to @counselor, notice: 'Counselor was successfully updated.'}
-        format.json {render :show, status: :ok, location: @counselor}
+        format.html { redirect_to @counselor, notice: 'Counselor was successfully updated.' }
+        format.json { render :show, status: :ok, location: @counselor }
       else
-        format.html {render :edit}
-        format.json {render json: @counselor.errors, status: :unprocessable_entity}
+        format.html { render :edit }
+        format.json { render json: @counselor.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,8 +54,8 @@ class CounselorsController < ApplicationController
   def destroy
     @counselor.destroy
     respond_to do |format|
-      format.html {redirect_to counselors_url, notice: 'Counselor was successfully destroyed.'}
-      format.json {head :no_content}
+      format.html { redirect_to counselors_url, notice: 'Counselor was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 
