@@ -1,2 +1,15 @@
 *.xml
 *.iml
+*.log
+YCHAT/log/test.log
+YCHAT/log/development.log
+YCHAT/db/test.sqlite3
+YCHAT/db/development.sqlite3
+YCHAT/coverage/index.html
+YCHAT/coverage/.resultset.json
+*.log
+*.log
+YCHAT/db/test.sqlite3
+*.sqlite3
+YCHAT/coverage/index.html
+YCHAT/coverage/.resultset.json
