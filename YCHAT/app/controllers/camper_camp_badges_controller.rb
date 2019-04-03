@@ -1,5 +1,5 @@
 class CamperCampBadgesController < ApplicationController
-  before_action :set_camper_camp_badge, only: [:show, :edit, :update, :destroy]
+  before_action :set_camper_camp_badge, only: %i[show edit update destroy]
 
   # GET /camper_camp_badges
   # GET /camper_camp_badges.json
@@ -9,8 +9,7 @@ class CamperCampBadgesController < ApplicationController
 
   # GET /camper_camp_badges/1
   # GET /camper_camp_badges/1.json
-  def show
-  end
+  def show; end
 
   # GET /camper_camp_badges/new
   def new
@@ -18,8 +17,7 @@ class CamperCampBadgesController < ApplicationController
   end
 
   # GET /camper_camp_badges/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /camper_camp_badges
   # POST /camper_camp_badges.json
@@ -28,11 +26,11 @@ class CamperCampBadgesController < ApplicationController
 
     respond_to do |format|
       if @camper_camp_badge.save
-        format.html {redirect_to @camper_camp_badge, notice: 'Camper camp badge was successfully created.'}
-        format.json {render :show, status: :created, location: @camper_camp_badge}
+        format.html { redirect_to @camper_camp_badge, notice: 'Camper camp badge was successfully created.' }
+        format.json { render :show, status: :created, location: @camper_camp_badge }
       else
-        format.html {render :new}
-        format.json {render json: @camper_camp_badge.errors, status: :unprocessable_entity}
+        format.html { render :new }
+        format.json { render json: @camper_camp_badge.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -42,11 +40,11 @@ class CamperCampBadgesController < ApplicationController
   def update
     respond_to do |format|
       if @camper_camp_badge.update(camper_camp_badge_params)
-        format.html {redirect_to @camper_camp_badge, notice: 'Camper camp badge was successfully updated.'}
-        format.json {render :show, status: :ok, location: @camper_camp_badge}
+        format.html { redirect_to @camper_camp_badge, notice: 'Camper camp badge was successfully updated.' }
+        format.json { render :show, status: :ok, location: @camper_camp_badge }
       else
-        format.html {render :edit}
-        format.json {render json: @camper_camp_badge.errors, status: :unprocessable_entity}
+        format.html { render :edit }
+        format.json { render json: @camper_camp_badge.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,8 +54,8 @@ class CamperCampBadgesController < ApplicationController
   def destroy
     @camper_camp_badge.destroy
     respond_to do |format|
-      format.html {redirect_to camper_camp_badges_url, notice: 'Camper camp badge was successfully destroyed.'}
-      format.json {head :no_content}
+      format.html { redirect_to camper_camp_badges_url, notice: 'Camper camp badge was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 

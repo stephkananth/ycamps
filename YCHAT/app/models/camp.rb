@@ -11,15 +11,15 @@ class Camp < ApplicationRecord
 
   # validations
   validates_presence_of :location_id, :name, :program, :start_date, :end_date
-  validates_date :start_date, on_or_after: -> {Date.today}, on_or_after_message: 'cannot be in the past', on: :create
+  validates_date :start_date, on_or_after: -> { Date.today }, on_or_after_message: 'cannot be in the past', on: :create
   validates_date :end_date, on_or_after: :start_date
   validate :camp_is_not_a_duplicate, on: :create
 
   # scopes
-  scope :alphabetical, -> {order('name')}
-  scope :chronological, -> {order('start_date', 'end_date')}
-  scope :upcoming, -> {where('start_date >= ?', Date.today)}
-  scope :past, -> {where('end_date < ?', Date.today)}
+  scope :alphabetical, -> { order('name') }
+  scope :chronological, -> { order('start_date', 'end_date') }
+  scope :upcoming, -> { where('start_date >= ?', Date.today) }
+  scope :past, -> { where('end_date < ?', Date.today) }
 
   # callbacks
   before_destroy do
@@ -36,11 +36,11 @@ class Camp < ApplicationRecord
   end
 
   def number_of_campers
-    campers.to_a.count
+    campers.to_a.size
   end
 
   def number_of_counselors
-    counselors.to_a.count
+    counselors.to_a.size
   end
 
   def camper_to_counselor_ratio
@@ -53,6 +53,7 @@ class Camp < ApplicationRecord
 
   def camp_is_not_a_duplicate
     return true if start_date.nil? || location_id.nil?
+
     if already_exists?
       errors.add(:start_date, 'already exists for start date and location')
     end

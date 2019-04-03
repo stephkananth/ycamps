@@ -301,6 +301,22 @@ Migrating to FixUserPassword (20190325042954)
             FROM sqlite_temp_master
             WHERE name='index_tasks_on_badge_id' AND type='index'
 [0m
+<<<<<<< HEAD
+Started GET "/" for 127.0.0.1 at 2019-04-02 15:31:59 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stephkananth/.rvm/gems/ruby-2.4.3/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stephkananth/.rvm/gems/ruby-2.4.3/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 21ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/camps" for 127.0.0.1 at 2019-04-02 15:32:04 -0400
+Processing by CampsController#index as HTML
+  Rendering camps/index.html.erb within layouts/application
+  [1m[36mCamp Load (0.8ms)[0m  [1m[34mSELECT "camps".* FROM "camps"[0m
+  Rendered camps/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 516ms (Views: 490.2ms | ActiveRecord: 1.1ms)
+=======
 Started GET "/" for ::1 at 2019-04-02 20:28:07 -0400
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by Rails::WelcomeController#index as HTML
@@ -1945,5 +1961,6 @@ Processing by SessionsController#new as HTML
   Rendering sessions/new.html.erb within layouts/application
   Rendered sessions/new.html.erb within layouts/application (2.7ms)
 Completed 200 OK in 147ms (Views: 131.3ms)
+>>>>>>> master
 
 

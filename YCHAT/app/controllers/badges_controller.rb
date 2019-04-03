@@ -1,5 +1,5 @@
 class BadgesController < ApplicationController
-  before_action :set_badge, only: [:show, :edit, :update, :destroy]
+  before_action :set_badge, only: %i[show edit update destroy]
 
   # GET /badges
   # GET /badges.json
@@ -10,6 +10,7 @@ class BadgesController < ApplicationController
   # GET /badges/1
   # GET /badges/1.json
   def show
+    @camp_badges = @badge.camp_badges.alphabetical
   end
 
   # GET /badges/new
@@ -18,8 +19,7 @@ class BadgesController < ApplicationController
   end
 
   # GET /badges/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /badges
   # POST /badges.json
@@ -28,11 +28,11 @@ class BadgesController < ApplicationController
 
     respond_to do |format|
       if @badge.save
-        format.html {redirect_to @badge, notice: 'Badge was successfully created.'}
-        format.json {render :show, status: :created, location: @badge}
+        format.html { redirect_to @badge, notice: 'Badge was successfully created.' }
+        format.json { render :show, status: :created, location: @badge }
       else
-        format.html {render :new}
-        format.json {render json: @badge.errors, status: :unprocessable_entity}
+        format.html { render :new }
+        format.json { render json: @badge.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -42,11 +42,11 @@ class BadgesController < ApplicationController
   def update
     respond_to do |format|
       if @badge.update(badge_params)
-        format.html {redirect_to @badge, notice: 'Badge was successfully updated.'}
-        format.json {render :show, status: :ok, location: @badge}
+        format.html { redirect_to @badge, notice: 'Badge was successfully updated.' }
+        format.json { render :show, status: :ok, location: @badge }
       else
-        format.html {render :edit}
-        format.json {render json: @badge.errors, status: :unprocessable_entity}
+        format.html { render :edit }
+        format.json { render json: @badge.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,8 +56,8 @@ class BadgesController < ApplicationController
   def destroy
     @badge.destroy
     respond_to do |format|
-      format.html {redirect_to badges_url, notice: 'Badge was successfully destroyed.'}
-      format.json {head :no_content}
+      format.html { redirect_to badges_url, notice: 'Badge was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 

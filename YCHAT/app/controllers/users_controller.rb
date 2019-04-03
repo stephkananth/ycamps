@@ -1,12 +1,18 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: %i[show edit update destroy]
   # before_action :check_login, only: [:show, :edit, :update, :destroy]
   # authorize_resource
 
   # GET /users
   # GET /users.json
   def index
-     @users = User.all.paginate(:page => params[:users]).per_page(10)
+    @users = User.all
+  end
+
+  # GET /users/1
+  # GET /users/1.json
+  def show
+    @users = User.all.paginate(page: params[:users]).per_page(10)
   end
 
   # GET /users/new
@@ -16,16 +22,16 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    @user.role = "counselor" if current_user.role?(:counselor)
-    @user.role = "admin" if current_user.role?(:admin)
+    @user.role = 'counselor' if current_user.role?(:counselor)
+    @user.role = 'admin' if current_user.role?(:admin)
   end
 
   # POST /users
   # POST /users.json
   def create
     @user = User.new(user_params)
-    @user.role = "counselor" if current_user.role?(:counselor)
-    @user.role = "admin" if current_user.role?(:admin)
+    @user.role = 'counselor' if current_user.role?(:counselor)
+    @user.role = 'admin' if current_user.role?(:admin)
     if @user.save
       flash[:notice] = "Successfully added #{@user.username} as a user."
       redirect_to users_url
@@ -56,6 +62,7 @@ class UsersController < ApplicationController
   end
 
   private
+
   def set_user
     @user = User.find(params[:id])
   end
