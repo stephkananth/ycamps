@@ -9,7 +9,9 @@ class CampBadgesController < ApplicationController
 
   # GET /camp_badges/1
   # GET /camp_badges/1.json
-  def show; end
+  def show
+    @campers = @camp_badge.campers
+  end
 
   # GET /camp_badges/new
   def new

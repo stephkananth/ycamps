@@ -9,7 +9,9 @@ class BranchesController < ApplicationController
 
   # GET /branches/1
   # GET /branches/1.json
-  def show; end
+  def show
+    @camps = @branch.camps
+  end
 
   # GET /branches/new
   def new

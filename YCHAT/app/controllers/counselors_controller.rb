@@ -9,7 +9,9 @@ class CounselorsController < ApplicationController
 
   # GET /counselors/1
   # GET /counselors/1.json
-  def show; end
+  def show
+    @camps = @counselor.camp_badges.camps
+  end
 
   # GET /counselors/new
   def new

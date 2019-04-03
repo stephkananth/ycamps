@@ -13,6 +13,9 @@ class Badge < ApplicationRecord
   # callbacks
 
   # public methods
+  def camps
+
+  end
 
   # private methods
 end

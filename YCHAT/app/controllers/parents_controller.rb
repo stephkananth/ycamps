@@ -9,7 +9,9 @@ class ParentsController < ApplicationController
 
   # GET /parents/1
   # GET /parents/1.json
-  def show; end
+  def show
+    @campers = @parent.campers
+  end
 
   # GET /parents/new
   def new

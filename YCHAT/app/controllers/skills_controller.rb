@@ -9,7 +9,9 @@ class SkillsController < ApplicationController
 
   # GET /skills/1
   # GET /skills/1.json
-  def show; end
+  def show
+    @badges = @skill.badges
+  end
 
   # GET /skills/new
   def new
