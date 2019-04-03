@@ -1,16 +1,21 @@
 class CounselorsController < ApplicationController
   before_action :set_counselor, only: %i[show edit update destroy]
+  # before_action :check_login
+  # authorize_resource
 
   # GET /counselors
   # GET /counselors.json
   def index
-    @counselors = Counselor.all
+    @counselors = Counselor.all.alphabetical.paginate(page: params[:instructors]).per_page(10)
   end
 
   # GET /counselors/1
   # GET /counselors/1.json
   def show
     @camps = @counselor.camp_badges.camps
+    # @past_camps = @counselors.camps.past.chronological
+    # @upcoming_camps = @instructor.camps.upcoming.chronological
+    # @campers = @
   end
 
   # GET /counselors/new
