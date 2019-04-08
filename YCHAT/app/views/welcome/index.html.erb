@@ -1,0 +1,5 @@
+<% if logged_in? && ( current_user.role?(:admin) ) %>
+ 	<%= render :partial => "admin_dashboard" %>
+<% else %>
+ 	<%= render :partial => "index_guest" %>
+<% end %>

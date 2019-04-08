@@ -4775,3 +4775,350 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 40ms (Views: 36.5ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for ::1 at 2019-04-07 21:01:07 -0400
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+pg (1.1.4) lib/pg.rb:56:in `initialize'
+pg (1.1.4) lib/pg.rb:56:in `new'
+pg (1.1.4) lib/pg.rb:56:in `connect'
+activerecord (5.1.7) lib/active_record/connection_adapters/postgresql_adapter.rb:705:in `connect'
+activerecord (5.1.7) lib/active_record/connection_adapters/postgresql_adapter.rb:229:in `initialize'
+activerecord (5.1.7) lib/active_record/connection_adapters/postgresql_adapter.rb:46:in `new'
+activerecord (5.1.7) lib/active_record/connection_adapters/postgresql_adapter.rb:46:in `postgresql_connection'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:761:in `new_connection'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:805:in `checkout_new_connection'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:784:in `try_to_checkout_new_connection'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:745:in `acquire_connection'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:502:in `checkout'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:376:in `connection'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:933:in `retrieve_connection'
+activerecord (5.1.7) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.7) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.7) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.7) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+rack-contrib (2.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.5.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-04-07 21:05:06 -0400
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+pg (1.1.4) lib/pg.rb:56:in `initialize'
+pg (1.1.4) lib/pg.rb:56:in `new'
+pg (1.1.4) lib/pg.rb:56:in `connect'
+activerecord (5.1.7) lib/active_record/connection_adapters/postgresql_adapter.rb:705:in `connect'
+activerecord (5.1.7) lib/active_record/connection_adapters/postgresql_adapter.rb:229:in `initialize'
+activerecord (5.1.7) lib/active_record/connection_adapters/postgresql_adapter.rb:46:in `new'
+activerecord (5.1.7) lib/active_record/connection_adapters/postgresql_adapter.rb:46:in `postgresql_connection'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:761:in `new_connection'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:805:in `checkout_new_connection'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:784:in `try_to_checkout_new_connection'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:745:in `acquire_connection'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:502:in `checkout'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:376:in `connection'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:933:in `retrieve_connection'
+activerecord (5.1.7) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.7) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.7) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.7) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+rack-contrib (2.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.5.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-04-07 21:08:15 -0400
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "myapp_development" does not exist
+):
+  
+activerecord (5.1.7) lib/active_record/connection_adapters/postgresql_adapter.rb:709:in `rescue in connect'
+activerecord (5.1.7) lib/active_record/connection_adapters/postgresql_adapter.rb:704:in `connect'
+activerecord (5.1.7) lib/active_record/connection_adapters/postgresql_adapter.rb:229:in `initialize'
+activerecord (5.1.7) lib/active_record/connection_adapters/postgresql_adapter.rb:46:in `new'
+activerecord (5.1.7) lib/active_record/connection_adapters/postgresql_adapter.rb:46:in `postgresql_connection'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:761:in `new_connection'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:805:in `checkout_new_connection'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:784:in `try_to_checkout_new_connection'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:745:in `acquire_connection'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:502:in `checkout'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:376:in `connection'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:933:in `retrieve_connection'
+activerecord (5.1.7) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.7) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.7) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.7) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+rack-contrib (2.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.5.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (16.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20190318171006)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "password" character varying, "first_name" character varying, "last_name" character varying, "role" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190318171006"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateParents (20190318171020)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE TABLE "parents" ("id" bigserial primary key, "user_id" bigint, "active" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_27c1d070f3"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_parents_on_user_id" ON "parents"  ("user_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190318171020"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCounselors (20190318171025)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "counselors" ("id" bigserial primary key, "user_id" bigint, "active" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_2b40193edf"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_counselors_on_user_id" ON "counselors"  ("user_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190318171025"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCampers (20190318171031)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "campers" ("id" bigserial primary key, "parent_id" bigint, "first_name" character varying, "last_name" character varying, "active" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_7b54a3d909"
+FOREIGN KEY ("parent_id")
+  REFERENCES "parents" ("id")
+)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_campers_on_parent_id" ON "campers"  ("parent_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190318171031"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBranches (20190318171050)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "branches" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190318171050"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLocations (20190318171054)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "name" character varying, "branch_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_08771c5210"
+FOREIGN KEY ("branch_id")
+  REFERENCES "branches" ("id")
+)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_locations_on_branch_id" ON "locations"  ("branch_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190318171054"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCamps (20190318171101)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "camps" ("id" bigserial primary key, "name" character varying, "program" character varying, "start_date" date, "end_date" date, "active" boolean, "location_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_49325a0599"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_camps_on_location_id" ON "camps"  ("location_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190318171101"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCampBadges (20190318171110)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "camp_badges" ("id" bigserial primary key, "badge_id" bigint, "camp_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_1561d3748c"
+FOREIGN KEY ("badge_id")
+  REFERENCES "badges" ("id")
+, CONSTRAINT "fk_rails_6b58b637bd"
+FOREIGN KEY ("camp_id")
+  REFERENCES "camps" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBadges (20190318171102)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (32.9ms)[0m  [1m[35mCREATE TABLE "badges" ("id" bigserial primary key, "name" character varying, "level" integer, "description" text, "skill_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_b47583f721"
+FOREIGN KEY ("skill_id")
+  REFERENCES "skills" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSkills (20190318171007)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "skills" ("id" bigserial primary key, "name" character varying, "category" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190318171007"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBadges (20190318171102)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "badges" ("id" bigserial primary key, "name" character varying, "level" integer, "description" text, "skill_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_b47583f721"
+FOREIGN KEY ("skill_id")
+  REFERENCES "skills" ("id")
+)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_badges_on_skill_id" ON "badges"  ("skill_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190318171102"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCampBadges (20190318171110)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "camp_badges" ("id" bigserial primary key, "badge_id" bigint, "camp_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_1561d3748c"
+FOREIGN KEY ("badge_id")
+  REFERENCES "badges" ("id")
+, CONSTRAINT "fk_rails_6b58b637bd"
+FOREIGN KEY ("camp_id")
+  REFERENCES "camps" ("id")
+)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_camp_badges_on_badge_id" ON "camp_badges"  ("badge_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_camp_badges_on_camp_id" ON "camp_badges"  ("camp_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190318171110"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTasks (20190318171127)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" bigserial primary key, "name" character varying, "description" text, "badge_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_f95e53d445"
+FOREIGN KEY ("badge_id")
+  REFERENCES "badges" ("id")
+)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_tasks_on_badge_id" ON "tasks"  ("badge_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190318171127"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCounselorCampBadges (20190318171146)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "counselor_camp_badges" ("id" bigserial primary key, "camp_badge_id" bigint, "counselor_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_5eeeb5a748"
+FOREIGN KEY ("camp_badge_id")
+  REFERENCES "camp_badges" ("id")
+, CONSTRAINT "fk_rails_2866b79dd0"
+FOREIGN KEY ("counselor_id")
+  REFERENCES "counselors" ("id")
+)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_counselor_camp_badges_on_camp_badge_id" ON "counselor_camp_badges"  ("camp_badge_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_counselor_camp_badges_on_counselor_id" ON "counselor_camp_badges"  ("counselor_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190318171146"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCamperCampBadges (20190318171152)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "camper_camp_badges" ("id" bigserial primary key, "camp_badge_id" bigint, "camper_id" bigint, "completed" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_add6a2f59e"
+FOREIGN KEY ("camp_badge_id")
+  REFERENCES "camp_badges" ("id")
+, CONSTRAINT "fk_rails_70bdc09457"
+FOREIGN KEY ("camper_id")
+  REFERENCES "campers" ("id")
+)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_camper_camp_badges_on_camp_badge_id" ON "camper_camp_badges"  ("camp_badge_id")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_camper_camp_badges_on_camper_id" ON "camper_camp_badges"  ("camper_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190318171152"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCamperCampBadgeTasks (20190318171158)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "camper_camp_badge_tasks" ("id" bigserial primary key, "camper_camp_badge_id" bigint, "task_id" bigint, "completed" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_e94489eb0b"
+FOREIGN KEY ("camper_camp_badge_id")
+  REFERENCES "camper_camp_badges" ("id")
+, CONSTRAINT "fk_rails_746a025bbb"
+FOREIGN KEY ("task_id")
+  REFERENCES "tasks" ("id")
+)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_camper_camp_badge_tasks_on_camper_camp_badge_id" ON "camper_camp_badge_tasks"  ("camper_camp_badge_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_camper_camp_badge_tasks_on_task_id" ON "camper_camp_badge_tasks"  ("task_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190318171158"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to FixUserPassword (20190325042954)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "users" RENAME COLUMN "password" TO "password_digest"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190325042954"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-08 01:13:05.383705"], ["updated_at", "2019-04-08 01:13:05.383705"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2019-04-07 21:13:29 -0400
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_index_guest.html.erb (1.2ms)
+  Rendered home/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 5942ms (Views: 5933.1ms | ActiveRecord: 0.0ms)
+
+
