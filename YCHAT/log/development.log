@@ -4775,3 +4775,3057 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 40ms (Views: 36.5ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/login" for ::1 at 2019-04-06 14:25:46 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 60ms (Views: 57.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 14:26:35 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 14:27:09 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_admin_dashboard.html.erb (0.2ms)
+  Rendered home/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 56ms (Views: 51.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 14:27:12 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_admin_dashboard.html.erb (0.2ms)
+  Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 42ms (Views: 38.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 14:27:23 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_index_guest.html.erb (0.5ms)
+  Rendered home/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 14:27:25 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 40ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 14:27:59 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_index_guest.html.erb (0.4ms)
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Started GET "/login" for ::1 at 2019-04-06 14:28:01 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 3313ms (Views: 3310.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 2052ms (Views: 2047.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 14:28:14 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 1880ms (Views: 1876.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 14:28:26 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 1931ms (Views: 1927.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 14:28:30 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_index_guest.html.erb (0.6ms)
+  Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 46ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 14:28:31 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 14:28:50 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 1819ms (Views: 1815.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 14:30:21 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 2068ms (Views: 2064.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 14:30:34 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 1844ms (Views: 1840.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 14:30:46 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 1862ms (Views: 1857.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 14:30:54 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 1814ms (Views: 1811.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 14:31:01 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 14:31:23 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 1921ms (Views: 1917.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 14:32:15 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_index_guest.html.erb (0.6ms)
+  Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 2071ms (Views: 2067.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 14:32:30 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 47ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 14:35:22 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_admin_dashboard.html.erb (0.3ms)
+  Rendered home/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 74ms (Views: 69.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 14:37:25 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 2312ms (Views: 2308.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 14:37:36 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1910ms (Views: 1907.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 14:38:03 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1954ms (Views: 1950.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 14:38:19 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1867ms (Views: 1863.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 14:38:34 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 2215ms (Views: 2211.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 14:38:47 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fVDSpWtnSlNcuHdClQaNQnPqNwqqY5PxJzD7CRGYQB6qGr+oeQ/z1TJbQwZjru6CR9tXgYDymvksgPeAIr5jbA==", "email"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 44ms (Views: 41.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 14:39:25 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fVDSpWtnSlNcuHdClQaNQnPqNwqqY5PxJzD7CRGYQB6qGr+oeQ/z1TJbQwZjru6CR9tXgYDymvksgPeAIr5jbA==", "email"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 2016ms (Views: 2013.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 14:41:11 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fVDSpWtnSlNcuHdClQaNQnPqNwqqY5PxJzD7CRGYQB6qGr+oeQ/z1TJbQwZjru6CR9tXgYDymvksgPeAIr5jbA==", "email"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 2154ms (Views: 2150.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 14:41:27 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fVDSpWtnSlNcuHdClQaNQnPqNwqqY5PxJzD7CRGYQB6qGr+oeQ/z1TJbQwZjru6CR9tXgYDymvksgPeAIr5jbA==", "email"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 1884ms (Views: 1880.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 14:41:54 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fVDSpWtnSlNcuHdClQaNQnPqNwqqY5PxJzD7CRGYQB6qGr+oeQ/z1TJbQwZjru6CR9tXgYDymvksgPeAIr5jbA==", "email"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 2292ms (Views: 2289.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 14:42:04 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fVDSpWtnSlNcuHdClQaNQnPqNwqqY5PxJzD7CRGYQB6qGr+oeQ/z1TJbQwZjru6CR9tXgYDymvksgPeAIr5jbA==", "email"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 1845ms (Views: 1841.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 14:43:17 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fVDSpWtnSlNcuHdClQaNQnPqNwqqY5PxJzD7CRGYQB6qGr+oeQ/z1TJbQwZjru6CR9tXgYDymvksgPeAIr5jbA==", "email"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 1868ms (Views: 1865.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 14:44:24 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fVDSpWtnSlNcuHdClQaNQnPqNwqqY5PxJzD7CRGYQB6qGr+oeQ/z1TJbQwZjru6CR9tXgYDymvksgPeAIr5jbA==", "email"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 2052ms (Views: 2048.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 14:44:41 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fVDSpWtnSlNcuHdClQaNQnPqNwqqY5PxJzD7CRGYQB6qGr+oeQ/z1TJbQwZjru6CR9tXgYDymvksgPeAIr5jbA==", "email"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 1944ms (Views: 1940.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 14:44:54 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fVDSpWtnSlNcuHdClQaNQnPqNwqqY5PxJzD7CRGYQB6qGr+oeQ/z1TJbQwZjru6CR9tXgYDymvksgPeAIr5jbA==", "email"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 1835ms (Views: 1832.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 14:45:04 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fVDSpWtnSlNcuHdClQaNQnPqNwqqY5PxJzD7CRGYQB6qGr+oeQ/z1TJbQwZjru6CR9tXgYDymvksgPeAIr5jbA==", "email"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 1910ms (Views: 1906.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 14:45:08 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fVDSpWtnSlNcuHdClQaNQnPqNwqqY5PxJzD7CRGYQB6qGr+oeQ/z1TJbQwZjru6CR9tXgYDymvksgPeAIr5jbA==", "email"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 43ms (Views: 40.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 14:45:17 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fVDSpWtnSlNcuHdClQaNQnPqNwqqY5PxJzD7CRGYQB6qGr+oeQ/z1TJbQwZjru6CR9tXgYDymvksgPeAIr5jbA==", "email"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1823ms (Views: 1819.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 14:45:29 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_admin_dashboard.html.erb (0.3ms)
+  Rendered home/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 14:57:12 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (9.6ms)
+Completed 500  in 19ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial home/__dashboard, application/__dashboard with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/views"
+):
+    1: <% if logged_in? %>
+    2:  	<%= render :partial => "_dashboard" %>
+    3: <% else %>
+    4:  	<%= render :partial => "index_guest" %>
+    5: <% end %>
+  
+app/views/home/index.html.erb:2:in `_app_views_home_index_html_erb__3232898806844941770_70284246076960'
+Started GET "/" for ::1 at 2019-04-06 14:58:23 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (6.3ms)
+Completed 500  in 16ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial home/__dashboard, application/__dashboard with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/views"
+):
+    1: <% if logged_in? %>
+    2:  	<%= render :partial => "_dashboard" %>
+    3: <% else %>
+    4:  	<%= render :partial => "index_guest" %>
+    5: <% end %>
+  
+app/views/home/index.html.erb:2:in `_app_views_home_index_html_erb__3232898806844941770_70284308446160'
+Started GET "/" for ::1 at 2019-04-06 14:59:04 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_index_guest.html.erb (0.5ms)
+  Rendered home/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 59ms (Views: 55.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 14:59:06 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 57ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 14:59:15 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DfFu2n0dfqmxSfG5Edg0sfuGcgrVgHIBZnPtNq+142eIBsJB1He6dd17ZxKgOF2QfDrxV/RQ7tqYEuuc0Cagsw==", "email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 61ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 14:59:15 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (6.1ms)
+Completed 500  in 14ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial home/__dashboard, application/__dashboard with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/views"
+):
+    1: <% if logged_in? %>
+    2:  	<%= render :partial => "_dashboard" %>
+    3: <% else %>
+    4:  	<%= render :partial => "index_guest" %>
+    5: <% end %>
+  
+app/views/home/index.html.erb:2:in `_app_views_home_index_html_erb__3232898806844941770_70284311814500'
+Started GET "/" for ::1 at 2019-04-06 14:59:49 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.6ms)
+  Rendered home/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 58ms (Views: 54.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 14:59:54 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/0ev4Cr4WbNYoy9plUHK0MkIUUTNxPDhpc/tWEhbybghx0A6mQ0kl3p7Uu60/tLEHPxo4TVYeXS4DD01L4f//Q==", "email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 59ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 14:59:54 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.3ms)
+  Rendered home/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 43ms (Views: 40.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 14:59:56 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.3ms)
+  Rendered home/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 46ms (Views: 42.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 15:00:43 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.3ms)
+  Rendered home/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 2239ms (Views: 2235.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 15:00:51 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_index_guest.html.erb (0.7ms)
+  Rendered home/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 15:00:54 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 44ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 15:16:29 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.3ms)
+  Rendered home/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 62ms (Views: 58.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 15:20:03 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.3ms)
+  Rendered home/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 2203ms (Views: 2199.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 15:45:59 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (6.1ms)
+  Rendered home/index.html.erb within layouts/application (13.0ms)
+Completed 500  in 25ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Missing partial partials/_nav with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/views"
+):
+     8: 		    </p>
+     9: 	  	</div>
+    10: 	</div>
+    11: 	<%= render :partial => "partials/nav" %>
+    12: </div>
+  
+app/views/home/_dashboard.html.erb:11:in `_app_views_home__dashboard_html_erb___4581669620233520616_70284238013240'
+app/views/home/index.html.erb:2:in `_app_views_home_index_html_erb__3232898806844941770_70284287188440'
+Started GET "/" for ::1 at 2019-04-06 15:46:17 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (3.9ms)
+  Rendered home/index.html.erb within layouts/application (7.8ms)
+Completed 500  in 17ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial ../partials/_nav with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/views"
+):
+     8: 		    </p>
+     9: 	  	</div>
+    10: 	</div>
+    11: 	<%= render :partial => "../partials/nav" %>
+    12: </div>
+  
+app/views/home/_dashboard.html.erb:11:in `_app_views_home__dashboard_html_erb___4581669620233520616_70284258102440'
+app/views/home/index.html.erb:2:in `_app_views_home_index_html_erb__3232898806844941770_70284290496740'
+Started GET "/" for ::1 at 2019-04-06 15:46:58 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (4.6ms)
+  Rendered home/index.html.erb within layouts/application (8.5ms)
+Completed 500  in 17ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial ../partials/_nav with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/views"
+):
+     8: 		    </p>
+     9: 	  	</div>
+    10: 	</div>
+    11: 	<%= render :partial => "../partials/nav" %>
+    12: </div>
+  
+app/views/home/_dashboard.html.erb:11:in `_app_views_home__dashboard_html_erb___4581669620233520616_70284250884480'
+app/views/home/index.html.erb:2:in `_app_views_home_index_html_erb__3232898806844941770_70284312389300'
+Started GET "/" for ::1 at 2019-04-06 15:47:07 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (4.2ms)
+  Rendered home/index.html.erb within layouts/application (7.9ms)
+Completed 500  in 18ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial ../partials/_nav with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/views"
+):
+     8: 		    </p>
+     9: 	  	</div>
+    10: 	</div>
+    11: 	<%= render :partial => "../partials/nav" %>
+    12: </div>
+  
+app/views/home/_dashboard.html.erb:11:in `_app_views_home__dashboard_html_erb___4581669620233520616_70284321296380'
+app/views/home/index.html.erb:2:in `_app_views_home_index_html_erb__3232898806844941770_70284314711660'
+Started GET "/" for ::1 at 2019-04-06 15:47:11 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_index_guest.html.erb (0.7ms)
+  Rendered home/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 57ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 15:47:13 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 15:47:20 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/TqR8bICV5nL+YaE/EAyWcCA4OEEbIrKcJ07i1wm+LVE6g5SJOcHJBVojGY5zi+FDme6sN5kJZh5MwEGQkEpMw==", "email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 60ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 15:47:20 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (4.0ms)
+  Rendered home/index.html.erb within layouts/application (7.6ms)
+Completed 500  in 16ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial ../partials/_nav with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/views"
+):
+     8: 		    </p>
+     9: 	  	</div>
+    10: 	</div>
+    11: 	<%= render :partial => "../partials/nav" %>
+    12: </div>
+  
+app/views/home/_dashboard.html.erb:11:in `_app_views_home__dashboard_html_erb___4581669620233520616_70284291788020'
+app/views/home/index.html.erb:2:in `_app_views_home_index_html_erb__3232898806844941770_70284305181280'
+Started GET "/home" for ::1 at 2019-04-06 15:48:23 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.3ms)
+  Rendered home/index.html.erb within layouts/application (7.8ms)
+Completed 500  in 17ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial partials/_nav with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/views"
+):
+    1: <% if logged_in? %>
+    2:  	<%= render :partial => "dashboard" %>
+    3:  	<%= render :partial => "partials/nav" %>
+    4: <% else %>
+    5:  	<%= render :partial => "index_guest" %>
+    6: <% end %>
+  
+app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__3232898806844941770_70284256868180'
+Started GET "/home" for ::1 at 2019-04-06 15:48:26 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.3ms)
+  Rendered home/index.html.erb within layouts/application (7.1ms)
+Completed 500  in 15ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial partials/_nav with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/views"
+):
+    1: <% if logged_in? %>
+    2:  	<%= render :partial => "dashboard" %>
+    3:  	<%= render :partial => "partials/nav" %>
+    4: <% else %>
+    5:  	<%= render :partial => "index_guest" %>
+    6: <% end %>
+  
+app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__3232898806844941770_70284310451620'
+Started GET "/home" for ::1 at 2019-04-06 15:48:39 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.4ms)
+  Rendered home/index.html.erb within layouts/application (4.0ms)
+Completed 500  in 25ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial partials/_nav with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/views"
+):
+    14:         <%= yield %>
+    15:      </div>
+    16:      <% if logged_in? %>
+    17:         <%= render :partial => "partials/nav" %>
+    18:     <% end %>
+    19:     <%= javascript_include_tag "application" %>
+    20:   </body>
+  
+app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___1303424699764384655_70284301117700'
+Started GET "/home" for ::1 at 2019-04-06 15:48:40 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.3ms)
+  Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 500  in 23ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial partials/_nav with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/views"
+):
+    14:         <%= yield %>
+    15:      </div>
+    16:      <% if logged_in? %>
+    17:         <%= render :partial => "partials/nav" %>
+    18:     <% end %>
+    19:     <%= javascript_include_tag "application" %>
+    20:   </body>
+  
+app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___1303424699764384655_70284311261880'
+Started GET "/home" for ::1 at 2019-04-06 15:49:01 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.4ms)
+  Rendered home/index.html.erb within layouts/application (4.2ms)
+  Rendered partials/_navigation.html.erb (0.3ms)
+Completed 200 OK in 57ms (Views: 53.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 15:49:05 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.5ms)
+  Rendered home/index.html.erb within layouts/application (5.1ms)
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 49ms (Views: 45.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 15:49:41 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.2ms)
+  Rendered home/_dashboard.html.erb (2.5ms)
+  Rendered home/index.html.erb within layouts/application (6.5ms)
+  Rendered partials/_navigation.html.erb (0.0ms)
+Completed 200 OK in 56ms (Views: 52.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 15:49:48 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.3ms)
+  Rendered home/_dashboard.html.erb (2.9ms)
+  Rendered home/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 45ms (Views: 41.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 15:50:05 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.2ms)
+  Rendered home/_dashboard.html.erb (3.1ms)
+  Rendered home/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 55ms (Views: 51.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 15:50:36 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.3ms)
+  Rendered home/_dashboard.html.erb (2.5ms)
+  Rendered home/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 15:51:46 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.4ms)
+  Rendered home/_dashboard.html.erb (3.5ms)
+  Rendered home/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 15:52:23 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.3ms)
+  Rendered home/_dashboard.html.erb (3.1ms)
+  Rendered home/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 15:53:08 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.3ms)
+  Rendered home/_dashboard.html.erb (2.7ms)
+  Rendered home/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 50ms (Views: 46.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 15:53:17 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.2ms)
+  Rendered home/_dashboard.html.erb (2.4ms)
+  Rendered home/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 45ms (Views: 41.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 15:53:52 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.3ms)
+  Rendered home/_dashboard.html.erb (3.0ms)
+  Rendered home/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 46ms (Views: 43.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 15:55:43 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.3ms)
+  Rendered home/_dashboard.html.erb (3.0ms)
+  Rendered home/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/logout" for ::1 at 2019-04-06 15:55:45 -0400
+Processing by SessionsController#destroy as HTML
+Completed 500  in 306ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `destroy_cart' for #<SessionsController:0x00007fd8adb4beb8>
+Did you mean?  destroy):
+  
+app/controllers/sessions_controller.rb:17:in `destroy'
+Started GET "/" for ::1 at 2019-04-06 15:56:08 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+  Rendered home/_dashboard.html.erb (3.4ms)
+  Rendered home/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 68ms (Views: 64.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 15:56:10 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+  Rendered home/_dashboard.html.erb (3.2ms)
+  Rendered home/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 91ms (Views: 88.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/logout" for ::1 at 2019-04-06 15:56:12 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 15:56:12 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_index_guest.html.erb (0.4ms)
+  Rendered home/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 44ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 15:57:27 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_index_guest.html.erb (0.6ms)
+  Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 53ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 15:57:28 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 46ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 15:57:45 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 2166ms (Views: 2162.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 15:57:59 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vDRKCMvtc+EWSmyzY3hME5BE2mrY+wMjQSKhKAfbBvRitKXSeBgOxTSSETRCx1QHRbDjzyBnirZc4XFFYAcwsQ==", "email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 96ms (Views: 37.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 15:58:08 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RNPyTWSqzl06kgX723AD8946vb9dE0m6tmFm0yyGm3+aUx2X11+zeRhKeHz6zxvnC86EGqWPwC+rora+S1qtOg==", "email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 59ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 15:58:08 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.4ms)
+  Rendered home/_dashboard.html.erb (3.2ms)
+  Rendered home/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 47ms (Views: 43.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:07:30 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+  Rendered home/_dashboard.html.erb (5.2ms)
+  Rendered home/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 2221ms (Views: 2217.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:07:50 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+  Rendered home/_dashboard.html.erb (4.2ms)
+  Rendered home/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 2127ms (Views: 2123.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:07:58 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+  Rendered home/_dashboard.html.erb (3.3ms)
+  Rendered home/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 1920ms (Views: 1916.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:08:11 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.4ms)
+  Rendered home/_dashboard.html.erb (2.7ms)
+  Rendered home/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 2070ms (Views: 2066.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:10:37 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+  Rendered home/_dashboard.html.erb (3.1ms)
+  Rendered home/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 2280ms (Views: 2276.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:10:56 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+  Rendered home/_dashboard.html.erb (2.8ms)
+  Rendered home/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 1869ms (Views: 1864.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:12:14 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+  Rendered home/_dashboard.html.erb (3.8ms)
+  Rendered home/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 2162ms (Views: 2158.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 16:12:21 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vDRKCMvtc+EWSmyzY3hME5BE2mrY+wMjQSKhKAfbBvRitKXSeBgOxTSSETRCx1QHRbDjzyBnirZc4XFFYAcwsQ==", "email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 98ms (Views: 38.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:12:23 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+  Rendered home/_dashboard.html.erb (3.0ms)
+  Rendered home/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 51ms (Views: 48.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:15:22 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.4ms)
+  Rendered home/_dashboard.html.erb (3.4ms)
+  Rendered home/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 65ms (Views: 61.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:19:24 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.4ms)
+  Rendered home/_dashboard.html.erb (3.2ms)
+  Rendered home/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 2071ms (Views: 2067.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:19:34 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+  Rendered home/_dashboard.html.erb (2.8ms)
+  Rendered home/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 2197ms (Views: 2193.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:19:57 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+  Rendered home/_dashboard.html.erb (3.1ms)
+  Rendered home/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 2018ms (Views: 2014.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:20:08 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+  Rendered home/_dashboard.html.erb (4.6ms)
+  Rendered home/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 1957ms (Views: 1953.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:20:23 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+  Rendered home/_dashboard.html.erb (3.3ms)
+  Rendered home/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 70ms (Views: 66.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:20:28 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_index_guest.html.erb (0.6ms)
+  Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 16:20:30 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 16:20:50 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1mjt3pIee7K7YzM342lMEMikA+nqoI3vGyKlLJSXPYTTd3wpcxuurw9YsttNDE9LJ6sYFYl8dY+LyMWFiRlsTw==", "email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 59ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:20:50 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+  Rendered home/_dashboard.html.erb (3.3ms)
+  Rendered home/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 57ms (Views: 52.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:21:00 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+  Rendered home/_dashboard.html.erb (3.3ms)
+  Rendered home/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 2051ms (Views: 2046.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:21:08 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.4ms)
+  Rendered home/_dashboard.html.erb (2.9ms)
+  Rendered home/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 1949ms (Views: 1946.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:21:20 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+  Rendered home/_dashboard.html.erb (3.0ms)
+  Rendered home/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 1925ms (Views: 1922.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:21:38 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+  Rendered home/_dashboard.html.erb (3.0ms)
+  Rendered home/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 1988ms (Views: 1984.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:22:34 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+  Rendered home/_dashboard.html.erb (3.3ms)
+  Rendered home/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 1903ms (Views: 1899.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:22:49 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+  Rendered home/_dashboard.html.erb (2.9ms)
+  Rendered home/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 1935ms (Views: 1931.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:24:01 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+  Rendered home/_dashboard.html.erb (2.8ms)
+  Rendered home/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 1865ms (Views: 1861.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:24:05 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+  Rendered home/_dashboard.html.erb (3.0ms)
+  Rendered home/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 48ms (Views: 45.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:24:45 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.4ms)
+  Rendered home/_dashboard.html.erb (2.8ms)
+  Rendered home/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 1981ms (Views: 1977.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:25:35 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.8ms)
+  Rendered home/_dashboard.html.erb (3.1ms)
+  Rendered home/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 1891ms (Views: 1887.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:25:47 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+  Rendered home/_dashboard.html.erb (3.8ms)
+  Rendered home/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 1992ms (Views: 1988.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:26:02 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+  Rendered home/_dashboard.html.erb (3.3ms)
+  Rendered home/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 1837ms (Views: 1834.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:26:26 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.4ms)
+  Rendered home/_dashboard.html.erb (2.7ms)
+  Rendered home/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 1923ms (Views: 1919.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:26:36 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+  Rendered home/_dashboard.html.erb (3.0ms)
+  Rendered home/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 1863ms (Views: 1860.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:27:07 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+  Rendered home/_dashboard.html.erb (2.9ms)
+  Rendered home/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 1917ms (Views: 1913.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:28:13 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+  Rendered home/_dashboard.html.erb (3.9ms)
+  Rendered home/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 2022ms (Views: 2018.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:28:52 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+  Rendered home/_dashboard.html.erb (3.0ms)
+  Rendered home/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 1948ms (Views: 1944.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:29:10 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.4ms)
+  Rendered home/_dashboard.html.erb (2.9ms)
+  Rendered home/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 1832ms (Views: 1827.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:29:24 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+  Rendered home/_dashboard.html.erb (2.9ms)
+  Rendered home/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 1977ms (Views: 1974.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:29:46 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+  Rendered home/_dashboard.html.erb (3.5ms)
+  Rendered home/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 2110ms (Views: 2106.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/logout" for ::1 at 2019-04-06 16:30:54 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/home
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:30:54 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_index_guest.html.erb (0.6ms)
+  Rendered home/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 56ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 16:30:55 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 47ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 16:31:06 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WbbOixCDJdpXIhQcjZh0GbsXBjKU4cAuqF8qYUvQcTaHNiFRo3ZY/nX6aZusJ2wNbuM/l2x9Sbu1nPoMLAxHcw==", "email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 60ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:31:06 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.8ms)
+  Rendered home/_dashboard.html.erb (4.7ms)
+  Rendered home/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 67ms (Views: 64.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:33:22 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+  Rendered home/_dashboard.html.erb (3.5ms)
+  Rendered home/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 2167ms (Views: 2163.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:34:14 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.4ms)
+  Rendered home/_dashboard.html.erb (2.9ms)
+  Rendered home/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 1856ms (Views: 1851.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 16:34:25 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.4ms)
+  Rendered home/_dashboard.html.erb (2.8ms)
+  Rendered home/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 2050ms (Views: 2045.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 17:24:24 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (1.0ms)
+  Rendered home/_dashboard.html.erb (3.9ms)
+  Rendered home/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 79ms (Views: 75.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 17:24:26 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.0ms)
+  Rendered users/edit.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 54ms (Views: 48.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-06 17:24:35 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Completed 500  in 12ms (ActiveRecord: 0.1ms)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `paginate' for #<User::ActiveRecord_Relation:0x00007fd8abdf3f50>):
+  
+app/controllers/users_controller.rb:15:in `show'
+Started GET "/users/1/edit" for ::1 at 2019-04-06 17:24:39 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.8ms)
+  Rendered users/edit.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 46ms (Views: 41.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 17:29:05 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered partials/_form_structure.html.erb (153.8ms)
+  Rendered users/edit.html.erb within layouts/application (157.2ms)
+Completed 500  in 168ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `simple_form_for' for #<#<Class:0x00007fd8af052d70>:0x00007fd8adf3ff38>
+Did you mean?  simple_format):
+    3:     <div class="card">    
+    4:       <div class="card-content">
+    5:         <span class="card-title"><%= type_of_form %></span>
+    6:         <%= simple_form_for(object) do |f| %>
+    7:           <%= f.error_notification %>
+    8:           <%= f.error :base %>
+    9:           <div class="row">
+  
+app/views/partials/_form_structure.html.erb:6:in `_app_views_partials__form_structure_html_erb___3471997652676027248_70284303949520'
+app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__1353629378682282653_70284304066780'
+Started GET "/users/1/edit" for ::1 at 2019-04-06 17:31:22 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered partials/_form_structure.html.erb (70.6ms)
+  Rendered users/edit.html.erb within layouts/application (75.9ms)
+Completed 500  in 116ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (Missing partial users/_fields, application/_fields with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/views"
+):
+     8:           <%= f.error :base %>
+     9:           <div class="row">
+    10:             <div class="form-inputs">
+    11:               <%= render partial: "#{fields}", locals: { f: f } %>
+    12:           </div>
+    13:         </div>
+    14:       </div>
+  
+app/views/partials/_form_structure.html.erb:11:in `block in _app_views_partials__form_structure_html_erb___2108623008513440359_70233966264940'
+app/views/partials/_form_structure.html.erb:6:in `_app_views_partials__form_structure_html_erb___2108623008513440359_70233966264940'
+app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb___4195388647562800067_70233961263700'
+Started GET "/users/1/edit" for ::1 at 2019-04-06 17:36:49 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered partials/_form_structure.html.erb (6.7ms)
+  Rendered users/edit.html.erb within layouts/application (11.2ms)
+Completed 500  in 24ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Missing partial users/_fields, application/_fields with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/views"
+):
+     8:           <%= f.error :base %>
+     9:           <div class="row">
+    10:             <div class="form-inputs">
+    11:               <%= render partial: "#{fields}", locals: { f: f } %>
+    12:           </div>
+    13:         </div>
+    14:       </div>
+  
+app/views/partials/_form_structure.html.erb:11:in `block in _app_views_partials__form_structure_html_erb___2108623008513440359_70234015990080'
+app/views/partials/_form_structure.html.erb:6:in `_app_views_partials__form_structure_html_erb___2108623008513440359_70234015990080'
+app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb___4195388647562800067_70234016025540'
+Started GET "/users/1/edit" for ::1 at 2019-04-06 17:38:09 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (440.8ms)
+  Rendered partials/_form_structure.html.erb (445.0ms)
+  Rendered users/edit.html.erb within layouts/application (448.5ms)
+Completed 500  in 459ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `active' for #<User:0x00007fc14314acd8>
+Did you mean?  acts_like?):
+    5: <% if current_user.role?(:admin) %>
+    6:   <%= f.input :role, collection: User::ROLES, include_blank: true %>
+    7: <% end %>
+    8: <%= f.input :active %>
+  
+app/views/users/_user_fields.html.erb:8:in `_app_views_users__user_fields_html_erb__1357634294108321623_70234015308220'
+app/views/partials/_form_structure.html.erb:11:in `block in _app_views_partials__form_structure_html_erb___2108623008513440359_70234015341580'
+app/views/partials/_form_structure.html.erb:6:in `_app_views_partials__form_structure_html_erb___2108623008513440359_70234015341580'
+app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb___4195388647562800067_70234015385160'
+Started GET "/users/1/edit" for ::1 at 2019-04-06 17:38:19 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (4.5ms)
+  Rendered partials/_form_structure.html.erb (7.7ms)
+  Rendered users/edit.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 423ms (Views: 417.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 17:39:03 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (6.5ms)
+  Rendered partials/_form_structure.html.erb (9.8ms)
+  Rendered users/edit.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 65ms (Views: 60.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 17:39:38 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (5.7ms)
+  Rendered partials/_form_structure.html.erb (9.3ms)
+  Rendered users/edit.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 57ms (Views: 52.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 17:41:16 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (10.8ms)
+  Rendered partials/_form_structure.html.erb (15.7ms)
+  Rendered users/edit.html.erb within layouts/application (20.9ms)
+  Rendered partials/_navigation.html.erb (1.0ms)
+Completed 200 OK in 91ms (Views: 84.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 17:43:17 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (6.9ms)
+  Rendered partials/_form_structure.html.erb (11.4ms)
+  Rendered users/edit.html.erb within layouts/application (16.7ms)
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 2780ms (Views: 2774.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 17:43:31 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (5.6ms)
+  Rendered partials/_form_structure.html.erb (9.8ms)
+  Rendered users/edit.html.erb within layouts/application (13.8ms)
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 64ms (Views: 56.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 17:43:39 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (7.0ms)
+  Rendered partials/_form_structure.html.erb (15.0ms)
+  Rendered users/edit.html.erb within layouts/application (18.1ms)
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 56.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 17:43:41 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.4ms)
+  Rendered home/index.html.erb within layouts/application (4.6ms)
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 47ms (Views: 43.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 17:43:45 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.3ms)
+  Rendered home/index.html.erb within layouts/application (3.8ms)
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 44ms (Views: 40.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 17:44:20 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.5ms)
+  Rendered home/index.html.erb within layouts/application (5.1ms)
+  Rendered partials/_navigation.html.erb (1.1ms)
+Completed 200 OK in 2163ms (Views: 2159.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 17:45:27 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.4ms)
+  Rendered home/index.html.erb within layouts/application (4.5ms)
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 51ms (Views: 47.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 17:45:31 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (6.5ms)
+  Rendered partials/_form_structure.html.erb (10.6ms)
+  Rendered users/edit.html.erb within layouts/application (14.3ms)
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 61ms (Views: 54.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:09:30 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (10.5ms)
+  Rendered partials/_form_structure.html.erb (16.1ms)
+  Rendered users/edit.html.erb within layouts/application (20.0ms)
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 99ms (Views: 91.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 18:10:45 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.6ms)
+  Rendered home/index.html.erb within layouts/application (5.4ms)
+  Rendered partials/_navigation.html.erb (1.1ms)
+Completed 200 OK in 91ms (Views: 87.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:10:47 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (6.5ms)
+  Rendered partials/_form_structure.html.erb (10.3ms)
+  Rendered users/edit.html.erb within layouts/application (14.7ms)
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 67ms (Views: 61.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:19:55 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (9.2ms)
+  Rendered partials/_form_structure.html.erb (14.7ms)
+  Rendered users/edit.html.erb within layouts/application (19.4ms)
+  Rendered partials/_page_structure.html.erb (0.5ms)
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 106ms (Views: 100.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 18:19:58 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.5ms)
+  Rendered home/index.html.erb within layouts/application (5.2ms)
+  Rendered partials/_page_structure.html.erb (0.3ms)
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 63ms (Views: 59.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 18:23:33 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.5ms)
+  Rendered home/index.html.erb within layouts/application (5.2ms)
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 81ms (Views: 77.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:23:36 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (6.5ms)
+  Rendered partials/_form_structure.html.erb (11.1ms)
+  Rendered users/edit.html.erb within layouts/application (15.9ms)
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 69ms (Views: 64.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:23:51 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (6.2ms)
+  Rendered partials/_form_structure.html.erb (10.2ms)
+  Rendered users/edit.html.erb within layouts/application (14.4ms)
+  Rendered partials/_navigation.html.erb (0.9ms)
+Completed 200 OK in 78ms (Views: 70.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:24:06 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (7.5ms)
+  Rendered partials/_form_structure.html.erb (10.9ms)
+  Rendered users/edit.html.erb within layouts/application (15.5ms)
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 59ms (Views: 53.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:24:41 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (7.6ms)
+  Rendered partials/_form_structure.html.erb (16.7ms)
+  Rendered users/edit.html.erb within layouts/application (20.1ms)
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 73ms (Views: 67.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:26:30 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (7.4ms)
+  Rendered partials/_form_structure.html.erb (11.2ms)
+  Rendered users/edit.html.erb within layouts/application (14.9ms)
+  Rendered partials/_navigation.html.erb (1.2ms)
+Completed 200 OK in 63ms (Views: 56.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:27:59 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (5.6ms)
+  Rendered partials/_form_structure.html.erb (9.7ms)
+  Rendered users/edit.html.erb within layouts/application (13.7ms)
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 77ms (Views: 70.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:31:43 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (6.8ms)
+  Rendered partials/_form_structure.html.erb (10.6ms)
+  Rendered users/edit.html.erb within layouts/application (15.4ms)
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 84ms (Views: 77.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:32:19 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (6.0ms)
+  Rendered partials/_form_structure.html.erb (9.5ms)
+  Rendered users/edit.html.erb within layouts/application (13.4ms)
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 64ms (Views: 57.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:36:26 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (9.3ms)
+  Rendered partials/_form_structure.html.erb (13.6ms)
+  Rendered users/edit.html.erb within layouts/application (19.1ms)
+  Rendered partials/_navigation.html.erb (0.9ms)
+Completed 200 OK in 101ms (Views: 91.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:38:12 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (10.1ms)
+  Rendered partials/_form_structure.html.erb (14.4ms)
+  Rendered users/edit.html.erb within layouts/application (19.2ms)
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 84ms (Views: 78.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:38:30 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (323.9ms)
+  Rendered partials/_form_structure.html.erb (326.7ms)
+  Rendered users/edit.html.erb within layouts/application (330.7ms)
+Completed 500  in 342ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007fc13c2d8200>:0x00007fc144d8cfb8>):
+    1: <%= f.label :email %>
+    2: <%= f.input :email, class: "form-control" %>
+    3: 
+    4: <%= f.input :password, label_html: { class: 'form-control' } %>
+  
+app/views/users/_user_fields.html.erb:1:in `_app_views_users__user_fields_html_erb__1357634294108321623_70234040388940'
+app/views/partials/_form_structure.html.erb:6:in `block in _app_views_partials__form_structure_html_erb___2108623008513440359_70233973616040'
+app/views/partials/_form_structure.html.erb:1:in `_app_views_partials__form_structure_html_erb___2108623008513440359_70233973616040'
+app/views/users/edit.html.erb:8:in `_app_views_users_edit_html_erb___4195388647562800067_70234030240600'
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:39:16 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (7.8ms)
+  Rendered partials/_form_structure.html.erb (12.3ms)
+  Rendered users/edit.html.erb within layouts/application (16.1ms)
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 87ms (Views: 80.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:41:19 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (7.9ms)
+  Rendered partials/_form_structure.html.erb (12.2ms)
+  Rendered users/edit.html.erb within layouts/application (16.6ms)
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 82ms (Views: 74.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:42:26 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (8.3ms)
+  Rendered partials/_form_structure.html.erb (12.7ms)
+  Rendered users/edit.html.erb within layouts/application (18.2ms)
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 84ms (Views: 77.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:43:14 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (10.2ms)
+  Rendered partials/_form_structure.html.erb (14.4ms)
+  Rendered users/edit.html.erb within layouts/application (18.0ms)
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 77ms (Views: 69.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:43:59 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (8.2ms)
+  Rendered partials/_form_structure.html.erb (12.2ms)
+  Rendered users/edit.html.erb within layouts/application (16.5ms)
+  Rendered partials/_navigation.html.erb (1.4ms)
+Completed 200 OK in 95ms (Views: 85.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:44:12 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500  in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `role?' for nil:NilClass):
+  
+app/controllers/users_controller.rb:25:in `edit'
+Started GET "/" for ::1 at 2019-04-06 18:44:24 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_index_guest.html.erb (0.7ms)
+  Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 53ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-06 18:44:26 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 46ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2019-04-06 18:44:34 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PTZkM5iO0OUVXIZ9Onr4v3HmeiLb3ovDq0dGG4frPyEa0wVNukTUGskOGzVMiENdbfCoNBcl9Tzf/QzupD1ATg==", "email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 86ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 18:44:34 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.5ms)
+  Rendered home/index.html.erb within layouts/application (4.9ms)
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 54ms (Views: 50.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:44:38 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (7.7ms)
+  Rendered partials/_form_structure.html.erb (11.8ms)
+  Rendered users/edit.html.erb within layouts/application (15.5ms)
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 65ms (Views: 56.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:46:04 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (10.5ms)
+  Rendered partials/_form_structure.html.erb (16.7ms)
+  Rendered users/edit.html.erb within layouts/application (21.8ms)
+  Rendered partials/_navigation.html.erb (1.2ms)
+Completed 200 OK in 95ms (Views: 86.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:46:12 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (9.0ms)
+  Rendered partials/_form_structure.html.erb (13.6ms)
+  Rendered users/edit.html.erb within layouts/application (17.4ms)
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 70ms (Views: 62.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:46:57 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (0.8ms)
+  Rendered partials/_form_structure.html.erb (4.7ms)
+  Rendered users/edit.html.erb within layouts/application (9.2ms)
+Completed 500  in 24ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/views/users/_user_fields.html.erb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+:class => "form-control" label: false );@output_buffer.safe_
+                              ^):
+  
+app/views/users/_user_fields.html.erb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/users/_user_fields.html.erb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/partials/_form_structure.html.erb:6:in `block in _app_views_partials__form_structure_html_erb___2108623008513440359_70234040601240'
+app/views/partials/_form_structure.html.erb:1:in `_app_views_partials__form_structure_html_erb___2108623008513440359_70234040601240'
+app/views/users/edit.html.erb:8:in `_app_views_users_edit_html_erb___4195388647562800067_70234040637100'
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:47:05 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (8.9ms)
+  Rendered partials/_form_structure.html.erb (13.2ms)
+  Rendered users/edit.html.erb within layouts/application (16.6ms)
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 73ms (Views: 67.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:48:00 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (474.4ms)
+  Rendered partials/_form_structure.html.erb (521.5ms)
+  Rendered users/edit.html.erb within layouts/application (526.3ms)
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 941ms (Views: 906.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:48:10 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (6.8ms)
+  Rendered partials/_form_structure.html.erb (10.3ms)
+  Rendered users/edit.html.erb within layouts/application (14.8ms)
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 64ms (Views: 59.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2019-04-06 18:48:28 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.3ms)
+  Rendered home/index.html.erb within layouts/application (5.2ms)
+  Rendered partials/_navigation.html.erb (0.9ms)
+Completed 200 OK in 80ms (Views: 76.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:48:30 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (7.4ms)
+  Rendered partials/_form_structure.html.erb (11.4ms)
+  Rendered users/edit.html.erb within layouts/application (15.6ms)
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 87ms (Views: 81.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:49:32 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (10.2ms)
+  Rendered partials/_form_structure.html.erb (13.7ms)
+  Rendered users/edit.html.erb within layouts/application (18.6ms)
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 69ms (Views: 62.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:49:55 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (6.9ms)
+  Rendered partials/_form_structure.html.erb (10.8ms)
+  Rendered users/edit.html.erb within layouts/application (14.6ms)
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 70ms (Views: 63.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:54:04 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (0.8ms)
+  Rendered partials/_form_structure.html.erb (3.8ms)
+  Rendered users/edit.html.erb within layouts/application (8.0ms)
+Completed 500  in 20ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/views/users/_user_fields.html.erb:13: syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+st_name, class "form-control", label: false );@output_buffer
+                              ^):
+  
+app/views/users/_user_fields.html.erb:13: syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+app/views/users/_user_fields.html.erb:13: syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+app/views/partials/_form_structure.html.erb:4:in `block in _app_views_partials__form_structure_html_erb___3434135706496221335_70158740521460'
+app/views/partials/_form_structure.html.erb:1:in `_app_views_partials__form_structure_html_erb___3434135706496221335_70158740521460'
+app/views/users/edit.html.erb:8:in `_app_views_users_edit_html_erb___3741354292030587705_70158719241680'
+Started GET "/users/1/edit" for ::1 at 2019-04-06 18:54:19 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (7.3ms)
+  Rendered partials/_form_structure.html.erb (11.2ms)
+  Rendered users/edit.html.erb within layouts/application (15.0ms)
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 74ms (Views: 68.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-07 13:12:16 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (75.4ms)
+  Rendered partials/_form_structure.html.erb (93.0ms)
+  Rendered users/edit.html.erb within layouts/application (108.2ms)
+  Rendered partials/_navigation.html.erb (3.3ms)
+Completed 200 OK in 345ms (Views: 285.2ms | ActiveRecord: 5.0ms)
+
+
+Started PATCH "/users/1" for ::1 at 2019-04-07 13:12:36 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PXQzYPEWHkAq7MlEKaLn8Gnttz7mVQa/3opyqIX48Jjj9Ny6QuNjZAg0tMMIHf/kvBmOmx7JjyrDSaLF4iTG3Q==", "user"=>{"email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Kimberly", "last_name"=>"Black1"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: :first_name, :last_name
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (3.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (10.1ms)
+  Rendered partials/_form_structure.html.erb (15.7ms)
+  Rendered users/edit.html.erb within layouts/application (19.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.9ms)
+Completed 200 OK in 94ms (Views: 75.2ms | ActiveRecord: 4.7ms)
+
+
+Started PATCH "/users/1" for ::1 at 2019-04-07 13:25:36 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ScNuaqN9nGj0mAZM+BqBaE/lHRLefoJVpnfjnnlVja2XQ4GwEIjhTNZAe8vZpZl8mhEktybiC8C7tDPzHom76A==", "user"=>{"email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Kimberly", "last_name"=>"Black"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: :first_name, :last_name
+  [1m[35m (2.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (33.5ms)
+  Rendered partials/_form_structure.html.erb (47.2ms)
+  Rendered users/edit.html.erb within layouts/application (56.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (1.9ms)
+Completed 200 OK in 284ms (Views: 228.3ms | ActiveRecord: 7.3ms)
+
+
+Started PATCH "/users/1" for ::1 at 2019-04-07 13:25:39 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9NDmZmd1anN9JhNjO5HqjWpKTiVlYF+vylZs0+RMgekqUAm81IAXV1/+buQaLvKZv753gJ381jrXlby+g5C3rA==", "user"=>{"email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Kimberly1", "last_name"=>"Black"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: :first_name, :last_name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (11.7ms)
+  Rendered partials/_form_structure.html.erb (17.7ms)
+  Rendered users/edit.html.erb within layouts/application (21.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 101ms (Views: 87.6ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/users/1" for ::1 at 2019-04-07 13:25:50 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yqHC8qYB6eMnOO4YaAbSoHag6LAmKHETXZzY5znv3IYUIS0oFfSUxwXgk59Jucq0o1TRFd60+IZAXwiKXjPqww==", "user"=>{"email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Kimberlly", "last_name"=>"Black"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: :first_name, :last_name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (9.7ms)
+  Rendered partials/_form_structure.html.erb (14.0ms)
+  Rendered users/edit.html.erb within layouts/application (18.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 83ms (Views: 68.9ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/users/1" for ::1 at 2019-04-07 13:31:29 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SPjMeAbUCz25JFvNgAD2HsrtFFwS23HuV0BqOY0d7zyWeCOitSF2GZv8Jkqhv+4KHxkt+epH+HtKg7pU6sHZeQ==", "user"=>{"email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Kimberly", "last_name"=>"Black"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: :first_name, :last_name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (4.1ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$hubqDV3vUzvzobCpOQhAe.37opA6eJczHDuSH6OR4jYb5FtpKnBUy"], ["updated_at", "2019-04-07 17:31:29.566378"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 500  in 123ms (ActiveRecord: 5.8ms)
+
+
+  
+NoMethodError (undefined method `username' for #<User:0x00007f9e3494f910>):
+  
+app/controllers/users_controller.rb:47:in `update'
+Started PATCH "/users/1" for ::1 at 2019-04-07 13:33:03 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yqHC8qYB6eMnOO4YaAbSoHag6LAmKHETXZzY5znv3IYUIS0oFfSUxwXgk59Jucq0o1TRFd60+IZAXwiKXjPqww==", "user"=>{"email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Kimberlly", "last_name"=>"Black"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (7.9ms)
+  Rendered partials/_form_structure.html.erb (17.2ms)
+  Rendered users/edit.html.erb within layouts/application (22.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 116ms (Views: 88.9ms | ActiveRecord: 2.8ms)
+
+
+Started PATCH "/users/1" for ::1 at 2019-04-07 13:33:12 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xXrjveXSWr7RHXdsoKI8pG9x+v/mo7ItZRNOWg/Izl4b+gxnVicnmvPFCuuBHSSwuoXDWh4/O7h40J43aBT4Gw==", "user"=>{"email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Kimberlly", "last_name"=>"Black"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "first_name" = ?, "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["first_name", "Kimberlly"], ["password_digest", "$2a$10$8xCtuHZNtNCIoXK67VOXWOCLMmhDNFFfSive3nRH7lqYaI4F5Z9YW"], ["updated_at", "2019-04-07 17:33:13.053872"], ["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 66ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users" for ::1 at 2019-04-07 13:33:13 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (1.0ms)
+Completed 200 OK in 51ms (Views: 47.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/1" for ::1 at 2019-04-07 13:34:53 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yqHC8qYB6eMnOO4YaAbSoHag6LAmKHETXZzY5znv3IYUIS0oFfSUxwXgk59Jucq0o1TRFd60+IZAXwiKXjPqww==", "user"=>{"email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Kimberlly", "last_name"=>"Black"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (7.3ms)
+  Rendered partials/_form_structure.html.erb (12.0ms)
+  Rendered users/edit.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 87ms (Views: 80.5ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/users/1" for ::1 at 2019-04-07 15:34:03 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yqHC8qYB6eMnOO4YaAbSoHag6LAmKHETXZzY5znv3IYUIS0oFfSUxwXgk59Jucq0o1TRFd60+IZAXwiKXjPqww==", "user"=>{"email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Kimberlly", "last_name"=>"Black"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (45.4ms)
+  Rendered partials/_form_structure.html.erb (58.0ms)
+  Rendered users/edit.html.erb within layouts/application (66.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (1.8ms)
+Completed 200 OK in 305ms (Views: 216.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 15:34:07 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Completed 500  in 22ms (ActiveRecord: 0.4ms)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `paginate' for #<User::ActiveRecord_Relation:0x00007f9e399ded68>):
+  
+app/controllers/users_controller.rb:15:in `show'
+Started PATCH "/users/1" for ::1 at 2019-04-07 15:35:15 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9NDmZmd1anN9JhNjO5HqjWpKTiVlYF+vylZs0+RMgekqUAm81IAXV1/+buQaLvKZv753gJ381jrXlby+g5C3rA==", "user"=>{"email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Kimberly1", "last_name"=>"Black"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (9.6ms)
+  Rendered partials/_form_structure.html.erb (16.8ms)
+  Rendered users/edit.html.erb within layouts/application (22.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 163ms (Views: 113.6ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/users/1" for ::1 at 2019-04-07 15:35:20 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9NDmZmd1anN9JhNjO5HqjWpKTiVlYF+vylZs0+RMgekqUAm81IAXV1/+buQaLvKZv753gJ381jrXlby+g5C3rA==", "user"=>{"email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Kimberly1", "last_name"=>"Black"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (7.1ms)
+  Rendered partials/_form_structure.html.erb (11.5ms)
+  Rendered users/edit.html.erb within layouts/application (15.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 85ms (Views: 75.5ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/users/1" for ::1 at 2019-04-07 15:35:49 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iUGFUK14TIzC139M819cg/Z9eaP9sVgYib/X4jkDh6dXwWqKHo0xqOAPAsvS4ESXI4lABgUt0Y2UfAePXt+x4g==", "user"=>{"email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Kimberly1", "last_name"=>"Black"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "first_name" = ?, "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["first_name", "Kimberly1"], ["password_digest", "$2a$10$v2vT5bs7qu9mHxDl2UEimOXRDBujJj5O22bMF8ZMTwWCKO.WNogIq"], ["updated_at", "2019-04-07 19:35:49.131985"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 75ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users" for ::1 at 2019-04-07 15:35:49 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (1.3ms)
+Completed 200 OK in 63ms (Views: 59.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 15:35:56 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Completed 500  in 14ms (ActiveRecord: 0.1ms)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `paginate' for #<User::ActiveRecord_Relation:0x00007f9e3b0600a0>):
+  
+app/controllers/users_controller.rb:15:in `show'
+Started GET "/users/1" for ::1 at 2019-04-07 15:38:11 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (1.6ms)
+Completed 200 OK in 119ms (Views: 88.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 15:38:24 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 51ms (Views: 44.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-07 15:38:26 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (8.4ms)
+  Rendered partials/_form_structure.html.erb (14.9ms)
+  Rendered users/edit.html.erb within layouts/application (18.8ms)
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 74ms (Views: 66.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 15:38:29 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (2.5ms)
+Completed 200 OK in 64ms (Views: 58.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-07 15:55:02 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (12.6ms)
+  Rendered partials/_form_structure.html.erb (19.2ms)
+  Rendered users/edit.html.erb within layouts/application (24.6ms)
+  Rendered partials/_navigation.html.erb (1.0ms)
+Completed 200 OK in 255ms (Views: 229.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 20:52:50 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (15.0ms)
+Completed 500  in 55ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial partials/_object_options with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/views"
+):
+     5:     <div class="card-body">
+     6:         <h5 class="card-title">Edit Your Information</h5>
+     7:         <p class="card-text">
+     8:           <%= render :partial => "partials/object_options", locals: {model_name: "account", object: @user} %>
+     9:         </p>
+    10:       </div>
+    11:   </div>
+  
+app/views/users/show.html.erb:8:in `_app_views_users_show_html_erb___2941318455567966752_70158735243800'
+Started GET "/users/1" for ::1 at 2019-04-07 20:54:29 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_object_options.html.erb (270.6ms)
+  Rendered users/show.html.erb within layouts/application (273.5ms)
+Completed 500  in 286ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_account_path' for #<#<Class:0x00007f9e3427c818>:0x00007f9e322cf088>
+Did you mean?  edit_parent_path):
+    2: 
+    3: <div class="form-actions">
+    4:   <% if logged_in? && ( current_user.role?(:admin) ) %>
+    5:     <%= link_to(eval("edit_#{model_name}_path(object)"), class: 'waves-effect waves-light btn') do %>
+    6:         &nbsp;<%= "Edit #{opt}" %>
+    7:     <% end %>
+    8:     &nbsp;&nbsp;
+  
+app/views/partials/_object_options.html.erb:5:in `eval'
+app/views/partials/_object_options.html.erb:5:in `eval'
+app/views/partials/_object_options.html.erb:5:in `_app_views_partials__object_options_html_erb___1723772918866238885_70158711658160'
+app/views/users/show.html.erb:8:in `_app_views_users_show_html_erb___2941318455567966752_70158711684400'
+Started GET "/users/1" for ::1 at 2019-04-07 20:54:52 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered partials/_object_options.html.erb (2.2ms)
+  Rendered users/show.html.erb within layouts/application (4.8ms)
+Completed 500  in 16ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/views/partials/_object_options.html.erb:4: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+'.freeze;   if logged_in?) 
+                          ^
+/Users/tiffanychen/Documents/dev/67373/ycamps/YCHAT/app/views/partials/_object_options.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/partials/_object_options.html.erb:4: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/partials/_object_options.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/partials/_object_options.html.erb:4: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/partials/_object_options.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/users/show.html.erb:8:in `_app_views_users_show_html_erb___2941318455567966752_70158785725800'
+Started GET "/users/1" for ::1 at 2019-04-07 20:54:58 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_object_options.html.erb (185.3ms)
+  Rendered users/show.html.erb within layouts/application (187.9ms)
+Completed 500  in 198ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_account_path' for #<#<Class:0x00007f9e3427c818>:0x00007f9e3b0b9948>
+Did you mean?  edit_parent_path):
+    2: 
+    3: <div class="form-actions">
+    4:   <% if logged_in? %>
+    5:     <%= link_to(eval("edit_#{model_name}_path(object)")) do %>
+    6:         &nbsp;<%= "Edit #{opt}" %>
+    7:     <% end %>
+    8:     &nbsp;&nbsp;
+  
+app/views/partials/_object_options.html.erb:5:in `eval'
+app/views/partials/_object_options.html.erb:5:in `eval'
+app/views/partials/_object_options.html.erb:5:in `_app_views_partials__object_options_html_erb___1723772918866238885_70158786037920'
+app/views/users/show.html.erb:8:in `_app_views_users_show_html_erb___2941318455567966752_70158786089380'
+Started GET "/users/1" for ::1 at 2019-04-07 21:34:21 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user_details.html.erb (1.4ms)
+  Rendered users/show.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (2.3ms)
+Completed 200 OK in 82ms (Views: 77.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:36:32 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user_details.html.erb (0.7ms)
+  Rendered users/show.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 78ms (Views: 71.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:37:30 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user_details.html.erb (0.8ms)
+  Rendered users/show.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (1.2ms)
+Completed 200 OK in 2858ms (Views: 2852.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:38:24 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user_details.html.erb (0.9ms)
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.9ms)
+Completed 200 OK in 1988ms (Views: 1981.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:39:19 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user_details.html.erb (2.2ms)
+  Rendered users/show.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 1980ms (Views: 1972.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:39:51 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user_details.html.erb (0.7ms)
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.9ms)
+Completed 200 OK in 63ms (Views: 57.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:42:27 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user_details.html.erb (0.5ms)
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (2.3ms)
+Completed 200 OK in 1926ms (Views: 1920.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:42:47 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user_details.html.erb (0.5ms)
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 52ms (Views: 45.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:42:48 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user_details.html.erb (2.0ms)
+  Rendered users/show.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (2.1ms)
+Completed 200 OK in 90ms (Views: 83.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:43:11 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user_details.html.erb (0.7ms)
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 50ms (Views: 45.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:44:02 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user_details.html.erb (0.7ms)
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.9ms)
+Completed 200 OK in 1939ms (Views: 1934.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:44:12 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user_details.html.erb (2.5ms)
+  Rendered users/show.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (1.2ms)
+Completed 200 OK in 2056ms (Views: 2050.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:44:55 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user_details.html.erb (0.5ms)
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.9ms)
+Completed 200 OK in 1901ms (Views: 1894.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:48:05 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_user_details.html.erb (0.6ms)
+  Rendered users/show.html.erb within layouts/application (4.8ms)
+  Rendered partials/_navigation.html.erb (2.0ms)
+Completed 200 OK in 98ms (Views: 91.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-07 21:51:10 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (9.0ms)
+  Rendered partials/_form_structure.html.erb (13.2ms)
+  Rendered users/edit.html.erb within layouts/application (17.2ms)
+  Rendered partials/_navigation.html.erb (1.2ms)
+Completed 200 OK in 80ms (Views: 73.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-07 21:51:44 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (6.4ms)
+  Rendered partials/_form_structure.html.erb (10.2ms)
+  Rendered users/edit.html.erb within layouts/application (14.6ms)
+  Rendered partials/_navigation.html.erb (1.2ms)
+Completed 200 OK in 66ms (Views: 60.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:51:47 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_user_details.html.erb (0.5ms)
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 47ms (Views: 42.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:53:03 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_user_details.html.erb (0.6ms)
+  Rendered users/show.html.erb within layouts/application (5.0ms)
+  Rendered partials/_navigation.html.erb (0.9ms)
+Completed 200 OK in 2133ms (Views: 2128.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:53:38 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_user_details.html.erb (0.5ms)
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+  Rendered partials/_navigation.html.erb (1.3ms)
+Completed 200 OK in 2221ms (Views: 2215.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:54:15 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_user_details.html.erb (1.9ms)
+  Rendered users/show.html.erb within layouts/application (8.3ms)
+  Rendered partials/_navigation.html.erb (1.4ms)
+Completed 200 OK in 2168ms (Views: 2161.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:54:24 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_user_details.html.erb (0.6ms)
+  Rendered users/show.html.erb within layouts/application (7.9ms)
+  Rendered partials/_navigation.html.erb (1.5ms)
+Completed 200 OK in 2004ms (Views: 1997.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:55:16 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_user_details.html.erb (0.8ms)
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+  Rendered partials/_navigation.html.erb (1.2ms)
+Completed 200 OK in 72ms (Views: 66.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for ::1 at 2019-04-07 21:55:27 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.7ms)
+  Rendered home/index.html.erb within layouts/application (6.4ms)
+  Rendered partials/_navigation.html.erb (0.9ms)
+Completed 200 OK in 54ms (Views: 49.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:55:33 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_user_details.html.erb (0.6ms)
+  Rendered users/show.html.erb within layouts/application (4.8ms)
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 49ms (Views: 44.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:56:00 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_user_details.html.erb (0.5ms)
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+  Rendered partials/_navigation.html.erb (1.0ms)
+Completed 200 OK in 2171ms (Views: 2166.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:56:15 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_user_details.html.erb (0.5ms)
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+  Rendered partials/_navigation.html.erb (1.3ms)
+Completed 200 OK in 1891ms (Views: 1885.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:56:46 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_user_details.html.erb (1.5ms)
+  Rendered users/show.html.erb within layouts/application (12.5ms)
+  Rendered partials/_navigation.html.erb (0.9ms)
+Completed 200 OK in 1951ms (Views: 1937.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:57:08 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_user_details.html.erb (0.5ms)
+  Rendered users/show.html.erb within layouts/application (3.8ms)
+  Rendered partials/_navigation.html.erb (0.9ms)
+Completed 200 OK in 1868ms (Views: 1862.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-07 21:57:49 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_user_details.html.erb (1.3ms)
+  Rendered users/show.html.erb within layouts/application (7.9ms)
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 60ms (Views: 53.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-07 21:57:51 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (13.6ms)
+  Rendered partials/_form_structure.html.erb (18.1ms)
+  Rendered users/edit.html.erb within layouts/application (23.0ms)
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 103ms (Views: 95.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/1" for ::1 at 2019-04-07 21:58:10 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wR1O1kWrtzskQLHwl1BSRUNsPnUlXbfIdlX4X3DSmMwfnaEM9l7KHwaYzHe270pRlpgH0N3BPl1rligyFw6uiQ==", "user"=>{"email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Kimberly", "last_name"=>"Black"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "first_name" = ?, "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["first_name", "Kimberly"], ["password_digest", "$2a$10$Vt1utiemfLYYarvCjXvIFeX9O343as6Y4bjykQbjjZPBoaXas1gw2"], ["updated_at", "2019-04-08 01:58:10.420987"], ["id", 1]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 72ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/users" for ::1 at 2019-04-07 21:58:10 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 47ms (Views: 43.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-04-07 21:59:05 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (8.5ms)
+  Rendered partials/_form_structure.html.erb (13.7ms)
+  Rendered users/edit.html.erb within layouts/application (17.5ms)
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 77ms (Views: 57.0ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/users/1" for ::1 at 2019-04-07 21:59:12 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sIyIUDBMUtcZLgzxNfQljiS6vtgOXJk4Hpse976hlLNuDGeKg7kv8zv2cXYUSz2a8U6HffbAEK0DWM6a2X2i9g==", "user"=>{"email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Kimberly", "last_name"=>"Black"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (9.3ms)
+  Rendered partials/_form_structure.html.erb (12.8ms)
+  Rendered users/edit.html.erb within layouts/application (15.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.9ms)
+Completed 200 OK in 129ms (Views: 63.1ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/users/1" for ::1 at 2019-04-07 21:59:19 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Py5U+nD+Z5S6iytRt4QkPQccbee8JUGuzUKVEYI76c3hrrsgwwsasJhTVtaWOzwp0uhUQkS5yDvQgUV85effiA==", "user"=>{"email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Kimberly", "last_name"=>"Black"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$YZo7RhshU/c0uNj6A1o9qu3vbK3dBv0fkT7Q7WOx6wjbdBWM.jCKu"], ["updated_at", "2019-04-08 01:59:19.988921"], ["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 66ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users" for ::1 at 2019-04-07 21:59:19 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 48ms (Views: 44.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/1" for ::1 at 2019-04-07 21:59:35 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sIyIUDBMUtcZLgzxNfQljiS6vtgOXJk4Hpse976hlLNuDGeKg7kv8zv2cXYUSz2a8U6HffbAEK0DWM6a2X2i9g==", "user"=>{"email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Kimberly", "last_name"=>"Black"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user_fields.html.erb (6.7ms)
+  Rendered partials/_form_structure.html.erb (10.8ms)
+  Rendered users/edit.html.erb within layouts/application (13.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 130ms (Views: 55.5ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/users/1" for ::1 at 2019-04-07 21:59:41 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s2iqAPs8XYtMsAJWlnEsmoS58+w9yHpSniMyABSUnRxt6EXaSMkgr25of9G3zjSOUU3KScVU88eD4OJtc0irWQ==", "user"=>{"email"=>"kblack@ymcapgh.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Kimberly", "last_name"=>"Black"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "kblack@ymcapgh.org"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$avj4VurJAPLFC9i2FYAnn.uFucSGfN0uNEpO2jHB68aGbFThKOOlW"], ["updated_at", "2019-04-08 01:59:41.450313"], ["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_user_details.html.erb (0.4ms)
+  Rendered users/show.html.erb within layouts/application (3.9ms)
+  Rendered partials/_navigation.html.erb (1.6ms)
+Completed 200 OK in 117ms (Views: 50.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/home" for ::1 at 2019-04-07 21:59:50 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (0.4ms)
+  Rendered home/index.html.erb within layouts/application (4.7ms)
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 45ms (Views: 41.6ms | ActiveRecord: 0.1ms)
+
+
