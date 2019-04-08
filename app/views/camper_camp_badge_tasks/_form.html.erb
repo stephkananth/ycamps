@@ -1,0 +1,33 @@
+<%= form_with(model: camper_camp_badge_task, local: true) do |form| %>
+  <% if camper_camp_badge_task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(camper_camp_badge_task.errors.count, "error") %> prohibited this camper_camp_badge_task from
+        being saved:</h2>
+
+      <ul>
+        <% camper_camp_badge_task.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :camper_camp_badge_id %>
+    <%= form.text_field :camper_camp_badge_id, id: :camper_camp_badge_task_camper_camp_badge_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :task_id %>
+    <%= form.text_field :task_id, id: :camper_camp_badge_task_task_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :completed %>
+    <%= form.check_box :completed, id: :camper_camp_badge_task_completed %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

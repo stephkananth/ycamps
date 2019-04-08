@@ -1,0 +1,28 @@
+<%= form_with(model: counselor_camp_badge, local: true) do |form| %>
+  <% if counselor_camp_badge.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(counselor_camp_badge.errors.count, "error") %> prohibited this counselor_camp_badge from being
+        saved:</h2>
+
+      <ul>
+        <% counselor_camp_badge.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :camp_badge_id %>
+    <%= form.text_field :camp_badge_id, id: :counselor_camp_badge_camp_badge_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :counselor_id %>
+    <%= form.text_field :counselor_id, id: :counselor_camp_badge_counselor_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

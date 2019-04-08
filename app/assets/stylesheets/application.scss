@@ -1,0 +1,73 @@
+@import "bootstrap";
+
+html, body{
+
+}
+
+.container{
+	font-family: "Quicksand";
+	margin: 0;
+	padding: 0;
+}
+
+.background-container{
+	min-height: 100vh;
+	background-image: url("/assets/grass-background.svg");
+	height: 100%;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#home{
+	background-image: url("/assets/grass-background.svg");
+	height: 100%; 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#home .card{
+    bottom: 0;
+    position: absolute;
+ }
+
+.card{
+	margin: 2em 1.5em 1.5em 2.25em;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 5px rgba(136, 136, 136, 0.3);
+	border-radius: 14px;
+	border: none;
+}
+
+.card-body{
+	padding: 2em;
+}
+
+h5.card-title{
+	font-weight: 700;
+	line-height: 28px;
+}
+
+.card-text{
+	font-size: 14px;
+	line-height: 19px;
+}
+
+
+.btn{
+	background: #56D4CB;
+	border-radius: 50px;
+	border: none;
+	font-weight: bold;
+	font-size: 14px;
+	padding: 12px;
+	text-transform: uppercase;
+}
+
+
+.btn a{
+	text-decoration: none;
+	color: #fff;
+}

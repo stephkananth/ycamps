@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Camper camp badge:</strong>
+  <%= @camper_camp_badge_task.camper_camp_badge %>
+</p>
+
+<p>
+  <strong>Task:</strong>
+  <%= @camper_camp_badge_task.task %>
+</p>
+
+<p>
+  <strong>Completed:</strong>
+  <%= @camper_camp_badge_task.completed %>
+</p>
+
+<%= link_to 'Edit', edit_camper_camp_badge_task_path(@camper_camp_badge_task) %> |
+<%= link_to 'Back', camper_camp_badge_tasks_path %>
