@@ -1,13 +1,26 @@
 @import "bootstrap";
 
 html, body{
-
+	height: 100%;
+	width: 100%;
+	background: #F7F7F7;
+	font-family: "Quicksand";
 }
 
 .container{
 	font-family: "Quicksand";
 	margin: 0;
 	padding: 0;
+}
+
+.row{
+	margin-right: 0;
+	margin-left: 0;
+
+}
+
+.bg-light{
+	background-color: #fff !important;
 }
 
 .background-container{
@@ -33,12 +46,30 @@ html, body{
     position: absolute;
  }
 
+#signin:before {
+  content: " ";
+  z-index: 0;
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(136, 136, 136, 0.3);
+}
+
+ #signin .card{
+ 	width: 100%;
+ 	margin-top: 30%;
+ }
+
 .card{
-	margin: 2em 1.5em 1.5em 2.25em;
+	margin: 2.5em;
 	background: #FFFFFF;
 	box-shadow: 0px 4px 5px rgba(136, 136, 136, 0.3);
 	border-radius: 14px;
 	border: none;
+	color: #7E8288;
 }
 
 .card-body{
@@ -55,7 +86,6 @@ h5.card-title{
 	line-height: 19px;
 }
 
-
 .btn{
 	background: #56D4CB;
 	border-radius: 50px;
@@ -66,8 +96,100 @@ h5.card-title{
 	text-transform: uppercase;
 }
 
-
 .btn a{
 	text-decoration: none;
 	color: #fff;
+}
+
+.btn:focus{
+	outline:0;
+}
+
+.btn:hover{
+	background-color: #fff;
+	color: #56D4CB;
+	border: 2px #56D4CB solid;
+}
+
+label{
+	text-transform: lowercase;
+	margin-bottom: 4px;
+	font-size: 14px;
+}
+
+input.form-control{
+	border-radius: 50px;
+
+}
+
+ .main-view .card{
+ 	width: 100%;
+ }
+
+.main-view .card-body{
+	padding: 20px;
+}
+
+ .dashboard{
+ 	background: url("/assets/dashboard-header.svg");
+ 	max-width: 100%;
+ 	max-height: 30vh;
+ 	background-position: center;
+	background-repeat: no-repeat;
+	margin: auto;
+	background-size: cover;
+ }
+
+ .header-title{
+ 	margin-left: 1.7em;
+ 	margin-top: 4em;
+ 	font-weight: 700;
+	font-size: 24px;
+	line-height: normal;
+	color: #696969;
+ }
+
+ .nav-link{
+ 	color: #696969 !important;
+ }
+
+ .nav-link:hover{
+ 	color: #56D4CB !important;
+ }
+
+ #profile{
+ 	background: url("/assets/profile-header.svg");
+ 	max-width: 100%;
+ 	max-height: 30vh;
+ 	background-position: center;
+	background-repeat: no-repeat;
+	margin: auto;
+	background-size: cover;
+ }
+
+ #profile h5.card-title{
+ 	margin-bottom: 0px;
+ }
+
+ #user-role{
+ 	font-size: 14px;
+ }
+
+.card-subtitle{
+	font-weight: 700;
+	font-size: 16px;
+	padding-bottom:  4px;
+}
+
+.card-section{
+	margin: 16px auto;
+}
+
+.card-link{
+	color: #56D4CB;
+	font-size: 18px;
+}
+
+.card-link:hover{
+	color: #56D4CB;
 }
