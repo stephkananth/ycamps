@@ -13,6 +13,9 @@
     <div class="container" id="main_content">
         <%= yield %>
      </div>
+     <% if logged_in? %>
+        <%= render :partial => "partials/navigation" %>
+     <% end %>
     <%= javascript_include_tag "application" %>
   </body>
 </html>
