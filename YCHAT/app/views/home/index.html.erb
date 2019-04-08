@@ -1,13 +1,5 @@
-<div class="background-container">
-	<div class="row" id="home">
-		<div class="card">
-			<div class="card-body">
-			    <h5 class="card-title">Y – Camper to Home Acheivement Tracking</h5>
-			    <p class="card-text">
-			    	Welcome to the YMCA Camper Acheivement Portal! Sign in below to view and monitor your campers’ progress.
-			    </p>
-			    <div class="btn btn-primary btn-block"><%= link_to 'Sign In', signin_path %></div>
-		  	</div>
-		</div>
-	</div>
-</div>
+<% if logged_in? && ( current_user.role?(:admin) ) %>
+ 	<%= render :partial => "admin_dashboard" %>
+<% else %>
+ 	<%= render :partial => "index_guest" %>
+<% end %>
