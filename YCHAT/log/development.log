@@ -4793,3 +4793,19 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 457ms (Views: 449.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-04-07 22:43:57 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_index_guest.html.erb (1.0ms)
+  Rendered home/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 761ms (Views: 750.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-07 22:44:00 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (815.3ms)
+Completed 200 OK in 863ms (Views: 859.0ms | ActiveRecord: 0.0ms)
+
+
