@@ -12,11 +12,14 @@
 
 ActiveRecord::Schema.define(version: 20190325042954) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "badges", force: :cascade do |t|
     t.string "name"
     t.integer "level"
     t.text "description"
-    t.integer "skill_id"
+    t.bigint "skill_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["skill_id"], name: "index_badges_on_skill_id"
@@ -29,8 +32,8 @@ ActiveRecord::Schema.define(version: 20190325042954) do
   end
 
   create_table "camp_badges", force: :cascade do |t|
-    t.integer "badge_id"
-    t.integer "camp_id"
+    t.bigint "badge_id"
+    t.bigint "camp_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["badge_id"], name: "index_camp_badges_on_badge_id"
@@ -38,8 +41,8 @@ ActiveRecord::Schema.define(version: 20190325042954) do
   end
 
   create_table "camper_camp_badge_tasks", force: :cascade do |t|
-    t.integer "camper_camp_badge_id"
-    t.integer "task_id"
+    t.bigint "camper_camp_badge_id"
+    t.bigint "task_id"
     t.boolean "completed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -48,8 +51,8 @@ ActiveRecord::Schema.define(version: 20190325042954) do
   end
 
   create_table "camper_camp_badges", force: :cascade do |t|
-    t.integer "camp_badge_id"
-    t.integer "camper_id"
+    t.bigint "camp_badge_id"
+    t.bigint "camper_id"
     t.boolean "completed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -58,7 +61,7 @@ ActiveRecord::Schema.define(version: 20190325042954) do
   end
 
   create_table "campers", force: :cascade do |t|
-    t.integer "parent_id"
+    t.bigint "parent_id"
     t.string "first_name"
     t.string "last_name"
     t.boolean "active"
@@ -73,15 +76,15 @@ ActiveRecord::Schema.define(version: 20190325042954) do
     t.date "start_date"
     t.date "end_date"
     t.boolean "active"
-    t.integer "location_id"
+    t.bigint "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["location_id"], name: "index_camps_on_location_id"
   end
 
   create_table "counselor_camp_badges", force: :cascade do |t|
-    t.integer "camp_badge_id"
-    t.integer "counselor_id"
+    t.bigint "camp_badge_id"
+    t.bigint "counselor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["camp_badge_id"], name: "index_counselor_camp_badges_on_camp_badge_id"
@@ -89,7 +92,7 @@ ActiveRecord::Schema.define(version: 20190325042954) do
   end
 
   create_table "counselors", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -98,14 +101,14 @@ ActiveRecord::Schema.define(version: 20190325042954) do
 
   create_table "locations", force: :cascade do |t|
     t.string "name"
-    t.integer "branch_id"
+    t.bigint "branch_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["branch_id"], name: "index_locations_on_branch_id"
   end
 
   create_table "parents", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -122,7 +125,7 @@ ActiveRecord::Schema.define(version: 20190325042954) do
   create_table "tasks", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.integer "badge_id"
+    t.bigint "badge_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["badge_id"], name: "index_tasks_on_badge_id"
@@ -138,4 +141,19 @@ ActiveRecord::Schema.define(version: 20190325042954) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "badges", "skills"
+  add_foreign_key "camp_badges", "badges"
+  add_foreign_key "camp_badges", "camps"
+  add_foreign_key "camper_camp_badge_tasks", "camper_camp_badges"
+  add_foreign_key "camper_camp_badge_tasks", "tasks"
+  add_foreign_key "camper_camp_badges", "camp_badges"
+  add_foreign_key "camper_camp_badges", "campers"
+  add_foreign_key "campers", "parents"
+  add_foreign_key "camps", "locations"
+  add_foreign_key "counselor_camp_badges", "camp_badges"
+  add_foreign_key "counselor_camp_badges", "counselors"
+  add_foreign_key "counselors", "users"
+  add_foreign_key "locations", "branches"
+  add_foreign_key "parents", "users"
+  add_foreign_key "tasks", "badges"
 end
