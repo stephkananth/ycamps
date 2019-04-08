@@ -79,7 +79,7 @@ gem 'validates_timeliness', '~> 5.0.0.alpha3'
 ruby '2.4.3'
 
 group :assets do
-  gem 'therubyracer'
+  gem 'mini_racer'
   # gem 'sass-rails', "  ~> 3.1.0"
   # gem 'coffee-rails', "~> 3.1.0"
   # gem 'uglifier'
