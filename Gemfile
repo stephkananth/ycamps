@@ -8,7 +8,8 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6', '>= 5.1.6.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.3.7'
+# gem 'sqlite3', '~> 1.3.7'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -72,3 +73,5 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'validates_timeliness', '~> 5.0.0.alpha3'
+
+ruby '2.4.3'
