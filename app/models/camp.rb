@@ -20,6 +20,7 @@ class Camp < ApplicationRecord
   scope :chronological, -> { order('start_date', 'end_date') }
   scope :upcoming, -> { where('start_date >= ?', Date.today) }
   scope :past, -> { where('end_date < ?', Date.today) }
+  scope :current, -> { where('start_date <= ? and end_date >= ?', Date.today, Date.today)}
 
   # callbacks
   before_destroy do
