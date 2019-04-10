@@ -17,7 +17,7 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     thelma_lovette.save!
     puts "Created branch, Thelma Lovette"
 
-    #Create Locations
+    # Create Locations
     camp_site = Location.new
     camp_site.name = "Camp Site"
     camp_site.branch_id = thelma_lovette.id
@@ -51,5 +51,44 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     camp_three.end_date = Date.new(2019,5,13)
     camp_three.save!
     puts "Created camp, Camp Three"
+
+    # Create Skills
+    art_skill = Skill.new
+    art_skill.name = "Art Imaginarium"
+    art_skill.category = "Arts and Crafts"
+    art_skill.save!
+    puts "Created skill, Art Imaginarium"
+
+    outdoor_skill = Skill.new
+    outdoor_skill.name = "Nature Quest"
+    outdoor_skill.category = "Worst Case Scenario"
+    outdoor_skill.save!
+    puts "Created skill, Nature Quest"
+
+
+    # Create Badges
+    colorful_world_badge = Badge.new
+    colorful_world_badge.name = "It's a Colorful World"
+    colorful_world_badge.level = 1
+    colorful_world_badge.description = "This badge ackowledges the understanding of the color wheel and color schemes along with the understanding and skill of designing a Pointillism Portrait and wax resistant painting."
+    colorful_world_badge.skill_id = art_skill.id
+    colorful_world_badge.save!
+    puts "Created badge, It's a Colorful World"
+
+    nature_101_badge = Badge.new
+    nature_101_badge.name = "Nature 101"
+    nature_101_badge.level = 1
+    nature_101_badge.description = "This badge acknowledges the basics of nature exploration.  You will learn about the food web and how it impacts us, what is orienteering and how do you do it, and enjoy a nature hike using your new skills."
+    nature_101_badge.skill_id = outdoor_skill.id
+
+    # Create Tasks
+  # create_table "tasks", force: :cascade do |t|
+  #   t.string "name"
+  #   t.text "description"
+  #   t.bigint "badge_id"
+  #   t.datetime "created_at", null: false
+  #   t.datetime "updated_at", null: false
+  #   t.index ["badge_id"], name: "index_tasks_on_badge_id"
+  # end
   end
 end
