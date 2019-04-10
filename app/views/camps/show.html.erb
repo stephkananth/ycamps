@@ -1,34 +1,37 @@
-<p id="notice"><%= notice %></p>
+<div class="row main-view barn-header" id="admin-camp-view">
+  <div class="header"></div>
+  <h2 class="header-title"><%= @camp.name %></h2>
+  <h3 class="header-subtitle">
+    <%= @camp.start_date.strftime("%A, %b %d") %> - <%=@camp.end_date.strftime("%A, %b %d") %><br/>
+    <%= @camp.location.name %> <br/>
+    <%= @camp.program %>
+  </h3>
+  
+  <%#= link_to camp_path(camp) do %>
+    <div class="card">
+      <div class="card-body">
+          <h5 class="card-title">Badges in Progress</h5>
+          <p class="card-text"></p>
+      </div>
+    </div>
+  <%#= end %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @camp.name %>
-</p>
+  <%#= link_to camp_path(camp) do %>
+    <div class="card">
+      <div class="card-body">
+          <h5 class="card-title">Camper Roster</h5>
+          <p class="card-text"></p>
+      </div>
+    </div>
+  <%#= end %>
 
-<p>
-  <strong>Program:</strong>
-  <%= @camp.program %>
-</p>
+  <%#= link_to camp_path(camp) do %>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Counselor List</h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  <%#= end %>
 
-<p>
-  <strong>Start date:</strong>
-  <%= @camp.start_date %>
-</p>
-
-<p>
-  <strong>End date:</strong>
-  <%= @camp.end_date %>
-</p>
-
-<p>
-  <strong>Active:</strong>
-  <%= @camp.active %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @camp.location %>
-</p>
-
-<%= link_to 'Edit', edit_camp_path(@camp) %> |
-<%= link_to 'Back', camps_path %>
+</div>
