@@ -11870,3 +11870,54 @@ Migrating to PopulateDatabase (20190410032015)
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2019-04-10 14:51:47 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCamp Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "camps" WHERE (start_date <= '2019-04-10' and end_date >= '2019-04-10') LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCamp Load (0.4ms)[0m  [1m[34mSELECT "camps".* FROM "camps" WHERE (start_date <= '2019-04-10' and end_date >= '2019-04-10') ORDER BY name[0m
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (53.5ms)
+  Rendered home/index.html.erb within layouts/application (84.5ms)
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 3126ms (Views: 3086.7ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/camps/1" for ::1 at 2019-04-10 14:51:54 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 51ms (Views: 31.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/camps/1" for ::1 at 2019-04-10 14:52:41 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCamp Load (0.4ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 39ms (Views: 34.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/camps/1" for ::1 at 2019-04-10 14:52:42 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCamp Load (0.2ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 5.6ms)
+
+
+  
+NoMethodError (undefined method `class_name' for nil:NilClass
+Did you mean?  class_eval):
+  
+app/controllers/camps_controller.rb:14:in `show'
