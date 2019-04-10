@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Badge:</strong>
+  <%= @camp_badge.badge %>
+</p>
+
+<p>
+  <strong>Camp:</strong>
+  <%= @camp_badge.camp %>
+</p>
+
+<%= link_to 'Edit', edit_camp_badge_path(@camp_badge) %> |
+<%= link_to 'Back', camp_badges_path %>
