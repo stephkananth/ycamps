@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @users = User.all.paginate(page: params[:users]).per_page(10)
   end
 
   # GET /users/new
@@ -32,7 +33,7 @@ class UsersController < ApplicationController
     @user.role = 'counselor' if current_user.role?(:counselor)
     @user.role = 'admin' if current_user.role?(:admin)
     if @user.save
-      flash[:notice] = "Successfully added #{@user.email} as a user."
+      flash[:notice] = "Successfully added #{@user.username} as a user."
       redirect_to users_url
     else
       render action: 'new'
@@ -43,8 +44,8 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     if @user.update_attributes(user_params)
-      flash[:notice] = "Successfully updated your profile."
-      render action: 'show'
+      flash[:notice] = "Successfully updated #{@user.username}."
+      redirect_to users_url
     else
       render action: 'edit'
     end
@@ -54,7 +55,7 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
     if @user.destroy
-      redirect_to users_url, notice: "Successfully removed #{@user.email} from the YCHAT system."
+      redirect_to users_url, notice: "Successfully removed #{@user.username} from the YCHAT system."
     else
       render action: 'show'
     end
@@ -67,6 +68,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:role, :email, :first_name, :last_name, :password, :password_confirmation)
+    params.require(:user).permit(:active, :username, :role, :email, :phone, :password, :password_confirmation)
   end
 end

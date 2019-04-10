@@ -1,17 +1,29 @@
-<div class="row main-view" id="profile">
-  <div class="header"></div>
-  <h2 class="header-title">Profile</h2>
-  <div class="card">
-    <div class="card-body">
-        <h5 class="card-title"><%= @user.first_name %> <%= @user.last_name %></h5>
-        <span id="user-role">
-          <% if current_user.role?(:admin) %>
-            Administrator
-          <% end %>
-        </span>
-        <p class="card-text">
-          <%= render :partial => "user_details" %>
-        </p>
-      </div>
-  </div>
-</div>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @user.password %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @user.role %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
