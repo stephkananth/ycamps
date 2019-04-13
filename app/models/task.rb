@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Task < ApplicationRecord
   # relationships
   belongs_to :badge
@@ -6,7 +8,7 @@ class Task < ApplicationRecord
   validates_presence_of(:badge_id)
 
   # scopes
-  scope :in_order, -> {order('level')}
+  scope :in_order, -> { order('level') }
 
   # callbacks
 

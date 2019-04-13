@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Location < ApplicationRecord
   # relationships
   has_many :camps
@@ -5,11 +7,11 @@ class Location < ApplicationRecord
 
   # validations
   validates_presence_of :branch_id
-  validates :name, presence: true, uniqueness: {case_sensitive: false}
+  validates :name, presence: true, uniqueness: { case_sensitive: false }
 
   # scopes
-  scope :alphabetical, -> {order('name')}
-  scope :search, ->(term) {where('name LIKE ?', "#{term}%")}
+  scope :alphabetical, -> { order('name') }
+  scope :search, ->(term) { where('name LIKE ?', "#{term}%") }
 
   # callbacks
 

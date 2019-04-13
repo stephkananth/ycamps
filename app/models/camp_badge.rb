@@ -1,5 +1,6 @@
-class CampBadge < ApplicationRecord
+# frozen_string_literal: true
 
+class CampBadge < ApplicationRecord
   # relationships
   belongs_to :badge
   belongs_to :camp
@@ -10,7 +11,7 @@ class CampBadge < ApplicationRecord
   validates_presence_of :badge_id, :camp_id
 
   # scopes
-  scope :alphabetical, -> {joins(:camp).order('name')}
+  scope :alphabetical, -> { joins(:camp).order('name') }
 
   # callbacks
   before_destroy do
@@ -25,7 +26,7 @@ class CampBadge < ApplicationRecord
   private
 
   def check_upcoming_camps
-    if self.camps.upcoming.empty?
+    if camps.upcoming.empty?
       self.active = false
     else
       errors.add(:base, 'There are upcoming camps associated with this curriculum so it cannot be made inactive.')
