@@ -1,24 +1,24 @@
 <div class="row dashboard main-view">
-	<div class="header"></div>
-	<h2 class="header-title">Welcome, <%= current_user.first_name %>!</h2>
-	<% if @current_camps.empty? %>
-     	<h4>There are no camps happening at this time.</h4>
-    <% else %>
-		<h4 id="top-section-header" class="section-header">Current Camps</h4>
-		<% @current_camps.each do |camp| %>
-			<%= link_to camp_path(camp) do %>
-				<div class="card">
-					<div class="card-body">
-					    <h5 class="card-title"><%= camp.name %></h5>
-					    <p class="card-text">     	
-			                <%= camp.start_date.strftime("%A, %b %d") %> - <%=camp.end_date.strftime("%A, %b %d") %> <br/>
-			                <%= camp.location.name %>
-			             </p>
-			        </div>
-			    </div>
-			<% end %>
-		<% end %>
-					           
+  <div class="header"></div>
+  <h2 class="header-title">Welcome, <%= current_user.first_name %>!</h2>
+  <% if @current_camps.empty? %>
+    <h4>There are no camps happening at this time.</h4>
+  <% else %>
+    <h4 id="top-section-header" class="section-header">Current Camps</h4>
+    <% @current_camps.each do |camp| %>
+      <%= link_to camp_path(camp) do %>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= camp.name %></h5>
+            <p class="card-text">
+              <%= camp.start_date.strftime("%A, %b %d") %> - <%= camp.end_date.strftime("%A, %b %d") %> <br/>
+              <%= camp.location.name %>
+            </p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
 
-	<% end %>			  
+
+  <% end %>
 </div>
