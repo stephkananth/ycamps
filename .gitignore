@@ -59,3 +59,10 @@ bower.json
 node_modules/
 *.log
 *.cache
+*.log
+coverage/index.html
+coverage/.last_run.json
+coverage/.resultset.json
+coverage/assets/0.10.2/application.css
+coverage/assets/0.10.2/application.js
+coverage/index.html
