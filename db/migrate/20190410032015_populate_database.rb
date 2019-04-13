@@ -1,7 +1,7 @@
 class PopulateDatabase < ActiveRecord::Migration[5.1]
   def change
-  	# Create Users
-  	kim_user = User.new
+    # Create Users
+    kim_user = User.new
     kim_user.role = "admin"
     kim_user.email = "kblack@ymcapgh.org"
     kim_user.password = "secret123"
@@ -28,7 +28,7 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     camp_one = Camp.new
     camp_one.name = "Camp One"
     camp_one.program = "Fairy Tale 1"
-    camp_one.location_id = camp_site.id 
+    camp_one.location_id = camp_site.id
     camp_one.start_date = Date.today()
     camp_one.end_date = Date.today() + 5
     camp_one.save!
@@ -37,7 +37,7 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     camp_two = Camp.new
     camp_two.name = "Camp Two"
     camp_two.program = "Fairy Tale 2"
-    camp_two.location_id = camp_site.id 
+    camp_two.location_id = camp_site.id
     camp_two.start_date = Date.today()
     camp_two.end_date = Date.today() + 5
     camp_two.save!
@@ -46,9 +46,9 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     camp_three = Camp.new
     camp_three.name = "Camp Three"
     camp_three.program = "Fairy Tale 2"
-    camp_three.location_id = camp_site.id 
-    camp_three.start_date = Date.new(2019,5,8)
-    camp_three.end_date = Date.new(2019,5,13)
+    camp_three.location_id = camp_site.id
+    camp_three.start_date = Date.new(2019, 5, 8)
+    camp_three.end_date = Date.new(2019, 5, 13)
     camp_three.save!
     puts "Created camp, Camp Three"
 
@@ -82,13 +82,13 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     nature_101_badge.skill_id = outdoor_skill.id
 
     # Create Tasks
-  # create_table "tasks", force: :cascade do |t|
-  #   t.string "name"
-  #   t.text "description"
-  #   t.bigint "badge_id"
-  #   t.datetime "created_at", null: false
-  #   t.datetime "updated_at", null: false
-  #   t.index ["badge_id"], name: "index_tasks_on_badge_id"
-  # end
+    # create_table "tasks", force: :cascade do |t|
+    #   t.string "name"
+    #   t.text "description"
+    #   t.bigint "badge_id"
+    #   t.datetime "created_at", null: false
+    #   t.datetime "updated_at", null: false
+    #   t.index ["badge_id"], name: "index_tasks_on_badge_id"
+    # end
   end
 end

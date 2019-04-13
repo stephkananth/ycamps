@@ -19,7 +19,8 @@ class CampsController < ApplicationController
   end
 
   # GET /camps/1/edit
-  def edit; end
+  def edit;
+  end
 
   # POST /camps
   # POST /camps.json
@@ -28,11 +29,11 @@ class CampsController < ApplicationController
 
     respond_to do |format|
       if @camp.save
-        format.html { redirect_to @camp, notice: 'Camp was successfully created.' }
-        format.json { render :show, status: :created, location: @camp }
+        format.html {redirect_to @camp, notice: 'Camp was successfully created.'}
+        format.json {render :show, status: :created, location: @camp}
       else
-        format.html { render :new }
-        format.json { render json: @camp.errors, status: :unprocessable_entity }
+        format.html {render :new}
+        format.json {render json: @camp.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -42,11 +43,11 @@ class CampsController < ApplicationController
   def update
     respond_to do |format|
       if @camp.update(camp_params)
-        format.html { redirect_to @camp, notice: 'Camp was successfully updated.' }
-        format.json { render :show, status: :ok, location: @camp }
+        format.html {redirect_to @camp, notice: 'Camp was successfully updated.'}
+        format.json {render :show, status: :ok, location: @camp}
       else
-        format.html { render :edit }
-        format.json { render json: @camp.errors, status: :unprocessable_entity }
+        format.html {render :edit}
+        format.json {render json: @camp.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -56,8 +57,8 @@ class CampsController < ApplicationController
   def destroy
     @camp.destroy
     respond_to do |format|
-      format.html { redirect_to camps_url, notice: 'Camp was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html {redirect_to camps_url, notice: 'Camp was successfully destroyed.'}
+      format.json {head :no_content}
     end
   end
 

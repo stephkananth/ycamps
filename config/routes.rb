@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'home/privacy', to: 'home#privacy', as: :privacy
   get 'home/search', to: 'home#search', as: :search
   root 'home#index'
-  
+
   resources :camper_camp_badge_tasks
   resources :camper_camp_badges
   resources :counselor_camp_badges
