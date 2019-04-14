@@ -1,5 +1,5 @@
 module Contexts
-  module Locations
+  module LocationsContexts
     # create your contexts here...
     def create_locations
       create_branches

@@ -1,5 +1,5 @@
 module Contexts
-  module Users
+  module UsersContexts
     # create your contexts here...
     def create_users
       @admin_user = FactoryBot.create(:user)
