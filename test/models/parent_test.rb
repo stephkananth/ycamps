@@ -49,11 +49,17 @@ class ParentTest < ActiveSupport::TestCase
     end
 
     should 'show that first name method works' do
-      assert_equal(['Aneena', 'Larry', 'Parent', 'Lisa'], Parent.all.alphabetical.map(&:first_name))
+      assert_equal(%w[Aneena Larry Parent Lisa], Parent.all.alphabetical.map(&:first_name))
     end
 
     should 'show that last name method works' do
-      assert_equal(['Ananth', 'Heimann', 'Inactive', 'Tables'], Parent.all.alphabetical.map(&:last_name))
+      assert_equal(%w[Ananth Heimann Inactive Tables], Parent.all.alphabetical.map(&:last_name))
+    end
+
+    should 'show that getting campers works' do
+      create_campers
+      assert_equal(%w[Alex Mark Rachel], @profh.campers.alphabetical.map(&:first_name))
+      delete_campers
     end
   end
 end
