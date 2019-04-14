@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class CamperTest < ActiveSupport::TestCase
@@ -26,5 +28,39 @@ class CamperTest < ActiveSupport::TestCase
   should_not allow_value(1.5).for(:parent_id)
   should_not allow_value('bad').for(:parent_id)
 
-  
+  context 'within context' do
+    setup do
+      create_users
+      create_parents
+      create_campers
+    end
+
+    teardown do
+      delete_campers
+      delete_parents
+      delete_users
+    end
+
+    should 'show that active scope works' do
+      assert_equal(2, Camper.active.size)
+      assert_equal(%w[Alex Mark], Camper.active.alphabetical.map(&:first_name))
+    end
+
+    should 'show that inactive scope works' do
+      assert_equal(1, Camper.inactive.size)
+      assert_equal(['Rachel'], Camper.inactive.alphabetical.map(&:first_name))
+    end
+
+    should 'show that alphabetical scope works' do
+      assert_equal(%w[Alex Mark Rachel], Camper.all.alphabetical.map(&:first_name))
+    end
+
+    should 'show that name method works' do
+      assert_equal(['Heimann, Alex', 'Heimann, Mark', 'Heimann, Rachel'], Camper.all.alphabetical.map(&:name))
+    end
+
+    should 'show that proper name method works' do
+      assert_equal(['Alex Heimann', 'Mark Heimann', 'Rachel Heimann'], Camper.all.alphabetical.map(&:proper_name))
+    end
+  end
 end
