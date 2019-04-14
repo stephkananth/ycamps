@@ -4,6 +4,32 @@ class Parent < ApplicationRecord
   has_many :campers
 
   # scopes
-  scope :alphabetical, -> {order('user.last_name, user.first_name')}
+  scope :active, -> {where(active: true)}
+  scope :inactive, -> {where(active: false)}
+  scope :alphabetical, -> {joins(:user).order('last_name, first_name')}
 
+  # validations
+  validates_numericality_of :user_id, only_integer: true, greater_than: 0
+
+  # callbacks
+  # before_destroy do
+  #   cannot_destroy_object
+  # end
+
+  # methods
+  def name
+    user.last_name + ', ' + user.first_name
+  end
+
+  def proper_name
+    user.first_name + ' ' + user.last_name
+  end
+
+  def first_name
+    user.first_name
+  end
+
+  def last_name
+    user.last_name
+  end
 end
