@@ -1,11 +1,17 @@
 module Contexts
   module ParentsContexts
     def create_parents
-      @parent1 = FactoryBot.create(:parent, user: @parent_user)
+      @profh = FactoryBot.create(:parent, user: @profh_user)
+      @ananth = FactoryBot.create(:parent, user: @ananth_user)
+      @tables = FactoryBot.create(:parent, user: @tables_user)
+      @inactive = FactoryBot.create(:parent, user: @inactive_parent, active: false)
     end
 
     def delete_parents
-      @parent1.delete
+      @profh.delete
+      @ananth.delete
+      @tables.delete
+      @inactive.delete
     end
   end
 end

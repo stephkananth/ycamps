@@ -11,7 +11,7 @@ class CampBadge < ApplicationRecord
   validates_presence_of :badge_id, :camp_id
 
   # scopes
-  scope :alphabetical, -> { joins(:camp).order('name') }
+  scope :alphabetical, -> {joins(:camp).order('name')}
 
   # callbacks
   before_destroy do

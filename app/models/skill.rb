@@ -5,11 +5,11 @@ class Skill < ApplicationRecord
   has_many :badges
 
   # validations
-  validates :name, presence: true, uniqueness: { case_sensitive: false }
+  validates :name, presence: true, uniqueness: {case_sensitive: false}
   validates_presence_of :category
 
   # scopes
-  scope :alphabetical, -> { order('name') }
+  scope :alphabetical, -> {order('name')}
 
   # callbacks
 
