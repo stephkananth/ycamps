@@ -4,13 +4,13 @@ class Counselor < ApplicationRecord
   has_many :camp_badges, through: :counselor_camp_badges
   has_many :camps, through: :camp_badges
 
+  # validations
+  validates_numericality_of :user_id, only_integer: true, greater_than: 0
+
   # scopes
   scope :active, -> {where(active: true)}
   scope :inactive, -> {where(active: false)}
   scope :alphabetical, -> {joins(:user).order('last_name, first_name')}
-
-  # validations
-  validates_numericality_of :user_id, only_integer: true, greater_than: 0
 
   # callbacks
   # before_destroy do
