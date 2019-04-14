@@ -26,6 +26,7 @@ module Contexts
   include Contexts::SkillsContexts
   include Contexts::BadgesContexts
   include Contexts::TasksContexts
+  include Contexts::CampBadgesContexts
   include Contexts::CamperCampBadgesContexts
   include Contexts::CamperCampBadgeTasksContexts
   include Contexts::CounselorCampBadgesContexts
@@ -41,6 +42,7 @@ module Contexts
     create_skills
     create_badges
     create_tasks
+    create_camp_badges
     create_camper_camp_badges
     create_camper_camp_badge_tasks
     create_counselor_camp_badges
@@ -50,6 +52,7 @@ module Contexts
     delete_counselor_camp_badges
     delete_camper_camp_badge_tasks
     delete_camper_camp_badges
+    delete_camp_badges
     delete_tasks
     delete_badges
     delete_skills

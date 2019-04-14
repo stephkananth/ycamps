@@ -4834,3 +4834,596 @@ CounselorCampBadgeTest: test_: CounselorCampBadge should belong to camp_badge.
 CounselorCampBadgeTest: test_: CounselorCampBadge should belong to counselor. 
 ------------------------------------------------------------------------------
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------
+ParentTest: test_: Parent should belong to user. 
+-------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+ParentTest: test_: Parent should have many campers. 
+----------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------------
+BranchTest: test_: Branch should require unique value for name. 
+----------------------------------------------------------------
+  [1m[36mBranch Load (6.9ms)[0m  [1m[34mSELECT  "branches".* FROM "branches" ORDER BY "branches"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "a"], ["created_at", "2019-04-14 01:56:47.405087"], ["updated_at", "2019-04-14 01:56:47.405087"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER($1) LIMIT $2[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------------------
+BranchTest: test_: Branch should have many camps through locations. 
+--------------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+BranchTest: test_: Branch should have many locations. 
+------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------------------------
+BranchTest: test_: Within context should list branch in alphabetical order. 
+----------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER($1) LIMIT $2[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thelma Lovette"], ["created_at", "2019-04-14 01:56:47.966787"], ["updated_at", "2019-04-14 01:56:47.966787"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER($1) LIMIT $2[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Olympus"], ["created_at", "2019-04-14 01:56:47.971127"], ["updated_at", "2019-04-14 01:56:47.971127"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER($1) LIMIT $2[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "North Boroughs"], ["created_at", "2019-04-14 01:56:47.975099"], ["updated_at", "2019-04-14 01:56:47.975099"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Load (0.4ms)[0m  [1m[34mSELECT "branches".* FROM "branches" ORDER BY name[0m
+  [1m[35mSQL (15.8ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = $1[0m  [["id", 12]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = $1[0m  [["id", 13]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------
+BranchTest: test_: Branch should require name to be set. 
+---------------------------------------------------------
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE "branches"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------------------------------------------------------------------------
+BranchTest: test_: Within context should not allowed creating a duplicate (also testing case sensitivity) branch name. 
+-----------------------------------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER($1) LIMIT $2[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thelma Lovette"], ["created_at", "2019-04-14 01:56:48.011395"], ["updated_at", "2019-04-14 01:56:48.011395"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER($1) LIMIT $2[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Olympus"], ["created_at", "2019-04-14 01:56:48.015472"], ["updated_at", "2019-04-14 01:56:48.015472"]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER($1) LIMIT $2[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "North Boroughs"], ["created_at", "2019-04-14 01:56:48.023626"], ["updated_at", "2019-04-14 01:56:48.023626"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER($1) LIMIT $2[0m  [["name", "north boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = $1[0m  [["id", 15]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = $1[0m  [["id", 16]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = $1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should belong to camp_badge. 
+-------------------------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should belong to counselor. 
+------------------------------------------------------------------------------
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should require counselor_id to be set. 
+-----------------------------------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------------------------------------
+CounselorCampBadgeTest: test_: CounselorCampBadge should require camp_badge_id to be set. 
+------------------------------------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------
+SkillTest: test_: Skill should have many badges. 
+-------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------------
+SkillTest: test_: Skill should require category to be set. 
+-----------------------------------------------------------
+  [1m[36mSkill Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------
+SkillTest: test_: Skill should require name to be set. 
+-------------------------------------------------------
+  [1m[36mSkill Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "skills" WHERE "skills"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------
+CampBadgeTest: test_: CampBadge should belong to camp. 
+-------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------------------
+CampBadgeTest: test_: CampBadge should require badge_id to be set. 
+-------------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------
+CampBadgeTest: test_: CampBadge should belong to badge. 
+--------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------------
+CampBadgeTest: test_: CampBadge should require camp_id to be set. 
+------------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+BadgeTest: test_: Badge should have many camp_badges. 
+------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------
+BadgeTest: test_: Badge should require name to be set. 
+-------------------------------------------------------
+  [1m[36mBadge Exists (7.6ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------------
+BadgeTest: test_: Badge should require unique value for name. 
+--------------------------------------------------------------
+  [1m[36mBadge Load (0.2ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" ORDER BY "badges"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "badges" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "a"], ["created_at", "2019-04-14 01:56:48.160627"], ["updated_at", "2019-04-14 01:56:48.160627"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBadge Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE LOWER("badges"."name") = LOWER($1) LIMIT $2[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+BadgeTest: test_: Badge should belong to skill. 
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------------
+BadgeTest: test_: Badge should require skill_id to be set. 
+-----------------------------------------------------------
+  [1m[36mBadge Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "badges" WHERE "badges"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------
+LocationTest: test_: Location should belong to branch. 
+-------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------------
+LocationTest: test_: Location should require name to be set. 
+-------------------------------------------------------------
+  [1m[36mLocation Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE "locations"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+LocationTest: test_: Location should have many camps. 
+------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------------
+LocationTest: test_: Location should require branch_id to be set. 
+------------------------------------------------------------------
+  [1m[36mLocation Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE "locations"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------------------
+LocationTest: test_: Location should require unique value for name. 
+--------------------------------------------------------------------
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" ORDER BY "locations"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "locations" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "a"], ["created_at", "2019-04-14 01:56:48.206318"], ["updated_at", "2019-04-14 01:56:48.206318"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER($1) LIMIT $2[0m  [["name", "A"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------------------------------
+LocationTest: test_: Within context should list locations in alphabetical order. 
+---------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER($1) LIMIT $2[0m  [["name", "Thelma Lovette"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thelma Lovette"], ["created_at", "2019-04-14 01:56:48.216323"], ["updated_at", "2019-04-14 01:56:48.216323"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER($1) LIMIT $2[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Olympus"], ["created_at", "2019-04-14 01:56:48.220063"], ["updated_at", "2019-04-14 01:56:48.220063"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBranch Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "branches" WHERE LOWER("branches"."name") = LOWER($1) LIMIT $2[0m  [["name", "North Boroughs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "branches" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "North Boroughs"], ["created_at", "2019-04-14 01:56:48.223366"], ["updated_at", "2019-04-14 01:56:48.223366"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER($1) LIMIT $2[0m  [["name", "Thelma Lovette YMCA"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Thelma Lovette YMCA"], ["branch_id", 18], ["created_at", "2019-04-14 01:56:48.228528"], ["updated_at", "2019-04-14 01:56:48.228528"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER($1) LIMIT $2[0m  [["name", "Olympus"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Olympus"], ["branch_id", 19], ["created_at", "2019-04-14 01:56:48.232893"], ["updated_at", "2019-04-14 01:56:48.232893"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "locations" WHERE LOWER("locations"."name") = LOWER($1) LIMIT $2[0m  [["name", "Avonworth Community Park"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("name", "branch_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Avonworth Community Park"], ["branch_id", 20], ["created_at", "2019-04-14 01:56:48.236423"], ["updated_at", "2019-04-14 01:56:48.236423"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" ORDER BY name[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = $1[0m  [["id", 6]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = $1[0m  [["id", 7]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = $1[0m  [["id", 8]]
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = $1[0m  [["id", 18]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = $1[0m  [["id", 19]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "branches" WHERE "branches"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------
+TaskTest: test_: Task should belong to badge. 
+----------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------
+TaskTest: test_: Task should require badge_id to be set. 
+---------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should belong to task. 
+---------------------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should require camper_camp_badge_id to be set. 
+---------------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should require task_id to be set. 
+--------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------------------------------------
+CamperCampBadgeTaskTest: test_: CamperCampBadgeTask should belong to camper_camp_badge. 
+----------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------------------------
+UserTest: test_: User should allow email to be set to "my.fred@ymca.net". 
+--------------------------------------------------------------------------
+  [1m[36mUser Exists (5.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "my.fred@ymca.net"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------------------------
+UserTest: test_: User should not allow email to be set to "my fred@fred.com". 
+------------------------------------------------------------------------------
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "my fred@fred.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------------------
+UserTest: test_: User should not allow role to be set to "leader". 
+-------------------------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------------------------
+UserTest: test_: Within context should have a role? method for authorization. 
+------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "kblack@ymca.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "first_name", "last_name", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "kblack@ymca.org"], ["password_digest", "$2a$04$T5tw3pREGTM9oOjJ2AaqseaW1OjP2.5GqKuQpkatkkdGIDEpTMUS."], ["first_name", "Kim"], ["last_name", "Black"], ["role", "admin"], ["created_at", "2019-04-14 01:56:48.328926"], ["updated_at", "2019-04-14 01:56:48.328926"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "counselor@ymca.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "first_name", "last_name", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "counselor@ymca.org"], ["password_digest", "$2a$04$AEQrKz2n/FyiJJ16gV8WUu9Ah0OqrBwHk0u24X3dsexXzuVUwQE.i"], ["first_name", "Kim"], ["last_name", "Black"], ["role", "counselor"], ["created_at", "2019-04-14 01:56:48.334094"], ["updated_at", "2019-04-14 01:56:48.334094"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "parent@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "first_name", "last_name", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "parent@gmail.com"], ["password_digest", "$2a$04$.7aJo0SAoRba57MHyv1bx.3W3FdMDNJBwrqQRt.M8/B7k/.Uu5/oK"], ["first_name", "Kim"], ["last_name", "Black"], ["role", "parent"], ["created_at", "2019-04-14 01:56:48.340146"], ["updated_at", "2019-04-14 01:56:48.340146"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 17]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 18]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 19]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------------
+UserTest: test_: User should not allow role to be set to 10. 
+-------------------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------------------
+UserTest: test_: User should not allow role to be set to "hacker". 
+-------------------------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+UserTest: test_: User should require last_name to be set. 
+----------------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------------
+UserTest: test_: User should not allow role to be set to nil. 
+--------------------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------------
+UserTest: test_: User should not allow role to be set to "bad". 
+----------------------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------------
+UserTest: test_: User should allow role to be set to "admin". 
+--------------------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------------
+UserTest: test_: User should allow role to be set to "parent". 
+---------------------------------------------------------------
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------------
+UserTest: test_: User should not allow email to be set to "fred". 
+------------------------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "fred"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------------------------
+UserTest: test_: User should not allow email to be set to "fred@fred.con". 
+---------------------------------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "fred@fred.con"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------------------------------
+UserTest: test_: Within context should allow user to authenticate with password. 
+---------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "kblack@ymca.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "first_name", "last_name", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "kblack@ymca.org"], ["password_digest", "$2a$04$sejXxSX8YhqQd0UOBDPgwuEWq5K68ZoTACoJYUnGI7XvLVLCCP4h."], ["first_name", "Kim"], ["last_name", "Black"], ["role", "admin"], ["created_at", "2019-04-14 01:56:48.394078"], ["updated_at", "2019-04-14 01:56:48.394078"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "counselor@ymca.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "first_name", "last_name", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "counselor@ymca.org"], ["password_digest", "$2a$04$Vmo86MsDbzk4POq4MPgDKeiseBRzXe6bxQoqF2ThO4uZtgJnBWDx."], ["first_name", "Kim"], ["last_name", "Black"], ["role", "counselor"], ["created_at", "2019-04-14 01:56:48.400127"], ["updated_at", "2019-04-14 01:56:48.400127"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "parent@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "first_name", "last_name", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "parent@gmail.com"], ["password_digest", "$2a$04$aSJxo4QnscdAWgya.QuU7eIGtHBYZN3zyqnqXHpy9tOyOGPZvEBP2"], ["first_name", "Kim"], ["last_name", "Black"], ["role", "parent"], ["created_at", "2019-04-14 01:56:48.406348"], ["updated_at", "2019-04-14 01:56:48.406348"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 20]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 21]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 22]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------------------------
+UserTest: test_: User should not allow email to be set to "fred@fred.uk". 
+--------------------------------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "fred@fred.uk"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------------------------
+UserTest: test_: User should allow email to be set to "my_fred@ymca.org". 
+--------------------------------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "my_fred@ymca.org"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------------
+UserTest: test_: User should allow role to be set to "counselor". 
+------------------------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------------------------
+UserTest: test_: User should allow email to be set to "fred123@ymca.gov". 
+--------------------------------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "fred123@ymca.gov"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------------------------
+UserTest: test_: Within context should require a password for new users. 
+-------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "kblack@ymca.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "first_name", "last_name", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "kblack@ymca.org"], ["password_digest", "$2a$04$iJq7h.nwcz86ujOreyQZ6u6liqSOSBI3K6DvXVzbikRKQVdK/Hos2"], ["first_name", "Kim"], ["last_name", "Black"], ["role", "admin"], ["created_at", "2019-04-14 01:56:48.435363"], ["updated_at", "2019-04-14 01:56:48.435363"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "counselor@ymca.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "first_name", "last_name", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "counselor@ymca.org"], ["password_digest", "$2a$04$sofaJlmG5nDgWJ/O4KNzsuUGiFAGT/y7Bdb66t2/DDPSOtlvWJfCW"], ["first_name", "Kim"], ["last_name", "Black"], ["role", "counselor"], ["created_at", "2019-04-14 01:56:48.441000"], ["updated_at", "2019-04-14 01:56:48.441000"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "parent@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "first_name", "last_name", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "parent@gmail.com"], ["password_digest", "$2a$04$Wj5W40iXf45yqwFgTUrRv.j/t/7jfGUng6Bt5vaWpWafVkGsWyDJK"], ["first_name", "Kim"], ["last_name", "Black"], ["role", "parent"], ["created_at", "2019-04-14 01:56:48.446720"], ["updated_at", "2019-04-14 01:56:48.446720"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "tank@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 24]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 25]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+UserTest: test_: User should have a secure password. 
+-----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------------------------
+UserTest: test_: User should not allow email to be set to "fred@fred,com". 
+---------------------------------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "fred@fred,com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------------------------
+UserTest: test_: User should allow email to be set to "fred@ymca.com". 
+-----------------------------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "fred@ymca.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------------
+UserTest: test_: User should require unique value for email. 
+-------------------------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "a"], ["password_digest", "$2a$04$lB/GLpCjl0aK/pGPC9jgYuR.TQxk3gHjr8pj5BykG.Q0f3T.Z5xXq"], ["created_at", "2019-04-14 01:56:48.475419"], ["updated_at", "2019-04-14 01:56:48.475419"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "A"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------------------------------------
+UserTest: test_: Within context should require passwords to be confirmed and matching. 
+---------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "kblack@ymca.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "first_name", "last_name", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "kblack@ymca.org"], ["password_digest", "$2a$04$FnxW8.uZevz8Xn8jvrTVkeFGq7i9yahbrRU4mHc3LXv9rez3kpXYu"], ["first_name", "Kim"], ["last_name", "Black"], ["role", "admin"], ["created_at", "2019-04-14 01:56:48.487390"], ["updated_at", "2019-04-14 01:56:48.487390"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "counselor@ymca.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "first_name", "last_name", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "counselor@ymca.org"], ["password_digest", "$2a$04$dhLpU/TfjQLayEzYUZB19ee4MIt8fYSTCcM9eNzZMKE3row3QbqzW"], ["first_name", "Kim"], ["last_name", "Black"], ["role", "counselor"], ["created_at", "2019-04-14 01:56:48.493730"], ["updated_at", "2019-04-14 01:56:48.493730"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "parent@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "first_name", "last_name", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "parent@gmail.com"], ["password_digest", "$2a$04$jgqsPQLacmrcxDlkUWJQu..qUx9bJ4NkE6LpyUUfkUcrqjSgeZNQe"], ["first_name", "Kim"], ["last_name", "Black"], ["role", "parent"], ["created_at", "2019-04-14 01:56:48.498781"], ["updated_at", "2019-04-14 01:56:48.498781"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "parent2@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "parent3@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 27]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 28]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 29]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------------
+UserTest: test_: User should not allow email to be set to nil. 
+---------------------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------------------------------
+UserTest: test_: User should allow email to be set to "fred@andrew.cmu.edu". 
+-----------------------------------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "fred@andrew.cmu.edu"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+UserTest: test_: User should require email to be set. 
+------------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------------
+UserTest: test_: User should require first_name to be set. 
+-----------------------------------------------------------
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------------------------
+UserTest: test_: Within context should require users to have unique emails. 
+----------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "kblack@ymca.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "first_name", "last_name", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "kblack@ymca.org"], ["password_digest", "$2a$04$AarjIgb6tT8qm.mOBBQI6eRsJ9SVRcOA/pJYs7Dko02q5vSxBwfw."], ["first_name", "Kim"], ["last_name", "Black"], ["role", "admin"], ["created_at", "2019-04-14 01:56:48.539220"], ["updated_at", "2019-04-14 01:56:48.539220"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "counselor@ymca.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "first_name", "last_name", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "counselor@ymca.org"], ["password_digest", "$2a$04$F1wWsbLwuknrK6CicswU1.G8VBVWEyQYyjTTrm42pcq29o6wtEi/."], ["first_name", "Kim"], ["last_name", "Black"], ["role", "counselor"], ["created_at", "2019-04-14 01:56:48.544450"], ["updated_at", "2019-04-14 01:56:48.544450"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "parent@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "first_name", "last_name", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "parent@gmail.com"], ["password_digest", "$2a$04$QVU3YiYs5uUlnUMdlva.Eup9cQQ0ukj2Njqm1YPckPRpKYDOClHrK"], ["first_name", "Kim"], ["last_name", "Black"], ["role", "parent"], ["created_at", "2019-04-14 01:56:48.549804"], ["updated_at", "2019-04-14 01:56:48.549804"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND ("users"."id" != $2) LIMIT $3[0m  [["email", "parent@gmail.com"], ["id", 30], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 30]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 31]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 32]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should belong to camp_badge. 
+-------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should require camp_badge_id to be set. 
+------------------------------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should require camper_id to be set. 
+--------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should have many camper_camp_badge_tasks. 
+--------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------------------
+CamperCampBadgeTest: test_: CamperCampBadge should belong to camper. 
+---------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------
+CounselorTest: test_: Counselor should belong to user. 
+-------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------------------
+CampTest: test_: Camp should not allow end_date to be set to "bad". 
+--------------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------
+CampTest: test_: Camp should require end_date to be set. 
+---------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+CampTest: test_: Camp should require name to be set. 
+-----------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------
+CampTest: test_: Camp should belong to location. 
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------------------
+CampTest: test_: Camp should not allow start_date to be set to "bad". 
+----------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+CampTest: test_: Camp should have many camp_badges. 
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------
+CampTest: test_: Camp should require program to be set. 
+--------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------
+CampTest: test_: Camp should require location_id to be set. 
+------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------------
+CampTest: test_: Camp should require start_date to be set. 
+-----------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
