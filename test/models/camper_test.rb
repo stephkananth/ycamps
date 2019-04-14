@@ -62,5 +62,7 @@ class CamperTest < ActiveSupport::TestCase
     should 'show that proper name method works' do
       assert_equal(['Alex Heimann', 'Mark Heimann', 'Rachel Heimann'], Camper.all.alphabetical.map(&:proper_name))
     end
+
+    # TODO: Show that you can get camps, currently enrolled camps, etc.
   end
 end
