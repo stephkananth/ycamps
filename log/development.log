@@ -11921,3 +11921,109 @@ NoMethodError (undefined method `class_name' for nil:NilClass
 Did you mean?  class_eval):
   
 app/controllers/camps_controller.rb:14:in `show'
+Started GET "/camps/1" for ::1 at 2019-04-14 19:34:27 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCamp Load (0.5ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  Rendered camps/show.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 6.2ms)
+
+
+  
+SyntaxError (/Users/nawonchoi/Documents/Github/373/ycamps/app/views/camps/show.html.erb:37: syntax error, unexpected keyword_end
+ze;@output_buffer.append=( end );@output_buffer.safe_append=
+                              ^
+/Users/nawonchoi/Documents/Github/373/ycamps/app/views/camps/show.html.erb:42: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/nawonchoi/Documents/Github/373/ycamps/app/views/camps/show.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/camps/show.html.erb:37: syntax error, unexpected keyword_end
+app/views/camps/show.html.erb:42: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/camps/show.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+app/views/camps/show.html.erb:37: syntax error, unexpected keyword_end
+app/views/camps/show.html.erb:42: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/camps/show.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/camps/1" for ::1 at 2019-04-14 19:34:31 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCamp Load (0.4ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (22.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (1.1ms)
+Completed 200 OK in 440ms (Views: 427.2ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/counselor_camp_badges/1" for ::1 at 2019-04-14 19:34:33 -0400
+Processing by CounselorCampBadgesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCounselorCampBadge Load (0.6ms)[0m  [1m[34mSELECT  "counselor_camp_badges".* FROM "counselor_camp_badges" WHERE "counselor_camp_badges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 11ms (ActiveRecord: 5.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find CounselorCampBadge with 'id'=1):
+  
+app/controllers/counselor_camp_badges_controller.rb:66:in `set_counselor_camp_badge'
+Started GET "/counselor_camp_badge/1" for ::1 at 2019-04-14 19:35:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/counselor_camp_badge/1"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+rack-contrib (2.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.5.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/camps/1" for ::1 at 2019-04-14 19:36:18 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCamp Load (0.4ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 48ms (Views: 43.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/camper_camp_badges/1" for ::1 at 2019-04-14 19:36:19 -0400
+Processing by CamperCampBadgesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCamperCampBadge Load (4.3ms)[0m  [1m[34mSELECT  "camper_camp_badges".* FROM "camper_camp_badges" WHERE "camper_camp_badges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 15ms (ActiveRecord: 9.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find CamperCampBadge with 'id'=1):
+  
+app/controllers/camper_camp_badges_controller.rb:66:in `set_camper_camp_badge'

@@ -11,6 +11,26 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     kim_user.save!
     puts "Created admin user, Kim"
 
+    kelly_user = User.new
+    kelly_user.role = "parent"
+    kelly_user.email = "kgreen@gmail.com"
+    kelly_user.password = "secret123"
+    kelly_user.password_confirmation = "secret123"
+    kelly_user.first_name = "Kelly"
+    kelly_user.last_name = "Green"
+    kelly_user.save!
+    puts "Created parent user, Kelly"
+
+    karen_user = User.new
+    karen_user.role = "parent"
+    karen_user.email = "kko@yahoo.com"
+    karen_user.password = "secret123"
+    karen_user.password_confirmation = "secret123"
+    karen_user.first_name = "Karen"
+    karen_user.last_name = "Ko"
+    karen_user.save!
+    puts "Created parent user, Karen"
+
     # Create Branches
     thelma_lovette = Branch.new
     thelma_lovette.name = "Thelma Lovette YMCA"
@@ -80,6 +100,31 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     nature_101_badge.level = 1
     nature_101_badge.description = "This badge acknowledges the basics of nature exploration.  You will learn about the food web and how it impacts us, what is orienteering and how do you do it, and enjoy a nature hike using your new skills."
     nature_101_badge.skill_id = outdoor_skill.id
+
+    # Create Parents
+    kelly_parent = Parent.new
+    kelly_parent_id = kelly_user.id
+
+    karen_parent = Parent.new
+    karen_parent_id = karen_user.id
+
+    # Create Campers
+    jack_camper = Camper.new
+    jack_camper_parent_id = kelly_user.id
+    jack_first_name = "Jack"
+    jack_last_name = "Green"
+
+    jill_camper = Camper.new
+    jill_camper_parent_id = kelly_user.id
+    jill_first_name = "Jill"
+    jill_last_name = "Green"
+
+    sam_camper = Camper.new
+    sam_camper_parent_id = karen_user.id
+    sam_first_name = "Sam"
+    sam_last_name = "Ko"        
+
+
 
     # Create Tasks
   # create_table "tasks", force: :cascade do |t|
