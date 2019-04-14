@@ -37,7 +37,7 @@ class Camp < ApplicationRecord
   def campers
     result = []
     camp_badges.each do |camp_badge|
-      result << Camper.where(camp_badge_id: camp_badge.id).map(&:camper)
+      result << CamperCampBadge.where(camp_badge_id: camp_badge.id).map(&:camper)
     end
     result
   end
