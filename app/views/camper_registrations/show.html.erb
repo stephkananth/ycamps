@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Camp:</strong>
+  <%= @camper_registration.camp %>
+</p>
+
+<p>
+  <strong>Camper:</strong>
+  <%= @camper_registration.camper %>
+</p>
+
+<%= link_to 'Edit', edit_camper_registration_path(@camper_registration) %> |
+<%= link_to 'Back', camper_registrations_path %>

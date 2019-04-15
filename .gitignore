@@ -1,3 +1,14 @@
+*.cache
+*.iml
+*.log
+*.sqlite3
+*.xml
+YCHAT/coverage/.resultset.json
+YCHAT/coverage/index.html
+YCHAT/db/development.sqlite3
+YCHAT/db/test.sqlite3
+YCHAT/log/development.log
+YCHAT/log/test.log
 *.rbc
 capybara-*.html
 .rspec
@@ -11,17 +22,6 @@ capybara-*.html
 *.orig
 rerun.txt
 pickle-email-*.html
-
-# TODO Comment out this rule if you are OK with secrets being uploaded to the repo
-config/initializers/secret_token.rb
-config/master.key
-
-# Only include if you have production secrets in this file, which is no longer a Rails default
-# config/secrets.yml
-
-# dotenv
-# TODO Comment out this rule if environment variables can be committed
-.env
 
 ## Environment normalization:
 /.bundle
@@ -46,5 +46,21 @@ bower.json
 
 # Ignore node_modules
 node_modules/
+<<<<<<< HEAD
 
 
+=======
+*.log
+*.cache
+*.log
+coverage/index.html
+coverage/.last_run.json
+coverage/.resultset.json
+coverage/assets/0.10.2/application.css
+coverage/assets/0.10.2/application.js
+coverage/index.html
+coverage/.last_run.json
+coverage/.resultset.json
+coverage/index.html
+log/test.log
+>>>>>>> 3306fc70603ce21b10a6296b1e790f50f95ac2e6

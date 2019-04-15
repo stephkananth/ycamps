@@ -1,24 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div class="row main-view barn-header" id="admin-camp-view">
+  <div class="header"></div>
+  <%= link_to 'Back', :back %>
+  <div class="header-text">
+    <h2 class="header-title"><%= @camper.first_name %> <%= @camper.last_name %></h2>
+    <div class="header-subtitle">
+      Parent— <%= @camper.parent.proper_name %><br/>
+      <%= link_to 'Edit', edit_camper_path(@camper) %>
+    </div>
+  </div>
 
-<p>
-  <strong>Parent:</strong>
-  <%= @camper.parent %>
-</p>
+  <div class="card">
+    <div class="card-body card-text">
+      <div class="card-section">
+        <div class="card-subtitle">Current Camp</div>
 
-<p>
-  <strong>First name:</strong>
-  <%= @camper.first_name %>
-</p>
+      </div>
+    </div>
+  </div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @camper.last_name %>
-</p>
-
-<p>
-  <strong>Active:</strong>
-  <%= @camper.active %>
-</p>
-
-<%= link_to 'Edit', edit_camper_path(@camper) %> |
-<%= link_to 'Back', campers_path %>
+</div>

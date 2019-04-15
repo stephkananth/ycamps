@@ -1,29 +1,29 @@
-<p id="notice"><%= notice %></p>
+<div class="row main-view barn-header" id="admin-camp-view">
+  <div class="header"></div>
+  <%= link_to 'Back', :back %>
+  <h2 class="header-title">Badges in Progress</h2>
 
-<h1>Camp Badges</h1>
+  <div class="card">
+    <div class="card-body card-text">
+        <table class="table card-text">
+          <thead>
+            <tr>
+              <th scope="col">Badges in Progress</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @camp_badges.each do |camp_badge| %>
+              <tr>
+                <td>
+                    <%= link_to camp_badge.badge.name, camp_badge %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <%= link_to 'New Camp Badge', new_camp_badge_path, class: "btn btn-primary btn-block" %>
+    </div>
+  </div>
 
-<table>
-  <thead>
-  <tr>
-    <th>Badge</th>
-    <th>Camp</th>
-    <th colspan="3"></th>
-  </tr>
-  </thead>
+</div>
 
-  <tbody>
-  <% @camp_badges.each do |camp_badge| %>
-    <tr>
-      <td><%= camp_badge.badge %></td>
-      <td><%= camp_badge.camp %></td>
-      <td><%= link_to 'Show', camp_badge %></td>
-      <td><%= link_to 'Edit', edit_camp_badge_path(camp_badge) %></td>
-      <td><%= link_to 'Destroy', camp_badge, method: :delete, data: {confirm: 'Are you sure?'} %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Camp Badge', new_camp_badge_path %>

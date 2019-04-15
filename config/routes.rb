@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :camp_counselors
+  resources :camper_registrations
   get 'sessions/new'
 
   get 'sessions/create'
@@ -11,8 +13,6 @@ Rails.application.routes.draw do
   get 'home/privacy', to: 'home#privacy', as: :privacy
   get 'home/search', to: 'home#search', as: :search
   root 'home#index'
-  
-  root 'welcome#index'
 
   resources :camper_camp_badge_tasks
   resources :camper_camp_badges

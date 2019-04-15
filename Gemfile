@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -35,6 +37,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap', '~> 4.0'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'simple_form'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

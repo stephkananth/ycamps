@@ -10,7 +10,8 @@ class CampersController < ApplicationController
   # GET /campers/1
   # GET /campers/1.json
   def show
-    @badges = @camper.camp_badges.badges
+    # @badges = Camper.camp_badges.badges
+    # @current_camp = Camper.camps.current
   end
 
   # GET /campers/new
@@ -19,7 +20,8 @@ class CampersController < ApplicationController
   end
 
   # GET /campers/1/edit
-  def edit; end
+  def edit;
+  end
 
   # POST /campers
   # POST /campers.json
@@ -28,11 +30,11 @@ class CampersController < ApplicationController
 
     respond_to do |format|
       if @camper.save
-        format.html { redirect_to @camper, notice: 'Camper was successfully created.' }
-        format.json { render :show, status: :created, location: @camper }
+        format.html {redirect_to @camper, notice: 'Camper was successfully created.'}
+        format.json {render :show, status: :created, location: @camper}
       else
-        format.html { render :new }
-        format.json { render json: @camper.errors, status: :unprocessable_entity }
+        format.html {render :new}
+        format.json {render json: @camper.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -42,11 +44,11 @@ class CampersController < ApplicationController
   def update
     respond_to do |format|
       if @camper.update(camper_params)
-        format.html { redirect_to @camper, notice: 'Camper was successfully updated.' }
-        format.json { render :show, status: :ok, location: @camper }
+        format.html {redirect_to @camper, notice: 'Camper was successfully updated.'}
+        format.json {render :show, status: :ok, location: @camper}
       else
-        format.html { render :edit }
-        format.json { render json: @camper.errors, status: :unprocessable_entity }
+        format.html {render :edit}
+        format.json {render json: @camper.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -56,8 +58,8 @@ class CampersController < ApplicationController
   def destroy
     @camper.destroy
     respond_to do |format|
-      format.html { redirect_to campers_url, notice: 'Camper was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html {redirect_to campers_url, notice: 'Camper was successfully destroyed.'}
+      format.json {head :no_content}
     end
   end
 

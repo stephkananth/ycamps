@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Camp < ApplicationRecord
   # relationships
   belongs_to :location
@@ -7,44 +9,45 @@ class Camp < ApplicationRecord
   has_many :camper_camp_badges, through: :camp_badges
   has_many :campers, through: :camper_camp_badges
   has_many :counselor_camp_badges, through: :camp_badges
-  has_many :counselors, through: :counselor_camp_badges
+  has_many :counselors, through: :camp_counselors
+
+  has_many :campers, through: :camp_registrations
 
   # validations
   validates_presence_of :location_id, :name, :program, :start_date, :end_date
-  validates_date :start_date, on_or_after: -> { Date.today }, on_or_after_message: 'cannot be in the past', on: :create
+  validates_date :start_date, on_or_after: -> {Date.today}, on_or_after_message: 'cannot be in the past', on: :create
   validates_date :end_date, on_or_after: :start_date
   validate :camp_is_not_a_duplicate, on: :create
 
   # scopes
-  scope :alphabetical, -> { order('name') }
-  scope :chronological, -> { order('start_date', 'end_date') }
-  scope :upcoming, -> { where('start_date >= ?', Date.today) }
-  scope :past, -> { where('end_date < ?', Date.today) }
+  scope :active, -> {where(active: true)}
+  scope :inactive, -> {where(active: false)}
+  scope :alphabetical, -> {order('name')}
+  scope :chronological, -> {order('start_date', 'end_date')}
+  scope :upcoming, -> {where('start_date > ?', Date.today)}
+  scope :past, -> {where('end_date < ?', Date.today)}
+  scope :current, -> {where('start_date <= ? and end_date >= ?', Date.today, Date.today)}
 
   # callbacks
-  before_destroy do
-    check_if_has_registrations
-    if errors.present?
-      @destroyable = false
-      throw(:abort)
-    end
-  end
+  # before_destroy do
+  #   check_if_has_registrations
+  #   if errors.present?
+  #     @destroyable = false
+  #     throw(:abort)
+  #   end
+  # end
 
   # public methods
+  def campers
+    result = []
+    camp_badges.each do |camp_badge|
+      result << CamperCampBadge.where(camp_badge_id: camp_badge.id).map(&:camper)
+    end
+    result
+  end
+
   def already_exists?
     Camp.where(location_id: location_id, name: name, program: program, start_date: start_date, end_date: end_date).size == 1
-  end
-
-  def number_of_campers
-    campers.to_a.size
-  end
-
-  def number_of_counselors
-    counselors.to_a.size
-  end
-
-  def camper_to_counselor_ratio
-    1.0 * number_of_counselors / number_of_counselors
   end
 
   # private methods
