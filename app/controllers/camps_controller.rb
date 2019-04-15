@@ -5,6 +5,9 @@ class CampsController < ApplicationController
   # GET /camps.json
   def index
     @camps = Camp.all
+    @upcoming_camps = Camp.upcoming.chronological
+    @past_camps = Camp.past.chronological
+    @current_camps = Camp.current.chronological
   end
 
   # GET /camps/1

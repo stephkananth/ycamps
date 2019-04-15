@@ -4,7 +4,7 @@ class CampersController < ApplicationController
   # GET /campers
   # GET /campers.json
   def index
-    @campers = Camper.all
+    @campers = Camper.all.alphabetical
   end
 
   # GET /campers/1

@@ -1,33 +1,15 @@
-<p id="notice"><%= notice %></p>
+<div class="row main-view barn-header" id="admin-camp-view">
+  <div class="header"></div>
+  <%= link_to 'Back', :back %>
+  <div class="header-text">
+    <h2 class="header-title">Campers</h2>
+    <div class="header-subtitle">
+    </div>
+  </div>
+  <%= link_to 'New Camper', new_camper_path, class: "btn btn-primary btn-block" %>
 
-<h1>Campers</h1>
+  <%= render :partial => "partials/camper_index", locals: {campers: @campers, state: "Current"} %>
+  <%#= render :partial => "partials/camper_index", locals: {camps: @upcoming_camps, state: "Upcoming"} %>
+  <%#= render :partial => "partials/camper_index", locals: {camps: @past_camps, state: "Past"} %>
 
-<table>
-  <thead>
-  <tr>
-    <th>Parent</th>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Active</th>
-    <th colspan="3"></th>
-  </tr>
-  </thead>
-
-  <tbody>
-  <% @campers.each do |camper| %>
-    <tr>
-      <td><%= camper.parent %></td>
-      <td><%= camper.first_name %></td>
-      <td><%= camper.last_name %></td>
-      <td><%= camper.active %></td>
-      <td><%= link_to 'Show', camper %></td>
-      <td><%= link_to 'Edit', edit_camper_path(camper) %></td>
-      <td><%= link_to 'Destroy', camper, method: :delete, data: {confirm: 'Are you sure?'} %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Camper', new_camper_path %>
+</div>

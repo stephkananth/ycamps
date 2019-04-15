@@ -36,5 +36,7 @@
       </div>
     </div>
   <% end %>
+  <%= link_to 'Edit', edit_camp_path(:camp_id => @camp.id), class: "btn btn-primary btn-block" %>
+  <%= link_to 'Delete', @camp, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-primary btn-block" %>
 
 </div>

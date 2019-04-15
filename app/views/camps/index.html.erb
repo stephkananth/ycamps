@@ -1,37 +1,17 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><#= notice %></p> -->
 
-<h1>Camps</h1>
+<div class="row main-view barn-header" id="admin-camp-view">
+  <div class="header"></div>
+  <%= link_to 'Back', :back %>
+  <div class="header-text">
+    <h2 class="header-title">Camps</h2>
+    <div class="header-subtitle">
+    </div>
+  </div>
+  <%= link_to 'New Camp', new_camp_path, class: "btn btn-primary btn-block" %>
 
-<table>
-  <thead>
-  <tr>
-    <th>Name</th>
-    <th>Program</th>
-    <th>Start date</th>
-    <th>End date</th>
-    <th>Active</th>
-    <th>Location</th>
-    <th colspan="3"></th>
-  </tr>
-  </thead>
+  <%= render :partial => "partials/camps_index", locals: {camps: @current_camps, state: "Current"} %>
+  <%= render :partial => "partials/camps_index", locals: {camps: @upcoming_camps, state: "Upcoming"} %>
+  <%= render :partial => "partials/camps_index", locals: {camps: @past_camps, state: "Past"} %>
 
-  <tbody>
-  <% @camps.each do |camp| %>
-    <tr>
-      <td><%= camp.name %></td>
-      <td><%= camp.program %></td>
-      <td><%= camp.start_date %></td>
-      <td><%= camp.end_date %></td>
-      <td><%= camp.active %></td>
-      <td><%= camp.location %></td>
-      <td><%= link_to 'Show', camp %></td>
-      <td><%= link_to 'Edit', edit_camp_path(camp) %></td>
-      <td><%= link_to 'Destroy', camp, method: :delete, data: {confirm: 'Are you sure?'} %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Camp', new_camp_path %>
+</div>
