@@ -1,14 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div class="row main-view profile-header">
+  <div class="header"></div>
+  <%= link_to 'Back', :back %>
+  <div class="header-text">
+    <h2 class="header-title"><%= @parent.proper_name %></h2>
+    <div class="header-subtitle">
+        Parent<br/>
+        <%= @parent.user.email %>
+    </div>
+  </div>
+    <%= link_to 'Edit Parent', edit_parent_path(@parent), class: "btn btn-primary btn-block" %>
+    <%#= link_to 'Create Students', new_student_path, class: "btn btn-primary btn-block" %>
+    <%= link_to 'Delete Parent', @parent, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-primary btn-block" %>
+    <div>
+        <%= render :partial => "partials/camper_index", locals: {campers: @campers, state: "Current"} %>
+        <%#= render :partial => "partials/camps_short_list", locals: {camps: @upcoming_camps, state: "Upcoming"} %>
+        <%#= render :partial => "partials/camps_short_list", locals: {camps: @past_camps, state: "Past"} %>
+    </div>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @parent.user %>
-</p>
-
-<p>
-  <strong>Active:</strong>
-  <%= @parent.active %>
-</p>
-
-<%= link_to 'Edit', edit_parent_path(@parent) %> |
-<%= link_to 'Back', parents_path %>

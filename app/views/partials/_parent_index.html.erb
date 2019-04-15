@@ -1,0 +1,30 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title"><%= state %> Parents</h5>
+    <p class="card-text">
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        <% parents.each do |parent| %>
+          <tr>
+            <td>
+              <%= link_to parent do %>
+                <%= parent.name %>
+              <% end %>
+            </td>
+            <td><%= parent.user.email %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+
+    </p>
+  </div>
+</div>

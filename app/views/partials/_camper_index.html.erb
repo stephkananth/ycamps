@@ -7,7 +7,7 @@
         <thead>
           <tr>
             <th>Name</th>
-            <th>Parent</th>
+            <!-- <th>Parent</th> -->
           </tr>
         </thead>
 
@@ -19,11 +19,11 @@
                   <%= camper.proper_name %>
                 <% end %>
               </td>
-              <td>
-                <%= link_to camper.parent.user do %>
-                  <%= camper.parent.proper_name %>
-                <% end %>
-              </td>
+              <!-- <td> -->
+                <%#= link_to camper.parent.user do %>
+                  <%#= camper.parent.proper_name %>
+                <%# end %>
+              <!-- </td> -->
             </tr>
           <% end %>
         </tbody>
