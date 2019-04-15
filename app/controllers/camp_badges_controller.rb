@@ -12,7 +12,8 @@ class CampBadgesController < ApplicationController
   def show
     @camp = @camp_badge.camp
     @badge = @camp_badge.badge
-    # @campers =  @camp.campers
+    @tasks = @badge.tasks
+    @ccbs = @camp_badge.camper_camp_badges
   end
 
   # GET /camp_badges/new
