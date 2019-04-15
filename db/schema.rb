@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190410032015) do
+ActiveRecord::Schema.define(version: 20190415001402) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,15 @@ ActiveRecord::Schema.define(version: 20190410032015) do
     t.index ["camp_id"], name: "index_camp_badges_on_camp_id"
   end
 
+  create_table "camp_counselors", force: :cascade do |t|
+    t.bigint "camp_id"
+    t.bigint "counselor_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["camp_id"], name: "index_camp_counselors_on_camp_id"
+    t.index ["counselor_id"], name: "index_camp_counselors_on_counselor_id"
+  end
+
   create_table "camper_camp_badge_tasks", force: :cascade do |t|
     t.bigint "camper_camp_badge_id"
     t.bigint "task_id"
@@ -58,6 +67,15 @@ ActiveRecord::Schema.define(version: 20190410032015) do
     t.datetime "updated_at", null: false
     t.index ["camp_badge_id"], name: "index_camper_camp_badges_on_camp_badge_id"
     t.index ["camper_id"], name: "index_camper_camp_badges_on_camper_id"
+  end
+
+  create_table "camper_registrations", force: :cascade do |t|
+    t.bigint "camp_id"
+    t.bigint "camper_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["camp_id"], name: "index_camper_registrations_on_camp_id"
+    t.index ["camper_id"], name: "index_camper_registrations_on_camper_id"
   end
 
   create_table "campers", force: :cascade do |t|
@@ -144,10 +162,14 @@ ActiveRecord::Schema.define(version: 20190410032015) do
   add_foreign_key "badges", "skills"
   add_foreign_key "camp_badges", "badges"
   add_foreign_key "camp_badges", "camps"
+  add_foreign_key "camp_counselors", "camps"
+  add_foreign_key "camp_counselors", "counselors"
   add_foreign_key "camper_camp_badge_tasks", "camper_camp_badges"
   add_foreign_key "camper_camp_badge_tasks", "tasks"
   add_foreign_key "camper_camp_badges", "camp_badges"
   add_foreign_key "camper_camp_badges", "campers"
+  add_foreign_key "camper_registrations", "campers"
+  add_foreign_key "camper_registrations", "camps"
   add_foreign_key "campers", "parents"
   add_foreign_key "camps", "locations"
   add_foreign_key "counselor_camp_badges", "camp_badges"

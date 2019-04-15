@@ -4,7 +4,7 @@ class CamperRegistrationsController < ApplicationController
   # GET /camper_registrations
   # GET /camper_registrations.json
   def index
-    @camper_registrations = CamperRegistration.all
+    @camper_registrations = CamperRegistration.where(:camp_id => params[:camp_id])
   end
 
   # GET /camper_registrations/1

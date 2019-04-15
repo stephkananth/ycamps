@@ -1,29 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div class="row main-view barn-header" id="admin-camp-view">
+  <div class="header"></div>
+  <%= link_to 'Back', :back %>
+  <h2 class="header-title">Counselors This Week</h2>
+  
+  <div class="card">
+    <div class="card-body card-text">
+        <table class="table card-text">
+          <thead>
+            <tr>
+              <th scope="col">Roster</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @camp_counselors.each do |camp_counselor| %>
+              <tr>
+                <td>
+                    <%= link_to camp_counselor.counselor.proper_name, camp_counselor.counselor %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <%= link_to 'New Camp Counselor', new_camp_counselor_path %>
+    </div>
+  </div>
 
-<h1>Camp Counselors</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Camp</th>
-      <th>Counselor</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @camp_counselors.each do |camp_counselor| %>
-      <tr>
-        <td><%= camp_counselor.camp %></td>
-        <td><%= camp_counselor.counselor %></td>
-        <td><%= link_to 'Show', camp_counselor %></td>
-        <td><%= link_to 'Edit', edit_camp_counselor_path(camp_counselor) %></td>
-        <td><%= link_to 'Destroy', camp_counselor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Camp Counselor', new_camp_counselor_path %>
+</div>
