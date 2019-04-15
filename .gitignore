@@ -1,8 +1,8 @@
 *.rbc
 capybara-*.html
 .rspec
-/log
-/tmp
+/log/*.log
+/tmp/*
 /db/*.sqlite3
 /db/*.sqlite3-journal
 /public/system
@@ -46,4 +46,5 @@ bower.json
 
 # Ignore node_modules
 node_modules/
+
 
