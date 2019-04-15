@@ -7,9 +7,11 @@ class Camp < ApplicationRecord
   has_many :camp_badges
   has_many :badges, through: :camp_badges
   has_many :camper_camp_badges, through: :camp_badges
-  has_many :campers, through: :camp_registrations
+  has_many :campers, through: :camper_camp_badges
   has_many :counselor_camp_badges, through: :camp_badges
   has_many :counselors, through: :camp_counselors
+
+  has_many :campers, through: :camp_registrations
 
   # validations
   validates_presence_of :location_id, :name, :program, :start_date, :end_date
