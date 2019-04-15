@@ -10,6 +10,15 @@
 
   <div class="card">
     <div class="card-body">
+    <h5 class="card-title">Current Instructor</h5>
+    <p class="card-text">
+      <%= @counselor %><br/>
+    </p>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-body">
       <h5 class="card-title">Current Camp</h5>
       <p class="card-text">
         <%= @camp.start_date.strftime("%A, %b %d") %> - <%= @camp.end_date.strftime("%A, %b %d") %><br/>
@@ -30,19 +39,58 @@
 
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Milestones</h5>
-      <p class="card-text">
+  		<h5 class="card-title">Milestones</h5>
+      <div id="accordion">
+        <% @tasks.each_with_index do |task, index| %>
+          <div class="accordion-section">
+            <a data-toggle="collapse" data-target="#collapse<%= index %>" aria-expanded="true" aria-controls="collapse<%= index %>">
+              <div class="accordion-header" id="heading<%= index %>">
+                <h6 class="mb-0">
+                  <%= task.name %>
+                </h6>
+              </div>
+            </a>
 
-      </p>
+            <div id="collapse<%= index %>" class="collapse" aria-labelledby="heading<%= index %>" data-parent="#accordion">
+              <div class="card-body">
+                <%= task.description %>
+              </div>
+            </div>
+          </div>
+        <% end %>
     </div>
+  </div>
   </div>
 
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Campers</h5>
-      <p class="card-text">
-
-      </p>
+  		<h5 class="card-title">Campers</h5>
+      <div class="container">
+        <% @ccbs.each_with_index do |ccb, index| %>
+          <% if ccb == @ccbs.first or (index + 1) % 3 == 1 %>
+            <div class="row">
+          <% end %>
+          <div class="col">
+            <%= link_to ccb.camper do %>
+              <div class="person-icon text-center">
+                <%= image_tag 'camper-img.svg', class: 'img-responsive' %><br/>
+                <%= ccb.camper.proper_name %>
+              </div>
+            <% end %>
+          </div>
+          <% if ccb == @ccbs.last and (index + 1) % 3 != 0 %>
+            <div class="col"></div>
+            <% if (index + 1) % 3 == 1 %>
+              <div class="col"></div>
+            <% end %>
+            </div>
+          <% end %>
+           <% if ccb == @ccbs.last or (index + 1) % 3 == 0 %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
     </div>
+  <div class="card pad-bottom">
   </div>
 </div>

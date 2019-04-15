@@ -94,6 +94,13 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     sam_camper.save!
     puts "Created camper, Sam"
 
+    lily_camper = Camper.new
+    lily_camper.parent_id = karen_parent.id
+    lily_camper.first_name = "Lily"
+    lily_camper.last_name = "Ko"
+    lily_camper.save!
+    puts "Created camper, Lily"
+
     # Create Counselor
     tiffany_counselor = Counselor.new
     tiffany_counselor.user_id = tiffany_user.id
@@ -241,6 +248,13 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     camper_cb3.save!
     puts "Created camper camp badge, Camper_CB3"
 
+    camper_cb4 = CamperCampBadge.new
+    camper_cb4.camp_badge_id = cb1_1.id
+    camper_cb4.camper_id = lily_camper.id
+    camper_cb4.completed = "False"
+    camper_cb4.save!
+    puts "Created camper camp badge, Camper_CB3"
+
     # Create Tasks
     cw1_task = Task.new
     cw1_task.name = "Color Scheme Portrait"
@@ -321,6 +335,12 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     cr5.camper_id = jill_camper.id
     cr5.save!
     puts "Created camper registration 5"
+
+    cr6 = CamperRegistration.new
+    cr6.camp_id = camp_one.id
+    cr6.camper_id = lily_camper.id
+    cr6.save!
+    puts "Created camper registration 6"
 
     # Create Camp Counselors
     cc1 = CampCounselor.new
