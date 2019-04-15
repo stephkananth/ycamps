@@ -12,9 +12,10 @@ class CounselorsController < ApplicationController
   # GET /counselors/1
   # GET /counselors/1.json
   def show
-    @camps = @counselor.camp_badges.camps
-    # @past_camps = @counselors.camps.past.chronological
-    # @upcoming_camps = @instructor.camps.upcoming.chronological
+    @camps = @counselor.camps
+    @past_camps = @counselor.camps.past.chronological
+    @upcoming_camps = @counselor.camps.upcoming.chronological
+    @current_camps = @counselor.camps.current.chronological
     # @campers = @
   end
 

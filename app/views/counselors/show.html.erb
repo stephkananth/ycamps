@@ -1,14 +1,18 @@
-<p id="notice"><%= notice %></p>
+<div class="row main-view profile-header">
+  <div class="header"></div>
+  <%= link_to 'Back', :back %>
+  <%= link_to 'Edit', edit_counselor_path(@counselor) %>
+  <div class="header-text">
+    <h2 class="header-title"><%= @counselor.proper_name %></h2>
+    <div class="header-subtitle">
+        Counselor
+    </div>
+  </div>
+    <div>
+        <%= render :partial => "partials/camps_list", locals: {camps: @current_camps, state: "Current"} %>
+        <%= render :partial => "partials/camps_list", locals: {camps: @upcoming_camps, state: "Upcoming"} %>
+        <%= render :partial => "partials/camps_list", locals: {camps: @past_camps, state: "Past"} %>
 
-<p>
-  <strong>User:</strong>
-  <%= @counselor.user %>
-</p>
-
-<p>
-  <strong>Active:</strong>
-  <%= @counselor.active %>
-</p>
-
-<%= link_to 'Edit', edit_counselor_path(@counselor) %> |
-<%= link_to 'Back', counselors_path %>
+        <%= link_to 'Add Counselor to a Camp', new_camp_badge_path, class: "btn btn-primary btn-block" %>
+    </div>
+</div>
