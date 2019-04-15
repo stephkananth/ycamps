@@ -15723,3 +15723,1191 @@ Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms)
 NoMethodError (undefined method `camp_badges' for #<Camper:0x00007ff0b97d86b8>):
   
 app/controllers/campers_controller.rb:13:in `show'
+Started GET "/campers/4" for ::1 at 2019-04-15 01:17:20 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CampersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamper Load (0.7ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 7.9ms)
+
+
+  
+NoMethodError (undefined method `camp_badges' for #<Camper:0x00007ff5804d9b30>):
+  
+app/controllers/campers_controller.rb:13:in `show'
+Started GET "/" for ::1 at 2019-04-15 01:17:23 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCamp Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "camps" WHERE (start_date <= '2019-04-15' and end_date >= '2019-04-15') LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCamp Load (0.5ms)[0m  [1m[34mSELECT "camps".* FROM "camps" WHERE (start_date <= '2019-04-15' and end_date >= '2019-04-15') ORDER BY name[0m
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (46.9ms)
+  Rendered home/index.html.erb within layouts/application (65.8ms)
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 268ms (Views: 237.0ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 01:17:25 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.4ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 71ms (Views: 52.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/camp_counselors?camp_id=4" for ::1 at 2019-04-15 01:17:25 -0400
+Processing by CampCounselorsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camp_counselors/index.html.erb within layouts/application
+  [1m[36mCampCounselor Load (0.8ms)[0m  [1m[34mSELECT "camp_counselors".* FROM "camp_counselors" WHERE "camp_counselors"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCounselor Load (0.4ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCounselor Load (0.3ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered camp_counselors/index.html.erb within layouts/application (29.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 88ms (Views: 60.0ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 01:17:27 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.4ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 52ms (Views: 46.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/camper_registrations?camp_id=4" for ::1 at 2019-04-15 01:17:30 -0400
+Processing by CamperRegistrationsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camper_registrations/index.html.erb within layouts/application
+  [1m[36mCamperRegistration Load (0.8ms)[0m  [1m[34mSELECT "camper_registrations".* FROM "camper_registrations" WHERE "camper_registrations"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCamper Load (0.4ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered camper_registrations/index.html.erb within layouts/application (16.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 66ms (Views: 53.0ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/campers/4" for ::1 at 2019-04-15 01:17:31 -0400
+Processing by CampersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `camp_badges' for #<Camper:0x00007ff58658be60>):
+  
+app/controllers/campers_controller.rb:13:in `show'
+Started GET "/camper_registrations?camp_id=4" for ::1 at 2019-04-15 01:21:18 -0400
+Processing by CamperRegistrationsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camper_registrations/index.html.erb within layouts/application
+  [1m[36mCamperRegistration Load (0.3ms)[0m  [1m[34mSELECT "camper_registrations".* FROM "camper_registrations" WHERE "camper_registrations"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered camper_registrations/index.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 55ms (Views: 51.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/campers/4" for ::1 at 2019-04-15 01:21:21 -0400
+Processing by CampersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `camp_badges' for #<Camper:0x00007ff580613fa0>):
+  
+app/controllers/campers_controller.rb:13:in `show'
+Started GET "/camper_registrations?camp_id=4" for ::1 at 2019-04-15 01:21:24 -0400
+Processing by CamperRegistrationsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camper_registrations/index.html.erb within layouts/application
+  [1m[36mCamperRegistration Load (0.4ms)[0m  [1m[34mSELECT "camper_registrations".* FROM "camper_registrations" WHERE "camper_registrations"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered camper_registrations/index.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 50ms (Views: 45.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 01:21:26 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 53ms (Views: 48.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/camper_registrations?camp_id=4" for ::1 at 2019-04-15 09:26:08 -0400
+Processing by CamperRegistrationsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camper_registrations/index.html.erb within layouts/application
+  [1m[36mCamperRegistration Load (0.3ms)[0m  [1m[34mSELECT "camper_registrations".* FROM "camper_registrations" WHERE "camper_registrations"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered camper_registrations/index.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 70ms (Views: 66.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/campers/4" for ::1 at 2019-04-15 09:26:09 -0400
+Processing by CampersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `camp_badges' for #<Camper:0x00007ff5864b1620>):
+  
+app/controllers/campers_controller.rb:13:in `show'
+Started GET "/campers/4" for ::1 at 2019-04-15 09:30:12 -0400
+Processing by CampersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 5.9ms)
+
+
+  
+NoMethodError (undefined method `camp_badges' for #<Class:0x00007ff5888c81d0>):
+  
+app/controllers/campers_controller.rb:13:in `show'
+Started GET "/campers/4" for ::1 at 2019-04-15 09:30:23 -0400
+Processing by CampersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering campers/show.html.erb within layouts/application
+  [1m[36mParent Load (0.5ms)[0m  [1m[34mSELECT  "parents".* FROM "parents" WHERE "parents"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered campers/show.html.erb within layouts/application (16.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.9ms)
+Completed 200 OK in 124ms (Views: 94.4ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/campers/4" for ::1 at 2019-04-15 09:38:51 -0400
+Processing by CampersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 6.0ms)
+
+
+  
+NoMethodError (undefined method `camps' for #<Class:0x00007ff589255ef0>):
+  
+app/controllers/campers_controller.rb:14:in `show'
+Started GET "/campers/4" for ::1 at 2019-04-15 09:39:52 -0400
+Processing by CampersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 5.7ms)
+
+
+  
+NoMethodError (undefined method `camps' for #<Class:0x00007ff586519c98>):
+  
+app/controllers/campers_controller.rb:14:in `show'
+Started GET "/campers/4" for ::1 at 2019-04-15 09:39:53 -0400
+Processing by CampersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `camps' for #<Class:0x00007ff586519c98>):
+  
+app/controllers/campers_controller.rb:14:in `show'
+Started GET "/campers/4" for ::1 at 2019-04-15 09:40:09 -0400
+Processing by CampersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering campers/show.html.erb within layouts/application
+  [1m[36mParent Load (0.3ms)[0m  [1m[34mSELECT  "parents".* FROM "parents" WHERE "parents"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered campers/show.html.erb within layouts/application (39.7ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 15.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `proper_name' for #<User:0x00007ff5863122d8>):
+    4:   <div class="header-text">
+    5:     <h2 class="header-title"><%= @camper.first_name %> <%= @camper.last_name %></h2>
+    6:     <div class="header-subtitle">
+    7:       Parent— <%= @camper.parent.user.proper_name %><br/>
+    8:       <%= link_to 'Edit', edit_camper_path(@camper) %>
+    9:     </div>
+   10:   </div>
+  
+app/views/campers/show.html.erb:7:in `_app_views_campers_show_html_erb___2355676925750650124_70346267366000'
+Started GET "/campers/4" for ::1 at 2019-04-15 09:40:25 -0400
+Processing by CampersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering campers/show.html.erb within layouts/application
+  [1m[36mParent Load (0.4ms)[0m  [1m[34mSELECT  "parents".* FROM "parents" WHERE "parents"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered campers/show.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    13:     <div class="card-body card-text">
+    14:         <div class="card-section">
+    15: 		  <div class="card-subtitle">Current Camp</div>
+    16: 		  <%= @user.email %>
+    17: 		</div>
+    18:     </div>
+    19:   </div>
+  
+app/views/campers/show.html.erb:16:in `_app_views_campers_show_html_erb___2355676925750650124_70346267986680'
+Started GET "/campers/4" for ::1 at 2019-04-15 09:40:33 -0400
+Processing by CampersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering campers/show.html.erb within layouts/application
+  [1m[36mParent Load (0.3ms)[0m  [1m[34mSELECT  "parents".* FROM "parents" WHERE "parents"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered campers/show.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.9ms)
+Completed 200 OK in 51ms (Views: 45.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/camper_registrations?camp_id=4" for ::1 at 2019-04-15 09:40:42 -0400
+Processing by CamperRegistrationsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camper_registrations/index.html.erb within layouts/application
+  [1m[36mCamperRegistration Load (0.4ms)[0m  [1m[34mSELECT "camper_registrations".* FROM "camper_registrations" WHERE "camper_registrations"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered camper_registrations/index.html.erb within layouts/application (21.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 74ms (Views: 61.0ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/campers/4" for ::1 at 2019-04-15 09:40:43 -0400
+Processing by CampersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering campers/show.html.erb within layouts/application
+  [1m[36mParent Load (0.3ms)[0m  [1m[34mSELECT  "parents".* FROM "parents" WHERE "parents"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered campers/show.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 57ms (Views: 51.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/camper_registrations?camp_id=4" for ::1 at 2019-04-15 09:40:44 -0400
+Processing by CamperRegistrationsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camper_registrations/index.html.erb within layouts/application
+  [1m[36mCamperRegistration Load (0.5ms)[0m  [1m[34mSELECT "camper_registrations".* FROM "camper_registrations" WHERE "camper_registrations"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered camper_registrations/index.html.erb within layouts/application (7.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 57ms (Views: 52.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/home" for ::1 at 2019-04-15 09:40:48 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCamp Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "camps" WHERE (start_date <= '2019-04-15' and end_date >= '2019-04-15') LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCamp Load (0.4ms)[0m  [1m[34mSELECT "camps".* FROM "camps" WHERE (start_date <= '2019-04-15' and end_date >= '2019-04-15') ORDER BY name[0m
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (33.0ms)
+  Rendered home/index.html.erb within layouts/application (37.0ms)
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 93ms (Views: 71.7ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 09:40:48 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 60ms (Views: 48.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/camp_counselors?camp_id=4" for ::1 at 2019-04-15 09:40:49 -0400
+Processing by CampCounselorsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camp_counselors/index.html.erb within layouts/application
+  [1m[36mCampCounselor Load (0.5ms)[0m  [1m[34mSELECT "camp_counselors".* FROM "camp_counselors" WHERE "camp_counselors"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCounselor Load (0.2ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCounselor Load (0.4ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered camp_counselors/index.html.erb within layouts/application (28.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 84ms (Views: 65.8ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 09:41:48 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.4ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 50ms (Views: 44.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/home" for ::1 at 2019-04-15 09:41:50 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCamp Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "camps" WHERE (start_date <= '2019-04-15' and end_date >= '2019-04-15') LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT "camps".* FROM "camps" WHERE (start_date <= '2019-04-15' and end_date >= '2019-04-15') ORDER BY name[0m
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (6.3ms)
+  Rendered home/index.html.erb within layouts/application (9.9ms)
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 53ms (Views: 48.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 09:41:51 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.6ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 52ms (Views: 45.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/home" for ::1 at 2019-04-15 10:03:19 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCamp Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "camps" WHERE (start_date <= '2019-04-15' and end_date >= '2019-04-15') LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCamp Load (0.7ms)[0m  [1m[34mSELECT "camps".* FROM "camps" WHERE (start_date <= '2019-04-15' and end_date >= '2019-04-15') ORDER BY name[0m
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (10.4ms)
+  Rendered home/index.html.erb within layouts/application (16.3ms)
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 96ms (Views: 89.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/home" for ::1 at 2019-04-15 10:03:22 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCamp Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "camps" WHERE (start_date <= '2019-04-15' and end_date >= '2019-04-15') LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT "camps".* FROM "camps" WHERE (start_date <= '2019-04-15' and end_date >= '2019-04-15') ORDER BY name[0m
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (6.8ms)
+  Rendered home/index.html.erb within layouts/application (11.6ms)
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 57ms (Views: 52.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 10:03:34 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.4ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 56ms (Views: 48.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/camp_badges" for ::1 at 2019-04-15 10:03:36 -0400
+Processing by CampBadgesController#index as HTML
+  Rendering camp_badges/index.html.erb within layouts/application
+  [1m[36mCampBadge Load (0.8ms)[0m  [1m[34mSELECT "camp_badges".* FROM "camp_badges"[0m
+  [1m[36mBadge Load (0.5ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.3ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered camp_badges/index.html.erb within layouts/application (31.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 76ms (Views: 61.6ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 10:03:37 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.4ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 48ms (Views: 42.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/camper_registrations?camp_id=4" for ::1 at 2019-04-15 10:03:38 -0400
+Processing by CamperRegistrationsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camper_registrations/index.html.erb within layouts/application
+  [1m[36mCamperRegistration Load (0.5ms)[0m  [1m[34mSELECT "camper_registrations".* FROM "camper_registrations" WHERE "camper_registrations"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered camper_registrations/index.html.erb within layouts/application (9.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 57ms (Views: 51.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 10:03:40 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.2ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 47ms (Views: 42.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/camp_counselors?camp_id=4" for ::1 at 2019-04-15 10:03:41 -0400
+Processing by CampCounselorsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camp_counselors/index.html.erb within layouts/application
+  [1m[36mCampCounselor Load (0.3ms)[0m  [1m[34mSELECT "camp_counselors".* FROM "camp_counselors" WHERE "camp_counselors"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCounselor Load (0.3ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCounselor Load (0.3ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered camp_counselors/index.html.erb within layouts/application (9.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 54ms (Views: 48.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 10:03:43 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (4.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (1.4ms)
+Completed 200 OK in 97ms (Views: 91.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/camper_registrations?camp_id=4" for ::1 at 2019-04-15 10:03:45 -0400
+Processing by CamperRegistrationsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camper_registrations/index.html.erb within layouts/application
+  [1m[36mCamperRegistration Load (0.4ms)[0m  [1m[34mSELECT "camper_registrations".* FROM "camper_registrations" WHERE "camper_registrations"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered camper_registrations/index.html.erb within layouts/application (7.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 53ms (Views: 49.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/campers/5" for ::1 at 2019-04-15 10:03:46 -0400
+Processing by CampersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering campers/show.html.erb within layouts/application
+  [1m[36mParent Load (0.4ms)[0m  [1m[34mSELECT  "parents".* FROM "parents" WHERE "parents"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered campers/show.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 51ms (Views: 44.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/camper_registrations?camp_id=4" for ::1 at 2019-04-15 10:03:49 -0400
+Processing by CamperRegistrationsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camper_registrations/index.html.erb within layouts/application
+  [1m[36mCamperRegistration Load (0.4ms)[0m  [1m[34mSELECT "camper_registrations".* FROM "camper_registrations" WHERE "camper_registrations"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered camper_registrations/index.html.erb within layouts/application (7.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 51ms (Views: 47.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 10:03:53 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.2ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 46ms (Views: 41.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/home" for ::1 at 2019-04-15 10:08:12 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCamp Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "camps" WHERE (start_date <= '2019-04-15' and end_date >= '2019-04-15') LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCamp Load (0.4ms)[0m  [1m[34mSELECT "camps".* FROM "camps" WHERE (start_date <= '2019-04-15' and end_date >= '2019-04-15') ORDER BY name[0m
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (8.3ms)
+  Rendered home/index.html.erb within layouts/application (13.2ms)
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 63ms (Views: 57.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 10:08:23 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.4ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (1.1ms)
+Completed 200 OK in 59ms (Views: 51.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/camp_badges" for ::1 at 2019-04-15 10:08:30 -0400
+Processing by CampBadgesController#index as HTML
+  Rendering camp_badges/index.html.erb within layouts/application
+  [1m[36mCampBadge Load (0.4ms)[0m  [1m[34mSELECT "camp_badges".* FROM "camp_badges"[0m
+  [1m[36mBadge Load (0.4ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.3ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered camp_badges/index.html.erb within layouts/application (7.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 60ms (Views: 55.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 10:08:36 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 47ms (Views: 42.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/camper_registrations?camp_id=4" for ::1 at 2019-04-15 10:08:37 -0400
+Processing by CamperRegistrationsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camper_registrations/index.html.erb within layouts/application
+  [1m[36mCamperRegistration Load (0.4ms)[0m  [1m[34mSELECT "camper_registrations".* FROM "camper_registrations" WHERE "camper_registrations"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered camper_registrations/index.html.erb within layouts/application (7.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 51ms (Views: 47.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 10:08:41 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 50ms (Views: 44.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/camp_counselors?camp_id=4" for ::1 at 2019-04-15 10:08:42 -0400
+Processing by CampCounselorsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camp_counselors/index.html.erb within layouts/application
+  [1m[36mCampCounselor Load (0.4ms)[0m  [1m[34mSELECT "camp_counselors".* FROM "camp_counselors" WHERE "camp_counselors"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCounselor Load (0.2ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCounselor Load (0.2ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered camp_counselors/index.html.erb within layouts/application (8.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 51ms (Views: 46.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 10:08:44 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.2ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 47ms (Views: 42.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/camp_badges" for ::1 at 2019-04-15 10:08:45 -0400
+Processing by CampBadgesController#index as HTML
+  Rendering camp_badges/index.html.erb within layouts/application
+  [1m[36mCampBadge Load (0.3ms)[0m  [1m[34mSELECT "camp_badges".* FROM "camp_badges"[0m
+  [1m[36mBadge Load (0.3ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.3ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered camp_badges/index.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 50ms (Views: 45.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/camp_badges/4" for ::1 at 2019-04-15 10:08:46 -0400
+Processing by CampBadgesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCampBadge Load (0.5ms)[0m  [1m[34mSELECT  "camp_badges".* FROM "camp_badges" WHERE "camp_badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamp Load (0.2ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.2ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering camp_badges/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camp_badges/show.html.erb within layouts/application (20.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 73ms (Views: 56.0ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/camp_badges" for ::1 at 2019-04-15 10:08:56 -0400
+Processing by CampBadgesController#index as HTML
+  Rendering camp_badges/index.html.erb within layouts/application
+  [1m[36mCampBadge Load (0.3ms)[0m  [1m[34mSELECT "camp_badges".* FROM "camp_badges"[0m
+  [1m[36mBadge Load (0.2ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.2ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered camp_badges/index.html.erb within layouts/application (6.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 50ms (Views: 46.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/camp_badges/new" for ::1 at 2019-04-15 10:08:58 -0400
+Processing by CampBadgesController#new as HTML
+  Rendering camp_badges/new.html.erb within layouts/application
+  Rendered camp_badges/_form.html.erb (523.0ms)
+  Rendered camp_badges/new.html.erb within layouts/application (526.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 575ms (Views: 570.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/camp_badges" for ::1 at 2019-04-15 10:09:01 -0400
+Processing by CampBadgesController#index as HTML
+  Rendering camp_badges/index.html.erb within layouts/application
+  [1m[36mCampBadge Load (0.3ms)[0m  [1m[34mSELECT "camp_badges".* FROM "camp_badges"[0m
+  [1m[36mBadge Load (0.2ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.2ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered camp_badges/index.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 49ms (Views: 45.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 10:09:02 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 48ms (Views: 43.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/camper_registrations?camp_id=4" for ::1 at 2019-04-15 10:09:04 -0400
+Processing by CamperRegistrationsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camper_registrations/index.html.erb within layouts/application
+  [1m[36mCamperRegistration Load (0.5ms)[0m  [1m[34mSELECT "camper_registrations".* FROM "camper_registrations" WHERE "camper_registrations"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered camper_registrations/index.html.erb within layouts/application (7.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.9ms)
+Completed 200 OK in 52ms (Views: 47.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/campers/4" for ::1 at 2019-04-15 10:09:05 -0400
+Processing by CampersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering campers/show.html.erb within layouts/application
+  [1m[36mParent Load (0.3ms)[0m  [1m[34mSELECT  "parents".* FROM "parents" WHERE "parents"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered campers/show.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 53ms (Views: 47.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/camper_registrations?camp_id=4" for ::1 at 2019-04-15 10:09:13 -0400
+Processing by CamperRegistrationsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camper_registrations/index.html.erb within layouts/application
+  [1m[36mCamperRegistration Load (0.3ms)[0m  [1m[34mSELECT "camper_registrations".* FROM "camper_registrations" WHERE "camper_registrations"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered camper_registrations/index.html.erb within layouts/application (7.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 50ms (Views: 46.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 10:27:37 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 74ms (Views: 68.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/camper_registrations?camp_id=4" for ::1 at 2019-04-15 10:27:39 -0400
+Processing by CamperRegistrationsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camper_registrations/index.html.erb within layouts/application
+  [1m[36mCamperRegistration Load (0.3ms)[0m  [1m[34mSELECT "camper_registrations".* FROM "camper_registrations" WHERE "camper_registrations"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered camper_registrations/index.html.erb within layouts/application (7.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 52ms (Views: 47.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 10:27:40 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 47ms (Views: 42.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/camper_registrations?camp_id=4" for ::1 at 2019-04-15 10:27:42 -0400
+Processing by CamperRegistrationsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camper_registrations/index.html.erb within layouts/application
+  [1m[36mCamperRegistration Load (0.5ms)[0m  [1m[34mSELECT "camper_registrations".* FROM "camper_registrations" WHERE "camper_registrations"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered camper_registrations/index.html.erb within layouts/application (7.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 48ms (Views: 44.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 10:27:54 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 46ms (Views: 40.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/camp_badges" for ::1 at 2019-04-15 10:27:55 -0400
+Processing by CampBadgesController#index as HTML
+  Rendering camp_badges/index.html.erb within layouts/application
+  [1m[36mCampBadge Load (0.3ms)[0m  [1m[34mSELECT "camp_badges".* FROM "camp_badges"[0m
+  [1m[36mBadge Load (0.2ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.2ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered camp_badges/index.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 52ms (Views: 47.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/camp_badges/4" for ::1 at 2019-04-15 10:27:57 -0400
+Processing by CampBadgesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCampBadge Load (0.5ms)[0m  [1m[34mSELECT  "camp_badges".* FROM "camp_badges" WHERE "camp_badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.4ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering camp_badges/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camp_badges/show.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 51ms (Views: 41.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/camp_badges" for ::1 at 2019-04-15 10:27:59 -0400
+Processing by CampBadgesController#index as HTML
+  Rendering camp_badges/index.html.erb within layouts/application
+  [1m[36mCampBadge Load (0.3ms)[0m  [1m[34mSELECT "camp_badges".* FROM "camp_badges"[0m
+  [1m[36mBadge Load (0.6ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.3ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered camp_badges/index.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 51ms (Views: 46.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 10:28:01 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.2ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 47ms (Views: 41.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/camp_counselors?camp_id=4" for ::1 at 2019-04-15 10:28:02 -0400
+Processing by CampCounselorsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camp_counselors/index.html.erb within layouts/application
+  [1m[36mCampCounselor Load (0.3ms)[0m  [1m[34mSELECT "camp_counselors".* FROM "camp_counselors" WHERE "camp_counselors"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCounselor Load (0.2ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCounselor Load (0.2ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered camp_counselors/index.html.erb within layouts/application (8.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 54ms (Views: 48.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/counselors/5" for ::1 at 2019-04-15 10:28:03 -0400
+Processing by CounselorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCounselor Load (0.2ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `camp_badges' for #<Counselor:0x00007ff5817774e0>):
+  
+app/controllers/counselors_controller.rb:15:in `show'
+Started GET "/camp_counselors?camp_id=4" for ::1 at 2019-04-15 10:28:07 -0400
+Processing by CampCounselorsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camp_counselors/index.html.erb within layouts/application
+  [1m[36mCampCounselor Load (0.4ms)[0m  [1m[34mSELECT "camp_counselors".* FROM "camp_counselors" WHERE "camp_counselors"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCounselor Load (0.2ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCounselor Load (0.2ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered camp_counselors/index.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 49ms (Views: 44.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 10:28:08 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 46ms (Views: 41.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/home" for ::1 at 2019-04-15 10:30:46 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCamp Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "camps" WHERE (start_date <= '2019-04-15' and end_date >= '2019-04-15') LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCamp Load (0.4ms)[0m  [1m[34mSELECT "camps".* FROM "camps" WHERE (start_date <= '2019-04-15' and end_date >= '2019-04-15') ORDER BY name[0m
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (42.3ms)
+  Rendered home/index.html.erb within layouts/application (68.1ms)
+  Rendered partials/_navigation.html.erb (1.3ms)
+Completed 200 OK in 425ms (Views: 382.4ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 10:31:09 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 85ms (Views: 62.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/camp_badges" for ::1 at 2019-04-15 10:31:11 -0400
+Processing by CampBadgesController#index as HTML
+  Rendering camp_badges/index.html.erb within layouts/application
+  [1m[36mCampBadge Load (0.7ms)[0m  [1m[34mSELECT "camp_badges".* FROM "camp_badges"[0m
+  [1m[36mBadge Load (0.5ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.4ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered camp_badges/index.html.erb within layouts/application (39.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (1.2ms)
+Completed 200 OK in 98ms (Views: 82.2ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/camp_badges/4" for ::1 at 2019-04-15 10:31:13 -0400
+Processing by CampBadgesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCampBadge Load (0.3ms)[0m  [1m[34mSELECT  "camp_badges".* FROM "camp_badges" WHERE "camp_badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamp Load (0.5ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.3ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering camp_badges/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camp_badges/show.html.erb within layouts/application (19.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 72ms (Views: 54.6ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/camp_badges" for ::1 at 2019-04-15 10:31:19 -0400
+Processing by CampBadgesController#index as HTML
+  Rendering camp_badges/index.html.erb within layouts/application
+  [1m[36mCampBadge Load (0.3ms)[0m  [1m[34mSELECT "camp_badges".* FROM "camp_badges"[0m
+  [1m[36mBadge Load (0.3ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.4ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered camp_badges/index.html.erb within layouts/application (7.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 54ms (Views: 50.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 10:31:21 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 48ms (Views: 42.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/camper_registrations?camp_id=4" for ::1 at 2019-04-15 10:31:22 -0400
+Processing by CamperRegistrationsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camper_registrations/index.html.erb within layouts/application
+  [1m[36mCamperRegistration Load (0.8ms)[0m  [1m[34mSELECT "camper_registrations".* FROM "camper_registrations" WHERE "camper_registrations"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCamper Load (0.7ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.4ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered camper_registrations/index.html.erb within layouts/application (31.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 92ms (Views: 72.9ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/campers/4" for ::1 at 2019-04-15 10:31:23 -0400
+Processing by CampersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamper Load (0.4ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering campers/show.html.erb within layouts/application
+  [1m[36mParent Load (0.5ms)[0m  [1m[34mSELECT  "parents".* FROM "parents" WHERE "parents"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered campers/show.html.erb within layouts/application (22.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 68ms (Views: 57.0ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/camper_registrations?camp_id=4" for ::1 at 2019-04-15 10:31:44 -0400
+Processing by CamperRegistrationsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camper_registrations/index.html.erb within layouts/application
+  [1m[36mCamperRegistration Load (0.3ms)[0m  [1m[34mSELECT "camper_registrations".* FROM "camper_registrations" WHERE "camper_registrations"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered camper_registrations/index.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 48ms (Views: 44.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 10:31:45 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.4ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 49ms (Views: 43.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/camp_counselors?camp_id=4" for ::1 at 2019-04-15 10:31:50 -0400
+Processing by CampCounselorsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camp_counselors/index.html.erb within layouts/application
+  [1m[36mCampCounselor Load (1.2ms)[0m  [1m[34mSELECT "camp_counselors".* FROM "camp_counselors" WHERE "camp_counselors"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCounselor Load (0.5ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCounselor Load (0.3ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered camp_counselors/index.html.erb within layouts/application (32.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 83ms (Views: 64.0ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/counselors/4" for ::1 at 2019-04-15 10:31:51 -0400
+Processing by CounselorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCounselor Load (0.3ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `camp_badges' for #<Counselor:0x00007faa34374818>):
+  
+app/controllers/counselors_controller.rb:15:in `show'
+Started GET "/camp_counselors?camp_id=4" for ::1 at 2019-04-15 10:31:56 -0400
+Processing by CampCounselorsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camp_counselors/index.html.erb within layouts/application
+  [1m[36mCampCounselor Load (0.4ms)[0m  [1m[34mSELECT "camp_counselors".* FROM "camp_counselors" WHERE "camp_counselors"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCounselor Load (0.2ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCounselor Load (0.3ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered camp_counselors/index.html.erb within layouts/application (9.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 51ms (Views: 46.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 10:31:59 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.4ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 52ms (Views: 46.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/camp_counselors?camp_id=4" for ::1 at 2019-04-15 10:32:09 -0400
+Processing by CampCounselorsController#index as HTML
+  Parameters: {"camp_id"=>"4"}
+  Rendering camp_counselors/index.html.erb within layouts/application
+  [1m[36mCampCounselor Load (0.4ms)[0m  [1m[34mSELECT "camp_counselors".* FROM "camp_counselors" WHERE "camp_counselors"."camp_id" = $1[0m  [["camp_id", 4]]
+  [1m[36mCounselor Load (0.3ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCounselor Load (0.2ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered camp_counselors/index.html.erb within layouts/application (8.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 51ms (Views: 46.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/camps/4" for ::1 at 2019-04-15 10:32:11 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCamp Load (0.4ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 45ms (Views: 40.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for ::1 at 2019-04-15 10:32:13 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCamp Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "camps" WHERE (start_date <= '2019-04-15' and end_date >= '2019-04-15') LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCamp Load (0.5ms)[0m  [1m[34mSELECT "camps".* FROM "camps" WHERE (start_date <= '2019-04-15' and end_date >= '2019-04-15') ORDER BY name[0m
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/_dashboard.html.erb (7.7ms)
+  Rendered home/index.html.erb within layouts/application (12.0ms)
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 58ms (Views: 51.9ms | ActiveRecord: 1.6ms)
+
+

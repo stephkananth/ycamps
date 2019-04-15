@@ -10,7 +10,8 @@ class CampersController < ApplicationController
   # GET /campers/1
   # GET /campers/1.json
   def show
-    @badges = @camper.camp_badges.badges
+    # @badges = Camper.camp_badges.badges
+    # @current_camp = Camper.camps.current
   end
 
   # GET /campers/new

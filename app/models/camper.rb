@@ -1,5 +1,7 @@
 class Camper < ApplicationRecord
   belongs_to :parent
+  has_many :camp_registrations
+  has_many :camps, through: :camp_registrations
   has_many :camper_camp_badges
   has_many :camp_badges, through: :camper_camp_badges
   has_many :camps, through: :camp_badges
