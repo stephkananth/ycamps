@@ -1,33 +1,33 @@
 @import "bootstrap";
 
-html, body{
+html, body {
   height: 100%;
   width: 100%;
   background: #F7F7F7;
   font-family: "Quicksand";
 }
 
-body{
-  padding-bottom: 100px; 
+body {
+  padding-bottom: 100px;
 }
 
-.container{
+.container {
   font-family: "Quicksand";
   margin: 0;
   padding: 0;
 }
 
-.row{
+.row {
   margin-right: 0;
   margin-left: 0;
 
 }
 
-.bg-light{
+.bg-light {
   background-color: #fff !important;
 }
 
-.background-container{
+.background-container {
   min-height: 100vh;
   background-image: url("/assets/grass-background.svg");
   height: 100%;
@@ -37,18 +37,18 @@ body{
   background-size: cover;
 }
 
-#home{
+#home {
   background-image: url("/assets/grass-background.svg");
-  height: 100%; 
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#home .card{
-    bottom: 0;
-    position: absolute;
- }
+#home .card {
+  bottom: 0;
+  position: absolute;
+}
 
 #signin:before {
   content: " ";
@@ -62,12 +62,12 @@ body{
   background: rgba(136, 136, 136, 0.3);
 }
 
- #signin .card{
+#signin .card {
   width: 100%;
   margin-top: 30%;
- }
+}
 
-.card{
+.card {
   margin: 0.5em 2.5em;
   background: #FFFFFF;
   box-shadow: 0px 4px 5px rgba(136, 136, 136, 0.3);
@@ -76,22 +76,22 @@ body{
   color: #7E8288;
 }
 
-.card-body{
+.card-body {
   padding: 2em;
 }
 
-h5.card-title{
+h5.card-title {
   font-weight: 700;
   line-height: 28px;
   font-size: 18px;
 }
 
-.card-text{
+.card-text {
   font-size: 14px;
   line-height: 19px;
 }
 
-.btn{
+.btn {
   background: #56D4CB;
   border-radius: 50px;
   border: none;
@@ -101,45 +101,45 @@ h5.card-title{
   text-transform: uppercase;
 }
 
-.btn a{
+.btn a {
   text-decoration: none;
   color: #fff;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-.btn:focus{
-  outline:0;
+.btn:focus {
+  outline: 0;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: #fff;
   color: #56D4CB;
   border: 2px #56D4CB solid;
 }
 
-label{
+label {
   text-transform: lowercase;
   margin-bottom: 4px;
   font-size: 14px;
 }
 
-input.form-control{
+input.form-control {
   border-radius: 50px;
 
 }
 
- .main-view .card{
+.main-view .card {
   width: 100%;
- }
+}
 
-.main-view .card-body{
+.main-view .card-body {
   padding: 20px;
 }
 
- .dashboard{
+.dashboard {
   background: url("/assets/dashboard-header.svg");
   max-width: 100%;
   max-height: 30vh;
@@ -147,18 +147,18 @@ input.form-control{
   background-repeat: no-repeat;
   margin: auto;
   background-size: cover;
- }
+}
 
- .header-title{
+.header-title {
   margin-left: 1.7em;
   margin-top: 4em;
   font-weight: 700;
   font-size: 26px;
   line-height: normal;
   color: #696969;
- }
+}
 
- .header-subtitle{
+.header-subtitle {
   margin: 1em;
   margin-bottom: 3em;
   margin-left: 3.2em;
@@ -166,15 +166,15 @@ input.form-control{
   font-size: 14px;
   line-height: normal;
   color: #696969;
- }
+}
 
- .nav-link{
+.nav-link {
   color: #696969 !important;
- }
+}
 
- .nav-link:hover{
+.nav-link:hover {
   color: #56D4CB !important;
- }
+}
 
  .profile-header{
   background: url("/assets/profile-header.svg");
@@ -184,52 +184,52 @@ input.form-control{
   background-repeat: no-repeat;
   margin: auto;
   background-size: cover;
- }
+}
 
  .profile-header h5.card-title{
   margin-bottom: 0px;
- }
-
- #user-role{
-  font-size: 14px;
- }
-
- a .card{
-  width:  100%;
- }
-
-.card-subtitle{
-  font-weight: 700;
-  font-size: 16px;
-  padding-bottom:  4px;
 }
 
-.card-section{
+#user-role {
+  font-size: 14px;
+}
+
+a .card {
+  width: 100%;
+}
+
+.card-subtitle {
+  font-weight: 700;
+  font-size: 16px;
+  padding-bottom: 4px;
+}
+
+.card-section {
   margin: 16px auto;
 }
 
-.card-link{
+.card-link {
   color: #56D4CB;
   font-size: 18px;
 }
 
-.card-link:hover{
+.card-link:hover {
   color: #56D4CB;
 }
 
-.section-header{
+.section-header {
   color: #696969;
   font-size: 20px;
   font-weight: 700;
 }
 
-#top-section-header{
+#top-section-header {
   margin-left: 2em;
   margin-top: 100px;
 
 }
 
-.barn-header{
+.barn-header {
   background: url("/assets/barn-header.svg");
   max-width: 100%;
   max-height: 30vh;
@@ -239,7 +239,7 @@ input.form-control{
   background-size: cover;
 }
 
-.camp-badge-header{
+.camp-badge-header {
   background: url("/assets/camp-badge-header.svg");
   max-width: 100%;
   max-height: 30vh;

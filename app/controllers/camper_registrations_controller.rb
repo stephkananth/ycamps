@@ -28,11 +28,11 @@ class CamperRegistrationsController < ApplicationController
 
     respond_to do |format|
       if @camper_registration.save
-        format.html { redirect_to @camper_registration, notice: 'Camper registration was successfully created.' }
-        format.json { render :show, status: :created, location: @camper_registration }
+        format.html {redirect_to @camper_registration, notice: 'Camper registration was successfully created.'}
+        format.json {render :show, status: :created, location: @camper_registration}
       else
-        format.html { render :new }
-        format.json { render json: @camper_registration.errors, status: :unprocessable_entity }
+        format.html {render :new}
+        format.json {render json: @camper_registration.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -42,11 +42,11 @@ class CamperRegistrationsController < ApplicationController
   def update
     respond_to do |format|
       if @camper_registration.update(camper_registration_params)
-        format.html { redirect_to @camper_registration, notice: 'Camper registration was successfully updated.' }
-        format.json { render :show, status: :ok, location: @camper_registration }
+        format.html {redirect_to @camper_registration, notice: 'Camper registration was successfully updated.'}
+        format.json {render :show, status: :ok, location: @camper_registration}
       else
-        format.html { render :edit }
-        format.json { render json: @camper_registration.errors, status: :unprocessable_entity }
+        format.html {render :edit}
+        format.json {render json: @camper_registration.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -56,19 +56,20 @@ class CamperRegistrationsController < ApplicationController
   def destroy
     @camper_registration.destroy
     respond_to do |format|
-      format.html { redirect_to camper_registrations_url, notice: 'Camper registration was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html {redirect_to camper_registrations_url, notice: 'Camper registration was successfully destroyed.'}
+      format.json {head :no_content}
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_camper_registration
-      @camper_registration = CamperRegistration.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def camper_registration_params
-      params.require(:camper_registration).permit(:camp_id, :camper_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_camper_registration
+    @camper_registration = CamperRegistration.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def camper_registration_params
+    params.require(:camper_registration).permit(:camp_id, :camper_id)
+  end
 end

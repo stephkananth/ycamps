@@ -72,7 +72,7 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     karen_parent.save!
     puts "Created parent, Karen"
 
-     # Create Campers
+    # Create Campers
     jack_camper = Camper.new
     jack_camper.parent_id = kelly_parent.id
     jack_camper.first_name = "Jack"
@@ -127,7 +127,7 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     camp_one = Camp.new
     camp_one.name = "Camp One"
     camp_one.program = "Fairy Tale 1"
-    camp_one.location_id = camp_site.id 
+    camp_one.location_id = camp_site.id
     camp_one.start_date = Date.today()
     camp_one.end_date = Date.today() + 5
     camp_one.save!
@@ -136,7 +136,7 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     camp_two = Camp.new
     camp_two.name = "Camp Two"
     camp_two.program = "Fairy Tale 2"
-    camp_two.location_id = camp_site.id 
+    camp_two.location_id = camp_site.id
     camp_two.start_date = Date.today()
     camp_two.end_date = Date.today() + 5
     camp_two.save!
@@ -145,9 +145,9 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     camp_three = Camp.new
     camp_three.name = "Camp Three"
     camp_three.program = "Fairy Tale 2"
-    camp_three.location_id = camp_site.id 
-    camp_three.start_date = Date.new(2019,5,8)
-    camp_three.end_date = Date.new(2019,5,13)
+    camp_three.location_id = camp_site.id
+    camp_three.start_date = Date.new(2019, 5, 8)
+    camp_three.end_date = Date.new(2019, 5, 13)
     camp_three.save!
     puts "Created camp, Camp Three"
 
@@ -211,7 +211,7 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     ccb_nawon.camp_badge_id = cb1_2.id
     ccb_nawon.counselor_id = nawon_counselor.id
     ccb_nawon.save!
-    puts "Created counselor camp badge, Nawon"    
+    puts "Created counselor camp badge, Nawon"
 
     ccb_steph = CounselorCampBadge.new
     ccb_steph.camp_badge_id = cb2_1.id
@@ -225,7 +225,7 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     camper_cb1.camper_id = jack_camper.id
     camper_cb1.completed = "False"
     camper_cb1.save!
-    puts "Created camper camp badge, Camper_CB1"    
+    puts "Created camper camp badge, Camper_CB1"
 
     camper_cb2 = CamperCampBadge.new
     camper_cb2.camp_badge_id = cb1_1.id
@@ -254,21 +254,21 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     cw2_task.description = "Campers will be able to explain how a wax-resist painting works and what makes it different from a regular painting or drawing"
     cw2_task.badge_id = colorful_world_badge.id
     cw2_task.save!
-    puts "Created task, Wax Resistant Paintings"   
+    puts "Created task, Wax Resistant Paintings"
 
     cw3_task = Task.new
     cw3_task.name = "Pointillism"
     cw3_task.description = "Campers will know the term Pointillism and be able to create an artwork inspired by the movement."
     cw3_task.badge_id = colorful_world_badge.id
     cw3_task.save!
-    puts "Created task, Pointillism" 
+    puts "Created task, Pointillism"
 
     cw4_task = Task.new
     cw4_task.name = "Fourth Task"
     cw4_task.description = "random text lol"
     cw4_task.badge_id = colorful_world_badge.id
     cw4_task.save!
-    puts "Created task, Fourth Task"     
+    puts "Created task, Fourth Task"
 
     nature1_task = Task.new
     nature1_task.name = "Food Web"
@@ -289,7 +289,7 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     nature3_task.description = "Campers will be given a list of scavenger hunt-like challenges that they must accomplish during the hike.  Campers will learn about the plants and animals located around camp."
     nature3_task.badge_id = nature_101_badge.id
     nature3_task.save!
-    puts "Created task, Nature Hike" 
+    puts "Created task, Nature Hike"
 
     # Create Camper Registrations
     cr1 = CamperRegistration.new
@@ -333,13 +333,13 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     cc2.camp_id = camp_one.id
     cc2.counselor_id = nawon_counselor.id
     cc2.save!
-    puts "Created camp counselor 2"    
+    puts "Created camp counselor 2"
 
     cc3 = CampCounselor.new
     cc3.camp_id = camp_two.id
     cc3.counselor_id = steph_counselor.id
     cc3.save!
-    puts "Created camp counselor 3"      
+    puts "Created camp counselor 3"
 
   end
 end

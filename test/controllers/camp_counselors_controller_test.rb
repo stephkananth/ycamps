@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe CampCounselorsController do
-  let(:camp_counselor) { camp_counselors :one }
+  let(:camp_counselor) {camp_counselors :one}
 
   it "gets index" do
     get camp_counselors_url
@@ -15,7 +15,7 @@ describe CampCounselorsController do
 
   it "creates camp_counselor" do
     expect {
-      post camp_counselors_url, params: { camp_counselor: { camp_id: camp_counselor.camp_id, counselor_id: camp_counselor.counselor_id } }
+      post camp_counselors_url, params: {camp_counselor: {camp_id: camp_counselor.camp_id, counselor_id: camp_counselor.counselor_id}}
     }.must_change "CampCounselor.count"
 
     must_redirect_to camp_counselor_path(CampCounselor.last)
@@ -32,7 +32,7 @@ describe CampCounselorsController do
   end
 
   it "updates camp_counselor" do
-    patch camp_counselor_url(camp_counselor), params: { camp_counselor: { camp_id: camp_counselor.camp_id, counselor_id: camp_counselor.counselor_id } }
+    patch camp_counselor_url(camp_counselor), params: {camp_counselor: {camp_id: camp_counselor.camp_id, counselor_id: camp_counselor.counselor_id}}
     must_redirect_to camp_counselor_path(camp_counselor)
   end
 

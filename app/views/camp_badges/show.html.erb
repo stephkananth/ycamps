@@ -7,42 +7,42 @@
       Skill— <%= @badge.skill.name %>
     </div>
   </div>
-  
+
   <div class="card">
     <div class="card-body">
-		<h5 class="card-title">Current Camp</h5>
-		<p class="card-text">
-			<%= @camp.start_date.strftime("%A, %b %d") %> - <%=@camp.end_date.strftime("%A, %b %d") %><br/>
-			<%= @camp.location.name %> <br/>
-			<%= @camp.program %>
-		</p>
+      <h5 class="card-title">Current Camp</h5>
+      <p class="card-text">
+        <%= @camp.start_date.strftime("%A, %b %d") %> - <%= @camp.end_date.strftime("%A, %b %d") %><br/>
+        <%= @camp.location.name %> <br/>
+        <%= @camp.program %>
+      </p>
     </div>
   </div>
 
   <div class="card">
     <div class="card-body">
-		<h5 class="card-title">Summary</h5>
-		<p class="card-text">
-			<%= @badge.description %>
-		</p>
+      <h5 class="card-title">Summary</h5>
+      <p class="card-text">
+        <%= @badge.description %>
+      </p>
     </div>
   </div>
 
   <div class="card">
     <div class="card-body">
-		<h5 class="card-title">Milestones</h5>
-		<p class="card-text">
-			
-		</p>
+      <h5 class="card-title">Milestones</h5>
+      <p class="card-text">
+
+      </p>
     </div>
   </div>
 
   <div class="card">
     <div class="card-body">
-		<h5 class="card-title">Campers</h5>
-		<p class="card-text">
-			
-		</p>
+      <h5 class="card-title">Campers</h5>
+      <p class="card-text">
+
+      </p>
     </div>
   </div>
 </div>

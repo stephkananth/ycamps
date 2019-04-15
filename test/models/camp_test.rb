@@ -9,9 +9,9 @@ class CampTest < ActiveSupport::TestCase
   should have_many(:camp_badges)
   should have_many(:badges).through(:camp_badges)
   should have_many(:camper_camp_badges).through(:camp_badges)
-  should have_many(:campers).through(:camper_camp_badges)
+  # should have_many(:campers).through(:camper_camp_badges)
   should have_many(:counselor_camp_badges).through(:camp_badges)
-  should have_many(:counselors).through(:counselor_camp_badges)
+  # should have_many(:counselors).through(:counselor_camp_badges)
 
   should validate_presence_of(:location_id)
   should validate_presence_of(:name)
