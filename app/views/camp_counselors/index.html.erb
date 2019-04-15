@@ -2,26 +2,26 @@
   <div class="header"></div>
   <%= link_to 'Back', :back %>
   <h2 class="header-title">Counselors This Week</h2>
-  
+
   <div class="card">
     <div class="card-body card-text">
-        <table class="table card-text">
-          <thead>
-            <tr>
-              <th scope="col">Roster</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @camp_counselors.each do |camp_counselor| %>
-              <tr>
-                <td>
-                    <%= link_to camp_counselor.counselor.proper_name, camp_counselor.counselor %>
-                </td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-        <%= link_to 'New Camp Counselor', new_camp_counselor_path %>
+      <table class="table card-text">
+        <thead>
+        <tr>
+          <th scope="col">Roster</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @camp_counselors.each do |camp_counselor| %>
+          <tr>
+            <td>
+              <%= link_to camp_counselor.counselor.proper_name, camp_counselor.counselor %>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <%= link_to 'New Camp Counselor', new_camp_counselor_path %>
     </div>
   </div>
 

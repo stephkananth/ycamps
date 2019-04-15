@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe CamperRegistrationsController do
-  let(:camper_registration) { camper_registrations :one }
+  let(:camper_registration) {camper_registrations :one}
 
   it "gets index" do
     get camper_registrations_url
@@ -15,7 +15,7 @@ describe CamperRegistrationsController do
 
   it "creates camper_registration" do
     expect {
-      post camper_registrations_url, params: { camper_registration: { camp_id: camper_registration.camp_id, camper_id: camper_registration.camper_id } }
+      post camper_registrations_url, params: {camper_registration: {camp_id: camper_registration.camp_id, camper_id: camper_registration.camper_id}}
     }.must_change "CamperRegistration.count"
 
     must_redirect_to camper_registration_path(CamperRegistration.last)
@@ -32,7 +32,7 @@ describe CamperRegistrationsController do
   end
 
   it "updates camper_registration" do
-    patch camper_registration_url(camper_registration), params: { camper_registration: { camp_id: camper_registration.camp_id, camper_id: camper_registration.camper_id } }
+    patch camper_registration_url(camper_registration), params: {camper_registration: {camp_id: camper_registration.camp_id, camper_id: camper_registration.camper_id}}
     must_redirect_to camper_registration_path(camper_registration)
   end
 

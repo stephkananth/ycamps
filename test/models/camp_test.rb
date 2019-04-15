@@ -45,8 +45,8 @@ class CampTest < ActiveSupport::TestCase
       delete_more_branches
     end
 
-    # should 'show that active scope works' do
-    #   assert_equal 6, Camp.active.size
-    # end
+      # should 'show that active scope works' do
+      #   assert_equal 6, Camp.active.size
+      # end
   end
 end

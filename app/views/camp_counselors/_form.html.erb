@@ -4,9 +4,9 @@
       <h2><%= pluralize(camp_counselor.errors.count, "error") %> prohibited this camp_counselor from being saved:</h2>
 
       <ul>
-      <% camp_counselor.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% camp_counselor.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
