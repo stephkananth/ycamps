@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-04-14T15:28:52-04:00">2019-04-14T15:28:52-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-04-15T10:28:55-04:00">2019-04-15T10:28:55-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">17.96%</span></span>
+    (<span class="covered_percent"><span class="red">18.12%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.27
+         0.28
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>53</b> files in total.
-    <b>952</b> relevant lines. 
-    <span class="green"><b>171</b> lines covered</span> and
-    <span class="red"><b>781</b> lines missed </span>
+    <b>949</b> relevant lines. 
+    <span class="green"><b>172</b> lines covered</span> and
+    <span class="red"><b>777</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -462,12 +462,12 @@
       
       <tr>
         <td class="strong"><a href="#8b4eb23e53d26cf34925d1dbc676b571dc2a4393" class="src_link" title="app/models/camp.rb">app/models/camp.rb</a></td>
-        <td class="red strong">67.57 %</td>
-        <td>64</td>
-        <td>37</td>
-        <td>25</td>
-        <td>12</td>
-        <td>0.8</td>
+        <td class="red strong">76.47 %</td>
+        <td>66</td>
+        <td>34</td>
+        <td>26</td>
+        <td>8</td>
+        <td>1.2</td>
       </tr>
       
       <tr>
@@ -853,20 +853,20 @@
           <div class="file_list_container" id="Models">
   <h2>
     <span class="group_name">Models</span>
-    (<span class="covered_percent"><span class="yellow">88.0%</span></span>
+    (<span class="covered_percent"><span class="green">90.12%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.38
+         1.47
        </span>
     </span> hits/line)
   </h2>
   <a name="Models"></a>
   <div>
     <b>15</b> files in total.
-    <b>175</b> relevant lines. 
-    <span class="green"><b>154</b> lines covered</span> and
-    <span class="red"><b>21</b> lines missed </span>
+    <b>172</b> relevant lines. 
+    <span class="green"><b>155</b> lines covered</span> and
+    <span class="red"><b>17</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -914,12 +914,12 @@
       
       <tr>
         <td class="strong"><a href="#8b4eb23e53d26cf34925d1dbc676b571dc2a4393" class="src_link" title="app/models/camp.rb">app/models/camp.rb</a></td>
-        <td class="red strong">67.57 %</td>
-        <td>64</td>
-        <td>37</td>
-        <td>25</td>
-        <td>12</td>
-        <td>0.8</td>
+        <td class="red strong">76.47 %</td>
+        <td>66</td>
+        <td>34</td>
+        <td>26</td>
+        <td>8</td>
+        <td>1.2</td>
       </tr>
       
       <tr>
@@ -9379,11 +9379,11 @@
         <div class="source_table" id="8b4eb23e53d26cf34925d1dbc676b571dc2a4393">
   <div class="header">
     <h3>app/models/camp.rb</h3>
-    <h4><span class="red">67.57 %</span> covered</h4>
+    <h4><span class="red">76.47 %</span> covered</h4>
     <div>
-      <b>37</b> relevant lines. 
-      <span class="green"><b>25</b> lines covered</span> and
-      <span class="red"><b>12</b> lines missed.</span>
+      <b>34</b> relevant lines. 
+      <span class="green"><b>26</b> lines covered</span> and
+      <span class="red"><b>8</b> lines missed.</span>
     </div>
   </div>
   
@@ -9480,8 +9480,8 @@
           <code class="ruby">  validates_presence_of :location_id, :name, :program, :start_date, :end_date</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="4" data-linenumber="16">
+          <span class="hits">4</span>
           
           <code class="ruby">  validates_date :start_date, on_or_after: -&gt; {Date.today}, on_or_after_message: &#39;cannot be in the past&#39;, on: :create</code>
         </li>
@@ -9513,175 +9513,175 @@
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">  scope :alphabetical, -&gt; {order(&#39;name&#39;)}</code>
+          <code class="ruby">  scope :active, -&gt; {where(active: true)}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
-          <code class="ruby">  scope :chronological, -&gt; {order(&#39;start_date&#39;, &#39;end_date&#39;)}</code>
+          <code class="ruby">  scope :inactive, -&gt; {where(active: false)}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
-          <code class="ruby">  scope :upcoming, -&gt; {where(&#39;start_date &gt;= ?&#39;, Date.today)}</code>
+          <code class="ruby">  scope :alphabetical, -&gt; {order(&#39;name&#39;)}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
-          <code class="ruby">  scope :past, -&gt; {where(&#39;end_date &lt; ?&#39;, Date.today)}</code>
+          <code class="ruby">  scope :chronological, -&gt; {order(&#39;start_date&#39;, &#39;end_date&#39;)}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
+          <code class="ruby">  scope :upcoming, -&gt; {where(&#39;start_date &gt;= ?&#39;, Date.today)}</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  scope :past, -&gt; {where(&#39;end_date &lt; ?&#39;, Date.today)}</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
           <code class="ruby">  scope :current, -&gt; {where(&#39;start_date &lt;= ? and end_date &gt;= ?&#39;, Date.today, Date.today)}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">  # callbacks</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="28">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="30">
           
-          <code class="ruby">  before_destroy do</code>
+          
+          <code class="ruby">  # before_destroy do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
-          <code class="ruby">    check_if_has_registrations</code>
+          <code class="ruby">  #   check_if_has_registrations</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
-          <code class="ruby">    if errors.present?</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="31">
-          
-          
-          <code class="ruby">      @destroyable = false</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="32">
-          
-          
-          <code class="ruby">      throw(:abort)</code>
+          <code class="ruby">  #   if errors.present?</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">  #     @destroyable = false</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="34">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">  #     throw(:abort)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  #   end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="36">
           
           
+          <code class="ruby">  # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
           <code class="ruby">  # public methods</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="37">
+        <li class="covered" data-hits="1" data-linenumber="39">
           <span class="hits">1</span>
           
           <code class="ruby">  def campers</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="38">
+        <li class="missed" data-hits="0" data-linenumber="40">
           
           
           <code class="ruby">    result = []</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="39">
+        <li class="missed" data-hits="0" data-linenumber="41">
           
           
           <code class="ruby">    camp_badges.each do |camp_badge|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="40">
+        <li class="missed" data-hits="0" data-linenumber="42">
           
           
           <code class="ruby">      result &lt;&lt; CamperCampBadge.where(camp_badge_id: camp_badge.id).map(&amp;:camper)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="42">
+        <li class="missed" data-hits="0" data-linenumber="44">
           
           
           <code class="ruby">    result</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="45">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="46">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="45">
+        <li class="covered" data-hits="1" data-linenumber="47">
           <span class="hits">1</span>
           
           <code class="ruby">  def already_exists?</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="46">
+        <li class="missed" data-hits="0" data-linenumber="48">
           
           
           <code class="ruby">    Camp.where(location_id: location_id, name: name, program: program, start_date: start_date, end_date: end_date).size == 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="47">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="48">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="49">
           
           
-          <code class="ruby">  # private methods</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="50">
@@ -9690,10 +9690,10 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="51">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="51">
           
-          <code class="ruby">  private</code>
+          
+          <code class="ruby">  # private methods</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="52">
@@ -9705,70 +9705,82 @@
         <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
-          <code class="ruby">  def camp_is_not_a_duplicate</code>
+          <code class="ruby">  private</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="54">
-          <span class="hits">7</span>
-          
-          <code class="ruby">    return true if start_date.nil? || location_id.nil?</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="55">
+        <li class="never" data-hits="" data-linenumber="54">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="56">
+        <li class="covered" data-hits="1" data-linenumber="55">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def camp_is_not_a_duplicate</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="56">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    return true if start_date.nil? || location_id.nil?</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="58">
           
           
           <code class="ruby">    if already_exists?</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="57">
+        <li class="missed" data-hits="0" data-linenumber="59">
           
           
           <code class="ruby">      errors.add(:start_date, &#39;already exists for start date and location&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="58">
+        <li class="never" data-hits="" data-linenumber="60">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="59">
+        <li class="never" data-hits="" data-linenumber="61">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="60">
+        <li class="never" data-hits="" data-linenumber="62">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="61">
+        <li class="covered" data-hits="1" data-linenumber="63">
           <span class="hits">1</span>
           
           <code class="ruby">  def check_if_has_campers</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="62">
+        <li class="missed" data-hits="0" data-linenumber="64">
           
           
           <code class="ruby">    errors.add(:base, &#39;Cannot be deleted because there are current registrations.&#39;) unless campers.empty?</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="63">
+        <li class="never" data-hits="" data-linenumber="65">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="64">
+        <li class="never" data-hits="" data-linenumber="66">
           
           
           <code class="ruby">end</code>

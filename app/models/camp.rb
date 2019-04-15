@@ -18,6 +18,8 @@ class Camp < ApplicationRecord
   validate :camp_is_not_a_duplicate, on: :create
 
   # scopes
+  scope :active, -> {where(active: true)}
+  scope :inactive, -> {where(active: false)}
   scope :alphabetical, -> {order('name')}
   scope :chronological, -> {order('start_date', 'end_date')}
   scope :upcoming, -> {where('start_date >= ?', Date.today)}
@@ -25,13 +27,13 @@ class Camp < ApplicationRecord
   scope :current, -> {where('start_date <= ? and end_date >= ?', Date.today, Date.today)}
 
   # callbacks
-  before_destroy do
-    check_if_has_registrations
-    if errors.present?
-      @destroyable = false
-      throw(:abort)
-    end
-  end
+  # before_destroy do
+  #   check_if_has_registrations
+  #   if errors.present?
+  #     @destroyable = false
+  #     throw(:abort)
+  #   end
+  # end
 
   # public methods
   def campers
