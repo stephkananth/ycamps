@@ -1,27 +1,27 @@
 <div class="row main-view barn-header" id="admin-camp-view">
   <div class="header"></div>
   <%= link_to 'Back', :back %>
-  <h2 class="header-title">Badges in Progress</h2>
+  <h2 class="header-title">Campers This Week</h2>
   
   <div class="card">
     <div class="card-body card-text">
         <table class="table card-text">
           <thead>
             <tr>
-              <th scope="col">Badges in Progress</th>
+              <th scope="col">Roster</th>
             </tr>
           </thead>
           <tbody>
-            <% @camp_badges.each do |camp_badge| %>
+            <% @camper_registrations.each do |camper_registration| %>
               <tr>
                 <td>
-                    <%= link_to camp_badge.badge.name, camp_badge %>
+                    <%= link_to camper_registration.camper.proper_name, camper_registration.camper %>
                 </td>
               </tr>
             <% end %>
           </tbody>
         </table>
-        <%= link_to 'New Camp Badge', new_camp_badge_path %>
+        <%= link_to 'New Camper', new_camper_registration_path %>
     </div>
   </div>
 

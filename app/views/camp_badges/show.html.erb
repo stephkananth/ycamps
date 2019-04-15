@@ -1,14 +1,48 @@
-<p id="notice"><%= notice %></p>
+<div class="row main-view camp-badge-header" id="admin-camp-view">
+  <div class="header"></div>
+  <%= link_to 'Back', :back %>
+  <div class="header-text">
+    <h2 class="header-title"><%= @badge.name %></h2>
+    <div class="header-subtitle">
+      Skill— <%= @badge.skill.name %>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-body">
+		<h5 class="card-title">Current Camp</h5>
+		<p class="card-text">
+			<%= @camp.start_date.strftime("%A, %b %d") %> - <%=@camp.end_date.strftime("%A, %b %d") %><br/>
+			<%= @camp.location.name %> <br/>
+			<%= @camp.program %>
+		</p>
+    </div>
+  </div>
 
-<p>
-  <strong>Badge:</strong>
-  <%= @camp_badge.badge %>
-</p>
+  <div class="card">
+    <div class="card-body">
+		<h5 class="card-title">Summary</h5>
+		<p class="card-text">
+			<%= @badge.description %>
+		</p>
+    </div>
+  </div>
 
-<p>
-  <strong>Camp:</strong>
-  <%= @camp_badge.camp %>
-</p>
+  <div class="card">
+    <div class="card-body">
+		<h5 class="card-title">Milestones</h5>
+		<p class="card-text">
+			
+		</p>
+    </div>
+  </div>
 
-<%= link_to 'Edit', edit_camp_badge_path(@camp_badge) %> |
-<%= link_to 'Back', camp_badges_path %>
+  <div class="card">
+    <div class="card-body">
+		<h5 class="card-title">Campers</h5>
+		<p class="card-text">
+			
+		</p>
+    </div>
+  </div>
+</div>

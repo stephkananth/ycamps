@@ -1,4 +1,12 @@
 FactoryBot.define do
+  factory :camp_counselor do
+    camp nil
+    counselor nil
+  end
+  factory :camper_registration do
+    camp nil
+    camper nil
+  end
   factory :user do
     email "kblack@ymca.org"
     first_name "Kim"

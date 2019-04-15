@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :camp_counselors
+  resources :camper_registrations
   get 'sessions/new'
 
   get 'sessions/create'
