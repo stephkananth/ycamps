@@ -19430,3 +19430,177 @@ Processing by CampBadgesController#show as HTML
 Completed 200 OK in 145ms (Views: 133.5ms | ActiveRecord: 3.2ms)
 
 
+Started GET "/camp_badges/1" for ::1 at 2019-04-15 14:05:21 -0400
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CampBadgesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampBadge Load (1.1ms)[0m  [1m[34mSELECT  "camp_badges".* FROM "camp_badges" WHERE "camp_badges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCamp Load (0.5ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.4ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 20.5ms)
+
+
+  
+NoMethodError (undefined method `counselor' for #<CampBadge:0x00007fac6d4d18b0>):
+  
+app/controllers/camp_badges_controller.rb:17:in `show'
+Started GET "/camp_badges/1" for ::1 at 2019-04-15 14:05:48 -0400
+Processing by CampBadgesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampBadge Load (0.2ms)[0m  [1m[34mSELECT  "camp_badges".* FROM "camp_badges" WHERE "camp_badges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.5ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCounselorCampBadge Load (0.6ms)[0m  [1m[34mSELECT  "counselor_camp_badges".* FROM "counselor_camp_badges" WHERE "counselor_camp_badges"."camp_badge_id" = $1 LIMIT $2[0m  [["camp_badge_id", 1], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 19.5ms)
+
+
+  [1m[36mCACHE CounselorCampBadge Load (0.0ms)[0m  [1m[34mSELECT  "counselor_camp_badges".* FROM "counselor_camp_badges" WHERE "counselor_camp_badges"."camp_badge_id" = $1 LIMIT $2[0m  [["camp_badge_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE CounselorCampBadge Load (0.0ms)[0m  [1m[34mSELECT  "counselor_camp_badges".* FROM "counselor_camp_badges" WHERE "counselor_camp_badges"."camp_badge_id" = $1 LIMIT $2[0m  [["camp_badge_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE CounselorCampBadge Load (0.0ms)[0m  [1m[34mSELECT  "counselor_camp_badges".* FROM "counselor_camp_badges" WHERE "counselor_camp_badges"."camp_badge_id" = $1 LIMIT $2[0m  [["camp_badge_id", 1], ["LIMIT", 11]]
+  
+  [1m[36mCACHE CounselorCampBadge Load (0.0ms)[0m  [1m[34mSELECT  "counselor_camp_badges".* FROM "counselor_camp_badges" WHERE "counselor_camp_badges"."camp_badge_id" = $1 LIMIT $2[0m  [["camp_badge_id", 1], ["LIMIT", 11]]
+NoMethodError (undefined method `counselor' for #<CounselorCampBadge::ActiveRecord_Associations_CollectionProxy:0x00007fac69847e30>):
+  
+app/controllers/camp_badges_controller.rb:17:in `show'
+Started GET "/camp_badges/1" for ::1 at 2019-04-15 14:06:31 -0400
+Processing by CampBadgesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampBadge Load (0.2ms)[0m  [1m[34mSELECT  "camp_badges".* FROM "camp_badges" WHERE "camp_badges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.3ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering camp_badges/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCounselorCampBadge Load (0.6ms)[0m  [1m[34mSELECT  "counselor_camp_badges".* FROM "counselor_camp_badges" WHERE "counselor_camp_badges"."camp_badge_id" = $1 LIMIT $2[0m  [["camp_badge_id", 1], ["LIMIT", 11]]
+  Rendered camp_badges/show.html.erb within layouts/application (37.1ms)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 27.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `counselor' for #<CounselorCampBadge::ActiveRecord_Associations_CollectionProxy:0x00007fac670f39b0>):
+    12:     <div class="card-body">
+    13:     <h5 class="card-title">Current Instructor</h5>
+    14:     <p class="card-text">
+    15:       <%= @counselorcbs.counselor.proper_name %><br/>
+    16:     </p>
+    17:     </div>
+    18:   </div>
+  
+app/views/camp_badges/show.html.erb:15:in `_app_views_camp_badges_show_html_erb__3873570373046484455_70189220072140'
+Started GET "/camp_badges/1" for ::1 at 2019-04-15 14:06:56 -0400
+Processing by CampBadgesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampBadge Load (0.3ms)[0m  [1m[34mSELECT  "camp_badges".* FROM "camp_badges" WHERE "camp_badges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.4ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering camp_badges/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCounselorCampBadge Load (0.4ms)[0m  [1m[34mSELECT  "counselor_camp_badges".* FROM "counselor_camp_badges" WHERE "counselor_camp_badges"."camp_badge_id" = $1 LIMIT $2[0m  [["camp_badge_id", 1], ["LIMIT", 11]]
+  Rendered camp_badges/show.html.erb within layouts/application (10.2ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `counselors' for #<CounselorCampBadge::ActiveRecord_Associations_CollectionProxy:0x00007fac6d63d3e8>):
+    12:     <div class="card-body">
+    13:     <h5 class="card-title">Current Instructor</h5>
+    14:     <p class="card-text">
+    15:       <%= @counselorcbs.counselors.first.proper_name %><br/>
+    16:     </p>
+    17:     </div>
+    18:   </div>
+  
+app/views/camp_badges/show.html.erb:15:in `_app_views_camp_badges_show_html_erb__3873570373046484455_70189273178220'
+Started GET "/camp_badges/1" for ::1 at 2019-04-15 14:07:03 -0400
+Processing by CampBadgesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampBadge Load (0.4ms)[0m  [1m[34mSELECT  "camp_badges".* FROM "camp_badges" WHERE "camp_badges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.3ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering camp_badges/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."badge_id" = $1[0m  [["badge_id", 1]]
+  [1m[36mCamperCampBadge Load (0.7ms)[0m  [1m[34mSELECT "camper_camp_badges".* FROM "camper_camp_badges" WHERE "camper_camp_badges"."camp_badge_id" = $1[0m  [["camp_badge_id", 1]]
+  [1m[36mCamper Load (0.9ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.4ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.5ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered camp_badges/show.html.erb within layouts/application (450.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (1.7ms)
+Completed 200 OK in 581ms (Views: 542.8ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/camp_badges/1" for ::1 at 2019-04-15 14:08:18 -0400
+Processing by CampBadgesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampBadge Load (0.4ms)[0m  [1m[34mSELECT  "camp_badges".* FROM "camp_badges" WHERE "camp_badges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCamp Load (0.4ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.5ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering camp_badges/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCounselorCampBadge Load (0.6ms)[0m  [1m[34mSELECT  "counselor_camp_badges".* FROM "counselor_camp_badges" WHERE "counselor_camp_badges"."camp_badge_id" = $1 ORDER BY "counselor_camp_badges"."id" ASC LIMIT $2[0m  [["camp_badge_id", 1], ["LIMIT", 1]]
+  [1m[36mCounselor Load (0.6ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."badge_id" = $1[0m  [["badge_id", 1]]
+  [1m[36mCamperCampBadge Load (0.3ms)[0m  [1m[34mSELECT "camper_camp_badges".* FROM "camper_camp_badges" WHERE "camper_camp_badges"."camp_badge_id" = $1[0m  [["camp_badge_id", 1]]
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.4ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered camp_badges/show.html.erb within layouts/application (36.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 87ms (Views: 69.3ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/camp_badges/1" for ::1 at 2019-04-15 14:08:58 -0400
+Processing by CampBadgesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampBadge Load (0.3ms)[0m  [1m[34mSELECT  "camp_badges".* FROM "camp_badges" WHERE "camp_badges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.2ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCounselorCampBadge Load (0.4ms)[0m  [1m[34mSELECT  "counselor_camp_badges".* FROM "counselor_camp_badges" WHERE "counselor_camp_badges"."camp_badge_id" = $1 ORDER BY "counselor_camp_badges"."id" ASC LIMIT $2[0m  [["camp_badge_id", 1], ["LIMIT", 1]]
+  [1m[36mCounselor Load (0.3ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camp_badges/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered camp_badges/show.html.erb within layouts/application (21.3ms)
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 38.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `proper_name' for "Tiffany Chen":String):
+    12:     <div class="card-body">
+    13:     <h5 class="card-title">Current Instructor</h5>
+    14:     <p class="card-text">
+    15:       <%= @counselor.proper_name %><br/>
+    16:     </p>
+    17:     </div>
+    18:   </div>
+  
+app/views/camp_badges/show.html.erb:15:in `_app_views_camp_badges_show_html_erb__3873570373046484455_70189299286660'
+Started GET "/camp_badges/1" for ::1 at 2019-04-15 14:09:10 -0400
+Processing by CampBadgesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampBadge Load (0.2ms)[0m  [1m[34mSELECT  "camp_badges".* FROM "camp_badges" WHERE "camp_badges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCamp Load (0.2ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.2ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCounselorCampBadge Load (0.5ms)[0m  [1m[34mSELECT  "counselor_camp_badges".* FROM "counselor_camp_badges" WHERE "counselor_camp_badges"."camp_badge_id" = $1 ORDER BY "counselor_camp_badges"."id" ASC LIMIT $2[0m  [["camp_badge_id", 1], ["LIMIT", 1]]
+  [1m[36mCounselor Load (0.3ms)[0m  [1m[34mSELECT  "counselors".* FROM "counselors" WHERE "counselors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering camp_badges/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."badge_id" = $1[0m  [["badge_id", 1]]
+  [1m[36mCamperCampBadge Load (0.3ms)[0m  [1m[34mSELECT "camper_camp_badges".* FROM "camper_camp_badges" WHERE "camper_camp_badges"."camp_badge_id" = $1[0m  [["camp_badge_id", 1]]
+  [1m[36mCamper Load (0.1ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT  "campers".* FROM "campers" WHERE "campers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered camp_badges/show.html.erb within layouts/application (83.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (1.1ms)
+Completed 200 OK in 154ms (Views: 118.6ms | ActiveRecord: 23.8ms)
+
+

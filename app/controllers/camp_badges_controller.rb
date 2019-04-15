@@ -14,6 +14,7 @@ class CampBadgesController < ApplicationController
     @badge = @camp_badge.badge
     @tasks = @badge.tasks
     @ccbs = @camp_badge.camper_camp_badges
+    @counselor = @camp_badge.counselor_camp_badges.first.counselor.proper_name
   end
 
   # GET /camp_badges/new
