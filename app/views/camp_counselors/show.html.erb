@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Camp:</strong>
+  <%= @camp_counselor.camp %>
+</p>
+
+<p>
+  <strong>Counselor:</strong>
+  <%= @camp_counselor.counselor %>
+</p>
+
+<%= link_to 'Edit', edit_camp_counselor_path(@camp_counselor) %> |
+<%= link_to 'Back', camp_counselors_path %>

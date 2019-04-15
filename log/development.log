@@ -12434,3 +12434,230 @@ Processing by CampBadgesController#index as HTML
 Completed 200 OK in 70ms (Views: 66.6ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/camp_badges/4" for ::1 at 2019-04-14 19:47:26 -0400
+Processing by CampBadgesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCampBadge Load (0.4ms)[0m  [1m[34mSELECT  "camp_badges".* FROM "camp_badges" WHERE "camp_badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `campers' for #<CampBadge:0x00007fcc272cb140>
+Did you mean?  camp):
+  
+app/controllers/camp_badges_controller.rb:13:in `show'
+Started GET "/camp_badges" for ::1 at 2019-04-14 19:52:51 -0400
+Processing by CampBadgesController#index as HTML
+  Rendering camp_badges/index.html.erb within layouts/application
+  [1m[36mCampBadge Load (0.3ms)[0m  [1m[34mSELECT "camp_badges".* FROM "camp_badges"[0m
+  [1m[36mBadge Load (0.2ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.2ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered camp_badges/index.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 84ms (Views: 79.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/camps/10" for ::1 at 2019-04-14 19:55:25 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCamp Load (0.4ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.8ms)
+Completed 200 OK in 45ms (Views: 39.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/camp_badges" for ::1 at 2019-04-14 19:57:04 -0400
+Processing by CampBadgesController#index as HTML
+  Rendering camp_badges/index.html.erb within layouts/application
+  [1m[36mCampBadge Load (0.3ms)[0m  [1m[34mSELECT "camp_badges".* FROM "camp_badges"[0m
+  [1m[36mBadge Load (0.3ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.2ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered camp_badges/index.html.erb within layouts/application (7.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.9ms)
+Completed 200 OK in 74ms (Views: 70.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/camp_badges/4" for ::1 at 2019-04-14 19:57:05 -0400
+Processing by CampBadgesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCampBadge Load (0.3ms)[0m  [1m[34mSELECT  "camp_badges".* FROM "camp_badges" WHERE "camp_badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `campers' for #<CampBadge:0x00007fcc1fd78dc0>
+Did you mean?  camp):
+  
+app/controllers/camp_badges_controller.rb:13:in `show'
+Started GET "/camp_badges/4" for ::1 at 2019-04-14 19:57:29 -0400
+Processing by CampBadgesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCampBadge Load (0.3ms)[0m  [1m[34mSELECT  "camp_badges".* FROM "camp_badges" WHERE "camp_badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering camp_badges/show.html.erb within layouts/application
+  [1m[36mBadge Load (0.2ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered camp_badges/show.html.erb within layouts/application (17.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.7ms)
+Completed 200 OK in 112ms (Views: 62.0ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/camp_badges/4" for ::1 at 2019-04-14 19:58:04 -0400
+Processing by CampBadgesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCampBadge Load (0.2ms)[0m  [1m[34mSELECT  "camp_badges".* FROM "camp_badges" WHERE "camp_badges"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.3ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 16.5ms)
+
+
+  
+NoMethodError (undefined method `class_name' for nil:NilClass
+Did you mean?  class_eval):
+  
+app/controllers/camp_badges_controller.rb:15:in `show'
+Started GET "/camp_badges" for ::1 at 2019-04-14 19:59:52 -0400
+Processing by CampBadgesController#index as HTML
+  Rendering camp_badges/index.html.erb within layouts/application
+  [1m[36mCampBadge Load (0.4ms)[0m  [1m[34mSELECT "camp_badges".* FROM "camp_badges"[0m
+  [1m[36mBadge Load (0.2ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.3ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" WHERE "badges"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered camp_badges/index.html.erb within layouts/application (8.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (1.2ms)
+Completed 200 OK in 94ms (Views: 85.5ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/camps/10" for ::1 at 2019-04-14 19:59:54 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCamp Load (0.2ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered camps/show.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 60ms (Views: 50.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/camps/10" for ::1 at 2019-04-14 20:01:28 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCamp Load (0.2ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  Rendered camps/show.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 6.6ms)
+
+
+  
+SyntaxError (/Users/tiffanychen/Documents/dev/67373/ycamps/app/views/camps/show.html.erb:37: syntax error, unexpected keyword_end
+ze;@output_buffer.append=( end );@output_buffer.safe_append=
+                              ^
+/Users/tiffanychen/Documents/dev/67373/ycamps/app/views/camps/show.html.erb:42: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/tiffanychen/Documents/dev/67373/ycamps/app/views/camps/show.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/camps/show.html.erb:37: syntax error, unexpected keyword_end
+app/views/camps/show.html.erb:42: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/camps/show.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+app/views/camps/show.html.erb:37: syntax error, unexpected keyword_end
+app/views/camps/show.html.erb:42: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/camps/show.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/camps/10" for ::1 at 2019-04-14 20:01:36 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  Rendered camps/show.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/tiffanychen/Documents/dev/67373/ycamps/app/views/camps/show.html.erb:37: syntax error, unexpected keyword_end
+ze;@output_buffer.append=( end );@output_buffer.safe_append=
+                              ^
+/Users/tiffanychen/Documents/dev/67373/ycamps/app/views/camps/show.html.erb:42: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/tiffanychen/Documents/dev/67373/ycamps/app/views/camps/show.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/camps/show.html.erb:37: syntax error, unexpected keyword_end
+app/views/camps/show.html.erb:42: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/camps/show.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+app/views/camps/show.html.erb:37: syntax error, unexpected keyword_end
+app/views/camps/show.html.erb:42: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/camps/show.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/camps/10" for ::1 at 2019-04-14 20:02:55 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCamp Load (0.3ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.8ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" INNER JOIN "camp_badges" ON "badges"."id" = "camp_badges"."badge_id" WHERE "camp_badges"."camp_id" = $1 LIMIT $2[0m  [["camp_id", 10], ["LIMIT", 11]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" INNER JOIN "camp_badges" ON "badges"."id" = "camp_badges"."badge_id" WHERE "camp_badges"."camp_id" = $1 LIMIT $2[0m  [["camp_id", 10], ["LIMIT", 11]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" INNER JOIN "camp_badges" ON "badges"."id" = "camp_badges"."badge_id" WHERE "camp_badges"."camp_id" = $1 LIMIT $2[0m  [["camp_id", 10], ["LIMIT", 11]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" INNER JOIN "camp_badges" ON "badges"."id" = "camp_badges"."badge_id" WHERE "camp_badges"."camp_id" = $1 LIMIT $2[0m  [["camp_id", 10], ["LIMIT", 11]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" INNER JOIN "camp_badges" ON "badges"."id" = "camp_badges"."badge_id" WHERE "camp_badges"."camp_id" = $1 LIMIT $2[0m  [["camp_id", 10], ["LIMIT", 11]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" INNER JOIN "camp_badges" ON "badges"."id" = "camp_badges"."badge_id" WHERE "camp_badges"."camp_id" = $1 LIMIT $2[0m  [["camp_id", 10], ["LIMIT", 11]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" INNER JOIN "camp_badges" ON "badges"."id" = "camp_badges"."badge_id" WHERE "camp_badges"."camp_id" = $1 LIMIT $2[0m  [["camp_id", 10], ["LIMIT", 11]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" INNER JOIN "camp_badges" ON "badges"."id" = "camp_badges"."badge_id" WHERE "camp_badges"."camp_id" = $1 LIMIT $2[0m  [["camp_id", 10], ["LIMIT", 11]]
+  Rendered camps/show.html.erb within layouts/application (326.2ms)
+Completed 500 Internal Server Error in 336ms (ActiveRecord: 12.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `camp' for #<#<Class:0x00007fcc208756d8>:0x00007fcc23097080>
+Did you mean?  @camp):
+    27:     </div>
+    28:   <%#= end %>
+    29: 
+    30:   <%= link_to counselor_camp_path(camp) do %>
+    31:     <div class="card">
+    32:       <div class="card-body">
+    33:         <h5 class="card-title">Counselor List</h5>
+  
+app/views/camps/show.html.erb:30:in `_app_views_camps_show_html_erb__2486369833945409752_70257368940220'
+Started GET "/camps/10" for ::1 at 2019-04-14 20:03:09 -0400
+Processing by CampsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCamp Load (0.2ms)[0m  [1m[34mSELECT  "camps".* FROM "camps" WHERE "camps"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering camps/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mBadge Load (0.6ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" INNER JOIN "camp_badges" ON "badges"."id" = "camp_badges"."badge_id" WHERE "camp_badges"."camp_id" = $1 LIMIT $2[0m  [["camp_id", 10], ["LIMIT", 11]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" INNER JOIN "camp_badges" ON "badges"."id" = "camp_badges"."badge_id" WHERE "camp_badges"."camp_id" = $1 LIMIT $2[0m  [["camp_id", 10], ["LIMIT", 11]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" INNER JOIN "camp_badges" ON "badges"."id" = "camp_badges"."badge_id" WHERE "camp_badges"."camp_id" = $1 LIMIT $2[0m  [["camp_id", 10], ["LIMIT", 11]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" INNER JOIN "camp_badges" ON "badges"."id" = "camp_badges"."badge_id" WHERE "camp_badges"."camp_id" = $1 LIMIT $2[0m  [["camp_id", 10], ["LIMIT", 11]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" INNER JOIN "camp_badges" ON "badges"."id" = "camp_badges"."badge_id" WHERE "camp_badges"."camp_id" = $1 LIMIT $2[0m  [["camp_id", 10], ["LIMIT", 11]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" INNER JOIN "camp_badges" ON "badges"."id" = "camp_badges"."badge_id" WHERE "camp_badges"."camp_id" = $1 LIMIT $2[0m  [["camp_id", 10], ["LIMIT", 11]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" INNER JOIN "camp_badges" ON "badges"."id" = "camp_badges"."badge_id" WHERE "camp_badges"."camp_id" = $1 LIMIT $2[0m  [["camp_id", 10], ["LIMIT", 11]]
+  [1m[36mCACHE Badge Load (0.0ms)[0m  [1m[34mSELECT  "badges".* FROM "badges" INNER JOIN "camp_badges" ON "badges"."id" = "camp_badges"."badge_id" WHERE "camp_badges"."camp_id" = $1 LIMIT $2[0m  [["camp_id", 10], ["LIMIT", 11]]
+  Rendered camps/show.html.erb within layouts/application (359.9ms)
+Completed 500 Internal Server Error in 370ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `counselor_camp_path' for #<#<Class:0x00007fcc208756d8>:0x00007fcc25411830>
+Did you mean?  counselor_path
+               counselors_path):
+    27:     </div>
+    28:   <%#= end %>
+    29: 
+    30:   <%= link_to counselor_camp_path do %>
+    31:     <div class="card">
+    32:       <div class="card-body">
+    33:         <h5 class="card-title">Counselor List</h5>
+  
+app/views/camps/show.html.erb:30:in `_app_views_camps_show_html_erb__2486369833945409752_70257387540780'
