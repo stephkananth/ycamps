@@ -1,48 +1,48 @@
 @import "bootstrap";
 
 html, body{
-	height: 100%;
-	width: 100%;
-	background: #F7F7F7;
-	font-family: "Quicksand";
+  height: 100%;
+  width: 100%;
+  background: #F7F7F7;
+  font-family: "Quicksand";
 }
 
 body{
-	padding-bottom: 100px; 
+  padding-bottom: 100px; 
 }
 
 .container{
-	font-family: "Quicksand";
-	margin: 0;
-	padding: 0;
+  font-family: "Quicksand";
+  margin: 0;
+  padding: 0;
 }
 
 .row{
-	margin-right: 0;
-	margin-left: 0;
+  margin-right: 0;
+  margin-left: 0;
 
 }
 
 .bg-light{
-	background-color: #fff !important;
+  background-color: #fff !important;
 }
 
 .background-container{
-	min-height: 100vh;
-	background-image: url("/assets/grass-background.svg");
-	height: 100%;
-	width: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+  min-height: 100vh;
+  background-image: url("/assets/grass-background.svg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #home{
-	background-image: url("/assets/grass-background.svg");
-	height: 100%; 
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+  background-image: url("/assets/grass-background.svg");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #home .card{
@@ -63,188 +63,188 @@ body{
 }
 
  #signin .card{
- 	width: 100%;
- 	margin-top: 30%;
+  width: 100%;
+  margin-top: 30%;
  }
 
 .card{
-	margin: 0.5em 2.5em;
-	background: #FFFFFF;
-	box-shadow: 0px 4px 5px rgba(136, 136, 136, 0.3);
-	border-radius: 14px;
-	border: none;
-	color: #7E8288;
+  margin: 0.5em 2.5em;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 5px rgba(136, 136, 136, 0.3);
+  border-radius: 14px;
+  border: none;
+  color: #7E8288;
 }
 
 .card-body{
-	padding: 2em;
+  padding: 2em;
 }
 
 h5.card-title{
-	font-weight: 700;
-	line-height: 28px;
-	font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  font-size: 18px;
 }
 
 .card-text{
-	font-size: 14px;
-	line-height: 19px;
+  font-size: 14px;
+  line-height: 19px;
 }
 
 .btn{
-	background: #56D4CB;
-	border-radius: 50px;
-	border: none;
-	font-weight: bold;
-	font-size: 14px;
-	padding: 12px;
-	text-transform: uppercase;
+  background: #56D4CB;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 12px;
+  text-transform: uppercase;
 }
 
 .btn a{
-	text-decoration: none;
-	color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 a{
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .btn:focus{
-	outline:0;
+  outline:0;
 }
 
 .btn:hover{
-	background-color: #fff;
-	color: #56D4CB;
-	border: 2px #56D4CB solid;
+  background-color: #fff;
+  color: #56D4CB;
+  border: 2px #56D4CB solid;
 }
 
 label{
-	text-transform: lowercase;
-	margin-bottom: 4px;
-	font-size: 14px;
+  text-transform: lowercase;
+  margin-bottom: 4px;
+  font-size: 14px;
 }
 
 input.form-control{
-	border-radius: 50px;
+  border-radius: 50px;
 
 }
 
  .main-view .card{
- 	width: 100%;
+  width: 100%;
  }
 
 .main-view .card-body{
-	padding: 20px;
+  padding: 20px;
 }
 
  .dashboard{
- 	background: url("/assets/dashboard-header.svg");
- 	max-width: 100%;
- 	max-height: 30vh;
- 	background-position: center;
-	background-repeat: no-repeat;
-	margin: auto;
-	background-size: cover;
+  background: url("/assets/dashboard-header.svg");
+  max-width: 100%;
+  max-height: 30vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: auto;
+  background-size: cover;
  }
 
  .header-title{
- 	margin-left: 1.7em;
- 	margin-top: 4em;
- 	font-weight: 700;
-	font-size: 26px;
-	line-height: normal;
-	color: #696969;
+  margin-left: 1.7em;
+  margin-top: 4em;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: normal;
+  color: #696969;
  }
 
  .header-subtitle{
- 	margin: 1em;
- 	margin-bottom: 3em;
- 	margin-left: 3.2em;
- 	font-weight: 500;
-	font-size: 14px;
-	line-height: normal;
-	color: #696969;
+  margin: 1em;
+  margin-bottom: 3em;
+  margin-left: 3.2em;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: normal;
+  color: #696969;
  }
 
  .nav-link{
- 	color: #696969 !important;
+  color: #696969 !important;
  }
 
  .nav-link:hover{
- 	color: #56D4CB !important;
+  color: #56D4CB !important;
  }
 
  #profile{
- 	background: url("/assets/profile-header.svg");
- 	max-width: 100%;
- 	max-height: 30vh;
- 	background-position: center;
-	background-repeat: no-repeat;
-	margin: auto;
-	background-size: cover;
+  background: url("/assets/profile-header.svg");
+  max-width: 100%;
+  max-height: 30vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: auto;
+  background-size: cover;
  }
 
  #profile h5.card-title{
- 	margin-bottom: 0px;
+  margin-bottom: 0px;
  }
 
  #user-role{
- 	font-size: 14px;
+  font-size: 14px;
  }
 
  a .card{
- 	width:  100%;
+  width:  100%;
  }
 
 .card-subtitle{
-	font-weight: 700;
-	font-size: 16px;
-	padding-bottom:  4px;
+  font-weight: 700;
+  font-size: 16px;
+  padding-bottom:  4px;
 }
 
 .card-section{
-	margin: 16px auto;
+  margin: 16px auto;
 }
 
 .card-link{
-	color: #56D4CB;
-	font-size: 18px;
+  color: #56D4CB;
+  font-size: 18px;
 }
 
 .card-link:hover{
-	color: #56D4CB;
+  color: #56D4CB;
 }
 
 .section-header{
-	color: #696969;
-	font-size: 20px;
-	font-weight: 700;
+  color: #696969;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 #top-section-header{
-	margin-left: 2em;
-	margin-top: 100px;
+  margin-left: 2em;
+  margin-top: 100px;
 
 }
 
 .barn-header{
-	background: url("/assets/barn-header.svg");
- 	max-width: 100%;
- 	max-height: 30vh;
- 	background-position: center;
-	background-repeat: no-repeat;
-	margin: auto;
-	background-size: cover;
+  background: url("/assets/barn-header.svg");
+  max-width: 100%;
+  max-height: 30vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: auto;
+  background-size: cover;
 }
 
 .camp-badge-header{
-	background: url("/assets/camp-badge-header.svg");
- 	max-width: 100%;
- 	max-height: 30vh;
- 	background-position: center;
-	background-repeat: no-repeat;
-	margin: auto;
-	background-size: cover;
+  background: url("/assets/camp-badge-header.svg");
+  max-width: 100%;
+  max-height: 30vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: auto;
+  background-size: cover;
 }

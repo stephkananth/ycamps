@@ -19,7 +19,8 @@ class BranchesController < ApplicationController
   end
 
   # GET /branches/1/edit
-  def edit; end
+  def edit;
+  end
 
   # POST /branches
   # POST /branches.json
@@ -28,11 +29,11 @@ class BranchesController < ApplicationController
 
     respond_to do |format|
       if @branch.save
-        format.html { redirect_to @branch, notice: 'Branch was successfully created.' }
-        format.json { render :show, status: :created, location: @branch }
+        format.html {redirect_to @branch, notice: 'Branch was successfully created.'}
+        format.json {render :show, status: :created, location: @branch}
       else
-        format.html { render :new }
-        format.json { render json: @branch.errors, status: :unprocessable_entity }
+        format.html {render :new}
+        format.json {render json: @branch.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -42,11 +43,11 @@ class BranchesController < ApplicationController
   def update
     respond_to do |format|
       if @branch.update(branch_params)
-        format.html { redirect_to @branch, notice: 'Branch was successfully updated.' }
-        format.json { render :show, status: :ok, location: @branch }
+        format.html {redirect_to @branch, notice: 'Branch was successfully updated.'}
+        format.json {render :show, status: :ok, location: @branch}
       else
-        format.html { render :edit }
-        format.json { render json: @branch.errors, status: :unprocessable_entity }
+        format.html {render :edit}
+        format.json {render json: @branch.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -56,8 +57,8 @@ class BranchesController < ApplicationController
   def destroy
     @branch.destroy
     respond_to do |format|
-      format.html { redirect_to branches_url, notice: 'Branch was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html {redirect_to branches_url, notice: 'Branch was successfully destroyed.'}
+      format.json {head :no_content}
     end
   end
 

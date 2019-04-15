@@ -23,17 +23,6 @@ capybara-*.html
 rerun.txt
 pickle-email-*.html
 
-# TODO Comment out this rule if you are OK with secrets being uploaded to the repo
-config/initializers/secret_token.rb
-config/master.key
-
-# Only include if you have production secrets in this file, which is no longer a Rails default
-# config/secrets.yml
-
-# dotenv
-# TODO Comment out this rule if environment variables can be committed
-.env
-
 ## Environment normalization:
 /.bundle
 /vendor/bundle
@@ -59,3 +48,14 @@ bower.json
 node_modules/
 *.log
 *.cache
+*.log
+coverage/index.html
+coverage/.last_run.json
+coverage/.resultset.json
+coverage/assets/0.10.2/application.css
+coverage/assets/0.10.2/application.js
+coverage/index.html
+coverage/.last_run.json
+coverage/.resultset.json
+coverage/index.html
+log/test.log

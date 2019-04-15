@@ -10,11 +10,13 @@ class LocationTest < ActiveSupport::TestCase
 
   context 'Within context' do
     setup do
+      create_branches
       create_locations
     end
 
     teardown do
       delete_locations
+      delete_branches
     end
 
     should 'list locations in alphabetical order' do
