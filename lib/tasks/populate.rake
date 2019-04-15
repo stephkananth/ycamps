@@ -15,14 +15,18 @@ namespace :db do
         require 'factory_bot_rails'
 
         # Step 1: Create some instructors
-        kim_user = User.new
-        kim_user.role = "admin"
-        kim_user.email = "kblack@ymcapgh.org"
-        kim_user.password = "secret123"
-        kim_user.password_confirmation = "secret123"
-        kim_user.first_name = "Kimberly"
-        kim_user.last_name = "Black"
-        kim_user.save!
-        puts "Created admin user, Kim"
+        kam_user = User.new
+        kam_user.role = "admin"
+        kam_user.email = "kablack@ymcapgh.org"
+        kam_user.password = "secret123"
+        kam_user.password_confirmation = "secret123"
+        kam_user.first_name = "Kamberly"
+        kam_user.last_name = "Black"
+        kam_user.save!
+        test = User.find_by_email("kablack@ymcapgh.org")
+        if test
+            puts "Created admin user, #{test.first_name}"
+        end
     end
 end
+
