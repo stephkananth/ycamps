@@ -6,7 +6,7 @@ class CounselorsController < ApplicationController
   # GET /counselors
   # GET /counselors.json
   def index
-    @counselors = Counselor.all.alphabetical.paginate(page: params[:instructors]).per_page(10)
+    @counselors = Counselor.all.alphabetical
   end
 
   # GET /counselors/1
