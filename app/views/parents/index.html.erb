@@ -1,29 +1,17 @@
-<p id="notice"><%= notice %></p>
+<div class="row main-view barn-header" id="admin-camp-view">
+  <div class="header"></div>
+  <%= link_to 'Back', :back %>
+  <div class="header-text">
+    <h2 class="header-title">Parents</h2>
+    <div class="header-subtitle">
+      <%= link_to 'New Parent', new_parent_path %>
 
-<h1>Parents</h1>
+    </div>
+  </div>
+  <%= link_to 'New Parent', new_parent_path, class: "btn btn-primary btn-block" %>
 
-<table>
-  <thead>
-  <tr>
-    <th>User</th>
-    <th>Active</th>
-    <th colspan="3"></th>
-  </tr>
-  </thead>
+  <%= render :partial => "partials/parent_index", locals: {parents: @parents, state: "Current"} %>
+  <%#= render :partial => "partials/camper_index", locals: {camps: @upcoming_camps, state: "Upcoming"} %>
+  <%#= render :partial => "partials/camper_index", locals: {camps: @past_camps, state: "Past"} %>
 
-  <tbody>
-  <% @parents.each do |parent| %>
-    <tr>
-      <td><%= parent.user %></td>
-      <td><%= parent.active %></td>
-      <td><%= link_to 'Show', parent %></td>
-      <td><%= link_to 'Edit', edit_parent_path(parent) %></td>
-      <td><%= link_to 'Destroy', parent, method: :delete, data: {confirm: 'Are you sure?'} %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Parent', new_parent_path %>
+</div>

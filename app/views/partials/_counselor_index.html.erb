@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title"><%= state %> Counselors</h5>
+    <p class="card-text">
+
+      <table>
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th colspan="3"></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% counselors.each do |counselor| %>
+          <tr>
+            <td>
+              <%= link_to counselor do %>
+                <%= counselor.name %>
+              <% end %>
+            </td>
+            <td><%= counselor.user.email %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+
+    </p>
+  </div>
+</div>

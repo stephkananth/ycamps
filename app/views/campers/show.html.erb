@@ -9,13 +9,8 @@
     </div>
   </div>
 
-  <div class="card">
-    <div class="card-body card-text">
-      <div class="card-section">
-        <div class="card-subtitle">Current Camp</div>
-
-      </div>
-    </div>
-  </div>
+  <%#= render :partial => "partials/camps_index", locals: {camps: @current_camps, state: "Current"} %>
+  <%#= render :partial => "partials/camps_index", locals: {camps: @upcoming_camps, state: "Upcoming"} %>
+  <%#= render :partial => "partials/camps_index", locals: {camps: @past_camps, state: "Past"} %>
 
 </div>
