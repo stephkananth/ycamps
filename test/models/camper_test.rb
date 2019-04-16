@@ -64,5 +64,47 @@ class CamperTest < ActiveSupport::TestCase
     end
 
     # TODO: Show that you can get camps, currently enrolled camps, etc.
+
+    should 'show that current badge method works' do
+      @skill = FactoryBot.create(:skill, name: 'Skill', category: 'Category')
+      @badge1 = FactoryBot.create(:badge, skill: @skill, name: 'Badge 1', level: 1)
+      @badge2 = FactoryBot.create(:badge, skill: @skill, name: 'Badge 2', level: 2)
+      @badge3 = FactoryBot.create(:badge, skill: @skill, name: 'Badge 3', level: 3)
+
+      @branch = FactoryBot.create(:branch, name: 'Branch')
+      @location = FactoryBot.create(:location, branch: @branch, name: 'Location')
+      @camp1 = FactoryBot.create(:camp, location: @location, name: 'Camp 1', program: 'Camp 1', start_date: Date.parse('2001-02-03'), end_date: Date.parse('2002-02-03'), active: true)
+      @camp2 = FactoryBot.create(:camp, location: @location, name: 'Camp 2', program: 'Camp 2', start_date: Date.parse('2019-04-10'), end_date: Date.yesterday, active: true)
+      @camp3 = FactoryBot.create(:camp, location: @location, name: 'Camp 3', program: 'Camp 3', start_date: Date.today, end_date: Date.tomorrow, active: true)
+
+      @camp_badge1 = FactoryBot.create(:camp_badge, badge: @badge1, camp: @camp1)
+      @camp_badge2 = FactoryBot.create(:camp_badge, badge: @badge2, camp: @camp2)
+      @camp_badge3 = FactoryBot.create(:camp_badge, badge: @badge3, camp: @camp3)
+
+      @camper_camp_badge1 = FactoryBot.create(:camper_camp_badge, camp_badge: @camp_badge1, camper: @alex, completed: true)
+      @camper_camp_badge2 = FactoryBot.create(:camper_camp_badge, camp_badge: @camp_badge2, camper: @alex, completed: true)
+      @camper_camp_badge3 = FactoryBot.create(:camper_camp_badge, camp_badge: @camp_badge3, camper: @alex, completed: false)
+
+      assert_equal @badge3, @alex.current_badge
+
+      @camper_camp_badge1.delete
+      @camper_camp_badge2.delete
+      @camper_camp_badge3.delete
+
+      @camp_badge1.delete
+      @camp_badge2.delete
+      @camp_badge3.delete
+
+      @camp1.delete
+      @camp2.delete
+      @camp3.delete
+      @location.delete
+      @branch.delete
+
+      @badge1.delete
+      @badge2.delete
+      @badge3.delete
+      @skill.delete
+    end
   end
 end

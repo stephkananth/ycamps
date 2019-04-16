@@ -17,7 +17,7 @@ class CampBadge < ApplicationRecord
   before_destroy do
     cannot_destroy_object
   end
-  after_rollback :check_upcoming_camps
+  # after_rollback :check_upcoming_camps
 
   # public methods
 
@@ -25,11 +25,11 @@ class CampBadge < ApplicationRecord
 
   private
 
-  def check_upcoming_camps
-    if camps.upcoming.empty?
-      self.active = false
-    else
-      errors.add(:base, 'There are upcoming camps associated with this curriculum so it cannot be made inactive.')
-    end
-  end
+  # def check_upcoming_camps
+  #   if camps.upcoming.empty?
+  #     self.active = false
+  #   else
+  #     errors.add(:base, 'There are upcoming camps associated with this curriculum so it cannot be made inactive.')
+  #   end
+  # end
 end

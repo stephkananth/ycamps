@@ -15,18 +15,18 @@ class Camp < ApplicationRecord
 
   # validations
   validates_presence_of :location_id, :name, :program, :start_date, :end_date
-  validates_date :start_date, on_or_after: -> {Date.today}, on_or_after_message: 'cannot be in the past', on: :create
+  # validates_date :start_date, on_or_after: -> { Date.today }, on_or_after_message: 'cannot be in the past', on: :create
   validates_date :end_date, on_or_after: :start_date
   validate :camp_is_not_a_duplicate, on: :create
 
   # scopes
-  scope :active, -> {where(active: true)}
-  scope :inactive, -> {where(active: false)}
-  scope :alphabetical, -> {order('name')}
-  scope :chronological, -> {order('start_date', 'end_date')}
-  scope :upcoming, -> {where('start_date > ?', Date.today)}
-  scope :past, -> {where('end_date < ?', Date.today)}
-  scope :current, -> {where('start_date <= ? and end_date >= ?', Date.today, Date.today)}
+  scope :active, -> { where(active: true) }
+  scope :inactive, -> { where(active: false) }
+  scope :alphabetical, -> { order('name') }
+  scope :chronological, -> { order('start_date', 'end_date') }
+  scope :upcoming, -> { where('start_date > ?', Date.today) }
+  scope :past, -> { where('end_date < ?', Date.today) }
+  scope :current, -> { where('start_date <= ? and end_date >= ?', Date.today, Date.today) }
 
   # callbacks
   # before_destroy do
@@ -48,6 +48,10 @@ class Camp < ApplicationRecord
 
   def already_exists?
     Camp.where(location_id: location_id, name: name, program: program, start_date: start_date, end_date: end_date).size == 1
+  end
+
+  def current?
+    (start_date <= Date.today) && (end_date >= Date.today)
   end
 
   # private methods
