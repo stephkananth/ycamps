@@ -230,28 +230,28 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     camper_cb1 = CamperCampBadge.new
     camper_cb1.camp_badge_id = cb1_1.id
     camper_cb1.camper_id = jack_camper.id
-    camper_cb1.completed = "False"
+    camper_cb1.completed = false
     camper_cb1.save!
     puts "Created camper camp badge, Camper_CB1"
 
     camper_cb2 = CamperCampBadge.new
     camper_cb2.camp_badge_id = cb1_1.id
     camper_cb2.camper_id = jill_camper.id
-    camper_cb2.completed = "False"
+    camper_cb2.completed = false
     camper_cb2.save!
     puts "Created camper camp badge, Camper_CB2"
 
     camper_cb3 = CamperCampBadge.new
     camper_cb3.camp_badge_id = cb1_1.id
     camper_cb3.camper_id = sam_camper.id
-    camper_cb3.completed = "False"
+    camper_cb3.completed = false
     camper_cb3.save!
     puts "Created camper camp badge, Camper_CB3"
 
     camper_cb4 = CamperCampBadge.new
     camper_cb4.camp_badge_id = cb1_1.id
     camper_cb4.camper_id = lily_camper.id
-    camper_cb4.completed = "False"
+    camper_cb4.completed = false
     camper_cb4.save!
     puts "Created camper camp badge, Camper_CB3"
 
