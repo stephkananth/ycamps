@@ -15,7 +15,7 @@ class Camp < ApplicationRecord
 
   # validations
   validates_presence_of :location_id, :name, :program, :start_date, :end_date
-  # validates_date :start_date, on_or_after: -> { Date.today }, on_or_after_message: 'cannot be in the past', on: :create
+  validates_date :start_date
   validates_date :end_date, on_or_after: :start_date
   validate :camp_is_not_a_duplicate, on: :create
 
