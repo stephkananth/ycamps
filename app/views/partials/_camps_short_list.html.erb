@@ -1,19 +1,20 @@
 <div class="card">
   <div class="card-body">
     <h5 class="card-title"><%= state %> Camps</h5>
-      <table class="table card-text">
-        <tbody>
-          <% if camps.empty? %>
-          <p>No camps at this time</p>
-          <% else %>
-            <% for camp in camps %>
-              <tr>
-                <td><%= link_to camp.name, camp_path(camp) %><br/><%= camp.start_date.strftime("%A, %b %d")%> - <%= camp.end_date.strftime("%A, %b %d") %></td>
-              </tr>
-            <% end %>
-          <% end %>
-        </tbody>
-      </table>
+    <table class="table card-text">
+      <tbody>
+      <% if camps.empty? %>
+        <p>No camps at this time</p>
+      <% else %>
+        <% for camp in camps %>
+          <tr>
+            <td><%= link_to camp.name, camp_path(camp) %><br/><%= camp.start_date.strftime("%A, %b %d") %>
+              - <%= camp.end_date.strftime("%A, %b %d") %></td>
+          </tr>
+        <% end %>
+      <% end %>
+      </tbody>
+    </table>
   </div>
 </div>
 

@@ -10,14 +10,22 @@ class CamperCampBadge < ApplicationRecord
   validates_presence_of :camp_badge_id, :camper_id
 
   # scopes
-  scope :completed, -> {where(completed: true)}
-  scope :incomplete, -> {where(completed: false)}
+  scope :completed, -> { where(completed: true) }
+  scope :incomplete, -> { where(completed: false) }
 
   # callbacks
 
   # public methods
   def completed?
     camper_camp_badge_tasks.completed.count == 4
+  end
+
+  def complete
+    self.completed = true; save!
+  end
+
+  def tasks
+    camper_camp_badge_tasks
   end
 
   # private methods

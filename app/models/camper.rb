@@ -12,9 +12,9 @@ class Camper < ApplicationRecord
   validates_presence_of :first_name, :last_name
   validates_numericality_of :parent_id, only_integer: true, greater_than: 0
 
-  scope :active, -> { where(active: true) }
-  scope :inactive, -> { where(active: false) }
-  scope :alphabetical, -> { order('last_name, first_name') }
+  scope :active, -> {where(active: true)}
+  scope :inactive, -> {where(active: false)}
+  scope :alphabetical, -> {order('last_name, first_name')}
 
   def name
     last_name + ', ' + first_name

@@ -17,5 +17,21 @@ module Contexts
       @camp_badge2.delete
       @camp_badge3.delete
     end
+
+    def create_more_camp_badges
+      @camp_badge4 = FactoryBot.create(:camp_badge, badge: @badge1, camp: @ldp_girls)
+      @camp_badge5 = FactoryBot.create(:camp_badge, badge: @badge1, camp: @ldp_boys)
+      @camp_badge6 = FactoryBot.create(:camp_badge, badge: @badge2, camp: @ldp_girls)
+      @camp_badge7 = FactoryBot.create(:camp_badge, badge: @badge2, camp: @ldp_boys)
+      @camp_badge8 = FactoryBot.create(:camp_badge, badge: @badge1, camp: @first_term)
+    end
+
+    def delete_more_camp_badges
+      @camp_badge4.delete
+      @camp_badge5.delete
+      @camp_badge6.delete
+      @camp_badge7.delete
+      @camp_badge8.delete
+    end
   end
 end

@@ -10,13 +10,13 @@
 
   <div class="card">
     <div class="card-body">
-    <h5 class="card-title">Current Instructor</h5>
-    <p class="card-text">
-      <%= @counselor %><br/>
-    </p>
+      <h5 class="card-title">Current Instructor</h5>
+      <p class="card-text">
+        <%= @counselor %><br/>
+      </p>
     </div>
   </div>
-  
+
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">Current Camp</h5>
@@ -39,7 +39,7 @@
 
   <div class="card">
     <div class="card-body">
-  		<h5 class="card-title">Milestones</h5>
+      <h5 class="card-title">Milestones</h5>
       <div id="accordion">
         <% @tasks.each_with_index do |task, index| %>
           <div class="accordion-section">
@@ -58,13 +58,13 @@
             </div>
           </div>
         <% end %>
+      </div>
     </div>
-  </div>
   </div>
 
   <div class="card">
     <div class="card-body">
-  		<h5 class="card-title">Campers</h5>
+      <h5 class="card-title">Campers</h5>
       <div class="container">
         <% @ccbs.each_with_index do |ccb, index| %>
           <% if ccb == @ccbs.first or (index + 1) % 3 == 1 %>
@@ -85,12 +85,12 @@
             <% end %>
             </div>
           <% end %>
-           <% if ccb == @ccbs.last or (index + 1) % 3 == 0 %>
+          <% if ccb == @ccbs.last or (index + 1) % 3 == 0 %>
             </div>
           <% end %>
         <% end %>
-      </div>
-    </div>
+        </div>
+  </div>
   <div class="card pad-bottom">
   </div>
 </div>
