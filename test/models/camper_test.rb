@@ -66,10 +66,11 @@ class CamperTest < ActiveSupport::TestCase
     # TODO: Show that you can get camps, currently enrolled camps, etc.
 
     should 'show that current badge method works' do
+
       @skill = FactoryBot.create(:skill, name: 'Skill', category: 'Category')
-      @badge1 = FactoryBot.create(:badge, skill: @skill, name: 'Badge 1', level: 1)
-      @badge2 = FactoryBot.create(:badge, skill: @skill, name: 'Badge 2', level: 2)
-      @badge3 = FactoryBot.create(:badge, skill: @skill, name: 'Badge 3', level: 3)
+      @badge1a = FactoryBot.create(:badge, skill: @skill, name: 'Badge 1', level: 1)
+      @badge2a = FactoryBot.create(:badge, skill: @skill, name: 'Badge 2', level: 2)
+      @badge3a = FactoryBot.create(:badge, skill: @skill, name: 'Badge 3', level: 3)
 
       @branch = FactoryBot.create(:branch, name: 'Branch')
       @location = FactoryBot.create(:location, branch: @branch, name: 'Location')
@@ -77,19 +78,27 @@ class CamperTest < ActiveSupport::TestCase
       @camp2 = FactoryBot.create(:camp, location: @location, name: 'Camp 2', program: 'Camp 2', start_date: Date.parse('2019-04-10'), end_date: Date.yesterday, active: true)
       @camp3 = FactoryBot.create(:camp, location: @location, name: 'Camp 3', program: 'Camp 3', start_date: Date.today, end_date: Date.tomorrow, active: true)
 
-      @camp_badge1 = FactoryBot.create(:camp_badge, badge: @badge1, camp: @camp1)
-      @camp_badge2 = FactoryBot.create(:camp_badge, badge: @badge2, camp: @camp2)
-      @camp_badge3 = FactoryBot.create(:camp_badge, badge: @badge3, camp: @camp3)
+      @camp_badge1 = FactoryBot.create(:camp_badge, badge: @badge1a, camp: @camp1)
+      @camp_badge2 = FactoryBot.create(:camp_badge, badge: @badge2a, camp: @camp2)
+      @camp_badge3 = FactoryBot.create(:camp_badge, badge: @badge3a, camp: @camp3)
 
-      @camper_camp_badge1 = FactoryBot.create(:camper_camp_badge, camp_badge: @camp_badge1, camper: @alex, completed: true)
-      @camper_camp_badge2 = FactoryBot.create(:camper_camp_badge, camp_badge: @camp_badge2, camper: @alex, completed: true)
-      @camper_camp_badge3 = FactoryBot.create(:camper_camp_badge, camp_badge: @camp_badge3, camper: @alex, completed: false)
+      @user = FactoryBot.create(:user, email: 'user@example.com', first_name: 'User', last_name: 'Example', role: 'counselor')
+      @parent = FactoryBot.create(:parent, user: @user)
+      @camper = FactoryBot.create(:camper, parent: @parent, first_name: 'Camper', last_name: 'Example')
 
-      assert_equal @badge3, @alex.current_badge
+      @camper_camp_badge1 = FactoryBot.create(:camper_camp_badge, camp_badge: @camp_badge1, camper: @camper, completed: true)
+      @camper_camp_badge2 = FactoryBot.create(:camper_camp_badge, camp_badge: @camp_badge2, camper: @camper, completed: true)
+      @camper_camp_badge3 = FactoryBot.create(:camper_camp_badge, camp_badge: @camp_badge3, camper: @camper, completed: false)
+
+      assert_equal @badge3a, @camper.current_badge
 
       @camper_camp_badge1.delete
       @camper_camp_badge2.delete
       @camper_camp_badge3.delete
+
+      @camper.delete
+      @parent.delete
+      @user.delete
 
       @camp_badge1.delete
       @camp_badge2.delete
@@ -101,9 +110,9 @@ class CamperTest < ActiveSupport::TestCase
       @location.delete
       @branch.delete
 
-      @badge1.delete
-      @badge2.delete
-      @badge3.delete
+      @badge1a.delete
+      @badge2a.delete
+      @badge3a.delete
       @skill.delete
     end
   end

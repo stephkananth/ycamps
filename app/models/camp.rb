@@ -51,7 +51,7 @@ class Camp < ApplicationRecord
   end
 
   def current?
-    (start_date <= Date.today) && (end_date >= Date.today)
+    (start_date <= Date.today) && (end_date > Date.today)
   end
 
   # private methods
