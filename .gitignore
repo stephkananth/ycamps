@@ -40,3 +40,8 @@ capybara-*.html
 /app/assets/stylesheets/.DS_Store
 /app/assets/javascripts/.DS_Store
 /public/.DS_Store
+coverage/index.html
+coverage/assets/0.10.2/application.css
+coverage/index.html
+coverage/assets/0.10.2/application.js
+coverage/.resultset.json

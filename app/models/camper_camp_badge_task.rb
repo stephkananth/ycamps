@@ -10,8 +10,8 @@ class CamperCampBadgeTask < ApplicationRecord
   validates_presence_of :task_id
 
   # scopes
-  scope :completed, -> { where(completed: true) }
-  scope :incomplete, -> { where(completed: false) }
+  scope :completed, -> {where(completed: true)}
+  scope :incomplete, -> {where(completed: false)}
 
   # callbacks
   around_update :mark_as_completed
