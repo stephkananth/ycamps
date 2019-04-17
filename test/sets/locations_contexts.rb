@@ -25,5 +25,13 @@ module Contexts
       # @brookwoods.delete
       # @sbtw.delete
     end
+
+    def create_generic_location
+      @location = FactoryBot.create(:location, branch: @branch, name: 'Location')
+    end
+
+    def delete_generic_location
+      @location.delete
+    end
   end
 end

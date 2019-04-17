@@ -14,9 +14,9 @@ class CampBadge < ApplicationRecord
   scope :alphabetical, -> {joins(:camp).order('name')}
 
   # callbacks
-  before_destroy do
-    cannot_destroy_object
-  end
+  # before_destroy do
+  #   cannot_destroy_object
+  # end
   # after_rollback :check_upcoming_camps
 
   # public methods

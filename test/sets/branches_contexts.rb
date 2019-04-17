@@ -23,5 +23,13 @@ module Contexts
       @new_england.delete
       @pennsylvania.delete
     end
+
+    def create_generic_branch
+      @branch = FactoryBot.create(:branch, name: 'Branch')
+    end
+
+    def delete_generic_branch
+      @branch.delete
+    end
   end
 end

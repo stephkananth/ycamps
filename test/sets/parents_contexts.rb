@@ -13,5 +13,13 @@ module Contexts
       @tables.delete
       @inactive.delete
     end
+
+    def create_generic_parent
+      @parent = FactoryBot.create(:parent, user: @user)
+    end
+
+    def delete_generic_parent
+      @parent.delete
+    end
   end
 end
