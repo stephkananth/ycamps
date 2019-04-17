@@ -20,6 +20,7 @@ class Importer
   end
 
   private
+
   def open_file_as_csv
     return false if file.nil?
     @stu_data = Array.new
@@ -28,7 +29,7 @@ class Importer
       student_data.last_row.times do |i|
         # rows start at 1 but array starts at 0
         # row 1 (array[0]) is the header that we don't want
-        @stu_data << sheet.row(i+1) unless i == 0
+        @stu_data << sheet.row(i + 1) unless i == 0
       end
     end
     @stu_data

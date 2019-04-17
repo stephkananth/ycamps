@@ -8,7 +8,7 @@ class Student
 
   attr_accessor :first_name, :last_name, :email, :uuid
 
-  def name 
+  def name
     "#{last_name}, #{first_name}"
   end
 end

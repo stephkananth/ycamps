@@ -5,23 +5,23 @@
 
   <div class="card">
     <div class="card-body card-text">
-        <table class="table card-text">
-          <thead>
-            <tr>
-              <th scope="col">Badges in Progress</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @camp_badges.each do |camp_badge| %>
-              <tr>
-                <td>
-                    <%= link_to camp_badge.badge.name, camp_badge %>
-                </td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-        <%= link_to 'New Camp Badge', new_camp_badge_path, class: "btn btn-primary btn-block" %>
+      <table class="table card-text">
+        <thead>
+        <tr>
+          <th scope="col">Badges in Progress</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @camp_badges.each do |camp_badge| %>
+          <tr>
+            <td>
+              <%= link_to camp_badge.badge.name, camp_badge %>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <%= link_to 'New Camp Badge', new_camp_badge_path, class: "btn btn-primary btn-block" %>
     </div>
   </div>
 

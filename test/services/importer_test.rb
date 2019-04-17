@@ -8,7 +8,7 @@ class ImporterTest < Minitest::Test
     assert !Importer.new('./test/student_data.csv').respond_to?(:stu_data=)
     assert Importer.new('./test/student_data.csv').respond_to? :students
     assert Importer.new('./test/student_data.csv').respond_to?(:students=)
-  end  
+  end
 
   def test_import_csv_data_as_students
     importer = Importer.new('./test/student_data.csv')
