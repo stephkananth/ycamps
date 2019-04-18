@@ -1,5 +1,6 @@
 @import "bootstrap";
 
+/* General Presets for Pages */
 html, body {
   height: 100%;
   width: 100%;
@@ -8,7 +9,6 @@ html, body {
 }
 
 .container{
-  font-family: "Quicksand";
   margin: 0;
   padding: 0;
 }
@@ -23,29 +23,23 @@ html, body {
   background-color: #fff !important;
 }
 
-.background-container {
+/* Home Page */
+.home-container {
   min-height: 100vh;
+  min-width: 100vw;
   background-image: url("/assets/grass-background.svg");
-  height: 100%;
-  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative
 }
 
-#home {
-  background-image: url("/assets/grass-background.svg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#home .card {
+.home-container .card {
   bottom: 0;
   position: absolute;
 }
 
+/* Shadow for modal pop-up */
 #signin:before {
   content: " ";
   z-index: 0;
@@ -58,18 +52,15 @@ html, body {
   background: rgba(136, 136, 136, 0.3);
 }
 
-#signin .card {
-  width: 100%;
-  margin-top: 30%;
-}
-
+/* Card Styling */
 .card {
-  margin: 0.5em 2.5em;
   background: #FFFFFF;
   box-shadow: 0px 4px 5px rgba(136, 136, 136, 0.3);
   border-radius: 14px;
   border: none;
   color: #7E8288;
+  width: 30%;
+  margin: 5% 35%;
 }
 
 .card-body {
@@ -348,5 +339,23 @@ a .card {
 .form .input label {
   margin-right: 9px;
   color: #696969;
+}
+
+/*** MEDIA QUERIES ***/
+
+/* Mobile View Styling */
+@media only screen and (max-width: 768px) {
+  .card{
+    width: 80%;
+    margin: 5% 10%;
+  }
+}
+
+/* Tablet View Styling */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card{
+    width: 60%;
+    margin: 5% 20%;
+  }
 }
 
