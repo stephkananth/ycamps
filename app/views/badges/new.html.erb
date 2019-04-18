@@ -1,5 +1,10 @@
-<h1>New Badge</h1>
-
-<%= render 'form', badge: @badge %>
-
-<%= link_to 'Back', badges_path %>
+<div class="row main-view barn-header" id="admin-camp-view">
+  <div class="header"></div>
+    <%= link_to 'Back', badges_path, class: "back-btn" %>
+  <div class="header-text">
+    <h2 class="header-title">New Badge</h2>
+    <div class="header-subtitle">
+    </div>
+  </div>
+    <%= render 'form', badge: @badge %>
+</div>

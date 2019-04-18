@@ -1,5 +1,11 @@
-<h1>New Camper Registration</h1>
-
-<%= render 'form', camper_registration: @camper_registration %>
-
-<%= link_to 'Back', camper_registrations_path %>
+<div class="row main-view barn-header" id="admin-camp-view">
+  <div class="header">
+    <%= link_to 'Back', camper_registrations_path, class: "back-btn" %>   
+  </div>
+  <div class="header-text">
+    <h2 class="header-title">New Camper Registration</h2>
+    <div class="header-subtitle">
+    </div>
+  </div>
+    <%= render 'form', camper_registration: @camper_registration %>
+</div>
