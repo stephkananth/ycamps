@@ -210,6 +210,10 @@ input.form-control {
   color: #696969;
 }
 
+.header-text {
+  width: 100%;
+}
+
 .nav-link {
   color: #696969 !important;
 }
@@ -291,7 +295,6 @@ a .card {
   background-size: cover;
 }
 
-
 .accordion-section{
   font-size: 14px;
 }
@@ -330,3 +333,20 @@ a .card {
 .unbold{
   font-weight: 400;
 }
+
+.form {
+  display: block;
+  max-width: 100%;
+  margin-left: 2em;
+  margin-top: 5em;
+}
+
+.form .input {
+  margin: 12px;
+}
+
+.form .input label {
+  margin-right: 9px;
+  color: #696969;
+}
+
