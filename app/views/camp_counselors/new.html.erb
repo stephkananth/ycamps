@@ -7,20 +7,21 @@
     </div>
   </div>
   <%#= render 'form', camp_counselor: @camp_counselor %>
-
-  <%= simple_form_for(@camp_counselor) do |f| %>
-  <%= f.error_notification %>
-  <div class="row">
-    <div class="form-inputs">
-      <%= f.input :camp_id, as: :hidden, input_html: { value: @camp.id } %>
-      <%= f.input :counselor_id, collection: Counselor.active.alphabetical.to_a, include_blank: true %>
+  <div class="form">
+      <%= simple_form_for(@camp_counselor) do |f| %>
+      <%= f.error_notification %>
+      <div class="row">
+        <div class="form-inputs">
+          <%= f.input :camp_id, as: :hidden, input_html: { value: @camp.id } %>
+          <%= f.input :counselor_id, collection: Counselor.alphabetical.to_a, include_blank: true, :label_method => :proper_name %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-actions col s8">
+          <%= f.button :submit %>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="form-actions col s8">
-      <%= f.button :submit %>
-    </div>
-  </div>
 <% end %>
 </div>
 

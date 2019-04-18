@@ -1,5 +1,11 @@
-<h1>New Counselor</h1>
-
-<%= render 'form', counselor: @counselor %>
-
-<%= link_to 'Back', counselors_path %>
+<div class="row main-view barn-header" id="admin-camp-view">
+  <div class="header"></div>
+    <%= link_to 'Back', counselors_path %>
+  <div class="header-text">
+    <h2 class="header-title">New Counselor</h2>
+    <div class="header-subtitle">
+    </div>
+  </div>
+    <%= render 'form', counselor: @counselor %>
+    
+</div>

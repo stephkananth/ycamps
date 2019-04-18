@@ -5,11 +5,13 @@ class CampCounselorsController < ApplicationController
   # GET /camp_counselors.json
   def index
     @camp_counselors = CampCounselor.where(:camp_id => params[:camp_id])
+    @camp_id = params[:camp_id]
   end
 
   # GET /camp_counselors/1
   # GET /camp_counselors/1.json
   def show
+
   end
 
   # GET /camp_counselors/new
