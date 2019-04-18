@@ -6,7 +6,7 @@
     <div class="header-subtitle">
     </div>
   </div>
-  <%= link_to 'New Camper', new_camper_path, class: "btn btn-primary btn-block" %>
+  <%= link_to 'New Camper', new_camper_path, class: "btn solo-btn btn-primary btn-block" %>
 
   <%= render :partial => "partials/camper_index", locals: {campers: @campers, state: "Current"} %>
   <%#= render :partial => "partials/camper_index", locals: {camps: @upcoming_camps, state: "Upcoming"} %>

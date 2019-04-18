@@ -14,6 +14,8 @@ class CampsController < ApplicationController
   # GET /camps/1.json
   def show
     @camp_badges = @camp.badges
+    @campers = @camp.campers
+    @counselors = @camp.counselors
   end
 
   # GET /camps/new

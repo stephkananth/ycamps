@@ -14,7 +14,7 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Badges in Progress</h5>
-        <p class="card-text"></p>
+        <p class="card-text">This week, there are <%=  @camp_badges.count %> badges in progress.</p>
       </div>
     </div>
   <% end %>
@@ -23,7 +23,7 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Camper Roster</h5>
-        <p class="card-text"></p>
+        <p class="card-text">This week, there are <%= @campers.count %> campers enrolled.</p>
       </div>
     </div>
   <% end %>
@@ -32,11 +32,11 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Counselor List</h5>
-        <p class="card-text"></p>
+        <p class="card-text">This week, there are <%#= @counselors.count %> counselors.</p>
       </div>
     </div>
   <% end %>
-  <%= link_to 'Edit', edit_camp_path(:camp_id => @camp.id), class: "btn btn-primary btn-block" %>
-  <%= link_to 'Delete', @camp, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-primary btn-block" %>
+  <%= link_to 'Edit', edit_camp_path(:camp_id => @camp.id), class: "btn solo-btn btn-primary btn-block" %>
+  <%= link_to 'Delete', @camp, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn solo-btn btn-primary btn-block" %>
 
 </div>
