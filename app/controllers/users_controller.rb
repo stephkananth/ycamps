@@ -32,6 +32,15 @@ class UsersController < ApplicationController
     @user.role = 'counselor' if current_user.role?(:counselor)
     @user.role = 'admin' if current_user.role?(:admin)
     if @user.save
+      if @user.role == 'parent'
+        @parent = Parent.new
+        @parent.user_id = @user.id
+        @parent.save
+      elsif @user.role == 'counselor'
+        @counselor = Counselor.new
+        @counselor.user_id = @user.id
+        @counselor.save
+      end
       flash[:notice] = "Successfully added #{@user.email} as a user."
       redirect_to users_url
     else
