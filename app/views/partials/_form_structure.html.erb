@@ -1,8 +1,10 @@
-<%= simple_form_for(object) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error :base %>
-  <%= render partial: "#{fields}", locals: {f: f} %>
-  <div class="actions">
-    <%= f.button :submit, class: 'btn btn-primary btn-block' %>
-  </div>
-<% end %>
+<div class="form">
+    <%= simple_form_for(object) do |f| %>
+      <%= f.error_notification %>
+      <%= f.error :base %>
+      <%= render partial: "#{fields}", locals: {f: f} %>
+      <div class="actions">
+        <%= f.button :submit, class: 'btn btn-primary btn-block' %>
+      </div>
+    <% end %>
+</div>

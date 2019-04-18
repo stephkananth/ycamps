@@ -1,3 +1,16 @@
+<div class="row main-view barn-header" id="admin-camp-view">
+  <div class="header"></div>
+    <%= link_to 'Back' :back,, class: "back-btn" %>
+  <div class="header-text">
+    <h2 class="header-title">New Counselor</h2>
+    <div class="header-subtitle">
+    </div>
+  </div>
+    <%= render 'form', counselor: @counselor %>
+    
+</div>
+
+
 <h1>New User</h1>
 
 <%= render 'form', user: @user %>
