@@ -7,7 +7,7 @@
       Skill— <%= @badge.skill.name %>
     </div>
   </div>
-
+  <%= link_to 'Assign Milestone', assign_milestones_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block" %>
   <div class="card">
     <div class="card-body">
     <h5 class="card-title">Current Instructor</h5>

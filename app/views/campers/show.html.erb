@@ -11,7 +11,13 @@
 
   <div class="card">
     <div class="card-body">
-    <h5 class="card-title"><%= @camper.first_name %> <span class="unbold">is currently working on.</span></h5>
+    <h5 class="card-title">
+      <%= @camper.first_name %> <span class="unbold">is currently working on</span>
+      <%= @current_badge.name %>.
+    </h5>
+    <p class="card-text">
+      <%= @current_badge.skill.category %>
+    </p>
     <p class="card-text">
       <%= @current_camp.name %><br/>
       <%= @current_camp.start_date.strftime("%A, %b %d") %> - <%= @current_camp.end_date.strftime("%A, %b %d") %><br/>

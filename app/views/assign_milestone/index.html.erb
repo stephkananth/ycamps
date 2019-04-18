@@ -1,0 +1,7 @@
+<%= simple_form_for :user, url: create_milestones_path(:camp_badge_id => @camp_badge.id) do |f| %>
+  <%= f.simple_fields_for :other do |o| %>
+    <%= o.input :task, collection: @tasks, :value_method => :id %>
+    <%= o.input :campers, collection: @campers, as: :check_boxes, :label_method => :proper_name, :value_method => :id %>
+  <% end %>
+  <%= f.button :submit %>
+<% end %>

@@ -305,6 +305,112 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     nature3_task.save!
     puts "Created task, Nature Hike"
 
+    # Create Camper Camp Badge Tasks
+    ccbt1_1 = CamperCampBadgeTask.new
+    ccbt1_1.task_id = cw1_task.id
+    ccbt1_1.camper_camp_badge_id = camper_cb1.id
+    ccbt1_1.completed = false
+    ccbt1_1.save!
+
+    ccbt1_2 = CamperCampBadgeTask.new
+    ccbt1_2.task_id = cw2_task.id
+    ccbt1_2.camper_camp_badge_id = camper_cb1.id
+    ccbt1_2.completed = false
+    ccbt1_2.save!
+
+    ccbt1_3 = CamperCampBadgeTask.new
+    ccbt1_3.task_id = cw3_task.id
+    ccbt1_3.camper_camp_badge_id = camper_cb1.id
+    ccbt1_3.completed = false
+    ccbt1_3.save!
+
+    ccbt1_4 = CamperCampBadgeTask.new
+    ccbt1_4.task_id = cw4_task.id
+    ccbt1_4.camper_camp_badge_id = camper_cb1.id
+    ccbt1_4.completed = false
+    ccbt1_4.save!
+
+    puts "Created tasks for Camper_CB1"
+
+    ccbt2_1 = CamperCampBadgeTask.new
+    ccbt2_1.task_id = cw1_task.id
+    ccbt2_1.camper_camp_badge_id = camper_cb2.id
+    ccbt2_1.completed = false
+    ccbt2_1.save!
+
+    ccbt2_2 = CamperCampBadgeTask.new
+    ccbt2_2.task_id = cw2_task.id
+    ccbt2_2.camper_camp_badge_id = camper_cb2.id
+    ccbt2_2.completed = false
+    ccbt2_2.save!
+
+    ccbt2_3 = CamperCampBadgeTask.new
+    ccbt2_3.task_id = cw3_task.id
+    ccbt2_3.camper_camp_badge_id = camper_cb2.id
+    ccbt2_3.completed = false
+    ccbt2_3.save!
+
+    ccbt2_4 = CamperCampBadgeTask.new
+    ccbt2_4.task_id = cw4_task.id
+    ccbt2_4.camper_camp_badge_id = camper_cb2.id
+    ccbt2_4.completed = false
+    ccbt2_4.save!
+
+    puts "Created tasks for Camper_CB2"
+
+    ccbt3_1 = CamperCampBadgeTask.new
+    ccbt3_1.task_id = cw1_task.id
+    ccbt3_1.camper_camp_badge_id = camper_cb3.id
+    ccbt3_1.completed = false
+    ccbt3_1.save!
+
+    ccbt3_2 = CamperCampBadgeTask.new
+    ccbt3_2.task_id = cw2_task.id
+    ccbt3_2.camper_camp_badge_id = camper_cb3.id
+    ccbt3_2.completed = false
+    ccbt3_2.save!
+
+    ccbt3_3 = CamperCampBadgeTask.new
+    ccbt3_3.task_id = cw3_task.id
+    ccbt3_3.camper_camp_badge_id = camper_cb3.id
+    ccbt3_3.completed = false
+    ccbt3_3.save!
+
+    ccbt3_4 = CamperCampBadgeTask.new
+    ccbt3_4.task_id = cw4_task.id
+    ccbt3_4.camper_camp_badge_id = camper_cb3.id
+    ccbt3_4.completed = false
+    ccbt3_4.save!
+
+    puts "Created tasks for Camper_CB3"
+
+    ccbt4_1 = CamperCampBadgeTask.new
+    ccbt4_1.task_id = cw1_task.id
+    ccbt4_1.camper_camp_badge_id = camper_cb4.id
+    ccbt4_1.completed = false
+    ccbt4_1.save!
+
+    ccbt4_2 = CamperCampBadgeTask.new
+    ccbt4_2.task_id = cw2_task.id
+    ccbt4_2.camper_camp_badge_id = camper_cb4.id
+    ccbt4_2.completed = false
+    ccbt4_2.save!
+
+    ccbt4_3 = CamperCampBadgeTask.new
+    ccbt4_3.task_id = cw3_task.id
+    ccbt4_3.camper_camp_badge_id = camper_cb4.id
+    ccbt4_3.completed = false
+    ccbt4_3.save!
+
+    ccbt4_4 = CamperCampBadgeTask.new
+    ccbt4_4.task_id = cw4_task.id
+    ccbt4_4.camper_camp_badge_id = camper_cb4.id
+    ccbt4_4.completed = false
+    ccbt4_4.save!
+
+    puts "Created tasks for Camper_CB4"
+
+
     # Create Camper Registrations
     cr1 = CamperRegistration.new
     cr1.camp_id = camp_one.id
