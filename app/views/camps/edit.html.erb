@@ -1,6 +1,19 @@
-<h1>Editing Camp</h1>
-
-<%= render 'form', camp: @camp %>
-
-<%= link_to 'Show', @camp %> |
-<%= link_to 'Back', camps_path %>
+<div class="header" id="barn-header">
+  <div class="header-body">
+    <div class="header-title">Editing Camp</div>
+    <div class="header-subtitle">
+      <%= @camp.name %>
+    </div>
+  </div>
+</div>
+<div class="row page-row">
+  <div class="col">
+  	<div class="card page-card">
+        <div class="card-body">
+    		<p class="card-text">
+    			<%= render 'form', camp: @camp %>
+    		</p>
+    	</div>
+    </div>
+  </div>
+</div>
