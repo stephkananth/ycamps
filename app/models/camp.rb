@@ -27,7 +27,8 @@ class Camp < ApplicationRecord
   scope :upcoming, -> {where('start_date > ?', Date.today)}
   scope :past, -> {where('end_date < ?', Date.today)}
   scope :current, -> {where('start_date <= ? and end_date >= ?', Date.today, Date.today)}
-
+  scope :not_in_system?, ->(camp) { where(location: camp.location, name: camp.name, program: camp.program, start_date: camp.start_date, end_date: camp.end_date) }
+  
   # callbacks
   # before_destroy do
   #   check_if_has_registrations
