@@ -1,5 +1,17 @@
-<h1>New Camp Badge</h1>
+<div class="header" id="barn-header">
+  <div class="header-body">
+    <div class="header-title">New Camp Badge</div>
+  </div>
+</div>
 
-<%= render 'form', camp_badge: @camp_badge %>
-
-<%= link_to 'Back', camp_badges_path %>
+<div class="row page-row">
+  <div class="col">
+  	<div class="card page-card">
+        <div class="card-body">
+    		<p class="card-text">
+    			<%= render 'form', camp_badge: @camp_badge %>
+    		</p>
+    	</div>
+    </div>
+  </div>
+</div>

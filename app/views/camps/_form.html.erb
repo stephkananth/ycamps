@@ -1,20 +1,27 @@
-<div class="form">
-  <%= simple_form_for(camp) do |f| %>
-    <%= f.error_notification %>
-    <div class="row">
-      <div class="form-inputs">
-        <%= f.input :name, label_html: { class: 'active' } %>
-        <%= f.input :program, label_html: { class: 'active' } %>
-        <%= f.input :start_date, label_html: { class: 'active' } %>
-        <%= f.input :end_date, label_html: { class: 'active' } %>
-        <%= f.input :location_id, collection: Location.alphabetical.to_a, include_blank: true %>
-        <%= f.input :active %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="form-actions col s8">
-        <%= f.button :submit %>
-      </div>
-    </div>
-  <% end %>
-</div>
+<%= simple_form_for(camp) do |f| %>
+  <%= f.error_notification %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.input :name, input_html: { class: 'form-control' }, label: false %>
+  </div>
+  <div class="form-group">
+    <%= f.label :program %>
+    <%= f.input :program, input_html: { class: 'form-control' }, label: false %>
+  </div>
+  <div class="form-group">
+    <%= f.label :start_date %><br/>
+    <%= f.input_field :start_date, class: 'form-control date', label: false, :order => [:month, :day, :year] %>
+  </div>
+  <div class="form-group">
+    <%= f.label :end_date %><br/>
+    <%= f.input_field :end_date, class: 'form-control date', label: false, :order => [:month, :day, :year] %>
+  </div>
+  <div class="form-group">
+    <%= f.label :location %>
+    <%= f.input :location, collection: Location.alphabetical.to_a, input_html: { class: 'form-control' }, label: false %>
+  </div>
+  <div class="form-group">
+    <%= f.input :active, :as => :hidden, :input_html => { :value => true } %>
+  </div>
+  <%= f.button :submit, class: 'btn btn-primary btn-block' %>
+<% end %>
