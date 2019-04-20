@@ -24,6 +24,14 @@ class Camper < ApplicationRecord
     first_name + ' ' + last_name
   end
 
+  def current_camp_badge
+    camper_camp_badges.each do |camper_camp_badge|
+      if camper_camp_badge.camp_badge.camp.current?
+        return camper_camp_badge.camp_badge
+      end
+    end
+  end
+
   def current_badge
     camper_camp_badges.each do |camper_camp_badge|
       if camper_camp_badge.camp_badge.camp.current?

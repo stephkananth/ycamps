@@ -4,7 +4,6 @@
   </div>
 </div>
 
-
 <div class="row page-row">
   <div class="col">
     <% if @camp_badges.empty? %>
@@ -23,7 +22,7 @@
                 <% @camp_badges.each do |camp_badge| %>
                   <tr>
                     <td>
-                        <%= link_to camp_badge.badge.name, camp_badge %>
+                      <%= link_to camp_badge.badge.name, camp_badge %>
                     </td>
                   </tr>
                 <% end %>

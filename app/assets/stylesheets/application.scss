@@ -134,6 +134,16 @@ h5.card-title {
   background-size: cover;
 }
 
+#profile-header{
+  background: url("/assets/profile-header.svg");
+  height: 25vh;
+  min-width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: auto;
+  background-size: cover;
+}
+
 /* Navigation */
 .nav-link {
   color: #696969 !important;
@@ -261,16 +271,6 @@ input.form-control {
   border-radius: 100px;
 }
 
-.profile-header{
-  background: url("/assets/profile-header.svg");
-  max-width: 100%;
-  max-height: 30vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: auto;
-  background-size: cover;
-}
-
 .profile-header h5.card-title{
   margin-bottom: 0px;
 }
@@ -282,7 +282,8 @@ input.form-control {
 .card-subtitle {
   font-weight: 700;
   font-size: 16px;
-  padding-bottom: 4px;
+  margin-bottom: 8px;
+  margin-top: 36px;
 }
 
 .card-section {
