@@ -17,7 +17,7 @@ class SkillTest < ActiveSupport::TestCase
     end
   end
 
-    # should 'verify the alphabetical scope works' do
-    #   assert_equal 2, Skill.alphabetical.all.length
-    # end
+  # should 'verify the alphabetical scope works' do
+  #   assert_equal 2, Skill.alphabetical.all.length
+  # end
 end

@@ -12,7 +12,10 @@ class Camper < ApplicationRecord
   scope :active, -> {where(active: true)}
   scope :inactive, -> {where(active: false)}
   scope :alphabetical, -> {order('last_name, first_name')}
-  scope :not_in_system?, ->(camper) { where(first_name: camper.first_name, last_name: camper.last_name) }
+
+  def self.not_in_system?(camper)
+    Camper.where(first_name: camper.first_name, last_name: camper.last_name).empty?
+  end
 
   def name
     last_name + ', ' + first_name

@@ -12,11 +12,13 @@ class Location < ApplicationRecord
   # scopes
   scope :alphabetical, -> {order('name')}
   scope :search, ->(term) {where('name LIKE ?', "#{term}%")}
-  scope :not_in_system?, ->(location) { where(name: location.name) }
 
   # callbacks
 
   # public methods
+  def self.not_in_system?(location)
+    Location.where(name: location.name).empty?
+  end
 
   # private methods
 end

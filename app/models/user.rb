@@ -5,8 +5,8 @@ class User < ApplicationRecord
 
   # validations
   validates_presence_of :first_name, :last_name
-  validates :email, presence: true, uniqueness: { case_sensitive: false }
-  validates :role, inclusion: { in: %w[admin counselor parent], message: 'is not a recognized role in system' }
+  validates :email, presence: true, uniqueness: {case_sensitive: false}
+  validates :role, inclusion: {in: %w[admin counselor parent], message: 'is not a recognized role in system'}
   validates_presence_of :password, on: :create
   validates_presence_of :password_confirmation, on: :create
   validates_confirmation_of :password, message: 'does not match'
@@ -14,8 +14,7 @@ class User < ApplicationRecord
   validates_format_of :email, with: /\A[\w]([^@\s,;]+)@(([\w-]+\.)+(com|edu|org|net|gov|mil))\z/i, message: 'is not a valid format'
 
   # scopes
-  scope :search, ->(term) { where('email LIKE ?', "#{term}%") }
-  scope :not_in_system?, ->(user) { where(email: user.email) }
+  scope :search, ->(term) {where('email LIKE ?', "#{term}%")}
 
   # for use in authorizing with CanCan
   ROLES = [['Admin', :admin], ['Counselor', :counselor], ['Parent', :parent]].freeze
@@ -25,6 +24,10 @@ class User < ApplicationRecord
     return false if role.nil?
 
     role.downcase.to_sym == authorized_role
+  end
+
+  def self.not_in_system?(user)
+    User.where(email: user.email).empty?
   end
 
   # login by email

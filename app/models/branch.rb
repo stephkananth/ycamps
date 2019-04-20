@@ -11,11 +11,13 @@ class Branch < ApplicationRecord
   # scopes
   scope :alphabetical, -> {order('name')}
   scope :search, ->(term) {where('name LIKE ?', "#{term}%")}
-  scope :not_in_system?, ->(branch) { where(name: branch.name) }
 
   # callbacks
 
   # public methods
+  def self.not_in_system?(branch)
+    Branch.where(name: branch.name).empty?
+  end
 
   # private methods
 end
