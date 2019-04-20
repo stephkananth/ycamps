@@ -35,7 +35,7 @@ class CampCounselorsController < ApplicationController
     else
       @camp = Camp.find(params[:camp_counselor][:camp_id])
       @other_counselors = @camp.counselors
-      render action: 'new', locals: { camp: @camp, other_counselors: @other_counselors }
+      render action: 'new', locals: {camp: @camp, other_counselors: @other_counselors}
     end
     # respond_to do |format|
     #   if @camp_counselor.save

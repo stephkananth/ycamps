@@ -3,8 +3,8 @@
     <%= f.error_notification %>
     <div class="row">
       <div class="form-inputs">
-        <%= f.input :first_name, label_html: { class: 'active' } %>
-        <%= f.input :last_name, label_html: { class: 'active' } %>
+        <%= f.input :first_name, label_html: {class: 'active'} %>
+        <%= f.input :last_name, label_html: {class: 'active'} %>
         <%= f.input :parent, collection: Parent.active.alphabetical.to_a, include_blank: true %>
         <%= f.input :active %>
       </div>

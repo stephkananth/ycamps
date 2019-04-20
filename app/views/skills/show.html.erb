@@ -7,14 +7,14 @@
   <div class="header-text">
     <h2 class="header-title"><%= @skill.name %></h2>
     <div class="header-subtitle">
-        <%= @skill.category %>
+      <%= @skill.category %>
     </div>
   </div>
-    <%= link_to 'Edit Skill', edit_skill_path(@skill), class: "btn btn-primary btn-block" %>
-    <%= link_to 'Delete Skill', @skill, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-primary btn-block" %>
-    <div>
-        <%= render :partial => "partials/badge_list", locals: {badges: @badges} %>
-        <%#= render :partial => "partials/camps_short_list", locals: {camps: @upcoming_camps, state: "Upcoming"} %>
-        <%#= render :partial => "partials/camps_short_list", locals: {camps: @past_camps, state: "Past"} %>
-    </div>
+  <%= link_to 'Edit Skill', edit_skill_path(@skill), class: "btn btn-primary btn-block" %>
+  <%= link_to 'Delete Skill', @skill, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-primary btn-block" %>
+  <div>
+    <%= render :partial => "partials/badge_list", locals: {badges: @badges} %>
+    <%#= render :partial => "partials/camps_short_list", locals: {camps: @upcoming_camps, state: "Upcoming"} %>
+    <%#= render :partial => "partials/camps_short_list", locals: {camps: @past_camps, state: "Past"} %>
+  </div>
 </div>

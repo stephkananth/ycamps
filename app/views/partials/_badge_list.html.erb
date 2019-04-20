@@ -3,24 +3,24 @@
     <h5 class="card-title">Badges</h5>
     <p class="card-text">
 
-      <table>
-        <thead>
-        <tr>
-          <th>Name</th>
-        </tr>
-        </thead>
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+      </tr>
+      </thead>
 
-        <tbody>
-        <% badges.each do |badge| %>
-          <tr>
-            
-            <td><%= badge.name %></td>
-            <td><%= link_to 'Edit', edit_badge_path(badge) %></td>
-            <td><%= link_to 'Delete',  badge, method: :delete, data: {confirm: 'Are you sure?'} %></td>
-          </tr>
-        <% end %>
-        </tbody>
-      </table>
+      <tbody>
+      <% badges.each do |badge| %>
+        <tr>
+
+          <td><%= badge.name %></td>
+          <td><%= link_to 'Edit', edit_badge_path(badge) %></td>
+          <td><%= link_to 'Delete', badge, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
 
     </p>
   </div>

@@ -28,7 +28,7 @@ a {
   color: #56D4CB;
 }
 
-a:hover{
+a:hover {
   color: #56D4CB;
   font-weight: 700;
 }
@@ -91,11 +91,11 @@ h5.card-title {
 
 
 /* Headers */
-.header{
+.header {
   position: relative;
 }
 
-.header-body{
+.header-body {
   position: absolute;
   bottom: 15%;
   left: 10%;
@@ -115,7 +115,7 @@ h5.card-title {
   color: #696969;
 }
 
-#dashboard-header{
+#dashboard-header {
   background: url("/assets/dashboard-header.svg");
   height: 25vh;
   min-width: 100vw;
@@ -135,7 +135,7 @@ h5.card-title {
   background-size: cover;
 }
 
-#profile-header{
+#profile-header {
   background: url("/assets/profile-header.svg");
   height: 25vh;
   min-width: 100vw;
@@ -155,12 +155,12 @@ h5.card-title {
 }
 
 /* Page Styling*/
-.page-row{
+.page-row {
   width: 100vw;
   padding: 5% 40%;
 }
 
-.page-card{
+.page-card {
   width: auto;
   margin-bottom: 16px;
   margin-top: 16px;
@@ -169,7 +169,7 @@ h5.card-title {
 }
 
 /* Button Overrides */
-.btn-group{
+.btn-group {
   margin-top: 24px;
   width: 100%;
 }
@@ -242,13 +242,13 @@ h5.card-title {
 }
 
 /* Links */
-a, a:hover{
+a, a:hover {
   text-decoration: none;
 }
 
 /* Form styling */
 
-.form-group{
+.form-group {
   width: 100%;
 }
 
@@ -263,7 +263,7 @@ input.form-control {
 
 }
 
-.form-control.date{
+.form-control.date {
   width: auto;
   display: inline;
 }
@@ -351,7 +351,7 @@ input.form-control {
   box-shadow: none;
 }
 
-.unbold{
+.unbold {
   font-weight: 400;
 }
 
@@ -375,17 +375,17 @@ input.form-control {
 
 /* Mobile View Styling */
 @media only screen and (max-width: 768px) {
-  .card{
+  .card {
     width: 80%;
     margin: 5% 10%;
   }
 
-  .page-row{
+  .page-row {
     width: 100vw;
     padding: 7%;
   }
 
-  .card.page-card{
+  .card.page-card {
     width: auto;
     margin-bottom: 16px;
     margin-top: 16px;
@@ -396,17 +396,17 @@ input.form-control {
 
 /* Tablet View Styling */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .card{
+  .card {
     width: 60%;
     margin: 5% 20%;
   }
 
-  .page-row{
+  .page-row {
     width: 100vw;
     padding: 10%;
   }
 
-  .card.page-card{
+  .card.page-card {
     width: auto;
     margin-bottom: 16px;
     margin-top: 16px;

@@ -1,13 +1,13 @@
 <div class="row main-view barn-header" id="admin-camp-view">
   <div class="header"></div>
-    <%#= link_to 'Back' :back, class: "back-btn" %>
+  <%#= link_to 'Back' :back, class: "back-btn" %>
   <div class="header-text">
     <h2 class="header-title">New User</h2>
     <div class="header-subtitle">
     </div>
   </div>
-    <%#= render 'form', user: @user %>
-    <%= render partial: "partials/form_structure", locals: {object: @user,
-                                                                type_of_form: "New User",
-                                                                fields: "user_fields"} %>
+  <%#= render 'form', user: @user %>
+  <%= render partial: "partials/form_structure", locals: {object: @user,
+                                                          type_of_form: "New User",
+                                                          fields: "user_fields"} %>
 </div>

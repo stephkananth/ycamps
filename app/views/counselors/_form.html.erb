@@ -3,10 +3,10 @@
     <%= f.error_notification %>
     <div class="row">
       <div class="form-inputs">
-        <%= f.input :name, label_html: { class: 'active' } %>
-        <%= f.input :program, label_html: { class: 'active' } %>
-        <%= f.input :start_date, label_html: { class: 'active' } %>
-        <%= f.input :end_date, label_html: { class: 'active' } %>
+        <%= f.input :name, label_html: {class: 'active'} %>
+        <%= f.input :program, label_html: {class: 'active'} %>
+        <%= f.input :start_date, label_html: {class: 'active'} %>
+        <%= f.input :end_date, label_html: {class: 'active'} %>
         <%= f.input :location_id, collection: Location.alphabetical.to_a, include_blank: true %>
         <%= f.input :active %>
       </div>
