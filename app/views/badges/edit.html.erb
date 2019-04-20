@@ -1,6 +1,33 @@
-<h1>Editing Badge</h1>
+<div class="header" id="profile-header">
+  <%#= link_to 'Back', :back %>
+  <div class="btn-wrapper">
+  </div>
+  <div class="header-body">
+    <div class="header-title">Edit '<%= @badge.name %>'</div>
+    <div class="header-subtitle">
+    </div>
+  </div>
+</div>
 
-<%= render 'form', badge: @badge %>
+<div class="row page-row">
+  <div class="col">
+      <div class="card page-card">
+        <div class="card-body">
+          <h5 class="card-title">Edit Badge</h5>
+          
+          <p class="card-text">
+            <%= render partial: "partials/form_structure", locals: {object: @badge,
+                                                                type_of_form: "Edit Badge",
+                                                                fields: "badge_fields"} %>
+          </p>
 
-<%= link_to 'Show', @badge %> |
-<%= link_to 'Back', badges_path %>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="pad-bottom">
+</div>
+
+    
+</div>
