@@ -45,15 +45,6 @@
     <div class="card page-card">
       <div class="card-body">
         <h5 class="card-title">Milestones</h5>
-        <p class="card-text">
-          <%= @badge.description %>
-        </p>
-      </div>
-    </div>
-
-    <div class="card page-card">
-      <div class="card-body">
-        <h5 class="card-title">Milestones</h5>
         <div id="accordion">
           <% @tasks.each_with_index do |task, index| %>
             <div class="accordion-section">
@@ -103,7 +94,10 @@
               </div>
             <% end %>
           <% end %>
-          </div>
+        <% end %>
+      </div>
+    </div>
+    <%= link_to 'Assign Milestone', assign_milestones_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block" %>
     </div>
   </div>
 
