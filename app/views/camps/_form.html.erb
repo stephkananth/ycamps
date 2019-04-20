@@ -2,11 +2,11 @@
   <%= f.error_notification %>
   <div class="form-group">
     <%= f.label :name %>
-    <%= f.input :name, input_html: { class: 'form-control' }, label: false %>
+    <%= f.input :name, input_html: {class: 'form-control'}, label: false %>
   </div>
   <div class="form-group">
     <%= f.label :program %>
-    <%= f.input :program, input_html: { class: 'form-control' }, label: false %>
+    <%= f.input :program, input_html: {class: 'form-control'}, label: false %>
   </div>
   <div class="form-group">
     <%= f.label :start_date %><br/>
@@ -18,10 +18,10 @@
   </div>
   <div class="form-group">
     <%= f.label :location %>
-    <%= f.input :location, collection: Location.alphabetical.to_a, input_html: { class: 'form-control' }, label: false %>
+    <%= f.input :location, collection: Location.alphabetical.to_a, input_html: {class: 'form-control'}, label: false %>
   </div>
   <div class="form-group">
-    <%= f.input :active, :as => :hidden, :input_html => { :value => true } %>
+    <%= f.input :active, :as => :hidden, :input_html => {:value => true} %>
   </div>
   <%= f.button :submit, class: 'btn btn-primary btn-block' %>
 <% end %>

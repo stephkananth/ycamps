@@ -15,6 +15,7 @@ class User < ApplicationRecord
 
   # scopes
   scope :search, ->(term) {where('email LIKE ?', "#{term}%")}
+  # scope :find_by_email, ->(email) {where(email: email)}
 
   # for use in authorizing with CanCan
   ROLES = [['Admin', :admin], ['Counselor', :counselor], ['Parent', :parent]].freeze
@@ -30,4 +31,5 @@ class User < ApplicationRecord
   def self.authenticate(email, password)
     find_by_email(email).try(:authenticate, password)
   end
+
 end

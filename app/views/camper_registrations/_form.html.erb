@@ -3,8 +3,8 @@
     <%= f.error_notification %>
     <div class="row">
       <div class="form-inputs">
-        <%= f.input :camp_id, collection: Camp.alphabetical.to_a, include_blank: true, :label_method => :name  %>
-        <%= f.input :camper_id, collection: Camper.alphabetical.to_a, include_blank: true, :label_method => :proper_name  %>
+        <%= f.input :camp_id, collection: Camp.alphabetical.to_a, include_blank: true, :label_method => :name %>
+        <%= f.input :camper_id, collection: Camper.alphabetical.to_a, include_blank: true, :label_method => :proper_name %>
       </div>
     </div>
     <div class="row">

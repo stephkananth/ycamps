@@ -2,11 +2,11 @@
   <%= f.error_notification %>
   <div class="form-group">
     <%= f.label :badge_id %>
-    <%= f.input :badge_id, collection: Badge.alphabetical.to_a, input_html: { class: 'form-control' }, label: false %>
+    <%= f.input :badge_id, collection: Badge.alphabetical.to_a, input_html: {class: 'form-control'}, label: false %>
   </div>
   <div class="form-group">
     <%= f.label :camp_id %>
-    <%= f.input :camp_id, collection: Camp.alphabetical.to_a, input_html: { class: 'form-control' }, label: false %>
+    <%= f.input :camp_id, collection: Camp.alphabetical.to_a, input_html: {class: 'form-control'}, label: false %>
   </div>
   <%= f.button :submit, class: 'btn btn-primary btn-block' %>
 <% end %>

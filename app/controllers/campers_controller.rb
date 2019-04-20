@@ -13,7 +13,8 @@ class CampersController < ApplicationController
     @camps = @camper.camps
     @current_camp = @camper.camps.current.first
     @current_badge = @camper.current_badge
-    @current_tasks = @current_badge.camper_camp_badges.where(:camper_id => @camper.id, :camp_badge_id => @camper.current_camp_badge.id).first.camper_camp_badge_tasks
+    # TODO: Refactor this line of code
+    @current_tasks = @camper.current_tasks
     @camper_camp_badges_complete = @camper.camper_camp_badges.completed
     @camper_camp_badges_incomplete = @camper.camper_camp_badges.incomplete
   end

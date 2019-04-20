@@ -3,9 +3,9 @@
     <%= f.error_notification %>
     <%= f.error :base %>
 
-    <%= f.input :name, label_html: { class: 'active' } %>
-    <%= f.input :level, label_html: { class: 'active' } %>
-    <%= f.input :description, label_html: { class: 'active' } %>
+    <%= f.input :name, label_html: {class: 'active'} %>
+    <%= f.input :level, label_html: {class: 'active'} %>
+    <%= f.input :description, label_html: {class: 'active'} %>
     <%= f.input :skill, collection: Skill.alphabetical.to_a, include_blank: true %>
 
     <div class="actions">

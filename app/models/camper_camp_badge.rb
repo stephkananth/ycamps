@@ -21,7 +21,10 @@ class CamperCampBadge < ApplicationRecord
   end
 
   def complete
-    self.completed = true; save!
+    if completed?
+      self.completed = true
+      save!
+    end
   end
 
   def tasks

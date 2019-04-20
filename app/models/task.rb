@@ -8,7 +8,8 @@ class Task < ApplicationRecord
   validates_presence_of(:badge_id)
 
   # scopes
-  scope :in_order, -> {order('level')}
+  scope :alphabetical, -> {order(name: :asc)}
+  scope :in_order, -> {order(order: :asc)}
 
   # callbacks
 

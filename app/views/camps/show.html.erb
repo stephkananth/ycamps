@@ -17,7 +17,7 @@
           <h5 class="card-title">Badges in Progress</h5>
           <p class="card-text">
             <% if @camp_badges.count != 0 %>
-              This week, there are <%=  @camp_badges.count %> badges in progress.
+              This week, there are <%= @camp_badges.count %> badges in progress.
             <% else %>
               There are currently no badges in progress yet.<br/>
               Add some to begin!
@@ -33,7 +33,7 @@
           <h5 class="card-title">Camper Roster</h5>
           <p class="card-text">
             <% if @campers.count != 0 %>
-              This week, there are <%=  @campers.count %> campers enrolled.
+              This week, there are <%= @campers.count %> campers enrolled.
             <% else %>
               There are no campers enrolled yet.
             <% end %>

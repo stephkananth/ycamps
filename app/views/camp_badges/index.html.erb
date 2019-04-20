@@ -12,29 +12,29 @@
       <div class="card page-card">
         <div class="card-body">
           <p class="card-text">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">Badges in Progress</th>
-                </tr>
-              </thead>
-              <tbody>
-                <% @camp_badges.each do |camp_badge| %>
-                  <tr>
-                    <td>
-                      <%= link_to camp_badge.badge.name, camp_badge %>
-                    </td>
-                  </tr>
-                <% end %>
-              </tbody>
-            </table>
+          <table class="table">
+            <thead>
+            <tr>
+              <th scope="col">Badges in Progress</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @camp_badges.each do |camp_badge| %>
+              <tr>
+                <td>
+                  <%= link_to camp_badge.badge.name, camp_badge %>
+                </td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
           </p>
         </div>
       </div>
     <% end %>
-     <%= link_to 'New Camp Badge', new_camp_badge_path, class: "btn btn-primary btn-block" %>
+    <%= link_to 'New Camp Badge', new_camp_badge_path, class: "btn btn-primary btn-block" %>
+    </div>
   </div>
-</div>
 
-<div class="pad-bottom">
-</div>
+  <div class="pad-bottom">
+  </div>

@@ -10,8 +10,8 @@ class Camp < ApplicationRecord
   has_many :counselor_camp_badges, through: :camp_badges
   has_many :camp_counselors
   has_many :counselors, through: :camp_counselors
-  has_many :camp_registrations
-  has_many :campers, through: :camp_registrations
+  has_many :camper_registrations
+  has_many :campers, through: :camper_registrations
 
   # validations
   validates_presence_of :location_id, :name, :program, :start_date, :end_date
@@ -29,13 +29,13 @@ class Camp < ApplicationRecord
   scope :current, -> {where('start_date <= ? and end_date > ?', Date.today, Date.today)}
 
   # callbacks
-  # before_destroy do
-  #   check_if_has_registrations
-  #   if errors.present?
-  #     @destroyable = false
-  #     throw(:abort)
-  #   end
-  # end
+  before_destroy do
+    check_if_has_registrations
+    if errors.present?
+      @destroyable = false
+      throw(:abort)
+    end
+  end
 
   # public methods
   def campers
@@ -61,12 +61,10 @@ class Camp < ApplicationRecord
   def camp_is_not_a_duplicate
     return true if start_date.nil? || location_id.nil?
 
-    if already_exists?
-      errors.add(:start_date, 'already exists for start date and location')
-    end
+    errors.add(:start_date, 'already exists for start date and location') if already_exists?
   end
 
-  def check_if_has_campers
+  def check_if_has_registrations
     errors.add(:base, 'Cannot be deleted because there are current registrations.') unless campers.empty?
   end
 end
