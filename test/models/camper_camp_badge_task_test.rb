@@ -27,8 +27,8 @@ class CamperCampBadgeTaskTest < ActiveSupport::TestCase
       create_generic_camp_badges
       create_generic_camper_camp_badges
       create_camper_camp_badge_tasks
-      assert_equal 4, CamperCampBadgeTask.completed.size
-      assert_equal 0, CamperCampBadgeTask.incomplete.size
+      assert_equal 3, CamperCampBadgeTask.completed.size
+      assert_equal 1, CamperCampBadgeTask.incomplete.size
       delete_camper_camp_badge_tasks
       delete_generic_camper_camp_badges
       delete_generic_camp_badges
@@ -67,11 +67,15 @@ class CamperCampBadgeTaskTest < ActiveSupport::TestCase
       create_camps
       create_generic_camp_badges
       create_generic_camper_camp_badges
-      deny @camper_camp_badge3.completed
       create_camper_camp_badge_tasks
-      assert_equal 4, @camper_camp_badge3.tasks.completed.to_a.size
-      assert @camper_camp_badge3.completed?
+
+      deny @camper_camp_badge3.completed
+      assert_equal 3, @camper_camp_badge3.tasks.completed.size
+      @camper_task4.complete
+      @camper_task4.save!
+      assert_equal 4, @camper_camp_badge3.tasks.completed.size
       assert @camper_camp_badge3.completed
+
       delete_camper_camp_badge_tasks
       delete_generic_camper_camp_badges
       delete_generic_camp_badges
