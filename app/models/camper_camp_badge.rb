@@ -20,5 +20,13 @@ class CamperCampBadge < ApplicationRecord
     camper_camp_badge_tasks.completed.count == 4
   end
 
+  def complete
+    self.completed = true; save!
+  end
+
+  def tasks
+    camper_camp_badge_tasks
+  end
+
   # private methods
 end

@@ -11,5 +11,13 @@ module Contexts
       @mark.delete
       @rachel.delete
     end
+
+    def create_generic_camper
+      @camper = FactoryBot.create(:camper, parent: @parent, first_name: 'Camper', last_name: 'Example')
+    end
+
+    def delete_generic_camper
+      @camper.delete
+    end
   end
 end

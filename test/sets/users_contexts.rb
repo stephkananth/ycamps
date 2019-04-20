@@ -36,5 +36,13 @@ module Contexts
       @matt_user.delete
       @hannah_user.delete
     end
+
+    def create_generic_user
+      @user = FactoryBot.create(:user, email: 'user@example.com', first_name: 'User', last_name: 'Example', role: 'counselor')
+    end
+
+    def delete_generic_user
+      @user.delete
+    end
   end
 end

@@ -15,15 +15,23 @@ module Contexts
     end
 
     def create_more_locations
-      # @deer_run = FactoryBot.create(:location, branch: @new_england)
-      # @brookwoods = FactoryBot.create(:location, branch: @new_england)
-      # @sbtw = FactoryBot.create(:location, branch: @pennsylvania)
+      @deer_run = FactoryBot.create(:location, name: 'Deer Run', branch: @new_england)
+      @brookwoods = FactoryBot.create(:location, name: 'Brookwoods', branch: @new_england)
+      @sbtw = FactoryBot.create(:location, name: 'Summer\'s Best Two Weeks', branch: @pennsylvania)
     end
 
     def delete_more_locations
-      # @deer_run.delete
-      # @brookwoods.delete
-      # @sbtw.delete
+      @deer_run.delete
+      @brookwoods.delete
+      @sbtw.delete
+    end
+
+    def create_generic_location
+      @location = FactoryBot.create(:location, branch: @branch, name: 'Location')
+    end
+
+    def delete_generic_location
+      @location.delete
     end
   end
 end

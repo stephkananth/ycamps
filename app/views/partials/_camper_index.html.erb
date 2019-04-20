@@ -3,31 +3,31 @@
     <h5 class="card-title"><%= state %> Campers</h5>
     <p class="card-text">
 
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <!-- <th>Parent</th> -->
-          </tr>
-        </thead>
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <!-- <th>Parent</th> -->
+      </tr>
+      </thead>
 
-        <tbody>
-          <% campers.each do |camper| %>
-            <tr>
-              <td>
-                <%= link_to camper do %>
-                  <%= camper.proper_name %>
-                <% end %>
-              </td>
-              <!-- <td> -->
-                <%#= link_to camper.parent.user do %>
-                  <%#= camper.parent.proper_name %>
-                <%# end %>
-              <!-- </td> -->
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+      <tbody>
+      <% campers.each do |camper| %>
+        <tr>
+          <td>
+            <%= link_to camper do %>
+              <%= camper.proper_name %>
+            <% end %>
+          </td>
+          <!-- <td> -->
+          <%#= link_to camper.parent.user do %>
+          <%#= camper.parent.proper_name %>
+          <%# end %>
+          <!-- </td> -->
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
 
     </p>
   </div>

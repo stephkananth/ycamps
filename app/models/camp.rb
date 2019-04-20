@@ -20,13 +20,13 @@ class Camp < ApplicationRecord
   validate :camp_is_not_a_duplicate, on: :create
 
   # scopes
-  scope :active, -> { where(active: true) }
-  scope :inactive, -> { where(active: false) }
-  scope :alphabetical, -> { order('name') }
-  scope :chronological, -> { order('start_date', 'end_date') }
-  scope :upcoming, -> { where('start_date > ?', Date.today) }
-  scope :past, -> { where('end_date < ?', Date.today) }
-  scope :current, -> { where('start_date <= ? and end_date >= ?', Date.today, Date.today) }
+  scope :active, -> {where(active: true)}
+  scope :inactive, -> {where(active: false)}
+  scope :alphabetical, -> {order('name')}
+  scope :chronological, -> {order('start_date', 'end_date')}
+  scope :upcoming, -> {where('start_date > ?', Date.today)}
+  scope :past, -> {where('end_date < ?', Date.today)}
+  scope :current, -> {where('start_date <= ? and end_date > ?', Date.today, Date.today)}
 
   # callbacks
   # before_destroy do
@@ -43,7 +43,7 @@ class Camp < ApplicationRecord
     camp_badges.each do |camp_badge|
       result << CamperCampBadge.where(camp_badge_id: camp_badge.id).map(&:camper)
     end
-    result
+    result[0]
   end
 
   def already_exists?
@@ -51,7 +51,7 @@ class Camp < ApplicationRecord
   end
 
   def current?
-    (start_date <= Date.today) && (end_date >= Date.today)
+    (start_date <= Date.today) && (end_date > Date.today)
   end
 
   # private methods

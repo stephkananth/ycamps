@@ -6,18 +6,23 @@ class CamperCampBadgeTask < ApplicationRecord
   belongs_to :task
 
   # validations
-  validates_presence_of :camper_camp_badge_id, :task_id
+  validates_presence_of :camper_camp_badge_id
+  validates_presence_of :task_id
 
   # scopes
   scope :completed, -> {where(completed: true)}
   scope :incomplete, -> {where(completed: false)}
 
   # callbacks
-  after_update do
-    camper_camp_badge.completed = true if camper_camp_badge.completed?
-  end
+  around_update :mark_as_completed
 
   # public methods
+
+  private
+
+  def mark_as_completed
+    camper_camp_badge.complete if camper_camp_badge.completed?
+  end
 
   # private methods
 end

@@ -8,7 +8,8 @@ html, body {
   font-family: "Quicksand";
 }
 
-.container{
+.container {
+  font-family: "Quicksand";
   margin: 0;
   padding: 0;
 }
@@ -267,11 +268,11 @@ input.form-control {
   display: inline;
 }
 
-.form-control select{
+.form-control select {
   border-radius: 100px;
 }
 
-.profile-header h5.card-title{
+.profile-header h5.card-title {
   margin-bottom: 0px;
 }
 
@@ -315,36 +316,36 @@ input.form-control {
   background-size: cover;
 }
 
-.accordion-section{
+.accordion-section {
   font-size: 14px;
 }
 
-.accordion-header{
+.accordion-header {
   padding: 16px;
   border-bottom: 1px solid #dee2e6;
 }
 
-.accordion-header h6{
+.accordion-header h6 {
   font-size: 14px;
   color: #56D4CB;
   font-weight: 700;
 }
 
-.img-thumbnail{
+.img-thumbnail {
   border: none;
   background-color: none;
 }
 
-.person-icon{
+.person-icon {
   margin-bottom: 16px;
   font-size: 12px;
 }
 
-.person-icon img{
+.person-icon img {
   margin-bottom: 4px;
 }
 
-.pad-bottom{
+.pad-bottom {
   height: 100px;
   background: none;
   box-shadow: none;

@@ -11,5 +11,13 @@ module Contexts
       @skill2.delete
       @skill3.delete
     end
+
+    def create_generic_skill
+      @skill = FactoryBot.create(:skill, name: 'Skill', category: 'Category')
+    end
+
+    def delete_generic_skill
+      @skill.delete
+    end
   end
 end
