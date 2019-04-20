@@ -13,7 +13,6 @@ class CampersController < ApplicationController
     @camps = @camper.camps
     @current_camp = @camper.camps.current.first
     @current_badge = @camper.current_badge
-    # TODO: Refactor this line of code
     @current_tasks = @camper.current_tasks
     @camper_camp_badges_complete = @camper.camper_camp_badges.completed
     @camper_camp_badges_incomplete = @camper.camper_camp_badges.incomplete

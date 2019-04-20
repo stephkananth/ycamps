@@ -63,8 +63,6 @@ class CamperTest < ActiveSupport::TestCase
       assert_equal(['Alex Heimann', 'Mark Heimann', 'Rachel Heimann'], Camper.all.alphabetical.map(&:proper_name))
     end
 
-    # TODO: Show that you can get camps, currently enrolled camps, etc.
-
     should 'show that current badge method works' do
       create_generic_skill
       create_generic_badges
