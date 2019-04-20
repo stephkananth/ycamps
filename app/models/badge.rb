@@ -5,6 +5,7 @@ class Badge < ApplicationRecord
   belongs_to :skill
   has_many :camp_badges
   has_many :tasks
+  has_many :camper_camp_badges, through: :camp_badges
 
   # validations
   validates_presence_of :skill_id

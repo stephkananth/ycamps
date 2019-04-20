@@ -1,70 +1,84 @@
-<div class="row main-view camp-badge-header" id="admin-camp-view">
-  <div class="header"></div>
-  <%= link_to 'Back', :back %>
-  <div class="header-text">
-    <h2 class="header-title"><%= @badge.name %></h2>
+<div class="header" id="barn-header">
+  <div class="header-body">
+    <div class="header-title"><%= @badge.name %></div>
     <div class="header-subtitle">
       Skill— <%= @badge.skill.name %>
     </div>
   </div>
-  <%= link_to 'Assign Milestone', assign_milestones_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block" %>
-  <div class="card">
-    <div class="card-body">
-    <h5 class="card-title">Current Instructor</h5>
-    <p class="card-text">
-      <%= @counselor %><br/>
-    </p>
-    </div>
-  </div>
-  
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Current Camp</h5>
-      <p class="card-text">
-        <%= @camp.start_date.strftime("%A, %b %d") %> - <%= @camp.end_date.strftime("%A, %b %d") %><br/>
-        <%= @camp.location.name %> <br/>
-        <%= @camp.program %>
-      </p>
-    </div>
-  </div>
+</div>
 
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Summary</h5>
-      <p class="card-text">
-        <%= @badge.description %>
-      </p>
+<div class="row page-row">
+  <div class="col">
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title">Current Instructor</h5>
+        <p class="card-text">
+          <% if @counselors.empty? %>
+            There are no counselors assigned to this camp badge at this time.
+          <% else %>
+              <%= link_to @counselors.first.proper_name, @counselors.first %>
+          <% end %>
+        </p>
+      </div>
     </div>
-  </div>
 
-  <div class="card">
-    <div class="card-body">
-  		<h5 class="card-title">Milestones</h5>
-      <div id="accordion">
-        <% @tasks.each_with_index do |task, index| %>
-          <div class="accordion-section">
-            <a data-toggle="collapse" data-target="#collapse<%= index %>" aria-expanded="true" aria-controls="collapse<%= index %>">
-              <div class="accordion-header" id="heading<%= index %>">
-                <h6 class="mb-0">
-                  <%= task.name %>
-                </h6>
-              </div>
-            </a>
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title">Current Camp</h5>
+        <p class="card-text">
+          <%= @camp.start_date.strftime("%A, %b %d") %> - <%= @camp.end_date.strftime("%A, %b %d") %><br/>
+          <%= @camp.location.name %> <br/>
+          <%= @camp.program %>
+        </p>
+      </div>
+    </div>
 
-            <div id="collapse<%= index %>" class="collapse" aria-labelledby="heading<%= index %>" data-parent="#accordion">
-              <div class="card-body">
-                <%= task.description %>
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title">Summary</h5>
+        <p class="card-text">
+          <%= @badge.description %>
+        </p>
+      </div>
+    </div>
+
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title">Milestones</h5>
+        <p class="card-text">
+          <%= @badge.description %>
+        </p>
+      </div>
+    </div>
+
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title">Milestones</h5>
+        <div id="accordion">
+          <% @tasks.each_with_index do |task, index| %>
+            <div class="accordion-section">
+              <a data-toggle="collapse" data-target="#collapse<%= index %>" aria-expanded="true" aria-controls="collapse<%= index %>">
+                <div class="accordion-header" id="heading<%= index %>">
+                  <h6 class="mb-0">
+                    <%= task.name %>
+                  </h6>
+                </div>
+              </a>
+
+              <div id="collapse<%= index %>" class="collapse" aria-labelledby="heading<%= index %>" data-parent="#accordion">
+                <div class="card-body">
+                  <%= task.description %>
+                </div>
               </div>
             </div>
-          </div>
-        <% end %>
+          <% end %>
+      </div>
+      </div>
     </div>
-  </div>
-  </div>
 
-  <div class="card">
-    <div class="card-body">
-  		<h5 class="card-title">Campers</h5>
+    <div class="card page-card">
+      <div class="card-body">
+      <h5 class="card-title">Campers</h5>
       <div class="container">
         <% @ccbs.each_with_index do |ccb, index| %>
           <% if ccb == @ccbs.first or (index + 1) % 3 == 1 %>
@@ -90,7 +104,12 @@
           <% end %>
         <% end %>
       </div>
+      </div>
     </div>
-  <div class="card pad-bottom">
+
+    <%= link_to 'Assign Milestone', assign_milestones_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block" %>
   </div>
+</div>
+
+<div class="pad-bottom">
 </div>
