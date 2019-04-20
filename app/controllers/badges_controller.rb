@@ -11,6 +11,7 @@ class BadgesController < ApplicationController
   # GET /badges/1.json
   def show
     @camp_badges = @badge.camp_badges.alphabetical
+    @skill = @badge.skill.name
   end
 
   # GET /badges/new
@@ -19,7 +20,7 @@ class BadgesController < ApplicationController
   end
 
   # GET /badges/1/edit
-  def edit;
+  def edit
   end
 
   # POST /badges

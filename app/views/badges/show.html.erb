@@ -1,24 +1,34 @@
-<p id="notice"><%= notice %></p>
+<div class="header" id="profile-header">
+  <div class="header-body">
+    <div class="header-title"><%= @badge.name %></div>
+    <div class="header-subtitle">
+      Badge<br/>
+      Skill—<%= @badge.skill.name %><br/><br/>
+      <%= link_to 'Edit', edit_badge_path(@badge), class: "btn btn-primary btn-block btn-sm" %>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @badge.name %>
-</p>
+<div class="row page-row">
+  <div class="col">
+      <div class="card page-card">
+        <div class="card-body">
+          <h5 class="card-title">Badge Details</h5>
+          <p class="card-text">
+            <b>Level:</b> <%= @badge.level %><br/><br/>
+            <b>Description:</b> <%= @badge.description %>
+          </p>
+        </div>
+      </div>
 
-<p>
-  <strong>Level:</strong>
-  <%= @badge.level %>
-</p>
+    <div class="row btn-group">
+      <div class="col">
+        <%= link_to 'Delete Badge', @badge, method: :delete, data: {confirm: 'Are you sure you want to delete this badge?'}, class: "btn btn-primary btn-block btn-left" %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @badge.description %>
-</p>
+<div class="pad-bottom">
+</div>
 
-<p>
-  <strong>Skill:</strong>
-  <%= @badge.skill %>
-</p>
-
-<%= link_to 'Edit', edit_badge_path(@badge) %> |
-<%= link_to 'Back', badges_path %>
