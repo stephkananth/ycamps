@@ -2,7 +2,8 @@
   <div class="header-body">
     <div class="header-title"><%= @camper.first_name %> <%= @camper.last_name %></div>
     <div class="header-subtitle">
-      Parent— <%= @camper.parent.proper_name %><br/>
+      Camper <br/>
+      Parent— <%= @camper.parent.proper_name %><br/><br/>
       <%= link_to 'Edit', edit_camper_path(@camper), class: "btn btn-primary btn-block btn-sm" %>
     </div>
   </div>
@@ -18,16 +19,16 @@
           <%= @camper.first_name %> <span class="unbold">is currently working on</span>
           <%= @current_badge.name %>.
         </h5>
+        <h6 class="card-subtitle">This Week's Badge</h6>
         <p class="card-text">
-          <h6 class="card-subtitle">This Week's Badge</h6>
           <%= link_to @current_badge.name, @current_badge %>
         </p>
+        <h6 class="card-subtitle">Category</h6>
         <p class="card-text">
-          <h6 class="card-subtitle">Category</h6>
           <%= @current_badge.skill.category %>
         </p>
+        <h6 class="card-subtitle">Camp</h6>
         <p class="card-text">
-          <h6 class="card-subtitle">Camp</h6>
           <%= link_to @current_camp.name, @current_camp %><br/>
           <%= @current_camp.start_date.strftime("%A, %b %d") %> - <%= @current_camp.end_date.strftime("%A, %b %d") %><br/>
           <%= @current_camp.location.name %><br/>
@@ -36,82 +37,107 @@
       </div>
     </div>
 
-      <div class="card page-card">
-        <div class="card-body">
-          <h5 class="card-title">
-            This Week's Progress
-          </h5>
-          <p class="card-text">
-            <% @current_tasks.each do |task| %>
-              <%= task.task.name %>
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title">
+          This Week's Progress
+        </h5>
+        <p class="card-text">
+          <div class="progress">
+            <% @current_tasks.each_with_index do |task, index| %>
+              <% if task.completed? %>
+                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              <% end %>
             <% end %>
-          </p>
-        </div>
+          </div>
+          <br/>
+          <% @current_tasks.each do |task| %>
+            <% if task.completed? %>
+              <ul class="completed-bullet">
+                <li>
+                  <span class="bold"><%= task.task.name %></span><br/>
+                  <span class="small-text">Complete</span>
+                </li>
+              </ul>
+            <% else %>
+              <ul class="incomplete-bullet">
+                <li>
+                  <span class="bold"><%= task.task.name %></span><br/>
+                  <span class="small-text">Incomplete</span>
+                </li>
+              </ul>
+            <% end %>
+          <% end %>
+        </p>
       </div>
+    </div>
     <% end %>
+
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title">
+          Trophy Case
+        </h5>
+        <h6 class="card-subtitle">Complete Badges</h6>
+        <p class="card-text">
+          <% if @camper_camp_badges_complete.empty? %>
+            There are no completed badges at this time.
+          <% end %>
+          <% @camper_camp_badges_complete.each_with_index do |ccbadge, index| %>
+            <% if ccbadge == @camper_camp_badges_complete.first or (index + 1) % 3 == 1 %>
+                <div class="row">
+              <% end %>
+              <div class="col">
+                <%= link_to ccbadge.camp_badge.badge do %>
+                  <div class="person-icon text-center">
+                    <%= image_tag 'badge-icon.svg', class: 'img-responsive' %><br/>
+                    <%= ccbadge.camp_badge.badge.name %>
+                  </div>
+                <% end %>
+              </div>
+              <% if ccbadge == @camper_camp_badges_complete.last and (index + 1) % 3 != 0 %>
+                <div class="col"></div>
+                <% if (index + 1) % 3 == 1 %>
+                  <div class="col"></div>
+                <% end %>
+                </div>
+              <% end %>
+               <% if ccbadge == @camper_camp_badges_complete.last or (index + 1) % 3 == 0 %>
+                </div>
+              <% end %>
+          <% end %>
+        </p>
+        <h6 class="card-subtitle">Incomplete Badges</h6>
+        <p class="card-text">
+          <% @camper_camp_badges_incomplete.each_with_index do |ccbadge, index| %>
+            <% if ccbadge == @camper_camp_badges_incomplete.first or (index + 1) % 3 == 1 %>
+                <div class="row">
+              <% end %>
+              <div class="col">
+                <%= link_to ccbadge.camp_badge.badge do %>
+                  <div class="person-icon text-center">
+                    <%= image_tag 'badge-icon.svg', class: 'img-responsive' %><br/>
+                    <%= ccbadge.camp_badge.badge.name %>
+                  </div>
+                <% end %>
+              </div>
+              <% if ccbadge == @camper_camp_badges_incomplete.last and (index + 1) % 3 != 0 %>
+                <div class="col"></div>
+                <% if (index + 1) % 3 == 1 %>
+                  <div class="col"></div>
+                <% end %>
+                </div>
+              <% end %>
+               <% if ccbadge == @camper_camp_badges_incomplete.last or (index + 1) % 3 == 0 %>
+                </div>
+              <% end %>
+          <% end %>
+        </p>
+      </div>
+    </div>
+
   </div>
 </div>
 
-  <div class="card">
-    <div class="card-body">
-    <h5 class="card-title">Trophies</h5>
-    <h6>complete</h6>
-    <p class="card-text">
-      <% @camper_camp_badges_complete.each_with_index do |ccbadge, index| %>
-        <% if ccbadge == @camper_camp_badges_complete.first or (index + 1) % 3 == 1 %>
-            <div class="row">
-          <% end %>
-          <div class="col">
-            <%= link_to ccbadge.camp_badge.badge do %>
-              <div class="person-icon text-center">
-                <%= image_tag 'badge-icon.svg', class: 'img-responsive' %><br/>
-                <%= ccbadge.camp_badge.camp.name %>
-              </div>
-            <% end %>
-          </div>
-          <% if ccbadge == @camper_camp_badges_complete.last and (index + 1) % 3 != 0 %>
-            <div class="col"></div>
-            <% if (index + 1) % 3 == 1 %>
-              <div class="col"></div>
-            <% end %>
-            </div>
-          <% end %>
-           <% if ccbadge == @camper_camp_badges_complete.last or (index + 1) % 3 == 0 %>
-            </div>
-          <% end %>
-      <% end %>
-    </p>
-    <h6>incomplete</h6>
-    <p class="card-text">
-      <% @camper_camp_badges_incomplete.each_with_index do |ccbadge, index| %>
-        <% if ccbadge == @camper_camp_badges_incomplete.first or (index + 1) % 3 == 1 %>
-            <div class="row">
-          <% end %>
-          <div class="col">
-            <%= link_to ccbadge.camp_badge.badge do %>
-              <div class="person-icon text-center">
-                <%= image_tag 'badge-icon.svg', class: 'img-responsive' %><br/>
-                <%= ccbadge.camp_badge.camp.name %>
-              </div>
-            <% end %>
-          </div>
-          <% if ccbadge == @camper_camp_badges_incomplete.last and (index + 1) % 3 != 0 %>
-            <div class="col"></div>
-            <% if (index + 1) % 3 == 1 %>
-              <div class="col"></div>
-            <% end %>
-            </div>
-          <% end %>
-           <% if ccbadge == @camper_camp_badges_incomplete.last or (index + 1) % 3 == 0 %>
-            </div>
-          <% end %>
-      <% end %>
-    </p>
-    </div>
-  </div>
-
-  <%#= render :partial => "partials/camps_index", locals: {camps: @current_camps, state: "Current"} %>
-  <%#= render :partial => "partials/camps_index", locals: {camps: @upcoming_camps, state: "Upcoming"} %>
-  <%#= render :partial => "partials/camps_index", locals: {camps: @past_camps, state: "Past"} %>
-
+<div class="pad-bottom">
 </div>

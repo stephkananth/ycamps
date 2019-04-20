@@ -1,7 +1,34 @@
-<%= simple_form_for :user, url: create_milestones_path(:camp_badge_id => @camp_badge.id) do |f| %>
-  <%= f.simple_fields_for :other do |o| %>
-    <%= o.input :task, collection: @tasks, :value_method => :id %>
-    <%= o.input :campers, collection: @campers, as: :check_boxes, :label_method => :proper_name, :value_method => :id %>
+<div class="header" id="assign-milestone-header">
+  <div class="header-body">
+    <div class="header-title">Assign a Milestone</div>
+    <div class="header-subtitle">
+      Assign a milestone to campers taking <br/>
+      <span class="bold"><%= @camp_badge.badge.name %></span> 
+      at <span class="bold"><%= @camp_badge.camp.name %></span>.<br/>
+    </div>
+  </div>
+</div>
+
+<div class="row page-row">
+  <div class="col">
+   <%= simple_form_for :user, url: create_milestones_path(:camp_badge_id => @camp_badge.id) do |f| %>
+  	<%= f.simple_fields_for :other do |o| %>
+    	<%= o.input :task, collection: @tasks, :value_method => :id, input_html: { class: 'form-control' } %>
+    <div class="card page-card">
+      <div class="card-body">
+      	<div class="card-text">
+      		<%= o.input :campers, collection: [Camper.new(id: 0, first_name: 'Select', last_name: 'All', parent_id: 0)] + @campers, as: :check_boxes, :label_method => :proper_name, :value_method => :id, label: false, input_html: {data: {behaviour: 'select-all'}} %>
+      	</div>
+      </div>
+    </div>
+    <% end %>
+  <%= f.button :submit, class: 'btn btn-primary btn-block' %>
   <% end %>
-  <%= f.button :submit %>
-<% end %>
+  </div>
+</div>
+
+<div class="pad-bottom">
+</div>
+
+
+

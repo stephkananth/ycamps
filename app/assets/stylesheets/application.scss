@@ -145,6 +145,16 @@ h5.card-title {
   background-size: cover;
 }
 
+#assign-milestone-header{
+  background: url("/assets/assign-milestone-header.svg");
+  height: 25vh;
+  min-width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: auto;
+  background-size: cover;
+}
+
 /* Navigation */
 .nav-link {
   color: #696969 !important;
@@ -276,6 +286,20 @@ input.form-control {
   margin-bottom: 0px;
 }
 
+.checkbox {
+  display: block;
+  padding: 0.75rem;
+  border-bottom: 1px solid #dee2e6
+}
+
+.checkbox label{
+  text-transform: capitalize;
+}
+
+.checkbox label input{
+  margin-right: 8px;
+}
+
 #user-role {
   font-size: 14px;
 }
@@ -355,6 +379,14 @@ input.form-control {
   font-weight: 400;
 }
 
+.bold{
+  font-weight: 700;
+}
+
+.small-text{
+  font-size: 14px;
+}
+
 .form {
   display: block;
   max-width: 100%;
@@ -369,6 +401,28 @@ input.form-control {
 .form .input label {
   margin-right: 9px;
   color: #696969;
+}
+
+/* Lists */
+.incomplete-bullet{
+  list-style-image: url("/assets/incomplete-bubble.svg");
+}
+
+.completed-bullet {
+  list-style-image: url("/assets/complete-bubble.svg");
+}
+
+li{
+  padding-left: 8px;
+}
+
+/* Progress Bar */
+.progress{
+  border-radius: 50px;
+}
+
+.progress-bar{
+  background-color: #99E078;
 }
 
 /*** MEDIA QUERIES ***/

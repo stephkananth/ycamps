@@ -12,16 +12,16 @@ class AssignMilestoneController < ApplicationController
 	end
 
 	def create
-	    @camp_badge = params[:camp_badge_id].to_i
-      	@campers = params[:user][:other][:campers].map(&:to_i).drop(1)
-      	@task = params[:user][:other][:task].to_i
-      	assign_milestones_to_campers(@task, @camp_badge, @campers)
-	    redirect_to "/camp_badges/#{@camp_badge}"
-  	end
+    @camp_badge = params[:camp_badge_id].to_i
+  	@campers = params[:user][:other][:campers].map(&:to_i).drop(1) - [0]
+  	@task = params[:user][:other][:task].to_i
+  	assign_milestones_to_campers(@task, @camp_badge, @campers)
+    redirect_to "/camp_badges/#{@camp_badge}"
+	end
 
-  	private
+	private
 
-    def milestone_params
-      params.require(:camp_badge).permit(other: [:task, :campers])
-    end
+  def milestone_params
+    params.require(:camp_badge).permit(other: [:task, :campers])
+  end
 end
