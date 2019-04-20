@@ -1,13 +1,34 @@
-<div class="row main-view barn-header" id="admin-camp-view">
-  <div class="header"></div>
-    <%#= link_to 'Back' :back, class: "back-btn" %>
-  <div class="header-text">
-    <h2 class="header-title">New User</h2>
+<div class="header" id="profile-header">
+  <%#= link_to 'Back', :back %>
+  <div class="btn-wrapper">
+  </div>
+  <div class="header-body">
+    <div class="header-title">New User</div>
     <div class="header-subtitle">
     </div>
   </div>
-    <%#= render 'form', user: @user %>
-    <%= render partial: "partials/form_structure", locals: {object: @user,
+</div>
+
+<div class="row page-row">
+  <div class="col">
+      <div class="card page-card">
+        <div class="card-body">
+          <h5 class="card-title">Create New User</h5>
+          
+          <p class="card-text">
+            <%= render partial: "partials/form_structure", locals: {object: @user,
                                                                 type_of_form: "New User",
                                                                 fields: "user_fields"} %>
+          </p>
+
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="pad-bottom">
+</div>
+
+    <%#= render 'form', user: @user %>
+    
 </div>

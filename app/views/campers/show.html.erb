@@ -1,7 +1,8 @@
 <div class="header" id="barn-header">
   <div class="header-body">
-    <div class="header-title"><%= @camper.first_name %> <%= @camper.last_name %></div>
+    <div class="header-title"><%= @camper.proper_name %></div>
     <div class="header-subtitle">
+      Camper<br/>
       Parent— <%= @camper.parent.proper_name %><br/>
       <%= link_to 'Edit', edit_camper_path(@camper), class: "btn btn-primary btn-block btn-sm" %>
     </div>
