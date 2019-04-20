@@ -1,6 +1,32 @@
-<h1>Editing Location</h1>
+<div class="header" id="profile-header">
+  <%#= link_to 'Back', :back %>
+  <div class="btn-wrapper">
+  </div>
+  <div class="header-body">
+    <div class="header-title">Edit '<%= @location.name %>'</div>
+    <div class="header-subtitle">
+    </div>
+  </div>
+</div>
 
-<%= render 'form', location: @location %>
+<div class="row page-row">
+  <div class="col">
+      <div class="card page-card">
+        <div class="card-body">
+          <h5 class="card-title">Edit Location</h5>
+          <p class="card-text">
+            <%= render partial: "partials/form_structure", locals: {object: @location,
+                                                                type_of_form: "Edit Location",
+                                                                fields: "location_fields"} %>
+          </p>
 
-<%= link_to 'Show', @location %> |
-<%= link_to 'Back', locations_path %>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="pad-bottom">
+</div>
+
+    
+</div>
