@@ -1,20 +1,57 @@
-<div class="row main-view profile-header">
-  <div class="header"></div>
-  <%= link_to 'Back', :back %>
-  <div class="header-text">
-    <h2 class="header-title"><%= @parent.proper_name %></h2>
+<div class="header" id="profile-header">
+  <div class="header-body">
+    <div class="header-title"><%= @parent.proper_name %></div>
     <div class="header-subtitle">
       Parent<br/>
-      <%= @parent.user.email %>
+      <%= @parent.user.email %><br/><br/>
+      <%= link_to 'Edit', edit_user_path(@parent.user), class: "btn btn-primary btn-block btn-sm" %>
     </div>
   </div>
-  <%= link_to 'Edit Parent', edit_parent_path(@parent), class: "btn btn-primary btn-block" %>
-  <%#= link_to 'Create Students', new_student_path, class: "btn btn-primary btn-block" %>
-  <%= link_to 'Delete Parent', @parent, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-primary btn-block" %>
-  <div>
-    <%= render :partial => "partials/camper_index", locals: {campers: @campers, state: "Current"} %>
-    <%#= render :partial => "partials/camps_short_list", locals: {camps: @upcoming_camps, state: "Upcoming"} %>
-    <%#= render :partial => "partials/camps_short_list", locals: {camps: @past_camps, state: "Past"} %>
+</div>
+
+<div class="row page-row">
+  <div class="col">
+      <div class="card page-card">
+        <div class="card-body">
+          <h5 class="card-title"><%= @parent.first_name %>'s Campers</h5>
+          <p class="card-text">
+            <% if @parent.campers.count != 0 %>
+              <table class="table">
+                <tbody>
+                <% @parent.campers.each do |camper| %>
+                  <tr>
+                    <td>
+                      <%= link_to camper do %>
+                        <%= camper.proper_name %>
+                      <% end %>
+                    </td>
+                    <!-- <td> -->
+                    <%#= link_to camper.parent.user do %>
+                    <%#= camper.parent.proper_name %>
+                    <%# end %>
+                    <!-- </td> -->
+                  </tr>
+                <% end %>
+                </tbody>
+              </table>
+            <% else %>
+              <%= @parent.first_name %> currently does not have any children. <br/>
+            <% end %>
+          </p>
+        </div>
+      </div>
+
+    <div class="row btn-group">
+      <div class="col">
+        <%= link_to 'Add New Camper', new_camper_path(:parent_id => @parent.id), class: "btn btn-primary btn-block btn-right" %>
+      </div>
+      <div class="col">
+        <%= link_to 'Delete Parent', @parent, method: :delete, data: {confirm: 'Are you sure you want to delete this parent?'}, class: "btn btn-primary btn-block btn-left" %>
+      </div>
+    </div>
   </div>
+</div>
+
+<div class="pad-bottom">
 </div>
 

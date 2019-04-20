@@ -21,8 +21,6 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    @user.role = 'counselor' if current_user.role?(:counselor)
-    @user.role = 'admin' if current_user.role?(:admin)
   end
 
   # POST /users

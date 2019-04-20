@@ -1,20 +1,52 @@
-<div class="row main-view barn-header" id="admin-camp-view">
-  <div class="header"></div>
-  <%= link_to 'Back', :back %>
+<div class="header" id="barn-header">
+  <%#= link_to 'Back', :back %>
   <div class="btn-wrapper">
-    <%= link_to '+ Add New Parent', new_parent_path, class: "btn-sm btn-primary btn-block" %>
   </div>
-  <div class="header-text">
-    <h2 class="header-title">Parents</h2>
+  <div class="header-body">
+    <div class="header-title">Parents</div>
     <div class="header-subtitle">
-      <%= link_to 'New Parent', new_parent_path %>
-
     </div>
   </div>
-  <%= link_to 'New Parent', new_parent_path, class: "btn btn-primary btn-block" %>
+</div>
 
-  <%= render :partial => "partials/parent_index", locals: {parents: @parents, state: "Current"} %>
-  <%#= render :partial => "partials/camper_index", locals: {camps: @upcoming_camps, state: "Upcoming"} %>
-  <%#= render :partial => "partials/camper_index", locals: {camps: @past_camps, state: "Past"} %>
+<div class="row page-row">
+  <div class="col">
+      <%= link_to 'Create New Parent', new_user_path, class: "btn btn-primary btn-block" %>
+      <div class="card page-card">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text">
+            <% if @parents.count != 0 %>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                  </tr>
+                </thead>
 
+                <tbody>
+                <% @parents.each do |parent| %>
+                  <tr>
+                    <td>
+                      <%= link_to parent do %>
+                        <%= parent.name %>
+                      <% end %>
+                    </td>
+                    <td><%= parent.user.email %></td>
+                  </tr>
+                <% end %>
+                </tbody>
+              </table>
+            <% else %>
+              There are no parents in the system.<br/>
+              Add some to begin!
+            <% end %>
+          </p>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="pad-bottom">
 </div>
