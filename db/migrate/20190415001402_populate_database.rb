@@ -260,6 +260,7 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     cw1_task.name = "Color Scheme Portrait"
     cw1_task.description = "Campers will understand color schemes and how to find them on the color wheel."
     cw1_task.badge_id = colorful_world_badge.id
+    cw1_task.order = 1
     cw1_task.save!
     puts "Created task, Color Scheme Portrait"
 
@@ -267,6 +268,7 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     cw2_task.name = "Wax Resistant Paintings"
     cw2_task.description = "Campers will be able to explain how a wax-resist painting works and what makes it different from a regular painting or drawing"
     cw2_task.badge_id = colorful_world_badge.id
+    cw1_task.order = 2
     cw2_task.save!
     puts "Created task, Wax Resistant Paintings"
 
@@ -274,6 +276,7 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     cw3_task.name = "Pointillism"
     cw3_task.description = "Campers will know the term Pointillism and be able to create an artwork inspired by the movement."
     cw3_task.badge_id = colorful_world_badge.id
+    cw1_task.order = 3
     cw3_task.save!
     puts "Created task, Pointillism"
 
@@ -281,6 +284,7 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     cw4_task.name = "Fourth Task"
     cw4_task.description = "random text lol"
     cw4_task.badge_id = colorful_world_badge.id
+    cw1_task.order = 4
     cw4_task.save!
     puts "Created task, Fourth Task"
 
@@ -288,6 +292,7 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     nature1_task.name = "Food Web"
     nature1_task.description = "Campers will be taught about what a food web is and how it can be impacted."
     nature1_task.badge_id = nature_101_badge.id
+    cw1_task.order = 1
     nature1_task.save!
     puts "Created task, Food Web"
 
@@ -295,6 +300,7 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     nature2_task.name = "Orienteering"
     nature2_task.description = "Campers will learn how to use a compass and map to navigate to a destination"
     nature2_task.badge_id = nature_101_badge.id
+    cw1_task.order = 2
     nature2_task.save!
     puts "Created task, Orienteering"
 
@@ -302,6 +308,7 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     nature3_task.name = "Nature Hike"
     nature3_task.description = "Campers will be given a list of scavenger hunt-like challenges that they must accomplish during the hike.  Campers will learn about the plants and animals located around camp."
     nature3_task.badge_id = nature_101_badge.id
+    cw1_task.order = 3
     nature3_task.save!
     puts "Created task, Nature Hike"
 
