@@ -11,35 +11,35 @@
 
 <div class="row page-row">
   <div class="col">
-      <div class="card page-card">
-        <div class="card-body">
-          <h5 class="card-title"><%= @parent.first_name %>'s Campers</h5>
-          <p class="card-text">
-            <% if @parent.campers.count != 0 %>
-              <table class="table">
-                <tbody>
-                <% @parent.campers.each do |camper| %>
-                  <tr>
-                    <td>
-                      <%= link_to camper do %>
-                        <%= camper.proper_name %>
-                      <% end %>
-                    </td>
-                    <!-- <td> -->
-                    <%#= link_to camper.parent.user do %>
-                    <%#= camper.parent.proper_name %>
-                    <%# end %>
-                    <!-- </td> -->
-                  </tr>
-                <% end %>
-                </tbody>
-              </table>
-            <% else %>
-              <%= @parent.first_name %> currently does not have any children. <br/>
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title"><%= @parent.first_name %>'s Campers</h5>
+        <p class="card-text">
+          <% if @parent.campers.count != 0 %>
+          <table class="table">
+            <tbody>
+            <% @parent.campers.each do |camper| %>
+              <tr>
+                <td>
+                  <%= link_to camper do %>
+                    <%= camper.proper_name %>
+                  <% end %>
+                </td>
+                <!-- <td> -->
+                <%#= link_to camper.parent.user do %>
+                <%#= camper.parent.proper_name %>
+                <%# end %>
+                <!-- </td> -->
+              </tr>
             <% end %>
-          </p>
-        </div>
+            </tbody>
+          </table>
+        <% else %>
+          <%= @parent.first_name %> currently does not have any children. <br/>
+        <% end %>
+        </p>
       </div>
+    </div>
 
     <div class="row btn-group">
       <div class="col">

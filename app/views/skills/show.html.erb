@@ -11,30 +11,30 @@
 
 <div class="row page-row">
   <div class="col">
-      <div class="card page-card">
-        <div class="card-body">
-          <h5 class="card-title">Badges</h5>
-          <p class="card-text">
-            <% if @skill.badges.count != 0 %>
-              <table class="table">
-                <tbody>
-                <% @skill.badges.each do |badge| %>
-                  <tr>
-                    <td>
-                      <%= link_to badge do %>
-                        <%= badge.name %>
-                      <% end %>
-                    </td>
-                  </tr>
-                <% end %>
-                </tbody>
-              </table>
-            <% else %>
-              <%= @skill.name %> currently does not have any badges. <br/>
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title">Badges</h5>
+        <p class="card-text">
+          <% if @skill.badges.count != 0 %>
+          <table class="table">
+            <tbody>
+            <% @skill.badges.each do |badge| %>
+              <tr>
+                <td>
+                  <%= link_to badge do %>
+                    <%= badge.name %>
+                  <% end %>
+                </td>
+              </tr>
             <% end %>
-          </p>
-        </div>
+            </tbody>
+          </table>
+        <% else %>
+          <%= @skill.name %> currently does not have any badges. <br/>
+        <% end %>
+        </p>
       </div>
+    </div>
 
     <div class="row btn-group">
       <div class="col">

@@ -11,40 +11,40 @@
 
 <div class="row page-row">
   <div class="col">
-      <%= link_to 'Create New Parent', new_user_path, class: "btn btn-primary btn-block" %>
-      <div class="card page-card">
-        <div class="card-body">
-          <h5 class="card-title"></h5>
-          <p class="card-text">
-            <% if @parents.count != 0 %>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                  </tr>
-                </thead>
+    <%= link_to 'Create New Parent', new_user_path, class: "btn btn-primary btn-block" %>
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">
+          <% if @parents.count != 0 %>
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+            </tr>
+            </thead>
 
-                <tbody>
-                <% @parents.each do |parent| %>
-                  <tr>
-                    <td>
-                      <%= link_to parent do %>
-                        <%= parent.name %>
-                      <% end %>
-                    </td>
-                    <td><%= parent.user.email %></td>
-                  </tr>
-                <% end %>
-                </tbody>
-              </table>
-            <% else %>
-              There are no parents in the system.<br/>
-              Add some to begin!
+            <tbody>
+            <% @parents.each do |parent| %>
+              <tr>
+                <td>
+                  <%= link_to parent do %>
+                    <%= parent.name %>
+                  <% end %>
+                </td>
+                <td><%= parent.user.email %></td>
+              </tr>
             <% end %>
-          </p>
-        </div>
+            </tbody>
+          </table>
+        <% else %>
+          There are no parents in the system.<br/>
+          Add some to begin!
+        <% end %>
+        </p>
       </div>
+    </div>
   </div>
 </div>
 

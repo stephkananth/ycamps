@@ -10,17 +10,17 @@
 
 <div class="row page-row">
   <div class="col">
-      <div class="card page-card">
-        <div class="card-body">
-          <h5 class="card-title">User Information</h5>
-          <p class="card-text">
-            <b>First Name:</b> <%= @user.first_name %><br/><br/>
-            <b>Last Name:</b> <%= @user.last_name %><br/><br/>
-            <b>Email:</b> <%= @user.email %><br/><br/>
-            <b>Role:</b> <%= @user.role.capitalize %>
-          </p>
-        </div>
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title">User Information</h5>
+        <p class="card-text">
+          <b>First Name:</b> <%= @user.first_name %><br/><br/>
+          <b>Last Name:</b> <%= @user.last_name %><br/><br/>
+          <b>Email:</b> <%= @user.email %><br/><br/>
+          <b>Role:</b> <%= @user.role.capitalize %>
+        </p>
       </div>
+    </div>
 
     <div class="row btn-group">
       <%= link_to 'Delete User', @user, method: :delete, data: {confirm: 'Are you sure you want to delete this user?'}, class: "btn btn-primary btn-block btn-left" %>

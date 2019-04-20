@@ -11,41 +11,41 @@
 
 <div class="row page-row">
   <div class="col">
-      <%= link_to 'Create New Skill', new_skill_path, class: "btn btn-primary btn-block" %>
-      <div class="card page-card">
-        <div class="card-body">
-          <h5 class="card-title"></h5>
-          <p class="card-text">
-            <% if @skills.count != 0 %>
-              <table class="table">
-                <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Category</th>
-                </tr>
-                </thead>
+    <%= link_to 'Create New Skill', new_skill_path, class: "btn btn-primary btn-block" %>
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">
+          <% if @skills.count != 0 %>
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Category</th>
+            </tr>
+            </thead>
 
-                <tbody>
-                <% @skills.each do |skill| %>
-                  <tr>
-                    
-                    <td>
-                      <%= link_to skill do %>
-                        <%= skill.name %>
-                      <% end %>
-                    </td>
-                    <td><%= skill.category %></td>
-                  </tr>
-                <% end %>
-                </tbody>
-              </table>
-              <% else %>
-                There are no skills in the system.<br/>
-                Add some to begin!
-              <% end %>
-          </p>
-        </div>
+            <tbody>
+            <% @skills.each do |skill| %>
+              <tr>
+
+                <td>
+                  <%= link_to skill do %>
+                    <%= skill.name %>
+                  <% end %>
+                </td>
+                <td><%= skill.category %></td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+        <% else %>
+          There are no skills in the system.<br/>
+          Add some to begin!
+        <% end %>
+        </p>
       </div>
+    </div>
   </div>
 </div>
 
