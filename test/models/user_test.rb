@@ -76,5 +76,12 @@ class UserTest < ActiveSupport::TestCase
       assert @counselor_user.role?(:counselor)
       assert @parent_user.role?(:parent)
     end
+
+    should 'show that authenticate method works' do
+      test_user = FactoryBot.create(:user, email: 'stephk@example.com', password_digest: 'secret123', first_name: 'Steph', last_name: 'Ananth', role: 'admin')
+      assert test_user.authenticate('secret123')
+      deny test_user.authenticate('secret')
+      test_user.delete
+    end
   end
 end
