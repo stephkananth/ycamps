@@ -1,27 +1,51 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Branches</h1>
+<div class="header" id="barn-header">
+  <%#= link_to 'Back', :back %>
+  <div class="btn-wrapper">
+  </div>
+  <div class="header-body">
+    <div class="header-title">Branches</div>
+    <div class="header-subtitle">
+    </div>
+  </div>
+</div>
 
-<table>
-  <thead>
-  <tr>
-    <th>Name</th>
-    <th colspan="3"></th>
-  </tr>
-  </thead>
+<div class="row page-row">
+  <div class="col">
+      <%= link_to 'Create New Branch', new_branch_path, class: "btn btn-primary btn-block" %>
+      <div class="card page-card">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text">
+            <% if @branches.count != 0 %>
+              <table class="table">
+                <thead>
+                <tr>
+                  <th>Name</th>
+                </tr>
+                </thead>
 
-  <tbody>
-  <% @branches.each do |branch| %>
-    <tr>
-      <td><%= branch.name %></td>
-      <td><%= link_to 'Show', branch %></td>
-      <td><%= link_to 'Edit', edit_branch_path(branch) %></td>
-      <td><%= link_to 'Destroy', branch, method: :delete, data: {confirm: 'Are you sure?'} %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+                <tbody>
+                <% @branches.each do |branch| %>
+                  <tr>
+                    
+                    <td>
+                      <%= link_to branch do %>
+                        <%= branch.name %>
+                      <% end %>
+                    </td>
+                  </tr>
+                <% end %>
+                </tbody>
+              </table>
+              <% else %>
+                There are no branches in the system.
+              <% end %>
+          </p>
+        </div>
+      </div>
+  </div>
+</div>
 
-<br>
-
-<%= link_to 'New Branch', new_branch_path %>
+<div class="pad-bottom">
+</div>

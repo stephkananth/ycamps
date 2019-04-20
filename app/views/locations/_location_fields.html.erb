@@ -1,0 +1,9 @@
+<div class="form-group">
+  <%= f.label :name %>
+  <%= f.input :name, input_html: {class: 'form-control'}, label: false %>
+</div>
+
+<div class="form-group">
+  <%= f.label :branch %>
+  <%= f.input :branch, collection: Branch.all.alphabetical.to_a, label: false, include_blank: true, input_html: {class: 'form-control'} %>
+</div>

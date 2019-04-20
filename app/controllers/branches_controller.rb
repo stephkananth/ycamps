@@ -4,12 +4,13 @@ class BranchesController < ApplicationController
   # GET /branches
   # GET /branches.json
   def index
-    @branches = Branch.all
+    @branches = Branch.all.alphabetical
   end
 
   # GET /branches/1
   # GET /branches/1.json
   def show
+    @locations = @branch.locations
     @camps = @branch.camps
   end
 

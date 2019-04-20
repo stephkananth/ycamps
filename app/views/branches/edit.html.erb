@@ -1,6 +1,34 @@
-<h1>Editing Branch</h1>
 
-<%= render 'form', branch: @branch %>
+<div class="header" id="profile-header">
+  <%#= link_to 'Back', :back %>
+  <div class="btn-wrapper">
+  </div>
+  <div class="header-body">
+    <div class="header-title">Edit '<%= @branch.name %>'</div>
+    <div class="header-subtitle">
+    </div>
+  </div>
+</div>
 
-<%= link_to 'Show', @branch %> |
-<%= link_to 'Back', branches_path %>
+<div class="row page-row">
+  <div class="col">
+      <div class="card page-card">
+        <div class="card-body">
+          <h5 class="card-title">Edit Branch</h5>
+          
+          <p class="card-text">
+            <%= render partial: "partials/form_structure", locals: {object: @branch,
+                                                                type_of_form: "Edit Branch",
+                                                                fields: "branch_fields"} %>
+          </p>
+
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="pad-bottom">
+</div>
+
+    
+</div>
