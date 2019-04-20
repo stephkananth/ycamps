@@ -2,7 +2,8 @@ class Counselor < ApplicationRecord
   belongs_to :user
   has_many :counselor_camp_badges
   has_many :camp_badges, through: :counselor_camp_badges
-  has_many :camps, through: :camp_badges
+  has_many :camp_counselors
+  has_many :camps, through: :camp_counselors
 
   # validations
   validates_numericality_of :user_id, only_integer: true, greater_than: 0

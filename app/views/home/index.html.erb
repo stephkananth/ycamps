@@ -1,7 +1,5 @@
 <% if logged_in? %>
-  <div class="row dashboard main-view">
-    <%= render :partial => "dashboard" %>
-  </div>
+	<%= render :partial => "dashboard" %>
 <% else %>
   <%= render :partial => "index_guest" %>
 <% end %>

@@ -1,28 +1,16 @@
-<%= form_with(model: camper_registration, local: true) do |form| %>
-  <% if camper_registration.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(camper_registration.errors.count, "error") %> prohibited this camper_registration from being
-        saved:</h2>
-
-      <ul>
-        <% camper_registration.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+<div class="form">
+  <%= simple_form_for(camper_registration) do |f| %>
+    <%= f.error_notification %>
+    <div class="row">
+      <div class="form-inputs">
+        <%= f.input :camp_id, collection: Camp.alphabetical.to_a, include_blank: true, :label_method => :name  %>
+        <%= f.input :camper_id, collection: Camper.alphabetical.to_a, include_blank: true, :label_method => :proper_name  %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-actions col s8">
+        <%= f.button :submit %>
+      </div>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :camp_id %>
-    <%= form.text_field :camp_id, id: :camper_registration_camp_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :camper_id %>
-    <%= form.text_field :camper_id, id: :camper_registration_camper_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

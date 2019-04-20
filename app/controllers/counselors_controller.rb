@@ -32,14 +32,18 @@ class CounselorsController < ApplicationController
   # POST /counselors.json
   def create
     @counselor = Counselor.new(counselor_params)
-
-    respond_to do |format|
+    @user = User.new(user_params)
+    @user.role = "counselor"
+    if !@user.save
+      @counselor.valid?
+      render action: 'new'
+    else
+      @counselor.user_id = @user.id
       if @counselor.save
-        format.html {redirect_to @counselor, notice: 'Counselor was successfully created.'}
-        format.json {render :show, status: :created, location: @counselor}
+        flash[:notice] = "#{@counselor.first_name} #{@counselor.last_name} was added to the system."
+        redirect_to counselor_path(@counselor)
       else
-        format.html {render :new}
-        format.json {render json: @counselor.errors, status: :unprocessable_entity}
+        render action: 'new'
       end
     end
   end

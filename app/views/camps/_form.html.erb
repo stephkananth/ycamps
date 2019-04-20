@@ -1,47 +1,27 @@
-<%= form_with(model: camp, local: true) do |form| %>
-  <% if camp.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(camp.errors.count, "error") %> prohibited this camp from being saved:</h2>
-
-      <ul>
-        <% camp.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :camp_name %>
+<%= simple_form_for(camp) do |f| %>
+  <%= f.error_notification %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.input :name, input_html: { class: 'form-control' }, label: false %>
   </div>
-
-  <div class="field">
-    <%= form.label :program %>
-    <%= form.text_field :program, id: :camp_program %>
+  <div class="form-group">
+    <%= f.label :program %>
+    <%= f.input :program, input_html: { class: 'form-control' }, label: false %>
   </div>
-
-  <div class="field">
-    <%= form.label :start_date %>
-    <%= form.date_select :start_date, id: :camp_start_date %>
+  <div class="form-group">
+    <%= f.label :start_date %><br/>
+    <%= f.input_field :start_date, class: 'form-control date', label: false, :order => [:month, :day, :year] %>
   </div>
-
-  <div class="field">
-    <%= form.label :end_date %>
-    <%= form.date_select :end_date, id: :camp_end_date %>
+  <div class="form-group">
+    <%= f.label :end_date %><br/>
+    <%= f.input_field :end_date, class: 'form-control date', label: false, :order => [:month, :day, :year] %>
   </div>
-
-  <div class="field">
-    <%= form.label :active %>
-    <%= form.check_box :active, id: :camp_active %>
+  <div class="form-group">
+    <%= f.label :location %>
+    <%= f.input :location, collection: Location.alphabetical.to_a, input_html: { class: 'form-control' }, label: false %>
   </div>
-
-  <div class="field">
-    <%= form.label :location_id %>
-    <%= form.text_field :location_id, id: :camp_location_id %>
+  <div class="form-group">
+    <%= f.input :active, :as => :hidden, :input_html => { :value => true } %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= f.button :submit, class: 'btn btn-primary btn-block' %>
 <% end %>

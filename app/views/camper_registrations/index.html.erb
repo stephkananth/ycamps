@@ -1,6 +1,9 @@
 <div class="row main-view barn-header" id="admin-camp-view">
   <div class="header"></div>
   <%= link_to 'Back', :back %>
+  <div class="btn-wrapper">
+    <%= link_to '+ Add New Camper to this Camp', new_camper_registration_path, class: "btn-sm btn-primary btn-block" %>
+  </div>
   <h2 class="header-title">Campers This Week</h2>
 
   <div class="card">
@@ -21,7 +24,6 @@
         <% end %>
         </tbody>
       </table>
-      <%= link_to 'New Camper', new_camper_registration_path %>
     </div>
   </div>
 

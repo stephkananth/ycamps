@@ -1,37 +1,19 @@
-<%= form_with(model: camper, local: true) do |form| %>
-  <% if camper.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(camper.errors.count, "error") %> prohibited this camper from being saved:</h2>
-
-      <ul>
-        <% camper.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+<div class="form">
+  <%= simple_form_for(camper) do |f| %>
+    <%= f.error_notification %>
+    <div class="row">
+      <div class="form-inputs">
+        <%= f.input :first_name, label_html: { class: 'active' } %>
+        <%= f.input :last_name, label_html: { class: 'active' } %>
+        <%= f.input :parent, collection: Parent.active.alphabetical.to_a, include_blank: true %>
+        <%= f.input :active %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-actions col s8">
+        <%= f.button :submit %>
+      </div>
     </div>
   <% end %>
+</div>
 
-  <div class="field">
-    <%= form.label :parent_id %>
-    <%= form.text_field :parent_id, id: :camper_parent_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name, id: :camper_first_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name, id: :camper_last_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :active %>
-    <%= form.check_box :active, id: :camper_active %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>

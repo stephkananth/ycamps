@@ -1,19 +1,30 @@
-<div class="row main-view profile-header">
-  <div class="header"></div>
-  <%= link_to 'Back', :back %>
-  <div class="header-text">
-    <h2 class="header-title"><%= @counselor.proper_name %></h2>
+<div class="header" id="profile-header">
+  <div class="header-body">
+    <div class="header-title"><%= @counselor.proper_name %></div>
     <div class="header-subtitle">
       Counselor<br/>
-      <%= @counselor.user.email %>
+      <%= @counselor.user.email %><br/><br/>
+      <%= link_to 'Edit Counselor', edit_counselor_path(@counselor), class: "btn btn-primary btn-block btn-sm" %>
     </div>
   </div>
-  <%= link_to 'Edit Counselor', edit_counselor_path(@counselor), class: "btn btn-primary btn-block" %>
-  <%= link_to 'Add Counselor to a Camp', new_camp_counselor_path, class: "btn btn-primary btn-block" %>
-  <%= link_to 'Destroy', @counselor, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-primary btn-block" %>
-  <div>
+</div>
+
+<div class="row page-row">
+  <div class="col">
     <%= render :partial => "partials/camps_short_list", locals: {camps: @current_camps, state: "Current"} %>
     <%= render :partial => "partials/camps_short_list", locals: {camps: @upcoming_camps, state: "Upcoming"} %>
     <%= render :partial => "partials/camps_short_list", locals: {camps: @past_camps, state: "Past"} %>
   </div>
+
+  <div class="row btn-group">
+    <div class="col">
+      <%= link_to 'Add Counselor to Camp', new_camp_counselor_path, class: "btn btn-primary btn-block" %>
+    </div>
+    <div class="col">
+      <%= link_to 'Delete', @counselor, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-primary btn-block" %>
+    </div>
+  </div>
+</div>
+
+<div class="pad-bottom">
 </div>

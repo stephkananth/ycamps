@@ -1,27 +1,20 @@
-<%= form_with(model: counselor, local: true) do |form| %>
-  <% if counselor.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(counselor.errors.count, "error") %> prohibited this counselor from being saved:</h2>
-
-      <ul>
-        <% counselor.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+<div class="form">
+  <%= simple_form_for(counselor) do |f| %>
+    <%= f.error_notification %>
+    <div class="row">
+      <div class="form-inputs">
+        <%= f.input :name, label_html: { class: 'active' } %>
+        <%= f.input :program, label_html: { class: 'active' } %>
+        <%= f.input :start_date, label_html: { class: 'active' } %>
+        <%= f.input :end_date, label_html: { class: 'active' } %>
+        <%= f.input :location_id, collection: Location.alphabetical.to_a, include_blank: true %>
+        <%= f.input :active %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-actions col s8">
+        <%= f.button :submit %>
+      </div>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :counselor_user_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :active %>
-    <%= form.check_box :active, id: :counselor_active %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

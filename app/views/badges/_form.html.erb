@@ -1,37 +1,15 @@
-<%= form_with(model: badge, local: true) do |form| %>
-  <% if badge.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(badge.errors.count, "error") %> prohibited this badge from being saved:</h2>
+<div class="form">
+  <%= simple_form_for(badge) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error :base %>
 
-      <ul>
-        <% badge.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+    <%= f.input :name, label_html: { class: 'active' } %>
+    <%= f.input :level, label_html: { class: 'active' } %>
+    <%= f.input :description, label_html: { class: 'active' } %>
+    <%= f.input :skill, collection: Skill.alphabetical.to_a, include_blank: true %>
+
+    <div class="actions">
+      <%= f.button :submit, class: 'btn btn-primary btn-block' %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :badge_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :level %>
-    <%= form.number_field :level, id: :badge_level %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :badge_description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :skill_id %>
-    <%= form.text_field :skill_id, id: :badge_skill_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

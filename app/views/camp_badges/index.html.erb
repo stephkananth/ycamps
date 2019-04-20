@@ -1,29 +1,40 @@
-<div class="row main-view barn-header" id="admin-camp-view">
-  <div class="header"></div>
-  <%= link_to 'Back', :back %>
-  <h2 class="header-title">Badges in Progress</h2>
-
-  <div class="card">
-    <div class="card-body card-text">
-      <table class="table card-text">
-        <thead>
-        <tr>
-          <th scope="col">Badges in Progress</th>
-        </tr>
-        </thead>
-        <tbody>
-        <% @camp_badges.each do |camp_badge| %>
-          <tr>
-            <td>
-              <%= link_to camp_badge.badge.name, camp_badge %>
-            </td>
-          </tr>
-        <% end %>
-        </tbody>
-      </table>
-      <%= link_to 'New Camp Badge', new_camp_badge_path, class: "btn btn-primary btn-block" %>
-    </div>
+<div class="header" id="barn-header">
+  <div class="header-body">
+    <div class="header-title">Badges in Progress</div>
   </div>
-
 </div>
 
+<div class="row page-row">
+  <div class="col">
+    <% if @camp_badges.empty? %>
+      <div class="section-header">There are no badges in progress at this time.</h4>
+    <% else %>
+      <div class="card page-card">
+        <div class="card-body">
+          <p class="card-text">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Badges in Progress</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @camp_badges.each do |camp_badge| %>
+                  <tr>
+                    <td>
+                      <%= link_to camp_badge.badge.name, camp_badge %>
+                    </td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </p>
+        </div>
+      </div>
+    <% end %>
+     <%= link_to 'New Camp Badge', new_camp_badge_path, class: "btn btn-primary btn-block" %>
+  </div>
+</div>
+
+<div class="pad-bottom">
+</div>

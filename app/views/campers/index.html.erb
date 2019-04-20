@@ -1,13 +1,14 @@
 <div class="row main-view barn-header" id="admin-camp-view">
   <div class="header"></div>
   <%= link_to 'Back', :back %>
+  <div class="btn-wrapper">
+    <%= link_to '+ Add New Camper', new_camper_path, class: "btn-sm btn-primary btn-block" %>
+  </div>
   <div class="header-text">
     <h2 class="header-title">Campers</h2>
     <div class="header-subtitle">
     </div>
   </div>
-  <%= link_to 'New Camper', new_camper_path, class: "btn btn-primary btn-block" %>
-
   <%= render :partial => "partials/camper_index", locals: {campers: @campers, state: "Current"} %>
   <%#= render :partial => "partials/camper_index", locals: {camps: @upcoming_camps, state: "Upcoming"} %>
   <%#= render :partial => "partials/camper_index", locals: {camps: @past_camps, state: "Past"} %>

@@ -1,5 +1,28 @@
-<h1>New Camp Counselor</h1>
+<div class="row main-view barn-header" id="admin-camp-view">
+  <div class="header"></div>
+  <%= link_to 'Back', camp_counselors_path %>
+  <div class="header-text">
+    <h2 class="header-title">New Camp Counselor for <%#= @camp.name%></h2>
+    <div class="header-subtitle">
+    </div>
+  </div>
+  <%#= render 'form', camp_counselor: @camp_counselor %>
+  <div class="form">
+      <%= simple_form_for(@camp_counselor) do |f| %>
+      <%= f.error_notification %>
+      <div class="row">
+        <div class="form-inputs">
+          <%= f.input :camp_id, as: :hidden, input_html: { value: @camp.id } %>
+          <%= f.input :counselor_id, collection: Counselor.alphabetical.to_a, include_blank: true, :label_method => :proper_name %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-actions col s8">
+          <%= f.button :submit %>
+        </div>
+      </div>
+    </div>
+<% end %>
+</div>
 
-<%= render 'form', camp_counselor: @camp_counselor %>
 
-<%= link_to 'Back', camp_counselors_path %>

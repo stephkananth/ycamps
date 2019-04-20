@@ -33,4 +33,7 @@ Rails.application.routes.draw do
   resources :users
   get 'login', to: 'sessions#new', as: :login
   get 'logout', to: 'sessions#destroy', as: :logout
+
+  get "assign_milestone" => "assign_milestone#index", as: :assign_milestones
+  post "create_milestone" => "assign_milestone#create", as: :create_milestones
 end
