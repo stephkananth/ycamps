@@ -112,5 +112,33 @@ class CamperTest < ActiveSupport::TestCase
       delete_generic_badges
       delete_generic_skill
     end
+
+    should 'show that current tasks method works' do
+      create_generic_skill
+      create_generic_badges
+      create_generic_branch
+      create_generic_location
+      create_generic_camps
+      create_generic_camp_badges
+      create_generic_user
+      create_generic_parent
+      create_generic_camper
+      create_generic_camper_camp_badges
+      create_generic_tasks
+      create_camper_camp_badge_tasks
+      assert_equal 4, @camper.current_tasks.size
+      delete_camper_camp_badge_tasks
+      delete_generic_tasks
+      delete_generic_camper_camp_badges
+      delete_generic_camper
+      delete_generic_parent
+      delete_generic_user
+      delete_generic_camp_badges
+      delete_generic_camps
+      delete_generic_location
+      delete_generic_branch
+      delete_generic_badges
+      delete_generic_skill
+    end
   end
 end

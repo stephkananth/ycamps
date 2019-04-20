@@ -115,9 +115,7 @@ class CampTest < ActiveSupport::TestCase
       create_generic_camper
       create_generic_camper_camp_badges
       create_more_semi_generic_camper_camp_badges
-
       assert_equal [@camper, @alex, @mark], @camp3.campers
-
       delete_more_semi_generic_camper_camp_badges
       delete_generic_camper_camp_badges
       delete_generic_camper

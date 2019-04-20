@@ -12,9 +12,9 @@ class Camper < ApplicationRecord
   validates_presence_of :first_name, :last_name
   validates_numericality_of :parent_id, only_integer: true, greater_than: 0
 
-  scope :active, -> {where(active: true)}
-  scope :inactive, -> {where(active: false)}
-  scope :alphabetical, -> {order('last_name, first_name')}
+  scope :active, -> { where(active: true) }
+  scope :inactive, -> { where(active: false) }
+  scope :alphabetical, -> { order('last_name, first_name') }
 
   def name
     last_name + ', ' + first_name
@@ -38,5 +38,9 @@ class Camper < ApplicationRecord
         return camper_camp_badge.camp_badge.badge
       end
     end
+  end
+
+  def current_tasks
+    current_badge.camper_camp_badges.where(camper_id: id, camp_badge_id: current_camp_badge.id).first.camper_camp_badge_tasks
   end
 end

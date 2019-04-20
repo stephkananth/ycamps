@@ -81,6 +81,8 @@ class UserTest < ActiveSupport::TestCase
       test_user = FactoryBot.create(:user, email: 'stephk@example.com', password: 'secret123', first_name: 'Steph', last_name: 'Ananth', role: 'admin')
       assert test_user.authenticate('secret123')
       deny test_user.authenticate('secret')
+      assert User.authenticate('stephk@example.com', 'secret123')
+      deny User.authenticate('stephk@example.com', 'secret')
       test_user.delete
     end
   end
