@@ -41,6 +41,8 @@ class Camper < ApplicationRecord
   end
 
   def current_tasks
-    current_badge.camper_camp_badges.where(camper_id: id, camp_badge_id: current_camp_badge.id).first.camper_camp_badge_tasks
+    if camper_camp_badges.count != 0 
+      current_badge.camper_camp_badges.where(camper_id: id, camp_badge_id: current_camp_badge.id).first.camper_camp_badge_tasks
+    end
   end
 end
