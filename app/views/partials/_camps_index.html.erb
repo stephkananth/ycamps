@@ -1,32 +1,21 @@
-<div class="card">
+<div class="card page-card">
   <div class="card-body">
     <h5 class="card-title"><%= state %> Camps</h5>
     <p class="card-text">
-
-    <table>
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Program</th>
-        <th>Start</th>
-        <th>End</th>
-        <th>Location</th>
-        <th colspan="3"></th>
-      </tr>
-      </thead>
+    <table class="table">
       <tbody>
-      <% camps.each do |camp| %>
+      <% @camps.each do |camp| %>
         <tr>
 
           <td>
             <%= link_to camp do %>
-              <%= camp.name %>
+              <span class="card-subtitle"><%= camp.name %></span><br/>
             <% end %>
+              <%= camp.program %> <br/>
+              <%= camp.start_date.strftime("%A, %b %d") %> - <%= camp.end_date.strftime("%A, %b %d") %> <br/>
+              <%= camp.location.name %>
+
           </td>
-          <td><%= camp.program %></td>
-          <td><%= camp.start_date %></td>
-          <td><%= camp.end_date %></td>
-          <td><%= camp.location.name %></td>
         </tr>
       <% end %>
       </tbody>
