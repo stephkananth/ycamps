@@ -1,11 +1,36 @@
-<div class="row main-view barn-header" id="admin-camp-view">
-  <div class="header">
-    <%= link_to 'Back', camper_registrations_path, class: "back-btn" %>
+<div class="header" id="profile-header">
+  <%#= link_to 'Back', :back %>
+  <div class="btn-wrapper">
   </div>
-  <div class="header-text">
-    <h2 class="header-title">New Camper Registration</h2>
+  <div class="header-body">
+    <div class="header-title">New Camper Registration</div>
     <div class="header-subtitle">
     </div>
   </div>
-  <%= render 'form', camper_registration: @camper_registration %>
 </div>
+
+<div class="row page-row">
+  <div class="col">
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title">Create New Camper Registration</h5>
+
+        <p class="card-text">
+          <%= render partial: "partials/form_structure", locals: {object: @camper_registration,
+                                                                  type_of_form: "New Camper Registration",
+                                                                  fields: "camper_registration_fields"} %>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pad-bottom">
+</div>
+
+
+</div>
+
+
+

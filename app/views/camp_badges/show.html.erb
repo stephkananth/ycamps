@@ -9,15 +9,17 @@
 
 <div class="row page-row">
   <div class="col">
+    <%= link_to 'Assign Milestone to Campers', assign_milestones_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block" %>
     <div class="card page-card">
       <div class="card-body">
-        <h5 class="card-title">Current Instructor</h5>
+        <h5 class="card-title">Current Counselor</h5>
         <p class="card-text">
           <% if @counselors.empty? %>
             There are no counselors assigned to this camp badge at this time.
           <% else %>
             <%= link_to @counselors.first.proper_name, @counselors.first %>
-          <% end %>
+          <% end %><br/><br/>
+          <%= link_to 'Add Counselor to Badge', new_counselor_camp_badge_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block btn-sm" %>
         </p>
       </div>
     </div>
@@ -100,17 +102,11 @@
                 </div>
               <% end %>
             <% end %>
-          <% end %>
+          <% end %><br/>
+          <%= link_to 'Add Campers', new_camper_camp_badge_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block btn-sm" %>
       </div>
     </div>
 
-    <div class="row btn-group">
-      <div class="col">
-        <%= link_to 'Assign Milestone to Campers', assign_milestones_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block" %>
-      </div>
-      <div class="col">
-        <%= link_to 'Add Campers', new_camper_camp_badge_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block" %>
-      </div>
     </div>
     </div>
   </div>

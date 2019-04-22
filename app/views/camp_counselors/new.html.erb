@@ -1,28 +1,37 @@
-<div class="row main-view barn-header" id="admin-camp-view">
-  <div class="header"></div>
-  <%= link_to 'Back', camp_counselors_path %>
-  <div class="header-text">
-    <h2 class="header-title">New Camp Counselor for <%#= @camp.name%></h2>
+<div class="header" id="profile-header">
+  <%#= link_to 'Back', :back %>
+  <div class="btn-wrapper">
+  </div>
+  <div class="header-body">
+    <div class="header-title">New Camp Counselor</div>
     <div class="header-subtitle">
     </div>
   </div>
-  <%#= render 'form', camp_counselor: @camp_counselor %>
-  <div class="form">
-    <%= simple_form_for(@camp_counselor) do |f| %>
-      <%= f.error_notification %>
-      <div class="row">
-        <div class="form-inputs">
-          <%= f.input :camp_id, as: :hidden, input_html: {value: @camp.id} %>
-          <%= f.input :counselor_id, collection: Counselor.alphabetical.to_a, include_blank: true, :label_method => :proper_name %>
-        </div>
+</div>
+
+<div class="row page-row">
+  <div class="col">
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title">Create New Camp Counselor</h5>
+
+        <p class="card-text">
+          <%= render partial: "partials/form_structure", locals: {object: @camp_counselor,
+                                                                  type_of_form: "New Camp Counselor",
+                                                                  fields: "camp_counselor_fields"} %>
+        </p>
+
       </div>
-      <div class="row">
-        <div class="form-actions col s8">
-          <%= f.button :submit %>
-        </div>
-      </div>
-      </div>
-    <% end %>
     </div>
+  </div>
+</div>
+
+<div class="pad-bottom">
+</div>
+
+
+</div>
+
+
 
 

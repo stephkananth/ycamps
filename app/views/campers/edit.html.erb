@@ -1,6 +1,36 @@
-<h1>Editing Camper</h1>
+<div class="header" id="profile-header">
+  <%#= link_to 'Back', :back %>
+  <div class="btn-wrapper">
+  </div>
+  <div class="header-body">
+    <div class="header-title">Edit Camper</div>
+    <div class="header-subtitle">
+    </div>
+  </div>
+</div>
 
-<%= render 'form', camper: @camper %>
+<div class="row page-row">
+  <div class="col">
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title">Edit Camper</h5>
 
-<%= link_to 'Show', @camper %> |
-<%= link_to 'Back', campers_path %>
+        <p class="card-text">
+          <%= render partial: "partials/form_structure", locals: {object: @camper,
+                                                                  type_of_form: "Edit Camper",
+                                                                  fields: "camper_fields"} %>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pad-bottom">
+</div>
+
+
+</div>
+
+
+

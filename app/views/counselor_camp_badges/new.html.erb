@@ -1,5 +1,27 @@
-<h1>New Counselor Camp Badge</h1>
+<div class="header" id="profile-header">
+  <%#= link_to 'Back', :back %>
+  <div class="btn-wrapper">
+  </div>
+  <div class="header-body">
+    <div class="header-title">Adding New Counselor to Badge</div>
+    <div class="header-subtitle">
+        <%= @camp_badge.camp.name %>
+    </div>
+  </div>
+</div>
 
-<%= render 'form', counselor_camp_badge: @counselor_camp_badge %>
+<div class="row page-row">
+  <div class="col">
+      <div class="card page-card">
+        <div class="card-body">
+          <h5 class="card-title">Add New Counselor to Badge</h5>
+          <p class="card-text">
+            <%= render 'form', counselor_camp_badge: @counselor_camp_badge %>
+          </p>
+        </div>
+      </div>
+  </div>
+</div>
 
-<%= link_to 'Back', counselor_camp_badges_path %>
+<div class="pad-bottom">
+</div>

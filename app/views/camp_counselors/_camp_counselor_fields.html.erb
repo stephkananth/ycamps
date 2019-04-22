@@ -1,0 +1,8 @@
+<div class="form-group">
+    <%= f.label :camp_id %>
+    <%= f.input :camp_id, collection: Camp.alphabetical.to_a, include_blank: true, label: false, label_html: {class: 'active'}, input_html: {class: 'form-control'} %>
+</div>
+<div class="form-group">
+    <%= f.label :counselor_id %>
+    <%= f.input :counselor_id, collection: Counselor.alphabetical.to_a, include_blank: true, label: false, label_html: {class: 'active'}, input_html: {class: 'form-control'} %>
+</div>

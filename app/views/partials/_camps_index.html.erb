@@ -4,19 +4,23 @@
     <p class="card-text">
     <table class="table">
       <tbody>
-      <% @camps.each do |camp| %>
-        <tr>
+      <% if camps.count != 0 %>
+        <% camps.each do |camp| %>
+          <tr>
 
-          <td>
-            <%= link_to camp do %>
-              <span class="card-subtitle"><%= camp.name %></span><br/>
-            <% end %>
-              <%= camp.program %> <br/>
-              <%= camp.start_date.strftime("%A, %b %d") %> - <%= camp.end_date.strftime("%A, %b %d") %> <br/>
-              <%= camp.location.name %>
+            <td>
+              <%= link_to camp do %>
+                <span class="card-subtitle"><%= camp.name %></span><br/>
+              <% end %>
+                <%= camp.program %> <br/>
+                <%= camp.start_date.strftime("%A, %b %d") %> - <%= camp.end_date.strftime("%A, %b %d") %> <br/>
+                <%= camp.location.name %>
 
-          </td>
-        </tr>
+            </td>
+          </tr>
+        <% end %>
+      <% else %>
+      There are no <%= state.downcase %> camps.
       <% end %>
       </tbody>
     </table>
