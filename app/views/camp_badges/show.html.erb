@@ -71,37 +71,49 @@
       <div class="card-body">
         <h5 class="card-title">Campers</h5>
         <div class="container">
-          <% @ccbs.each_with_index do |ccb, index| %>
-            <% if ccb == @ccbs.first or (index + 1) % 3 == 1 %>
-              <div class="row">
-            <% end %>
-            <div class="col">
-              <%= link_to ccb.camper do %>
-                <div class="person-icon text-center">
-                  <%= image_tag 'camper-img.svg', class: 'img-responsive' %><br/>
-                  <%= ccb.camper.proper_name %>
+          <% if @ccbs.empty? %>
+              <p class="card-text">
+                There are no campers assigned to this badge at this time.
+              </p>
+            </div>
+          <% else %>
+            <% @ccbs.each_with_index do |ccb, index| %>
+              <% if ccb == @ccbs.first or (index + 1) % 3 == 1 %>
+                <div class="row">
+              <% end %>
+              <div class="col">
+                <%= link_to ccb.camper do %>
+                  <div class="person-icon text-center">
+                    <%= image_tag 'camper-img.svg', class: 'img-responsive' %><br/>
+                    <%= ccb.camper.proper_name %>
+                  </div>
+                <% end %>
+              </div>
+              <% if ccb == @ccbs.last and (index + 1) % 3 != 0 %>
+                <div class="col"></div>
+                  <% if (index + 1) % 3 == 1 %>
+                    <div class="col"></div>
+                  <% end %>
                 </div>
               <% end %>
-            </div>
-            <% if ccb == @ccbs.last and (index + 1) % 3 != 0 %>
-              <div class="col"></div>
-              <% if (index + 1) % 3 == 1 %>
-                <div class="col"></div>
+              <% if ccb == @ccbs.last or (index + 1) % 3 == 0 %>
+                </div>
               <% end %>
-              </div>
-            <% end %>
-            <% if ccb == @ccbs.last or (index + 1) % 3 == 0 %>
-              </div>
             <% end %>
           <% end %>
-        <% end %>
       </div>
     </div>
-    <%= link_to 'Assign Milestone', assign_milestones_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block" %>
+
+    <div class="row btn-group">
+      <div class="col">
+        <%= link_to 'Assign Milestone to Campers', assign_milestones_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block" %>
+      </div>
+      <div class="col">
+        <%= link_to 'Add Campers', new_camper_camp_badge_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block" %>
+      </div>
+    </div>
     </div>
   </div>
-
-  <%= link_to 'Assign Milestone', assign_milestones_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block" %>
 </div>
 </div>
 

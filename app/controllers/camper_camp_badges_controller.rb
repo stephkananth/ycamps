@@ -14,6 +14,8 @@ class CamperCampBadgesController < ApplicationController
 
   # GET /camper_camp_badges/new
   def new
+    camp_badge_id = params[:camp_badge_id]
+    @camp_badge = CampBadge.where(id: params[:camp_badge_id]).first
     @camper_camp_badge = CamperCampBadge.new
   end
 
@@ -24,16 +26,12 @@ class CamperCampBadgesController < ApplicationController
   # POST /camper_camp_badges
   # POST /camper_camp_badges.json
   def create
+    @camp_badge = CampBadge.where(id: params[:camp_badge_id]).first
     @camper_camp_badge = CamperCampBadge.new(camper_camp_badge_params)
-
-    respond_to do |format|
-      if @camper_camp_badge.save
-        format.html {redirect_to @camper_camp_badge, notice: 'Camper camp badge was successfully created.'}
-        format.json {render :show, status: :created, location: @camper_camp_badge}
-      else
-        format.html {render :new}
-        format.json {render json: @camper_camp_badge.errors, status: :unprocessable_entity}
-      end
+    if @camper_camp_badge.save
+      redirect_to camp_badge_path(CampBadge.where(id: params[:camper_camp_badge][:camp_badge_id]).first), notice: "#{@camper_camp_badge.camper.name} was added to the system."
+    else
+      redirect_to new_camper_camp_badge_path(:camp_badge_id => params[:camper_camp_badge][:camp_badge_id])
     end
   end
 

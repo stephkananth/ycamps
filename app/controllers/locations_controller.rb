@@ -25,16 +25,15 @@ class LocationsController < ApplicationController
   # POST /locations
   # POST /locations.json
   def create
-    @location = Location.new(location_params)
+    branch_id = params[:location][:branch]
+    location_name = params[:location][:name]
 
-    respond_to do |format|
-      if @location.save
-        format.html {redirect_to @location, notice: 'Location was successfully created.'}
-        format.json {render :show, status: :created, location: @location}
-      else
-        format.html {render :new}
-        format.json {render json: @location.errors, status: :unprocessable_entity}
-      end
+    @location = Location.new(name: location_name, branch_id: branch_id)
+
+    if @location.save
+      redirect_to location_path(@location), notice: "#{@location.name} location was added to the system."
+    else
+      render action: 'new'
     end
   end
 
