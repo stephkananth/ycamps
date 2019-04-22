@@ -13,8 +13,12 @@
 <div class="container" id="main_content">
   <%= yield %>
 </div>
-<% if logged_in? %>
-  <%= render :partial => "partials/navigation" %>
+<% if logged_in? && (current_user.role?(:admin)) %>
+  <%= render :partial => "partials/admin_navigation" %>
+<% elsif logged_in? && (current_user.role?(:parent)) %>
+    <%= render :partial => "partials/parent_navigation" %>
+<% elsif logged_in? && (current_user.role?(:counselor)) %>
+    <%= render :partial => "partials/counselor_navigation" %>
 <% end %>
 <%= javascript_include_tag "application" %>
 </body>
