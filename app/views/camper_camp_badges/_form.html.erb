@@ -1,33 +1,12 @@
-<%= form_with(model: camper_camp_badge, local: true) do |form| %>
-  <% if camper_camp_badge.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(camper_camp_badge.errors.count, "error") %> prohibited this camper_camp_badge from being
-        saved:</h2>
-
-      <ul>
-        <% camper_camp_badge.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :camp_badge_id %>
-    <%= form.text_field :camp_badge_id, id: :camper_camp_badge_camp_badge_id %>
+<%= simple_form_for(camper_camp_badge) do |f| %>
+  <%= f.error_notification %>
+  <%= f.hidden_field :camp_badge_id, value: params['camp_badge_id'] %>
+  <div class="form-group">
+    <%= f.label :camper_id %>
+    <%= f.input :camper_id, collection: Camper.alphabetical.to_a, input_html: {class: 'form-control'}, label: false %>
   </div>
-
-  <div class="field">
-    <%= form.label :camper_id %>
-    <%= form.text_field :camper_id, id: :camper_camp_badge_camper_id %>
+  <div class="form-group">
+    <%= f.input :completed, as: :check_boxes, label: "Badge Completed?" %>
   </div>
-
-  <div class="field">
-    <%= form.label :completed %>
-    <%= form.check_box :completed, id: :camper_camp_badge_completed %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= f.button :submit, class: 'btn btn-primary btn-block' %>
 <% end %>
