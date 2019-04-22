@@ -20,6 +20,8 @@ class CampersController < ApplicationController
 
   # GET /campers/new
   def new
+    parent_id = params[:parent_id]
+    @parent = Parent.where(id: params[:parent_id]).first
     @camper = Camper.new
   end
 
