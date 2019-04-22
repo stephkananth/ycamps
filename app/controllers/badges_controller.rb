@@ -12,6 +12,7 @@ class BadgesController < ApplicationController
   def show
     @camp_badges = @badge.camp_badges.alphabetical
     @skill = @badge.skill.name
+    @tasks = @badge.tasks
   end
 
   # GET /badges/new
