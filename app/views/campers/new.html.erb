@@ -16,9 +16,27 @@
         <h5 class="card-title">Create New Camper</h5>
 
         <p class="card-text">
-          <%= render partial: "partials/form_structure", locals: {object: @camper,
+          <% if logged_in? && (current_user.role?(:admin)) %>
+            <%= render partial: "partials/form_structure", locals: {object: @camper,
                                                                   type_of_form: "New Camper",
                                                                   fields: "camper_fields"} %>
+          <% elsif logged_in? && (current_user.role?(:parent)) %>                   
+            <%= simple_form_for(@camper) do |f| %>
+              <%= f.error_notification %>
+              <%= f.hidden_field :parent_id, value: current_user.id %>
+              <div class="form-group">
+                <%= f.label :first_name %>
+                <%= f.input :first_name, input_html: {class: 'form-control'}, label: false %>
+              </div>
+              <div class="form-group">
+                <%= f.label :last_name %>
+                <%= f.input :last_name, input_html: {class: 'form-control'}, label: false %>
+              </div>
+              <%= f.button :submit, class: 'btn btn-primary btn-block' %>
+            <% end %> 
+          <% end %>
+
+
         </p>
 
       </div>
