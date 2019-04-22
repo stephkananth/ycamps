@@ -1,5 +1,7 @@
-<% if logged_in? %>
-  <%= render :partial => "dashboard" %>
-<% else %>
-  <%= render :partial => "index_guest" %>
+<% if logged_in? && (current_user.role?(:admin)) %>
+  <%= render :partial => "admin_dashboard" %>
+<% elsif logged_in? && (current_user.role?(:parent)) %>
+    <%= render :partial => "parent_dashboard" %>
+<% elsif logged_in? && (current_user.role?(:counselor)) %>
+    <%= render :partial => "counselor_dashboard" %>
 <% end %>
