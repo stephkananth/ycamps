@@ -12,15 +12,26 @@ class User < ApplicationRecord
   validates_confirmation_of :password, message: 'does not match'
   validates_length_of :password, minimum: 8, message: 'must be at least 8 characters long', allow_blank: true
   validates_format_of :email, with: /\A[\w]([^@\s,;]+)@(([\w-]+\.)+(com|edu|org|net|gov|mil))\z/i, message: 'is not a valid format'
+  validate :user_is_not_a_duplicate, on: :create
 
   # scopes
   scope :search, ->(term) {where('email LIKE ?', "#{term}%")}
-  # scope :find_by_email, ->(email) {where(email: email)}
 
   # for use in authorizing with CanCan
   ROLES = [['Admin', :admin], ['Counselor', :counselor], ['Parent', :parent]].freeze
 
   # additional functions
+  def user_is_not_a_duplicate
+    return true if email.nil?
+    if already_exists?
+      errors.add(:base, 'already exists')
+    end
+  end
+
+  def already_exists?
+    User.where(email: email) > 0
+  end
+
   def role?(authorized_role)
     return false if role.nil?
 
@@ -31,5 +42,4 @@ class User < ApplicationRecord
   def self.authenticate(email, password)
     find_by_email(email).try(:authenticate, password)
   end
-
 end

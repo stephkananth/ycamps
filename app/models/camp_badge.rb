@@ -10,27 +10,22 @@ class CampBadge < ApplicationRecord
 
   # validations
   validates_presence_of :badge_id, :camp_id
+  validate :camp_badge_is_not_a_duplicate, on: :create
 
   # scopes
   scope :alphabetical, -> {joins(:camp).order('name')}
 
-  # callbacks
-  # before_destroy do
-  #   cannot_destroy_object
-  # end
-  # after_rollback :check_upcoming_camps
-
   # public methods
+  def camp_badge_is_not_a_duplicate
+    return true if badge_id.nil? || camp_id.nil?
+    if already_exists?
+      errors.add(:base, 'already exists')
+    end
+  end
+
+  def already_exists?
+    CampBadge.where(badge_id: badge_id, camp_id: camp_id) > 0
+  end
 
   # private methods
-
-  private
-
-  # def check_upcoming_camps
-  #   if camps.upcoming.empty?
-  #     self.active = false
-  #   else
-  #     errors.add(:base, 'There are upcoming camps associated with this curriculum so it cannot be made inactive.')
-  #   end
-  # end
 end

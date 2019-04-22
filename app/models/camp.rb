@@ -46,6 +46,14 @@ class Camp < ApplicationRecord
     result[0]
   end
 
+  def counselors
+    result = []
+    camp_badges.each do |camp_badge|
+      result << CounselorCampBadge.where(camp_badge_id: camp_badge.id).map(&:counselor)
+    end
+    result[0]
+  end
+
   def already_exists?
     Camp.where(location_id: location_id, name: name, program: program, start_date: start_date, end_date: end_date).size == 1
   end
