@@ -28,6 +28,9 @@ class CampersController < ApplicationController
 
   # GET /campers/1/edit
   def edit;
+    if logged_in? && (current_user.role?(:parent))
+      @parent = Parent.where(user_id: current_user.id).first.id
+    end
   end
 
   # POST /campers
