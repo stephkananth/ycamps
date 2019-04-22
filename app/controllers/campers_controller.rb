@@ -20,7 +20,9 @@ class CampersController < ApplicationController
 
   # GET /campers/new
   def new
-    @camper = Camper.new
+    if logged_in? && (current_user.role?(:admin))
+      @camper = Camper.new
+    end
   end
 
   # GET /campers/1/edit
