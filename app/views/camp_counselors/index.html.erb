@@ -1,28 +1,43 @@
-<div class="row main-view barn-header" id="admin-camp-view">
-  <div class="header"></div>
-  <%= link_to 'Back', :back %>
-  <h2 class="header-title">Counselors This Week</h2>
-
-  <div class="card">
-    <div class="card-body card-text">
-      <table class="table card-text">
-        <thead>
-        <tr>
-          <th scope="col">Roster</th>
-        </tr>
-        </thead>
-        <tbody>
-        <% @camp_counselors.each do |camp_counselor| %>
-          <tr>
-            <td>
-              <%= link_to camp_counselor.counselor.proper_name, camp_counselor.counselor %>
-            </td>
-          </tr>
-        <% end %>
-        </tbody>
-      </table>
-      <%= link_to 'New Camp Counselor', new_camp_counselor_path(:camp_id => @camp_id), class: "btn btn-primary btn-block" %>
+<div class="header" id="barn-header">
+  <%#= link_to 'Back', :back %>
+  <div class="btn-wrapper">
+  </div>
+  <div class="header-body">
+    <div class="header-title">Counselors This Week</div>
+    <div class="header-subtitle">
+      <br/>
+      <%= link_to 'New Camp Counselor', new_camp_counselor_path(:camp_id => @camp_id), class: "btn btn-primary btn-block btn-sm" %>
     </div>
   </div>
+</div>
 
+<div class="row page-row">
+  <div class="col">
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">
+          <table class="table">
+            <thead>
+            <tr>
+              <th scope="col">Roster</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @camp_counselors.each do |camp_counselor| %>
+              <tr>
+                <td>
+                  <%= link_to camp_counselor.counselor.proper_name, camp_counselor.counselor %>
+                </td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pad-bottom">
 </div>
