@@ -21,6 +21,32 @@
       </div>
     </div>
 
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title">Tasks</h5>
+        <p class="card-text">
+          <% if @tasks.count != 0 %>
+            <table class="table">
+              <thead>
+                <th>Name</th>
+                <th>Description</th>
+              </thead>
+              <tbody>
+                <% @tasks.each do |task| %>
+                  <tr>
+                    <td><%= task.name %></td>
+                    <td><%= task.description %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          <% else %>
+            <%= @badge.name %> currently does not have any tasks. <br/>
+          <% end %>
+        </p>
+      </div>
+    </div>    
+
     <div class="row btn-group">
       <div class="col">
         <%= link_to 'Delete Badge', @badge, method: :delete, data: {confirm: 'Are you sure you want to delete this badge?'}, class: "btn btn-primary btn-block btn-left" %>
