@@ -20,9 +20,6 @@ class CampersController < ApplicationController
 
   # GET /campers/new
   def new
-    if logged_in? && (current_user.role?(:parent))
-      @parent = Parent.where(user_id: current_user.id).first.id
-    end
     @camper = Camper.new
   end
 
