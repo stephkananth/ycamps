@@ -1,20 +1,22 @@
-<!-- <p id="notice"><#= notice %></p> -->
-
-<div class="row main-view barn-header" id="admin-camp-view">
-  <div class="header">
-    <%= link_to "Back", :back, class: "back-btn" %>
-    <div class="btn-wrapper">
-      <%= link_to '+ Add New Camp', new_camp_path, class: "btn-sm btn-primary btn-block" %>
-    </div>
+<div class="header" id="barn-header">
+  <%#= link_to 'Back', :back %>
+  <div class="btn-wrapper">
   </div>
-  <div class="header-text">
-    <h2 class="header-title">Camps</h2>
+  <div class="header-body">
+    <div class="header-title">Camps</div>
     <div class="header-subtitle">
     </div>
   </div>
+</div>
 
-  <%= render :partial => "partials/camps_index", locals: {camps: @current_camps, state: "Current"} %>
-  <%= render :partial => "partials/camps_index", locals: {camps: @upcoming_camps, state: "Upcoming"} %>
-  <%= render :partial => "partials/camps_index", locals: {camps: @past_camps, state: "Past"} %>
+<div class="row page-row">
+  <div class="col">
+    <%= link_to 'Create New Camp', new_camp_path, class: "btn btn-primary btn-block" %>
+    <%= render :partial => "partials/camps_index", locals: {camps: @current_camps, state: "Current"} %>
+    <%= render :partial => "partials/camps_index", locals: {camps: @upcoming_camps, state: "Upcoming"} %>
+    <%= render :partial => "partials/camps_index", locals: {camps: @past_camps, state: "Past"} %>
+  </div>
+</div>
 
+<div class="pad-bottom">
 </div>
