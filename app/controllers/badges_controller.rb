@@ -27,7 +27,11 @@ class BadgesController < ApplicationController
   # POST /badges
   # POST /badges.json
   def create
-    @badge = Badge.new(badge_params)
+    badge_name = params[:badge][:name]
+    skill_id = params[:badge][:skill]
+    description = params[:badge][:description]
+    level = params[:badge][:level]
+    @badge = Badge.new(name: badge_name, skill_id: skill_id, level: level)
 
     respond_to do |format|
       if @badge.save
@@ -57,11 +61,9 @@ class BadgesController < ApplicationController
   # DELETE /badges/1
   # DELETE /badges/1.json
   def destroy
+    skill_id = @badge.skill_id
     @badge.destroy
-    respond_to do |format|
-      format.html {redirect_to badges_url, notice: 'Badge was successfully destroyed.'}
-      format.json {head :no_content}
-    end
+    redirect_to skill_path(skill_id), notice: "Badge — #{@badge.name} was removed from the system."
   end
 
   private
