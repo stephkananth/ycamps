@@ -19,7 +19,9 @@
           <% else %>
             <%= link_to @counselors.first.proper_name, @counselors.first %>
           <% end %><br/><br/>
-          <%= link_to 'Add Counselor to Badge', new_counselor_camp_badge_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block btn-sm" %>
+          <% if logged_in? && current_user.role?(:admin) %>
+            <%= link_to 'Add Counselor to Badge', new_counselor_camp_badge_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block btn-sm" %>
+          <% end %>
         </p>
       </div>
     </div>

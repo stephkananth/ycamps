@@ -6,7 +6,9 @@
     <div class="header-title">Campers This Week</div>
     <div class="header-subtitle">
       <br/>
-      <%= link_to 'Add New Camper to this Camp', new_camper_registration_path, class: "btn-sm btn-primary btn-block btn-sm" %>
+      <% if logged_in? && current_user.role?(:admin) %>
+        <%= link_to 'Add New Camper to this Camp', new_camper_registration_path, class: "btn-sm btn-primary btn-block btn-sm" %>
+      <% end %>
     </div>
   </div>
 </div>
@@ -31,7 +33,9 @@
                   <%= link_to camper_registration.camper.proper_name, camper_registration.camper %>
                 </td>
                 <td>
-                  <%= link_to 'Delete', @camper_registration, method: :delete, data: {confirm: 'Are you sure you want to delete this camper from this camp?'}, class: "btn btn-primary btn-block btn-sm" %>
+                  <% if logged_in? && current_user.role?(:admin) %>
+                    <%= link_to 'Delete', @camper_registration, method: :delete, data: {confirm: 'Are you sure you want to delete this camper from this camp?'}, class: "btn btn-primary btn-block btn-sm" %>
+                  <% end %>
                 </td>
               </tr>
             <% end %>

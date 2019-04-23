@@ -11,7 +11,9 @@
 
 <div class="row page-row">
   <div class="col">
-    <%= link_to 'Create New Camp', new_camp_path, class: "btn btn-primary btn-block" %>
+    <% if logged_in? && current_user.role?(:admin) %>
+      <%= link_to 'Create New Camp', new_camp_path, class: "btn btn-primary btn-block" %>
+    <% end %>
     <%= render :partial => "partials/camps_index", locals: {camps: @current_camps, state: "Current"} %>
     <%= render :partial => "partials/camps_index", locals: {camps: @upcoming_camps, state: "Upcoming"} %>
     <%= render :partial => "partials/camps_index", locals: {camps: @past_camps, state: "Past"} %>

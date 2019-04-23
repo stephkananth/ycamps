@@ -11,7 +11,9 @@
 
 <div class="row page-row">
   <div class="col">
-    <%= link_to 'Create New Skill', new_skill_path, class: "btn btn-primary btn-block" %>
+    <% if logged_in? && current_user.role?(:admin) %>
+      <%= link_to 'Create New Skill', new_skill_path, class: "btn btn-primary btn-block" %>
+    <% end %>
     <div class="card page-card">
       <div class="card-body">
         <h5 class="card-title"></h5>

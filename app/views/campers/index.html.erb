@@ -7,7 +7,9 @@
     <div class="header-title">Campers</div>
     <div class="header-subtitle">
       <br/>
-      <%= link_to 'Create New Camper', new_camper_path, class: "btn btn-primary btn-block btn-sm" %>
+      <% if logged_in? && current_user.role?(:admin) %>
+        <%= link_to 'Create New Camper', new_camper_path, class: "btn btn-primary btn-block btn-sm" %>
+      <% end %>
     </div>
   </div>
 </div>
