@@ -27,8 +27,6 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-    @user.role = 'counselor' if current_user.role?(:counselor)
-    @user.role = 'admin' if current_user.role?(:admin)
     if @user.save
       if @user.role == 'parent'
         @parent = Parent.new

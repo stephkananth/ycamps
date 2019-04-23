@@ -1,0 +1,59 @@
+<div class="header" id="dashboard-header">
+  <div class="header-body">
+    <div class="header-title">Welcome, <%= current_user.first_name %>!</div>
+  </div>
+</div>
+
+<div class="row page-row">
+  <div class="col">
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title">Current Camp</h5>
+        <p class="card-text">
+          <% if @current_camp.nil? %>
+            You are not a counselor for any camp at this time.
+          <% else %>
+            <%= @current_camp.name %><br/>
+            <%= @current_camp.start_date.strftime("%A, %b %d") %> - <%= @current_camp.end_date.strftime("%A, %b %d") %> <br/>
+            <%= @current_camp.location.name %>
+          <% end %>
+        </p>
+      </div>
+    </div>
+    <br/>
+
+    <% if !@current_camp.nil? %>
+      <div class="section-header">Your Class</div>
+        <% if @class.nil? && !@current_camp.nil? %>
+          <div class="card page-card">
+            <div class="card-body">
+              <h5 class="card-title">Create Your Class for the Week</h5>
+              <%= link_to "Begin", new_camp_badge_path(:camp_id => @current_camp.id), class: "btn btn-primary btn-block btn-sm" %>
+            </div>
+          </div>
+        <% else %>
+          <%= link_to @class do %>
+            <div class="card page-card">
+              <div class="card-body">
+                  <div class="row">
+                    <div class="col-3">
+                      <%= image_tag 'badge-icon.svg', class: 'img-responsive' %><br/>
+                    </div>
+                    <div class="col-9">
+                      <h5 class="card-title"><%= @class.badge.name %></h5>
+                      <br/><br/>
+                      <p class="card-text">
+                        <%= @class.camper_camp_badges.count %> students<br/>
+                      </p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+    <% end %>
+  </div>
+</div>
+
+  <div class="pad-bottom">
+  </div>

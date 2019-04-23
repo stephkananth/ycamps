@@ -31,13 +31,13 @@ class CampBadgesController < ApplicationController
   def create
     @camp_badge = CampBadge.new(camp_badge_params)
 
-    respond_to do |format|
-      if @camp_badge.save
-        format.html {redirect_to @camp_badge, notice: 'Camp badge was successfully created.'}
-        format.json {render :show, status: :created, location: @camp_badge}
+    if @camp_badge.save
+      redirect_to new_camper_camp_badge_path(:camp_badge_id => @camp_badge.id)
+    else
+      if current_user.role?(:counselor)
+        redirect_to new_camp_badge_path(:camp_id => params[:camp_badge][:camp_id])
       else
-        format.html {render :new}
-        format.json {render json: @camp_badge.errors, status: :unprocessable_entity}
+        render action: 'new'
       end
     end
   end

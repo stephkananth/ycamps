@@ -1,6 +1,11 @@
 <div class="header" id="barn-header">
   <div class="header-body">
-    <div class="header-title">New Camp Badge</div>
+    <% if logged_in? && (current_user.role?(:counselor)) %>
+      <div class="header-title">Create a Class</div>
+      <div class="header-subtitle">Select a badge to work on for this week of the camp.</div>
+    <% elsif logged_in? && (current_user.role?(:admin)) %>
+      <div class="header-title">New Camp Badge</div>
+    <% end %>
   </div>
 </div>
 
@@ -9,7 +14,11 @@
     <div class="card page-card">
       <div class="card-body">
         <p class="card-text">
-          <%= render 'form', camp_badge: @camp_badge %>
+          <% if logged_in? && (current_user.role?(:admin)) %>
+            <%= render 'admin_form', camp_badge: @camp_badge %>
+          <% elsif logged_in? && (current_user.role?(:counselor)) %>
+            <%= render 'counselor_form', camp_badge: @camp_badge %>
+          <% end %>
         </p>
       </div>
     </div>

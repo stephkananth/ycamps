@@ -27,7 +27,7 @@
                   <%= camp_badge.camp.name %>
                 </td>
                 <td>
-                  <%= link_to 'Delete', @camp_badge, method: :delete, data: {confirm: 'Are you sure you want to delete this camp badge?'}, class: "btn btn-primary btn-block btn-sm" %>
+                  <%= link_to 'Delete', camp_badge_path(camp_badge), method: :delete, data: {confirm: 'Are you sure you want to delete this camp badge?'}, class: "btn btn-primary btn-block btn-sm" %>
                 </td>
               </tr>
             <% end %>
