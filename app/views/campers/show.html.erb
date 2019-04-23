@@ -29,7 +29,11 @@
           </p>
           <h6 class="card-subtitle">Camp</h6>
           <p class="card-text">
-            <%= link_to @current_camp.name, @current_camp %><br/>
+            <% if logged_in? && (current_user.role?(:admin) || current_user.role?(:counselor)) %>
+              <%= link_to @current_camp.name, @current_camp %><br/>
+            <% else %>
+              <%= @current_camp.name %><br/>
+            <% end %>
             <%= @current_camp.start_date.strftime("%A, %b %d") %> - <%= @current_camp.end_date.strftime("%A, %b %d") %>
             <br/>
             <%= @current_camp.location.name %><br/>
