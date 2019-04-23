@@ -35,7 +35,11 @@ class CampersController < ApplicationController
   # POST /campers
   # POST /campers.json
   def create
-    @camper = Camper.new(camper_params)
+    first_name = params[:camper][:first_name]
+    last_name = params[:camper][:first_name]
+    parent_id = params[:camper][:parent]
+    active = params[:camper][:active]
+    @camper = Camper.new(first_name: first_name, last_name: last_name, parent_id: parent_id, active: active)
 
     respond_to do |format|
       if @camper.save
