@@ -16,11 +16,11 @@
         <div class="card-body">
           <h5 class="card-title">Badges in Progress</h5>
           <p class="card-text">
-            <% if @camp_badges.count != 0 %>
-              This week, there are <%= @camp_badges.count %> badges in progress.
-            <% else %>
+            <% if @camp_badges.nil? %>
               There are currently no badges in progress yet.<br/>
               Add some to begin!
+            <% else %>
+              This week, there are <%= @camp_badges.count %> badges in progress.
             <% end %>
           </p>
         </div>
@@ -32,10 +32,10 @@
         <div class="card-body">
           <h5 class="card-title">Camper Roster</h5>
           <p class="card-text">
-            <% if @campers.count != 0 %>
-              This week, there are <%= @campers.count %> campers enrolled.
-            <% else %>
+            <% if @campers.nil? %>
               There are no campers enrolled yet.
+            <% else %>
+              This week, there are <%= @campers.count %> campers enrolled.
             <% end %>
           </p>
         </div>

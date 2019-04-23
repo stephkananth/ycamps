@@ -4,4 +4,6 @@
     <%= render :partial => "parent_dashboard" %>
 <% elsif logged_in? && (current_user.role?(:counselor)) %>
     <%= render :partial => "counselor_dashboard" %>
+<% else %>
+	 <%= render :partial => "index_guest" %>
 <% end %>

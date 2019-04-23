@@ -1,0 +1,9 @@
+<%= simple_form_for(camp_badge) do |f| %>
+  <%= f.error_notification %>
+  <div class="form-group">
+    <%= f.label :badge_id %>
+    <%= f.input :badge_id, collection: Badge.alphabetical.to_a, input_html: {class: 'form-control'}, label: false %>
+  </div>
+  <%= f.hidden_field :camp_id, value: params['camp_id'] %>
+  <%= f.button :submit, class: 'btn btn-primary btn-block' %>
+<% end %>

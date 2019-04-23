@@ -37,7 +37,7 @@
             <td><%= badge.description %></td>
             <td><%= badge.skill.name %></td>
             <td><%= link_to 'Edit', edit_badge_path(badge) %></td>
-            <td><%= link_to 'Destroy', badge, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+            <td><%= link_to 'Destroy', camp_badge_path(badge), method: :delete, data: {confirm: 'Are you sure?'} %></td>
           </tr>
         <% end %>
         </tbody>

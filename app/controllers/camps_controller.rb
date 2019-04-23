@@ -30,7 +30,14 @@ class CampsController < ApplicationController
   # POST /camps
   # POST /camps.json
   def create
-    @camp = Camp.new(camp_params)
+    camp_name = params[:camp][:name]
+    camp_program = params[:camp][:program]
+    start_date = Date.new(params[:camp]["start_date(1i)"].to_i, params[:camp]["start_date(2i)"].to_i, params[:camp]["start_date(3i)"].to_i)
+    end_date = Date.new(params[:camp]["end_date(1i)"].to_i, params[:camp]["end_date(2i)"].to_i, params[:camp]["end_date(3i)"].to_i)
+    active_status = params[:camp][:active]
+    location_id = params[:camp][:location]
+
+    @camp = Camp.new(name: camp_name, program: camp_program, start_date: start_date, end_date: end_date, location_id: location_id, active: active_status)
 
     respond_to do |format|
       if @camp.save
