@@ -4,7 +4,9 @@
     <div class="header-subtitle">
       Camper <br/>
       Parent— <%= @camper.parent.proper_name %><br/><br/>
-      <%= link_to 'Edit', edit_camper_path(@camper), class: "btn btn-primary btn-block btn-sm" %>
+      <% if logged_in? && (current_user.role?(:admin) || current_user.role?(:parent)) %>
+        <%= link_to 'Edit', edit_camper_path(@camper), class: "btn btn-primary btn-block btn-sm" %>
+      <% end %>
     </div>
   </div>
 </div>
@@ -107,8 +109,7 @@
                 <% end %>
                 </div>
               <% end %>
-               <% if ccbadge == @camper_camp_badges_complete.last or (index + 1) % 3 == 0 %>
-                </div>
+              <% if ccbadge == @camper_camp_badges_complete.last or (index + 1) % 3 == 0 %>
               <% end %>
           <% end %>
         </p>

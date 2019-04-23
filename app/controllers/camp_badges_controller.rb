@@ -32,13 +32,18 @@ class CampBadgesController < ApplicationController
     @camp_badge = CampBadge.new(camp_badge_params)
 
     if @camp_badge.save
-      redirect_to new_camper_camp_badge_path(:camp_badge_id => @camp_badge.id)
-    else
       if current_user.role?(:counselor)
-        redirect_to new_camp_badge_path(:camp_id => params[:camp_badge][:camp_id])
-      else
-        render action: 'new'
+        @counselor_camp_badge = CounselorCampBadge.new(
+                                    counselor_id: Counselor.where(user_id: current_user.id).first.id,
+                                    camp_badge_id: @camp_badge.id) 
+        if @counselor_camp_badge.save
+          redirect_to new_camper_camp_badge_path(:camp_badge_id => @camp_badge.id)
+        else
+          redirect_to new_camp_badge_path(:camp_id => params[:camp_badge][:camp_id])
+        end
       end
+    else
+      render action: 'new'
     end
   end
 
@@ -59,6 +64,7 @@ class CampBadgesController < ApplicationController
   # DELETE /camp_badges/1
   # DELETE /camp_badges/1.json
   def destroy
+    @camp_badge = CampBadge.find(params[:id])
     @camp_badge.destroy
     respond_to do |format|
       format.html {redirect_to camp_badges_url, notice: 'Camp badge was successfully destroyed.'}

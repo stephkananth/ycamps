@@ -15,15 +15,16 @@
     <%= render :partial => "partials/camps_short_list", locals: {camps: @upcoming_camps, state: "Upcoming"} %>
     <%= render :partial => "partials/camps_short_list", locals: {camps: @past_camps, state: "Past"} %>
   </div>
-
-  <div class="row btn-group">
-    <div class="col">
-      <%= link_to 'Add Counselor to Camp', new_camp_counselor_path, class: "btn btn-primary btn-block" %>
+  <% if logged_in? && current_user.role?(:admin) %>
+    <div class="row btn-group">
+      <div class="col">
+        <%= link_to 'Add Counselor to Camp', new_camp_counselor_path, class: "btn btn-primary btn-block" %>
+      </div>
+      <div class="col">
+        <%= link_to 'Delete', @counselor, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-primary btn-block" %>
+      </div>
     </div>
-    <div class="col">
-      <%= link_to 'Delete', @counselor, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-primary btn-block" %>
-    </div>
-  </div>
+  <% end %>
 </div>
 
 <div class="pad-bottom">
