@@ -1,46 +1,13 @@
-
-<div class="header" id="barn-header">
-  <%#= link_to 'Back', :back %>
+<div class="row main-view barn-header" id="admin-camp-view">
+  <div class="header"></div>
+  <%= link_to 'Back', :back %>
   <div class="btn-wrapper">
+    <%= link_to '+ Add New Camper', new_camper_path, class: "btn-sm btn-primary btn-block" %>
   </div>
-  <div class="header-body">
-    <div class="header-title">Campers</div>
+  <div class="header-text">
+    <h2 class="header-title">Campers</h2>
     <div class="header-subtitle">
-      <br/>
-      <%= link_to 'Create New Camper', new_camper_path, class: "btn btn-primary btn-block btn-sm" %>
     </div>
   </div>
-</div>
-
-<div class="row page-row">
-  <div class="col">
-    <div class="card page-card">
-      <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text">
-          <table class="table">
-            <thead>
-            <tr>
-              <th scope="col">Campers</th>
-            </tr>
-            </thead>
-            <tbody>
-            <% @campers.each do |camper| %>
-              <tr>
-                <td>
-                  <%= link_to camper do %>
-                    <%= camper.proper_name %>
-                  <% end %>
-                </td>
-              </tr>
-            <% end %>
-            </tbody>
-          </table>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="pad-bottom">
+  <%= render :partial => "partials/camper_index", locals: {campers: @campers, state: "Current"} %>
 </div>
