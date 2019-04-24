@@ -38,6 +38,10 @@ class Camp < ApplicationRecord
   end
 
   # public methods
+  def self.not_in_system?(camp)
+    Camp.where(location: camp.location, name: camp.name, program: camp.program, start_date: camp.start_date, end_date: camp.end_date).empty?
+  end
+
   def campers
     result = []
     camp_badges.each do |camp_badge|

@@ -27,6 +27,10 @@ class User < ApplicationRecord
     role.downcase.to_sym == authorized_role
   end
 
+  def self.not_in_system?(user)
+    User.where(email: user.email).empty?
+  end
+
   # login by email
   def self.authenticate(email, password)
     find_by_email(email).try(:authenticate, password)

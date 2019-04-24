@@ -16,6 +16,9 @@ class Location < ApplicationRecord
   # callbacks
 
   # public methods
+  def self.not_in_system?(location)
+    Location.where(name: location.name).empty?
+  end
 
   # private methods
 end

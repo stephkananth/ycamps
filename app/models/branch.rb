@@ -15,6 +15,9 @@ class Branch < ApplicationRecord
   # callbacks
 
   # public methods
+  def self.not_in_system?(branch)
+    Branch.where(name: branch.name).empty?
+  end
 
   # private methods
 end
