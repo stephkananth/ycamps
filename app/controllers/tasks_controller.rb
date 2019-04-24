@@ -25,41 +25,36 @@ class TasksController < ApplicationController
   # POST /tasks
   # POST /tasks.json
   def create
-    @task = Task.new(task_params)
+    task_name = params[:task][:name]
+    badge_id = params[:task][:badge]
+    description = params[:task][:description]
 
-    respond_to do |format|
-      if @task.save
-        format.html {redirect_to @task, notice: 'Task was successfully created.'}
-        format.json {render :show, status: :created, location: @task}
-      else
-        format.html {render :new}
-        format.json {render json: @task.errors, status: :unprocessable_entity}
-      end
+    @task = Task.new(name: task_name, badge_id: badge_id, description: description)
+
+    if @task.save
+      redirect_to badge_path(badge_id), notice: "Task — #{@task.name} was added to the system."
+    else
+      render action: 'new'
     end
   end
 
   # PATCH/PUT /tasks/1
   # PATCH/PUT /tasks/1.json
   def update
-    respond_to do |format|
-      if @task.update(task_params)
-        format.html {redirect_to @task, notice: 'Task was successfully updated.'}
-        format.json {render :show, status: :ok, location: @task}
-      else
-        format.html {render :edit}
-        format.json {render json: @task.errors, status: :unprocessable_entity}
-      end
+    badge_id = @task.badge.id
+    if @task.update(task_params)
+      redirect_to badge_path(badge_id), notice: "#{@task.name} task was updated in the system."
+    else
+      render action: 'new'
     end
   end
 
   # DELETE /tasks/1
   # DELETE /tasks/1.json
   def destroy
+    badge_id = @task.badge.id
     @task.destroy
-    respond_to do |format|
-      format.html {redirect_to tasks_url, notice: 'Task was successfully destroyed.'}
-      format.json {head :no_content}
-    end
+    redirect_to badge_path(badge_id), notice: "#{@task.name} location was removed from the system."
   end
 
   private

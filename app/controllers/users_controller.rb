@@ -58,10 +58,26 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-    if @user.destroy
-      redirect_to users_url, notice: "Successfully removed #{@user.email} from the YCHAT system."
+    if @user.role?(:parent)
+      @parent = Parent.where(user_id: @user.id).first
+      if @parent.destroy && @user.destroy
+        redirect_to users_url, notice: "Successfully removed #{@user.email} from the YCHAT system."
+      else
+        render action: 'show'
+      end
+    elsif @user.role?(:counselor)
+      @counselor = Counselor.where(user_id: @user.id).first
+      if @counselor.destroy && @user.destroy
+        redirect_to users_url, notice: "Successfully removed #{@user.email} from the YCHAT system."
+      else
+        render action: 'show'
+      end
     else
-      render action: 'show'
+      if @user.destroy
+        redirect_to users_url, notice: "Successfully removed #{@user.email} from the YCHAT system."
+      else
+        render action: 'show'
+      end
     end
   end
 
