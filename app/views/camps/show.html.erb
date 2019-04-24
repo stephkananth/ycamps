@@ -32,10 +32,10 @@
         <div class="card-body">
           <h5 class="card-title">Camper Roster</h5>
           <p class="card-text">
-            <% if @campers.nil? %>
-              There are no campers enrolled yet.
-            <% else %>
+            <% if @campers.count != 0 %>
               This week, there are <%= @campers.count %> campers enrolled.
+            <% else %>
+              There are no campers enrolled yet.
             <% end %>
           </p>
         </div>

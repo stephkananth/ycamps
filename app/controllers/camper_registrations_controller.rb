@@ -26,14 +26,11 @@ class CamperRegistrationsController < ApplicationController
   def create
     @camper_registration = CamperRegistration.new(camper_registration_params)
 
-    respond_to do |format|
-      if @camper_registration.save
-        format.html {redirect_to @camper_registration, notice: 'Camper registration was successfully created.'}
-        format.json {render :show, status: :created, location: @camper_registration}
-      else
-        format.html {render :new}
-        format.json {render json: @camper_registration.errors, status: :unprocessable_entity}
-      end
+    if @camper_registration.save
+      @camp = @camper_registration.camp
+      redirect_to @camp, notice: 'Camper registration was successfully created.'
+    else
+      render :new
     end
   end
 
