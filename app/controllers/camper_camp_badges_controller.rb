@@ -1,5 +1,7 @@
 class CamperCampBadgesController < ApplicationController
   before_action :set_camper_camp_badge, only: %i[show edit update destroy]
+  include CamperCampBadgesHelper
+
 
   # GET /camper_camp_badges
   # GET /camper_camp_badges.json
@@ -28,11 +30,12 @@ class CamperCampBadgesController < ApplicationController
   # POST /camper_camp_badges
   # POST /camper_camp_badges.json
   def create
-    @camp_badge = CampBadge.where(id: params[:camp_badge_id]).first
+    @camp_badge = CampBadge.where(id: params[:camper_camp_badge][:camp_badge_id]).first
   
     @camper_camp_badge = CamperCampBadge.new(camper_camp_badge_params)
 
     if @camper_camp_badge.save
+      create_camper_tasks(@camp_badge.badge, @camper_camp_badge)
       redirect_to camp_badge_path(CampBadge.where(id: params[:camper_camp_badge][:camp_badge_id]).first), notice: "#{@camper_camp_badge.camper.name} was added to the system."
     else
       redirect_to new_camper_camp_badge_path(:camp_badge_id => params[:camper_camp_badge][:camp_badge_id])

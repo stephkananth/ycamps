@@ -36,7 +36,7 @@ class CampersController < ApplicationController
   # POST /campers.json
   def create
     first_name = params[:camper][:first_name]
-    last_name = params[:camper][:first_name]
+    last_name = params[:camper][:last_name]
     parent_id = params[:camper][:parent]
     active = params[:camper][:active]
     @camper = Camper.new(first_name: first_name, last_name: last_name, parent_id: parent_id, active: active)

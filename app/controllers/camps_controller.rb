@@ -14,7 +14,7 @@ class CampsController < ApplicationController
   # GET /camps/1.json
   def show
     @camp_badges = @camp.badges
-    @campers = @camp.campers
+    @campers = @camp.camper_registrations
     @counselors = @camp.counselors
   end
 
@@ -39,28 +39,27 @@ class CampsController < ApplicationController
 
     @camp = Camp.new(name: camp_name, program: camp_program, start_date: start_date, end_date: end_date, location_id: location_id, active: active_status)
 
-    respond_to do |format|
-      if @camp.save
-        format.html {redirect_to @camp, notice: 'Camp was successfully created.'}
-        format.json {render :show, status: :created, location: @camp}
-      else
-        format.html {render :new}
-        format.json {render json: @camp.errors, status: :unprocessable_entity}
-      end
+    if @camp.save
+      redirect_to @camp, notice: 'Camp was successfully created.'
+    else
+      render :new
     end
   end
 
   # PATCH/PUT /camps/1
   # PATCH/PUT /camps/1.json
   def update
-    respond_to do |format|
-      if @camp.update(camp_params)
-        format.html {redirect_to @camp, notice: 'Camp was successfully updated.'}
-        format.json {render :show, status: :ok, location: @camp}
-      else
-        format.html {render :edit}
-        format.json {render json: @camp.errors, status: :unprocessable_entity}
-      end
+    camp_name = params[:camp][:name]
+    camp_program = params[:camp][:program]
+    start_date = Date.new(params[:camp]["start_date(1i)"].to_i, params[:camp]["start_date(2i)"].to_i, params[:camp]["start_date(3i)"].to_i)
+    end_date = Date.new(params[:camp]["end_date(1i)"].to_i, params[:camp]["end_date(2i)"].to_i, params[:camp]["end_date(3i)"].to_i)
+    active_status = params[:camp][:active]
+    location_id = params[:camp][:location]
+
+    if @camp.update(name: camp_name, program: camp_program, start_date: start_date, end_date: end_date, location_id: location_id, active: active_status)
+      redirect_to @camp, notice: 'Camp was successfully updated.'
+    else
+      render :edit
     end
   end
 

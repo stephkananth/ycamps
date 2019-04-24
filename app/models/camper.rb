@@ -3,10 +3,9 @@
 class Camper < ApplicationRecord
   belongs_to :parent
   has_many :camper_registrations
-  # has_many :camps, through: :camper_registrations
+  has_many :camps, through: :camper_registrations
   has_many :camper_camp_badges
   has_many :camp_badges, through: :camper_camp_badges
-  has_many :camps, through: :camp_badges
   has_many :badges, through: :camp_badges
 
   validates_presence_of :first_name, :last_name

@@ -41,6 +41,8 @@ class CampBadgesController < ApplicationController
         else
           redirect_to new_camp_badge_path(:camp_id => params[:camp_badge][:camp_id])
         end
+      elsif current_user.role?(:admin)
+        redirect_to camp_badge_path(@camp_badge)
       end
     else
       render action: 'new'
