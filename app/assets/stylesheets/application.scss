@@ -300,6 +300,40 @@ input.form-control {
   margin-right: 8px;
 }
 
+.form {
+  display: block;
+  max-width: 100%;
+  margin-left: 2em;
+  margin-top: 5em;
+}
+
+.form .input {
+  margin: 12px;
+}
+
+.form .input label {
+  margin-right: 9px;
+  color: #696969;
+}
+
+/* Form Errors */
+.error_notification{
+  background-color:  rgba(255, 203, 159, 0.5);
+  padding: 10px;
+  padding-left: 16px;
+  border-radius: 50px;
+  color: #FF8811;
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.error{
+  color: #FF8811;
+  font-weight: 700;
+  font-size: 14px;
+}
+
 #user-role {
   font-size: 14px;
 }
@@ -385,22 +419,6 @@ input.form-control {
 
 .small-text{
   font-size: 14px;
-}
-
-.form {
-  display: block;
-  max-width: 100%;
-  margin-left: 2em;
-  margin-top: 5em;
-}
-
-.form .input {
-  margin: 12px;
-}
-
-.form .input label {
-  margin-right: 9px;
-  color: #696969;
 }
 
 /* Lists */
