@@ -31,7 +31,7 @@ class BadgesController < ApplicationController
     skill_id = params[:badge][:skill]
     description = params[:badge][:description]
     level = params[:badge][:level]
-    @badge = Badge.new(name: badge_name, skill_id: skill_id, level: level)
+    @badge = Badge.new(name: badge_name, skill_id: skill_id, level: level, description: description)
 
     respond_to do |format|
       if @badge.save

@@ -5,6 +5,7 @@
   <div class="header-body">
     <div class="header-title">Edit User</div>
     <div class="header-subtitle">
+      Role — <%= @user.role.capitalize %>
     </div>
   </div>
 </div>
@@ -18,7 +19,7 @@
         <p class="card-text">
           <%= render partial: "partials/form_structure", locals: {object: @user,
                                                                   type_of_form: "Edit User",
-                                                                  fields: "user_fields"} %>
+                                                                  fields: "edit_user_fields"} %>
         </p>
 
       </div>
