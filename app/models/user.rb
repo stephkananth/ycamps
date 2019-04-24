@@ -29,7 +29,7 @@ class User < ApplicationRecord
   end
 
   def already_exists?
-    User.where(email: email) > 0
+    User.where(email: email) == 1
   end
 
   def role?(authorized_role)

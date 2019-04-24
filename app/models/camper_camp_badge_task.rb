@@ -28,7 +28,7 @@ class CamperCampBadgeTask < ApplicationRecord
   end
 
   def already_exists?
-    CamperCampBadgeTask.where(camper_camp_badge_id: camper_camp_badge_id, task_id: task_id) > 0
+    CamperCampBadgeTask.where(camper_camp_badge_id: camper_camp_badge_id, task_id: task_id) == 1
   end
 
   def complete

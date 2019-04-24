@@ -43,6 +43,9 @@ class Camp < ApplicationRecord
     camp_badges.each do |camp_badge|
       result << CamperCampBadge.where(camp_badge_id: camp_badge.id).map(&:camper)
     end
+    camper_registrations.each do |camp_registration|
+      result << camp_registration.camper
+    end
     result[0]
   end
 

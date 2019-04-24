@@ -51,5 +51,16 @@ class BadgeTest < ActiveSupport::TestCase
       delete_more_branches
       delete_generic_branch
     end
+
+    should 'show that duplicate badges cannot be created' do
+      create_generic_skill
+      create_generic_badges
+
+      @bad = FactoryBot.build(:badge, skill: @skill, name: 'Badge 1', level: 1)
+      deny @bad.valid?
+
+      delete_generic_badges
+      delete_generic_skill
+    end
   end
 end

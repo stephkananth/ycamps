@@ -23,7 +23,7 @@ class Task < ApplicationRecord
   end
 
   def already_exists?
-    Task.where(badge_id: badge_id, name: name, order: order) > 0
+    Task.where(badge_id: badge_id, name: name, order: order) == 1
   end
 
   # private methods
