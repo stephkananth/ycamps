@@ -15,6 +15,10 @@ class CampBadgesController < ApplicationController
     @tasks = @badge.tasks
     @ccbs = @camp_badge.camper_camp_badges
     @counselors = @camp_badge.counselors
+    if logged_in? && (current_user.role?(:counselor))
+      @counselor = Counselor.where(user_id: current_user).first
+      @counselor_cb = @counselor.camp_badges
+    end
   end
 
   # GET /camp_badges/new

@@ -9,7 +9,15 @@
 
 <div class="row page-row">
   <div class="col">
-    <%= link_to 'Assign Milestone to Campers', assign_milestones_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block" %>
+    <% if logged_in? && (current_user.role?(:admin)) %>
+      <% if !@ccbs.empty? %>
+        <%= link_to 'Assign Milestone to Campers', assign_milestones_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block" %>
+      <% end %>
+    <% elsif logged_in? && (current_user.role?(:counselor)) %>
+      <% if (@counselor_cb.include? @camp_badge) && (!@ccbs.empty?) %>
+          <%= link_to 'Assign Milestone to Campers', assign_milestones_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block" %>
+      <% end %>
+    <% end %>
     <div class="card page-card">
       <div class="card-body">
         <h5 class="card-title">Current Counselor</h5>
@@ -104,8 +112,17 @@
                 </div>
               <% end %>
             <% end %>
-          <% end %><br/>
+          <% end %>
+
+        <% if logged_in? && (current_user.role?(:admin)) %>
+          <br/>
           <%= link_to 'Add Campers', new_camper_camp_badge_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block btn-sm" %>
+        <% elsif logged_in? && (current_user.role?(:counselor)) %>
+          <% if @counselor_cb.include? @camp_badge %>
+            <br/>
+          <%= link_to 'Add Campers', new_camper_camp_badge_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block btn-sm" %>
+          <% end %>
+        <% end %>
       </div>
     </div>
 
