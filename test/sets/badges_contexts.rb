@@ -16,12 +16,14 @@ module Contexts
       @badge1a = FactoryBot.create(:badge, skill: @skill, name: 'Badge 1', level: 1)
       @badge2a = FactoryBot.create(:badge, skill: @skill, name: 'Badge 2', level: 2)
       @badge3a = FactoryBot.create(:badge, skill: @skill, name: 'Badge 3', level: 3)
+      @badge4a = FactoryBot.create(:badge, skill: @skill, name: 'First Aid 2', level: 2)
     end
 
     def delete_generic_badges
       @badge1a.delete
       @badge2a.delete
       @badge3a.delete
+      @badge4a.delete
     end
   end
 end
