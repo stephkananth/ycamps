@@ -101,6 +101,7 @@ class CampTest < ActiveSupport::TestCase
     end
 
     should 'show that the campers method works' do
+      # TODO: error
       create_users
       create_parents
       create_campers
@@ -133,6 +134,7 @@ class CampTest < ActiveSupport::TestCase
     end
 
     should 'show that camps with campers cannot be destroyed' do
+      # TODO: error
       create_users
       create_parents
       create_campers

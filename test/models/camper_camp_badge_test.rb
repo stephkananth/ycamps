@@ -48,14 +48,17 @@ class CamperCampBadgeTest < ActiveSupport::TestCase
     end
 
     should 'show that completed scope works' do
+      # TODO: error
       assert_equal 4, CamperCampBadge.completed.size
     end
 
     should 'show that incomplete scope works' do
+      # TODO: error
       assert_equal 5, CamperCampBadge.incomplete.size
     end
 
     should 'show that completed method works' do
+      # TODO: error
       create_generic_tasks
       deny @camper_camp_badge3.completed?
       @camper_task1 = FactoryBot.create(:camper_camp_badge_task, camper_camp_badge: @camper_camp_badge3, task: @task1, completed: true)
@@ -76,6 +79,7 @@ class CamperCampBadgeTest < ActiveSupport::TestCase
     end
 
     should 'show that duplicates cannot be made' do
+      # TODO: error
       bad = FactoryBot.build(:camper_camp_badge, camp_badge: @camp_badge1, camper: @camper, completed: true)
       deny bad.valid?
       bad.delete
