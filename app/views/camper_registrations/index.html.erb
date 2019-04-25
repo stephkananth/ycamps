@@ -23,6 +23,7 @@
             <thead>
             <tr>
               <th scope="col">Roster</th>
+              <th></th>
             </tr>
             </thead>
             <tbody>
@@ -30,6 +31,11 @@
               <tr>
                 <td>
                   <%= link_to camper_registration.camper.proper_name, camper_registration.camper %>
+                </td>
+                <td>
+                  <% if logged_in? && current_user.role?(:admin) %>
+                    <%= link_to 'Delete', @camper_registration, method: :delete, data: {confirm: 'Are you sure you want to delete this camper from this camp?'}, class: "btn btn-primary btn-block btn-sm" %>
+                  <% end %>
                 </td>
               </tr>
             <% end %>
