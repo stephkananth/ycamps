@@ -144,8 +144,8 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     camp_two.name = "Camp Two"
     camp_two.program = "Fairy Tale 2"
     camp_two.location_id = camp_site.id
-    camp_two.start_date = Date.today()
-    camp_two.end_date = Date.today() + 5
+    camp_two.start_date = Date.today() + 7
+    camp_two.end_date = Date.today() + 12
     camp_two.save!
     puts "Created camp, Camp Two"
 
@@ -153,10 +153,66 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     camp_three.name = "Camp Three"
     camp_three.program = "Fairy Tale 2"
     camp_three.location_id = camp_site.id
-    camp_three.start_date = Date.new(2019, 5, 8)
-    camp_three.end_date = Date.new(2019, 5, 13)
+    camp_three.start_date = Date.today() + 14
+    camp_three.end_date = Date.today() + 19
     camp_three.save!
     puts "Created camp, Camp Three"
+
+    # Create Camp Counselors
+    cc1 = CampCounselor.new
+    cc1.camp_id = camp_one.id
+    cc1.counselor_id = tiffany_counselor.id
+    cc1.save!
+    puts "Created camp counselor 1"
+
+    cc2 = CampCounselor.new
+    cc2.camp_id = camp_one.id
+    cc2.counselor_id = nawon_counselor.id
+    cc2.save!
+    puts "Created camp counselor 2"
+
+    cc3 = CampCounselor.new
+    cc3.camp_id = camp_two.id
+    cc3.counselor_id = steph_counselor.id
+    cc3.save!
+    puts "Created camp counselor 3"
+
+    # Create Camper Registrations
+    cr1 = CamperRegistration.new
+    cr1.camp_id = camp_one.id
+    cr1.camper_id = jack_camper.id
+    cr1.save!
+    puts "Created camper registration 1"
+
+    cr2 = CamperRegistration.new
+    cr2.camp_id = camp_one.id
+    cr2.camper_id = jill_camper.id
+    cr2.save!
+    puts "Created camper registration 2"
+
+    cr3 = CamperRegistration.new
+    cr3.camp_id = camp_one.id
+    cr3.camper_id = sam_camper.id
+    cr3.save!
+    puts "Created camper registration 3"
+
+    cr4 = CamperRegistration.new
+    cr4.camp_id = camp_two.id
+    cr4.camper_id = jack_camper.id
+    cr4.save!
+    puts "Created camper registration 4"
+
+    cr5 = CamperRegistration.new
+    cr5.camp_id = camp_two.id
+    cr5.camper_id = jill_camper.id
+    cr5.save!
+    puts "Created camper registration 5"
+
+    cr6 = CamperRegistration.new
+    cr6.camp_id = camp_one.id
+    cr6.camper_id = lily_camper.id
+    cr6.save!
+    puts "Created camper registration 6"
 
     # Create Skills
     art_skill = Skill.new
@@ -416,63 +472,6 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     ccbt4_4.save!
 
     puts "Created tasks for Camper_CB4"
-
-
-    # Create Camper Registrations
-    cr1 = CamperRegistration.new
-    cr1.camp_id = camp_one.id
-    cr1.camper_id = jack_camper.id
-    cr1.save!
-    puts "Created camper registration 1"
-
-    cr2 = CamperRegistration.new
-    cr2.camp_id = camp_one.id
-    cr2.camper_id = jill_camper.id
-    cr2.save!
-    puts "Created camper registration 2"
-
-    cr3 = CamperRegistration.new
-    cr3.camp_id = camp_one.id
-    cr3.camper_id = sam_camper.id
-    cr3.save!
-    puts "Created camper registration 3"
-
-    cr4 = CamperRegistration.new
-    cr4.camp_id = camp_two.id
-    cr4.camper_id = jack_camper.id
-    cr4.save!
-    puts "Created camper registration 4"
-
-    cr5 = CamperRegistration.new
-    cr5.camp_id = camp_two.id
-    cr5.camper_id = jill_camper.id
-    cr5.save!
-    puts "Created camper registration 5"
-
-    cr6 = CamperRegistration.new
-    cr6.camp_id = camp_one.id
-    cr6.camper_id = lily_camper.id
-    cr6.save!
-    puts "Created camper registration 6"
-
-    # Create Camp Counselors
-    cc1 = CampCounselor.new
-    cc1.camp_id = camp_one.id
-    cc1.counselor_id = tiffany_counselor.id
-    cc1.save!
-    puts "Created camp counselor 1"
-
-    cc2 = CampCounselor.new
-    cc2.camp_id = camp_one.id
-    cc2.counselor_id = nawon_counselor.id
-    cc2.save!
-    puts "Created camp counselor 2"
-
-    cc3 = CampCounselor.new
-    cc3.camp_id = camp_two.id
-    cc3.counselor_id = steph_counselor.id
-    cc3.save!
-    puts "Created camp counselor 3"
 
   end
 end

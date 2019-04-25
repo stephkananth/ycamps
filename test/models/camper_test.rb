@@ -138,5 +138,11 @@ class CamperTest < ActiveSupport::TestCase
       delete_generic_badges
       delete_generic_skill
     end
+
+    should 'show that duplicates cannot be made' do
+      bad = FactoryBot.build(:camper, parent: @profh, first_name: 'Alex', last_name: 'Heimann')
+      deny bad.valid?
+      bad.delete
+    end
   end
 end

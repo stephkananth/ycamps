@@ -85,5 +85,11 @@ class UserTest < ActiveSupport::TestCase
       deny User.authenticate('stephk@example.com', 'secret')
       test_user.delete
     end
+
+    should 'show that duplicates cannot be made' do
+      bad = FactoryBot.build(:user, email: 'becca@example.com', first_name: 'Becca', last_name: 'Kern', role: 'counselor')
+      deny bad.valid?
+      bad.delete
+    end
   end
 end

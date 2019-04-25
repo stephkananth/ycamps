@@ -13,11 +13,6 @@ class Counselor < ApplicationRecord
   scope :inactive, -> {where(active: false)}
   scope :alphabetical, -> {joins(:user).order('last_name, first_name')}
 
-  # callbacks
-  # before_destroy do
-  #   cannot_destroy_object
-  # end
-
   # methods
   def name
     user.last_name + ', ' + user.first_name

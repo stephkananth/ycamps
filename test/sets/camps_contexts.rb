@@ -26,7 +26,7 @@ module Contexts
 
     def create_generic_camps
       @camp1 = FactoryBot.create(:camp, location: @location, name: 'Camp 1', program: 'Camp 1', start_date: Date.parse('2001-02-03'), end_date: Date.parse('2002-02-03'), active: true)
-      @camp2 = FactoryBot.create(:camp, location: @location, name: 'Camp 2', program: 'Camp 2', start_date: Date.parse('2019-04-10'), end_date: Date.yesterday, active: true)
+      @camp2 = FactoryBot.create(:camp, location: @location, name: 'Camp 2', program: 'Camp 2', start_date: Date.parse('2019-04-10'), end_date: Date.yesterday - 1, active: true)
       @camp3 = FactoryBot.create(:camp, location: @location, name: 'Camp 3', program: 'Camp 3', start_date: Date.today, end_date: Date.tomorrow, active: true)
     end
 

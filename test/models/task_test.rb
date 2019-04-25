@@ -24,5 +24,11 @@ class TaskTest < ActiveSupport::TestCase
     should 'show that in order scope works' do
       assert_equal ['Task 1', 'Task 2', 'Task 3', 'Task 4'], Task.all.in_order.map(&:name)
     end
+
+    should 'show that duplicate tasks cannot be made' do
+      bad_task = FactoryBot.build(:task, badge: @badge3a, name: 'Task 1', order: 1)
+      deny bad_task.valid?
+      bad_task.delete
+    end
   end
 end

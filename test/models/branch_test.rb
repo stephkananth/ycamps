@@ -24,6 +24,15 @@ class BranchTest < ActiveSupport::TestCase
     should 'not allow creating a duplicate (also testing case sensitivity) branch name' do
       bad_branch = FactoryBot.build(:branch, name: 'north boroughs')
       deny bad_branch.valid?
+      bad_branch.delete
+    end
+
+    should 'show that duplicate branches cannot be made' do
+      create_more_branches
+      bad_branch = FactoryBot.build(:branch, name: 'New England')
+      deny bad_branch.valid?
+      bad_branch.delete
+      delete_more_branches
     end
   end
 end

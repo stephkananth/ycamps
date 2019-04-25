@@ -74,5 +74,11 @@ class CamperCampBadgeTest < ActiveSupport::TestCase
       @camper_task4.delete
       delete_generic_tasks
     end
+
+    should 'show that duplicates cannot be made' do
+      bad = FactoryBot.build(:camper_camp_badge, camp_badge: @camp_badge1, camper: @camper, completed: true)
+      deny bad.valid?
+      bad.delete
+    end
   end
 end

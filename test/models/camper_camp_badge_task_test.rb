@@ -145,7 +145,7 @@ class CamperCampBadgeTaskTest < ActiveSupport::TestCase
       delete_generic_user
     end
 
-    should 'verify that camper_camp_badge_callback works correctly with badges with <4 tasks' do
+    should 'show that duplicates cannot be made' do
       create_generic_user
       create_users
       create_generic_parent
@@ -154,7 +154,7 @@ class CamperCampBadgeTaskTest < ActiveSupport::TestCase
       create_campers
       create_generic_skill
       create_generic_badges
-      create_generic_3_tasks
+      create_generic_tasks
       create_generic_branch
       create_more_branches
       create_generic_location
@@ -163,16 +163,13 @@ class CamperCampBadgeTaskTest < ActiveSupport::TestCase
       create_camps
       create_generic_camp_badges
       create_generic_camper_camp_badges
-      create_camper_camp_badge_with_3_tasks
+      create_camper_camp_badge_tasks
 
-      deny @camper_camp_badge4.completed
-      assert_equal 2, @camper_camp_badge4.tasks.completed.size
-      @camper_task3.complete
-      assign_milestones_to_campers(@task3.id, @camp_badge4.id, [@camper])
-      assert_equal 3, @camper_camp_badge4.tasks.completed.size
-      assert @camper_camp_badge4.completed
+      bad = FactoryBot.build(:camper_camp_badge_task, camper_camp_badge: @camper_camp_badge3, task: @task1, completed: true)
+      deny bad.valid?
+      bad.delete
 
-      delete_camper_camp_badge_with_3_tasks
+      delete_camper_camp_badge_tasks
       delete_generic_camper_camp_badges
       delete_generic_camp_badges
       delete_camps
@@ -181,7 +178,7 @@ class CamperCampBadgeTaskTest < ActiveSupport::TestCase
       delete_more_locations
       delete_generic_branch
       delete_more_branches
-      delete_generic_3_tasks
+      delete_generic_tasks
       delete_generic_badges
       delete_generic_skill
       delete_campers

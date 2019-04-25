@@ -11,11 +11,6 @@ class Parent < ApplicationRecord
   # validations
   validates_numericality_of :user_id, only_integer: true, greater_than: 0
 
-  # callbacks
-  # before_destroy do
-  #   cannot_destroy_object
-  # end
-
   # methods
   def name
     user.last_name + ', ' + user.first_name

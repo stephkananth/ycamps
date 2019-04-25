@@ -37,4 +37,12 @@ class SkillTest < ActiveSupport::TestCase
     delete_generic_skill
     delete_skills
   end
+
+  should 'verify duplicate skills cannot be created' do
+    create_generic_skill
+    bad_skill = FactoryBot.build(:skill, name: 'Skill', category: 'Category')
+    deny bad_skill.valid?
+    bad_skill.delete
+    delete_generic_skill
+  end
 end

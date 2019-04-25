@@ -23,9 +23,26 @@ class LocationTest < ActiveSupport::TestCase
       assert_equal Location.alphabetical.all.map(&:name), ['Avonworth Community Park', 'Olympus', 'Thelma Lovette YMCA']
     end
 
-    # should 'not allowed creating a duplicate (also testing case sensitivity) branch name' do
-    #   bad_location = FactoryBot.build(:location, name: 'avonworth community park')
-    #   deny bad_location.valid?
-    # end
+    should 'not allowed creating a duplicate (also testing case sensitivity) branch name' do
+      create_more_branches
+      create_more_locations
+      bad_location = FactoryBot.build(:location, name: 'deer run', branch: @new_england)
+      deny bad_location.valid?
+      bad_location.delete
+      delete_more_locations
+      delete_more_branches
+    end
+
+    should 'not allowed creating a duplicate branch name' do
+      create_more_branches
+      create_more_locations
+      bad_location = FactoryBot.build(:location, name: 'Deer Run', branch: @new_england)
+      deny bad_location.valid?
+      bad_location.delete
+      delete_more_locations
+      delete_more_branches
+    end
+
+
   end
 end

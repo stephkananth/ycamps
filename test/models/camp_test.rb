@@ -163,5 +163,11 @@ class CampTest < ActiveSupport::TestCase
       delete_parents
       delete_users
     end
+
+    should 'show that duplicates cannot be made' do
+      bad = FactoryBot.build(:camp, location: @deer_run, name: 'LDP at Deer Run', program: 'Leadership Development', start_date: Date.parse('2019-06-23'), end_date: Date.parse('2019-08-17'))
+      deny bad.valid?
+      bad.delete
+    end
   end
 end
