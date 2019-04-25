@@ -6,25 +6,27 @@
 
 <div class="row page-row">
   <div class="col">
-    <div class="card page-card">
-      <div class="card-body">
-        <h5 class="card-title">Current Camp</h5>
-        <p class="card-text">
-          <% if @current_camp.nil? %>
-            You are not a counselor for any camp at this time.
-          <% else %>
-            <%= @current_camp.name %><br/>
-            <%= @current_camp.start_date.strftime("%A, %b %d") %> - <%= @current_camp.end_date.strftime("%A, %b %d") %> <br/>
-            <%= @current_camp.location.name %>
-          <% end %>
-        </p>
+    <%= link_to @current_camp do %>
+      <div class="card page-card">
+        <div class="card-body">
+          <h5 class="card-title">Current Camp</h5>
+          <p class="card-text">
+            <% if @current_camp.nil? %>
+              You are not a counselor for any camp at this time.
+            <% else %>
+              <%= @current_camp.name %><br/>
+              <%= @current_camp.start_date.strftime("%A, %b %d") %> - <%= @current_camp.end_date.strftime("%A, %b %d") %> <br/>
+              <%= @current_camp.location.name %>
+            <% end %>
+          </p>
+        </div>
       </div>
-    </div>
+    <% end %>
     <br/>
 
     <% if !@current_camp.nil? %>
       <div class="section-header">Your Class</div>
-        <% if @class.nil? && !@current_camp.nil? %>
+        <% if !@current_camp.nil? && @counselor.camp_badges.empty? %>
           <div class="card page-card">
             <div class="card-body">
               <h5 class="card-title">Create Your Class for the Week</h5>
@@ -51,6 +53,7 @@
           <% end %>
         <% end %>
     <% end %>
+
   </div>
 </div>
 

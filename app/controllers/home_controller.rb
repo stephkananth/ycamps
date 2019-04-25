@@ -8,8 +8,9 @@ class HomeController < ApplicationController
     elsif logged_in? && (current_user.role?(:counselor))
     	@counselor = Counselor.where(user_id: current_user).first
     	@current_camp = @counselor.camps.current.first
-    	@class = @counselor.camp_badges.where(camp_id: @current_camp.id).first
-    	# byebug
+      if !@counselor.camp_badges.empty?
+    	  @class = @counselor.camp_badges.where(camp_id: @current_camp.id).first
+    	end
     end
   end
 end

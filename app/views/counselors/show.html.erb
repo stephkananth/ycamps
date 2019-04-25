@@ -4,7 +4,9 @@
     <div class="header-subtitle">
       Counselor<br/>
       <%= @counselor.user.email %><br/><br/>
-      <%= link_to 'Edit Counselor', edit_user_path(@counselor.user), class: "btn btn-primary btn-block btn-sm" %>
+      <% if logged_in? && (current_user.role?(:admin)) %>
+        <%= link_to 'Edit Counselor', edit_user_path(@counselor.user), class: "btn btn-primary btn-block btn-sm" %>
+      <% end %>
     </div>
   </div>
 </div>

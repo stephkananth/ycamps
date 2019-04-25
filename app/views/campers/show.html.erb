@@ -114,32 +114,35 @@
               <% end %>
           <% end %>
         </p>
-        <h6 class="card-subtitle">Incomplete Badges</h6>
-        <p class="card-text">
-          <% @camper_camp_badges_incomplete.each_with_index do |ccbadge, index| %>
-            <% if ccbadge == @camper_camp_badges_incomplete.first or (index + 1) % 3 == 1 %>
-                <div class="row">
-              <% end %>
-              <div class="col">
-                <%= link_to ccbadge.camp_badge.badge do %>
-                  <div class="person-icon text-center">
-                    <%= image_tag 'badge-icon.svg', class: 'img-responsive' %><br/>
-                    <%= ccbadge.camp_badge.badge.name %>
+
+        <% if @camper_camp_badges_incomplete.count != 0 %>
+          <h6 class="card-subtitle">Incomplete Badges</h6>
+          <p class="card-text">
+            <% @camper_camp_badges_incomplete.each_with_index do |ccbadge, index| %>
+              <% if ccbadge == @camper_camp_badges_incomplete.first or (index + 1) % 3 == 1 %>
+                  <div class="row">
+                <% end %>
+                <div class="col">
+                  <%= link_to ccbadge.camp_badge.badge do %>
+                    <div class="person-icon text-center">
+                      <%= image_tag 'badge-icon.svg', class: 'img-responsive' %><br/>
+                      <%= ccbadge.camp_badge.badge.name %>
+                    </div>
+                  <% end %>
+                </div>
+                <% if ccbadge == @camper_camp_badges_incomplete.last and (index + 1) % 3 != 0 %>
+                  <div class="col"></div>
+                  <% if (index + 1) % 3 == 1 %>
+                    <div class="col"></div>
+                  <% end %>
                   </div>
                 <% end %>
-              </div>
-              <% if ccbadge == @camper_camp_badges_incomplete.last and (index + 1) % 3 != 0 %>
-                <div class="col"></div>
-                <% if (index + 1) % 3 == 1 %>
-                  <div class="col"></div>
+                 <% if ccbadge == @camper_camp_badges_incomplete.last or (index + 1) % 3 == 0 %>
+                  </div>
                 <% end %>
-                </div>
-              <% end %>
-               <% if ccbadge == @camper_camp_badges_incomplete.last or (index + 1) % 3 == 0 %>
-                </div>
-              <% end %>
-          <% end %>
-        </p>
+            <% end %>
+          </p>
+        <% end %>
       </div>
     </div>
   </div>
