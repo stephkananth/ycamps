@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Counselor < ApplicationRecord
   belongs_to :user
   has_many :counselor_camp_badges

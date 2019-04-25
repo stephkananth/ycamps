@@ -52,9 +52,8 @@ class Camper < ApplicationRecord
 
   def camper_is_not_a_duplicate
     return true if first_name.nil? || last_name.nil? || parent_id.nil?
-    if already_exists?
-      errors.add(:base, 'already exists')
-    end
+
+    errors.add(:base, 'already exists') if already_exists?
   end
 
   def already_exists?

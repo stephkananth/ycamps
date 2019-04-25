@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module AssignMilestoneHelper
   def assign_milestones_to_campers(task_id, camp_badge_id, campers)
     campers.each do |camper|

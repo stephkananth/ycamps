@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 class CamperCampBadgesController < ApplicationController
   before_action :set_camper_camp_badge, only: %i[show edit update destroy]
   include CamperCampBadgesHelper
-
 
   # GET /camper_camp_badges
   # GET /camper_camp_badges.json
@@ -19,7 +20,7 @@ class CamperCampBadgesController < ApplicationController
     camp_badge_id = params[:camp_badge_id]
     @camp_badge = CampBadge.where(id: params[:camp_badge_id]).first
     @camp = Camp.where(id: @camp_badge.camp.id).first
-    @campers = @camp.camper_registrations.map {|registration| registration.camper}
+    @campers = @camp.camper_registrations.map(&:camper)
     @camper_camp_badge = CamperCampBadge.new
   end
 
@@ -38,7 +39,7 @@ class CamperCampBadgesController < ApplicationController
       create_camper_tasks(@camp_badge.badge, @camper_camp_badge)
       redirect_to camp_badge_path(CampBadge.where(id: params[:camper_camp_badge][:camp_badge_id]).first), notice: "#{@camper_camp_badge.camper.name} was added to the system."
     else
-      redirect_to new_camper_camp_badge_path(:camp_badge_id => params[:camper_camp_badge][:camp_badge_id])
+      redirect_to new_camper_camp_badge_path(camp_badge_id: params[:camper_camp_badge][:camp_badge_id])
     end
   end
 

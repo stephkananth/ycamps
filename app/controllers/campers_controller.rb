@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CampersController < ApplicationController
   before_action :set_camper, only: %i[show edit update destroy]
 
@@ -20,14 +22,12 @@ class CampersController < ApplicationController
 
   # GET /campers/new
   def new
-    if logged_in? && (current_user.role?(:admin))
-      @camper = Camper.new
-    end
+    @camper = Camper.new if logged_in? && current_user.role?(:admin)
   end
 
   # GET /campers/1/edit
-  def edit;
-    if logged_in? && (current_user.role?(:parent))
+  def edit
+    if logged_in? && current_user.role?(:parent)
       @parent = Parent.where(user_id: current_user.id).first.id
     end
   end

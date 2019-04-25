@@ -17,9 +17,8 @@ class Task < ApplicationRecord
   # public methods
   def task_is_not_a_duplicate
     return true if badge_id.nil? || name.nil? || order.nil?
-    if already_exists?
-      errors.add(:base, 'already exists')
-    end
+
+    errors.add(:base, 'already exists') if already_exists?
   end
 
   def already_exists?

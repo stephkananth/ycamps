@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BadgesController < ApplicationController
   before_action :set_badge, only: %i[show edit update destroy]
 
@@ -21,7 +23,7 @@ class BadgesController < ApplicationController
   end
 
   # GET /badges/1/edit
-  def edit
+  def edit;
   end
 
   # POST /badges

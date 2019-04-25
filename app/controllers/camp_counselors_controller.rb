@@ -1,17 +1,18 @@
+# frozen_string_literal: true
+
 class CampCounselorsController < ApplicationController
   # before_action :set_camp_counselor, only: [:show, :edit, :update, :destroy]
 
   # GET /camp_counselors
   # GET /camp_counselors.json
   def index
-    @camp_counselors = CampCounselor.where(:camp_id => params[:camp_id])
+    @camp_counselors = CampCounselor.where(camp_id: params[:camp_id])
     @camp_id = params[:camp_id]
   end
 
   # GET /camp_counselors/1
   # GET /camp_counselors/1.json
-  def show
-
+  def show;
   end
 
   # GET /camp_counselors/new
@@ -22,7 +23,7 @@ class CampCounselorsController < ApplicationController
   end
 
   # GET /camp_counselors/1/edit
-  def edit
+  def edit;
   end
 
   # POST /camp_counselors
@@ -30,7 +31,7 @@ class CampCounselorsController < ApplicationController
   def create
     @camp_counselor = CampCounselor.new(camp_counselor_params)
     if @camp_counselor.save
-      flash[:notice] = "Successfully added counselor."
+      flash[:notice] = 'Successfully added counselor.'
       redirect_to camp_path(@camp_counselor.camp)
     else
       @camp = Camp.find(params[:camp_counselor][:camp_id])
@@ -70,7 +71,7 @@ class CampCounselorsController < ApplicationController
     @camp_counselor = CampCounselor.where(camp_id: camp_id, counselor_id: counselor_id).first
     unless @camp_counselor.nil?
       @camp_counselor.destroy
-      flash[:notice] = "Successfully removed this counselor."
+      flash[:notice] = 'Successfully removed this counselor.'
     end
     # @camp_counselor.destroy
     # respond_to do |format|

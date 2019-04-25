@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CampsController < ApplicationController
   before_action :set_camp, only: %i[show edit update destroy]
 
@@ -32,8 +34,8 @@ class CampsController < ApplicationController
   def create
     camp_name = params[:camp][:name]
     camp_program = params[:camp][:program]
-    start_date = Date.new(params[:camp]["start_date(1i)"].to_i, params[:camp]["start_date(2i)"].to_i, params[:camp]["start_date(3i)"].to_i)
-    end_date = Date.new(params[:camp]["end_date(1i)"].to_i, params[:camp]["end_date(2i)"].to_i, params[:camp]["end_date(3i)"].to_i)
+    start_date = Date.new(params[:camp]['start_date(1i)'].to_i, params[:camp]['start_date(2i)'].to_i, params[:camp]['start_date(3i)'].to_i)
+    end_date = Date.new(params[:camp]['end_date(1i)'].to_i, params[:camp]['end_date(2i)'].to_i, params[:camp]['end_date(3i)'].to_i)
     active_status = params[:camp][:active]
     location_id = params[:camp][:location]
 
@@ -51,8 +53,8 @@ class CampsController < ApplicationController
   def update
     camp_name = params[:camp][:name]
     camp_program = params[:camp][:program]
-    start_date = Date.new(params[:camp]["start_date(1i)"].to_i, params[:camp]["start_date(2i)"].to_i, params[:camp]["start_date(3i)"].to_i)
-    end_date = Date.new(params[:camp]["end_date(1i)"].to_i, params[:camp]["end_date(2i)"].to_i, params[:camp]["end_date(3i)"].to_i)
+    start_date = Date.new(params[:camp]['start_date(1i)'].to_i, params[:camp]['start_date(2i)'].to_i, params[:camp]['start_date(3i)'].to_i)
+    end_date = Date.new(params[:camp]['end_date(1i)'].to_i, params[:camp]['end_date(2i)'].to_i, params[:camp]['end_date(3i)'].to_i)
     active_status = params[:camp][:active]
     location_id = params[:camp][:location]
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Contexts
   module CamperCampBadgeTasksContexts
     def create_camper_camp_badge_tasks

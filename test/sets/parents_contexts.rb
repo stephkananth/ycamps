@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Contexts
   module ParentsContexts
     def create_parents

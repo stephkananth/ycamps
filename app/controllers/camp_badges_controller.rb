@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CampBadgesController < ApplicationController
   before_action :set_camp_badge, only: %i[show edit update destroy]
 
@@ -15,7 +17,7 @@ class CampBadgesController < ApplicationController
     @tasks = @badge.tasks
     @ccbs = @camp_badge.camper_camp_badges
     @counselors = @camp_badge.counselors
-    if logged_in? && (current_user.role?(:counselor))
+    if logged_in? && current_user.role?(:counselor)
       @counselor = Counselor.where(user_id: current_user).first
       @counselor_cb = @counselor.camp_badges
     end
@@ -39,11 +41,12 @@ class CampBadgesController < ApplicationController
       if current_user.role?(:counselor)
         @counselor_camp_badge = CounselorCampBadge.new(
             counselor_id: Counselor.where(user_id: current_user.id).first.id,
-            camp_badge_id: @camp_badge.id)
+            camp_badge_id: @camp_badge.id
+        )
         if @counselor_camp_badge.save
-          redirect_to new_camper_camp_badge_path(:camp_badge_id => @camp_badge.id)
+          redirect_to new_camper_camp_badge_path(camp_badge_id: @camp_badge.id)
         else
-          redirect_to new_camp_badge_path(:camp_id => params[:camp_badge][:camp_id])
+          redirect_to new_camp_badge_path(camp_id: params[:camp_badge][:camp_id])
         end
       elsif current_user.role?(:admin)
         redirect_to camp_badge_path(@camp_badge)

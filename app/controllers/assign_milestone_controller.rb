@@ -1,14 +1,15 @@
-class AssignMilestoneController < ApplicationController
+# frozen_string_literal: true
 
+class AssignMilestoneController < ApplicationController
   include AssignMilestoneHelper
 
   def index
-    @camp_badge = CampBadge.where(:id => params[:camp_badge_id]).first
+    @camp_badge = CampBadge.where(id: params[:camp_badge_id]).first
     @campers = @camp_badge.camper_camp_badges.map(&:camper)
     @tasks = @camp_badge.badge.tasks
   end
 
-  def new
+  def new;
   end
 
   def create
@@ -22,6 +23,6 @@ class AssignMilestoneController < ApplicationController
   private
 
   def milestone_params
-    params.require(:camp_badge).permit(other: [:task, :campers])
+    params.require(:camp_badge).permit(other: %i[task campers])
   end
 end

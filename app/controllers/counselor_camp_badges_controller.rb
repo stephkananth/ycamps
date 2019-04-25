@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CounselorCampBadgesController < ApplicationController
   before_action :set_counselor_camp_badge, only: %i[show edit update destroy]
 
@@ -31,7 +33,7 @@ class CounselorCampBadgesController < ApplicationController
     if @counselor_camp_badge.save
       redirect_to camp_badge_path(CampBadge.where(id: params[:counselor_camp_badge][:camp_badge_id]).first), notice: "#{@counselor_camp_badge.counselor.name} was added to the system."
     else
-      redirect_to new_camper_camp_badge_path(:camp_badge_id => params[:counselor_camp_badge][:camp_badge_id])
+      redirect_to new_camper_camp_badge_path(camp_badge_id: params[:counselor_camp_badge][:camp_badge_id])
     end
   end
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require './test/sets/users_contexts'
 require './test/sets/parents_contexts'
 require './test/sets/campers_contexts'
@@ -12,7 +14,6 @@ require './test/sets/camp_badges_contexts'
 require './test/sets/camper_camp_badges_contexts'
 require './test/sets/camper_camp_badge_tasks_contexts'
 require './test/sets/counselor_camp_badges_contexts'
-
 
 module Contexts
   # explicitly include all sets of contexts used for testing

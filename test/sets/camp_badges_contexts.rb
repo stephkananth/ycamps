@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 module Contexts
   module CampBadgesContexts
-    def create_camp_badges
+    def create_camp_badges;
     end
 
-    def delete_camp_badges
+    def delete_camp_badges;
     end
 
     def create_generic_camp_badges

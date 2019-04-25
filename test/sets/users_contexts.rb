@@ -2,7 +2,6 @@
 
 module Contexts
   module UsersContexts
-    # create your contexts here...
     def create_users
       @admin_user = FactoryBot.create(:user)
       @counselor_user = FactoryBot.create(:user, email: 'counselor@ymca.org', role: 'counselor')

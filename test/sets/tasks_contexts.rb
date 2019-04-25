@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 module Contexts
   module TasksContexts
-    def create_tasks
+    def create_tasks;
     end
 
-    def delete_tasks
+    def delete_tasks;
     end
 
     def create_generic_tasks

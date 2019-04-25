@@ -1,15 +1,17 @@
+# frozen_string_literal: true
+
 class CamperRegistrationsController < ApplicationController
-  before_action :set_camper_registration, only: [:show, :edit, :update, :destroy]
+  before_action :set_camper_registration, only: %i[show edit update destroy]
 
   # GET /camper_registrations
   # GET /camper_registrations.json
   def index
-    @camper_registrations = CamperRegistration.where(:camp_id => params[:camp_id])
+    @camper_registrations = CamperRegistration.where(camp_id: params[:camp_id])
   end
 
   # GET /camper_registrations/1
   # GET /camper_registrations/1.json
-  def show
+  def show;
   end
 
   # GET /camper_registrations/new
@@ -18,7 +20,7 @@ class CamperRegistrationsController < ApplicationController
   end
 
   # GET /camper_registrations/1/edit
-  def edit
+  def edit;
   end
 
   # POST /camper_registrations

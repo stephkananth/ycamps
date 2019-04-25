@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 module Contexts
   module CamperCampBadgesContexts
-    def create_camper_camp_badges
+    def create_camper_camp_badges;
     end
 
-    def delete_camper_camp_badges
+    def delete_camper_camp_badges;
     end
 
     def create_generic_camper_camp_badges

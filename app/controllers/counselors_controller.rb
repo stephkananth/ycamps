@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CounselorsController < ApplicationController
   before_action :set_counselor, only: %i[show edit update destroy]
   # before_action :check_login
@@ -33,7 +35,7 @@ class CounselorsController < ApplicationController
   def create
     @counselor = Counselor.new(counselor_params)
     @user = User.new(user_params)
-    @user.role = "counselor"
+    @user.role = 'counselor'
     if !@user.save
       @counselor.valid?
       render action: 'new'

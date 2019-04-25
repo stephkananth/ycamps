@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
   # before_action :check_login, only: [:show, :edit, :update, :destroy]
@@ -11,7 +13,7 @@ class UsersController < ApplicationController
 
   # GET /users/1
   # GET /users/1.json
-  def show
+  def show;
   end
 
   # GET /users/new
@@ -20,7 +22,7 @@ class UsersController < ApplicationController
   end
 
   # GET /users/1/edit
-  def edit
+  def edit;
   end
 
   # POST /users
@@ -48,7 +50,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     if @user.update_attributes(user_params)
-      flash[:notice] = "Successfully updated your profile."
+      flash[:notice] = 'Successfully updated your profile.'
       render action: 'show'
     else
       render action: 'edit'

@@ -34,9 +34,8 @@ class CamperCampBadge < ApplicationRecord
 
   def camper_camp_badge_is_not_a_duplicate
     return true if camp_badge_id.nil? || camper_id.nil?
-    if already_exists?
-      errors.add(:base, 'already exists')
-    end
+
+    errors.add(:base, 'already exists') if already_exists?
   end
 
   def already_exists?

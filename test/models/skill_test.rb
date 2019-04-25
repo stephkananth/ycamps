@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class SkillTest < ActiveSupport::TestCase
@@ -19,7 +21,7 @@ class SkillTest < ActiveSupport::TestCase
     create_generic_skill
     create_badges
     create_generic_badges
-    assert_equal ["Archery", "First Aid", "Frisbee", "Skill"], Skill.all.alphabetical.map(&:name)
+    assert_equal ['Archery', 'First Aid', 'Frisbee', 'Skill'], Skill.all.alphabetical.map(&:name)
     delete_generic_badges
     delete_badges
     delete_generic_skill

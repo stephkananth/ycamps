@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CamperCampBadgesHelper
   def create_camper_tasks(badge, camper_camp_badge)
     camp_tasks = badge.tasks

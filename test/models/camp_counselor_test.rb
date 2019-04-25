@@ -1,4 +1,7 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
+
 class CampCounselorTest < ActiveSupport::TestCase
   should belong_to(:camp)
   should belong_to(:counselor)

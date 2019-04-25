@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CamperCampBadgeTasksController < ApplicationController
   before_action :set_camper_camp_badge_task, only: %i[show edit update destroy]
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Ability
   include CanCan::Ability
 
@@ -36,7 +38,7 @@ class Ability
       # they can read their own students' data
       can :show, Camper do |this_camper|
         my_camps = Counselor.where(user_id: user).first.camps
-        my_campers = my_camps.map {|c| c.campers}.flatten
+        my_campers = my_camps.map(&:campers).flatten
         my_campers.include? this_camper
       end
 
@@ -69,8 +71,6 @@ class Ability
         my_campers = Camper.where(parent_id: pid).first.campers.map(&:id)
         my_campers.include? this_camper.id
       end
-
-    else
 
     end
   end

@@ -25,9 +25,8 @@ class Badge < ApplicationRecord
   # private methods
   def badge_is_not_a_duplicate
     return true if name.nil? || level.nil? || skill_id.nil?
-    if already_exists?
-      errors.add(:base, 'already exists')
-    end
+
+    errors.add(:base, 'already exists') if already_exists?
   end
 
   def already_exists?
