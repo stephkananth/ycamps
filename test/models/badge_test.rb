@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class BadgeTest < ActiveSupport::TestCase
@@ -18,7 +20,7 @@ class BadgeTest < ActiveSupport::TestCase
     should 'show that alphabetical scope works' do
       create_generic_skill
       create_generic_badges
-      assert_equal ['Badge 1', 'Badge 2', 'Badge 3'], Badge.all.alphabetical.map(&:name)
+      assert_equal ['Badge 1', 'Badge 2', 'Badge 3', 'First Aid 2'], Badge.all.alphabetical.map(&:name)
       delete_generic_badges
       delete_generic_skill
     end

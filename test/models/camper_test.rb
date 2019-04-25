@@ -4,9 +4,10 @@ require 'test_helper'
 
 class CamperTest < ActiveSupport::TestCase
   should belong_to(:parent)
+  should have_many(:camper_registrations)
+  should have_many(:camps).through(:camper_registrations)
   should have_many(:camper_camp_badges)
   should have_many(:camp_badges).through(:camper_camp_badges)
-  should have_many(:camps).through(:camp_badges)
 
   should validate_presence_of(:first_name)
   should validate_presence_of(:last_name)
