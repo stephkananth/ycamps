@@ -31,6 +31,6 @@ class Badge < ApplicationRecord
   end
 
   def already_exists?
-    Badge.where(name: name, level: level, skill_id: skill_id) == 1
+    Badge.where(name: name, level: level, skill_id: skill_id).size == 1
   end
 end

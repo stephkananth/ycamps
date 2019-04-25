@@ -25,7 +25,7 @@ class Location < ApplicationRecord
   end
 
   def already_exists?
-    Location.where(branch_id: branch_id, name: name) == 1
+    Location.where(branch_id: branch_id, name: name).size == 1
   end
 
   # private methods

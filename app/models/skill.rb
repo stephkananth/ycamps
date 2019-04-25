@@ -27,7 +27,7 @@ class Skill < ApplicationRecord
   end
 
   def already_exists?
-    Skill.where(category: category, name: name) == 1
+    Skill.where(category: category, name: name).size == 1
   end
 
   # private methods

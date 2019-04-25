@@ -40,7 +40,7 @@ class CamperCampBadge < ApplicationRecord
   end
 
   def already_exists?
-    CamperCampBadge.where(camp_badge_id: camp_badge_id, camper_id: camper_id) == 1
+    CamperCampBadge.where(camp_badge_id: camp_badge_id, camper_id: camper_id).size == 1
   end
   # private methods
 end

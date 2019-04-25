@@ -53,6 +53,6 @@ class Camper < ApplicationRecord
   end
 
   def already_exists?
-    Camper.where(first_name: first_name, last_name: last_name, parent_id: parent_id) == 1
+    Camper.where(first_name: first_name, last_name: last_name, parent_id: parent_id).size == 1
   end
 end

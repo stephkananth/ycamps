@@ -24,7 +24,7 @@ class Branch < ApplicationRecord
   end
 
   def already_exists?
-    Branch.where(name: name) == 1
+    Branch.where(name: name).size == 1
   end
 
   # private methods
