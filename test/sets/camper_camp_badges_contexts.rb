@@ -10,12 +10,14 @@ module Contexts
       @camper_camp_badge1 = FactoryBot.create(:camper_camp_badge, camp_badge: @camp_badge1, camper: @camper, completed: true)
       @camper_camp_badge2 = FactoryBot.create(:camper_camp_badge, camp_badge: @camp_badge2, camper: @camper, completed: true)
       @camper_camp_badge3 = FactoryBot.create(:camper_camp_badge, camp_badge: @camp_badge3, camper: @camper, completed: false)
+      @camper_camp_badge4 = FactoryBot.create(:camper_camp_badge, camp_badge: @camp_badge4, camper: @camper, completed: false)
     end
 
     def delete_generic_camper_camp_badges
       @camper_camp_badge1.delete
       @camper_camp_badge2.delete
       @camper_camp_badge3.delete
+      @camper_camp_badge4.delete
     end
 
     def create_more_semi_generic_camper_camp_badges

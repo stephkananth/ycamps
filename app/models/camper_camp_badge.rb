@@ -17,7 +17,7 @@ class CamperCampBadge < ApplicationRecord
 
   # public methods
   def completed?
-    camper_camp_badge_tasks.completed.count == 4
+    camper_camp_badge_tasks.completed.count == camp_badge.badge.tasks.count
   end
 
   def complete
