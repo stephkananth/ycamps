@@ -29,7 +29,7 @@ class CamperRegistrationTest < ActiveSupport::TestCase
       create_camps
 
       registration1 = FactoryBot.create(:camper_registration, camp: @first_term, camper: @alex)
-      deny FactoryBot.create(:camper_registration, camp: @first_term, camper: @alex).valid?
+      registration2 = FactoryBot.create(:camper_registration, camp: @first_term, camper: @alex).valid?
 
       deny registration2.valid?
 
