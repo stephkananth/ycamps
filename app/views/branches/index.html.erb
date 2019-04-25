@@ -1,4 +1,3 @@
-
 <div class="header" id="barn-header">
   <%#= link_to 'Back', :back %>
   <div class="btn-wrapper">
@@ -12,38 +11,38 @@
 
 <div class="row page-row">
   <div class="col">
-      <%= link_to 'Create New Branch', new_branch_path, class: "btn btn-primary btn-block" %>
-      <div class="card page-card">
-        <div class="card-body">
-          <h5 class="card-title"></h5>
-          <p class="card-text">
-            <% if @branches.count != 0 %>
-              <table class="table">
-                <thead>
-                <tr>
-                  <th>Name</th>
-                </tr>
-                </thead>
+    <%= link_to 'Create New Branch', new_branch_path, class: "btn btn-primary btn-block" %>
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">
+          <% if @branches.count != 0 %>
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Name</th>
+            </tr>
+            </thead>
 
-                <tbody>
-                <% @branches.each do |branch| %>
-                  <tr>
-                    
-                    <td>
-                      <%= link_to branch do %>
-                        <%= branch.name %>
-                      <% end %>
-                    </td>
-                  </tr>
-                <% end %>
-                </tbody>
-              </table>
-              <% else %>
-                There are no branches in the system.
-              <% end %>
-          </p>
-        </div>
+            <tbody>
+            <% @branches.each do |branch| %>
+              <tr>
+
+                <td>
+                  <%= link_to branch do %>
+                    <%= branch.name %>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+        <% else %>
+          There are no branches in the system.
+        <% end %>
+        </p>
       </div>
+    </div>
   </div>
 </div>
 

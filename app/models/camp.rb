@@ -20,13 +20,13 @@ class Camp < ApplicationRecord
   validate :camp_is_not_a_duplicate, on: :create
 
   # scopes
-  scope :active, -> { where(active: true) }
-  scope :inactive, -> { where(active: false) }
-  scope :alphabetical, -> { order('name') }
-  scope :chronological, -> { order('start_date', 'end_date') }
-  scope :upcoming, -> { where('start_date > ?', Date.today) }
-  scope :past, -> { where('end_date < ?', Date.today) }
-  scope :current, -> { where('start_date <= ? and end_date > ?', Date.today, Date.today) }
+  scope :active, -> {where(active: true)}
+  scope :inactive, -> {where(active: false)}
+  scope :alphabetical, -> {order('name')}
+  scope :chronological, -> {order('start_date', 'end_date')}
+  scope :upcoming, -> {where('start_date > ?', Date.today)}
+  scope :past, -> {where('end_date < ?', Date.today)}
+  scope :current, -> {where('start_date <= ? and end_date > ?', Date.today, Date.today)}
 
   # callbacks
   before_destroy do
@@ -55,7 +55,7 @@ class Camp < ApplicationRecord
 
   def counselors
     result = []
-    camp_badges.each { |camp_badge| result << CounselorCampBadge.where(camp_badge_id: camp_badge.id).map(&:counselor).flatten }
+    camp_badges.each {|camp_badge| result << CounselorCampBadge.where(camp_badge_id: camp_badge.id).map(&:counselor).flatten}
     camp_counselors.each do |camp_counselor|
       result << camp_counselor.counselor
     end

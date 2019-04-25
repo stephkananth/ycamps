@@ -12,15 +12,15 @@
               <%= link_to camp do %>
                 <span class="card-subtitle"><%= camp.name %></span><br/>
               <% end %>
-                <%= camp.program %> <br/>
-                <%= camp.start_date.strftime("%A, %b %d") %> - <%= camp.end_date.strftime("%A, %b %d") %> <br/>
-                <%= camp.location.name %>
+              <%= camp.program %> <br/>
+              <%= camp.start_date.strftime("%A, %b %d") %> - <%= camp.end_date.strftime("%A, %b %d") %> <br/>
+              <%= camp.location.name %>
 
             </td>
           </tr>
         <% end %>
       <% else %>
-      There are no <%= state.downcase %> camps.
+        There are no <%= state.downcase %> camps.
       <% end %>
       </tbody>
     </table>

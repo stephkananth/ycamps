@@ -10,30 +10,30 @@
 
 <div class="row page-row">
   <div class="col">
-      <div class="card page-card">
-        <div class="card-body">
-          <h5 class="card-title">Locations</h5>
-          <p class="card-text">
-            <% if @locations.count != 0 %>
-              <table class="table">
-                <tbody>
-                <% @locations.each do |location| %>
-                  <tr>
-                    <td>
-                      <%= link_to location do %>
-                        <%= location.name %>
-                      <% end %>
-                    </td>
-                  </tr>
-                <% end %>
-                </tbody>
-              </table>
-            <% else %>
-              <%= @branch.name %> currently does not have any locations. <br/>
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title">Locations</h5>
+        <p class="card-text">
+          <% if @locations.count != 0 %>
+          <table class="table">
+            <tbody>
+            <% @locations.each do |location| %>
+              <tr>
+                <td>
+                  <%= link_to location do %>
+                    <%= location.name %>
+                  <% end %>
+                </td>
+              </tr>
             <% end %>
-          </p>
-        </div>
+            </tbody>
+          </table>
+        <% else %>
+          <%= @branch.name %> currently does not have any locations. <br/>
+        <% end %>
+        </p>
       </div>
+    </div>
 
     <div class="row btn-group">
       <div class="col">

@@ -29,7 +29,8 @@
                       <%= camper.current_badge.name %>
                     </p>
                   </div>
-                </div><br/>
+                </div>
+                <br/>
                 <div class="progress">
                   <% camper.current_tasks.each_with_index do |task, index| %>
                     <% if task.completed? %>

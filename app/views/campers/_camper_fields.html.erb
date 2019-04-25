@@ -1,12 +1,12 @@
 <div class="form-group">
-    <%= f.label :first_name %>
-    <%= f.input :first_name, label: false, label_html: {class: 'active'}, input_html: {class: 'form-control'} %>
+  <%= f.label :first_name %>
+  <%= f.input :first_name, label: false, label_html: {class: 'active'}, input_html: {class: 'form-control'} %>
 </div>
 <div class="form-group">
-    <%= f.label :last_name %>
-    <%= f.input :last_name, label: false, label_html: {class: 'active'}, input_html: {class: 'form-control'} %>
+  <%= f.label :last_name %>
+  <%= f.input :last_name, label: false, label_html: {class: 'active'}, input_html: {class: 'form-control'} %>
 </div>
 <div class="form-group">
-    <%= f.label :parent %>
-    <%= f.input :parent, label: false, collection: Parent.alphabetical.to_a, include_blank: true, input_html: {class: 'form-control'} %>
+  <%= f.label :parent %>
+  <%= f.input :parent, label: false, collection: Parent.alphabetical.to_a, include_blank: true, input_html: {class: 'form-control'} %>
 </div>

@@ -54,7 +54,8 @@
               </div>
             </div>
           <% end %>
-        </div><br/>
+        </div>
+        <br/>
         <% if logged_in? && current_user.role?(:admin) %>
           <%= link_to 'Add New Task', new_task_path, class: "btn btn-primary btn-block btn-left btn-sm" %>
         <% end %>

@@ -10,30 +10,30 @@
 
 <div class="row page-row">
   <div class="col">
-      <div class="card page-card">
-        <div class="card-body">
-          <h5 class="card-title">Camps at <%= @location.name %></h5>
-          <p class="card-text">
-            <% if @camps.count != 0 %>
-              <table class="table">
-                <tbody>
-                <% @camps.each do |camp| %>
-                  <tr>
-                    <td>
-                      <%= link_to camp do %>
-                        <%= camp.name %>
-                      <% end %>
-                    </td>
-                  </tr>
-                <% end %>
-                </tbody>
-              </table>
-            <% else %>
-              <%= @location.name %> currently does not have any camps. <br/>
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title">Camps at <%= @location.name %></h5>
+        <p class="card-text">
+          <% if @camps.count != 0 %>
+          <table class="table">
+            <tbody>
+            <% @camps.each do |camp| %>
+              <tr>
+                <td>
+                  <%= link_to camp do %>
+                    <%= camp.name %>
+                  <% end %>
+                </td>
+              </tr>
             <% end %>
-          </p>
-        </div>
+            </tbody>
+          </table>
+        <% else %>
+          <%= @location.name %> currently does not have any camps. <br/>
+        <% end %>
+        </p>
       </div>
+    </div>
 
     <div class="row btn-group">
       <div class="col">

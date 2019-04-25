@@ -19,7 +19,7 @@ class CamperCampBadgesController < ApplicationController
     camp_badge_id = params[:camp_badge_id]
     @camp_badge = CampBadge.where(id: params[:camp_badge_id]).first
     @camp = Camp.where(id: @camp_badge.camp.id).first
-    @campers = @camp.camper_registrations.map{|registration| registration.camper}
+    @campers = @camp.camper_registrations.map {|registration| registration.camper}
     @camper_camp_badge = CamperCampBadge.new
   end
 
@@ -31,7 +31,7 @@ class CamperCampBadgesController < ApplicationController
   # POST /camper_camp_badges.json
   def create
     @camp_badge = CampBadge.where(id: params[:camper_camp_badge][:camp_badge_id]).first
-  
+
     @camper_camp_badge = CamperCampBadge.new(camper_camp_badge_params)
 
     if @camper_camp_badge.save

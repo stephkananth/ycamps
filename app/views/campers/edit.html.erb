@@ -18,23 +18,23 @@
         <p class="card-text">
           <% if logged_in? && (current_user.role?(:admin)) %>
             <%= render partial: "partials/form_structure", locals: {object: @camper,
-                                                                  type_of_form: "Edit Camper",
-                                                                  fields: "camper_fields"} %>
-          <% elsif logged_in? && (current_user.role?(:parent)) %>                   
+                                                                    type_of_form: "Edit Camper",
+                                                                    fields: "camper_fields"} %>
+          <% elsif logged_in? && (current_user.role?(:parent)) %>
             <%= simple_form_for(@camper) do |f| %>
               <%= f.error_notification %>
               <%= f.hidden_field :parent_id, value: @parent %>
-              <div class="form-group">
-                <%= f.label :first_name %>
-                <%= f.input :first_name, input_html: {class: 'form-control'}, label: false %>
-              </div>
-              <div class="form-group">
-                <%= f.label :last_name %>
-                <%= f.input :last_name, input_html: {class: 'form-control'}, label: false %>
-              </div>
-              <%= f.button :submit, class: 'btn btn-primary btn-block' %>
-            <% end %> 
+            <div class="form-group">
+              <%= f.label :first_name %>
+              <%= f.input :first_name, input_html: {class: 'form-control'}, label: false %>
+            </div>
+            <div class="form-group">
+              <%= f.label :last_name %>
+              <%= f.input :last_name, input_html: {class: 'form-control'}, label: false %>
+            </div>
+            <%= f.button :submit, class: 'btn btn-primary btn-block' %>
           <% end %>
+        <% end %>
         </p>
 
       </div>

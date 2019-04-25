@@ -1,1659 +1,1863 @@
 <!DOCTYPE html>
 <html xmlns='http://www.w3.org/1999/xhtml'>
-  <head>
+<head>
     <title>Code coverage for Ycamps</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <script src='./assets/0.10.2/application.js' type='text/javascript'></script>    
+    <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+    <script src='./assets/0.10.2/application.js' type='text/javascript'></script>
     <link href='./assets/0.10.2/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_red.png" />
-    <link rel="icon" type="image/png" href="./assets/0.10.2/favicon.png" />
-  </head>
-  
-  <body>
-    <div id="loading">
-      <img src="./assets/0.10.2/loading.gif" alt="loading"/>
-    </div>
-    <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-04-25T13:15:40-04:00">2019-04-25T13:15:40-04:00</abbr></div>
-      <ul class="group_tabs"></ul>
+    <link href="./assets/0.10.2/favicon_red.png" rel="shortcut icon" type="image/png"/>
+    <link href="./assets/0.10.2/favicon.png" rel="icon" type="image/png"/>
+</head>
 
-      <div id="content">
+<body>
+<div id="loading">
+    <img alt="loading" src="./assets/0.10.2/loading.gif"/>
+</div>
+<div id="wrapper" style="display:none;">
+    <div class="timestamp">Generated <abbr class="timeago"
+                                           title="2019-04-25T13:15:40-04:00">2019-04-25T13:15:40-04:00</abbr></div>
+    <ul class="group_tabs"></ul>
+
+    <div id="content">
         <div class="file_list_container" id="AllFiles">
-  <h2>
-    <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">22.86%</span></span>
-     covered at
-     <span class="covered_strength">
+            <h2>
+                <span class="group_name">All Files</span>
+                (<span class="covered_percent"><span class="red">22.86%</span></span>
+                covered at
+                <span class="covered_strength">
        <span class="green">
          3.17
        </span>
     </span> hits/line)
-  </h2>
-  <a name="AllFiles"></a>
-  <div>
-    <b>64</b> files in total.
-    <b>1461</b> relevant lines. 
-    <span class="green"><b>334</b> lines covered</span> and
-    <span class="red"><b>1127</b> lines missed </span>
-  </div>
-  <table class="file_list">
-    <thead>
-      <tr>
-        <th>File</th>
-        <th>% covered</th>
-        <th>Lines</th>
-        <th>Relevant Lines</th>
-        <th>Lines covered</th>
-        <th>Lines missed</th>
-        <th>Avg. Hits / Line</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-      <tr>
-        <td class="strong"><a href="#1bcbf7f2354cb82c0d93b3341c242933e3b827e7" class="src_link" title="app/channels/application_cable/channel.rb">app/channels/application_cable/channel.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>4</td>
-        <td>4</td>
-        <td>0</td>
-        <td>4</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#24b045e1ff6fc53eeb187a2996340736c65d37b3" class="src_link" title="app/channels/application_cable/connection.rb">app/channels/application_cable/connection.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>4</td>
-        <td>4</td>
-        <td>0</td>
-        <td>4</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#2874aaac538bc8cdaca790204447e7a1ae087bea" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>21</td>
-        <td>15</td>
-        <td>0</td>
-        <td>15</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#59d2966f7d5ef2a2d20b991fa1ba33843d3979ea" class="src_link" title="app/controllers/assign_milestone_controller.rb">app/controllers/assign_milestone_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>27</td>
-        <td>21</td>
-        <td>0</td>
-        <td>21</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#706e600d6b4ef064b4c40c3624e45e8746a20c7c" class="src_link" title="app/controllers/badges_controller.rb">app/controllers/badges_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>80</td>
-        <td>55</td>
-        <td>0</td>
-        <td>55</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#f5abe50059f0ad79c342cbd263c2b11c34a40a7d" class="src_link" title="app/controllers/branches_controller.rb">app/controllers/branches_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>77</td>
-        <td>52</td>
-        <td>0</td>
-        <td>52</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#0a12220f18a00a0c9da2fc2e3b33064304597a09" class="src_link" title="app/controllers/camp_badges_controller.rb">app/controllers/camp_badges_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>92</td>
-        <td>67</td>
-        <td>0</td>
-        <td>67</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#8c69b5334d5205ca71f52855e1a72f5a749db718" class="src_link" title="app/controllers/camp_counselors_controller.rb">app/controllers/camp_counselors_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>93</td>
-        <td>53</td>
-        <td>0</td>
-        <td>53</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#90968b32c4fb60557016f2482991ae5fa3d674c3" class="src_link" title="app/controllers/camper_camp_badge_tasks_controller.rb">app/controllers/camper_camp_badge_tasks_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>75</td>
-        <td>50</td>
-        <td>0</td>
-        <td>50</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#c54061d5179f124ab899805ed1475357421930dc" class="src_link" title="app/controllers/camper_camp_badges_controller.rb">app/controllers/camper_camp_badges_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>80</td>
-        <td>53</td>
-        <td>0</td>
-        <td>53</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#47953c8153b117cdc84f4412906d8caa57a04162" class="src_link" title="app/controllers/camper_registrations_controller.rb">app/controllers/camper_registrations_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>72</td>
-        <td>47</td>
-        <td>0</td>
-        <td>47</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#1d7a24a769501cd7b91af8dfe2bee8918d4c150a" class="src_link" title="app/controllers/campers_controller.rb">app/controllers/campers_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>90</td>
-        <td>65</td>
-        <td>0</td>
-        <td>65</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#ecbaf29195902196c1dd181eb75e8326587fca7d" class="src_link" title="app/controllers/camps_controller.rb">app/controllers/camps_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>87</td>
-        <td>60</td>
-        <td>0</td>
-        <td>60</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#fce7c6e24bfb705163f5758f6fd40f05577b9f5f" class="src_link" title="app/controllers/counselor_camp_badges_controller.rb">app/controllers/counselor_camp_badges_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>73</td>
-        <td>49</td>
-        <td>0</td>
-        <td>49</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#3245384c72abd774f71bc3c7c629417a19822944" class="src_link" title="app/controllers/counselors_controller.rb">app/controllers/counselors_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>86</td>
-        <td>59</td>
-        <td>0</td>
-        <td>59</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#fc1d05bd68c58861eef3665e94f0c11ea11f3946" class="src_link" title="app/controllers/home_controller.rb">app/controllers/home_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>16</td>
-        <td>16</td>
-        <td>0</td>
-        <td>16</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#4d8c85ab62233e24264dd80821c048c879788966" class="src_link" title="app/controllers/locations_controller.rb">app/controllers/locations_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>75</td>
-        <td>49</td>
-        <td>0</td>
-        <td>49</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#2f58d8df7c7625851d90b2de61c8938a41ef2ed6" class="src_link" title="app/controllers/parents_controller.rb">app/controllers/parents_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>76</td>
-        <td>51</td>
-        <td>0</td>
-        <td>51</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#742e689099c4f55299f5f51c29535547893f7891" class="src_link" title="app/controllers/sessions_controller.rb">app/controllers/sessions_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>20</td>
-        <td>18</td>
-        <td>0</td>
-        <td>18</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#06151f5a25e3bec616474f418b5f351c94c50a35" class="src_link" title="app/controllers/skills_controller.rb">app/controllers/skills_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>76</td>
-        <td>51</td>
-        <td>0</td>
-        <td>51</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#be31d727363cbe27ec538c2d1155ad5093c6aef4" class="src_link" title="app/controllers/tasks_controller.rb">app/controllers/tasks_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>71</td>
-        <td>45</td>
-        <td>0</td>
-        <td>45</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#86845895bceb0505f53b340478373eb0720318e2" class="src_link" title="app/controllers/users_controller.rb">app/controllers/users_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>93</td>
-        <td>69</td>
-        <td>0</td>
-        <td>69</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#b6baec91f865be058e1f00c09f420f19a8272864" class="src_link" title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#6d6700356d6ef2d6ee156159d359ea7bcb35fd59" class="src_link" title="app/helpers/assign_milestone_helper.rb">app/helpers/assign_milestone_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>10</td>
-        <td>7</td>
-        <td>7</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#81bfba9e73fc6b83bd2dd742e1f4bd0a14cefd46" class="src_link" title="app/helpers/badges_helper.rb">app/helpers/badges_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#683e36138ebe134b27827db33a471c4641cbc2b4" class="src_link" title="app/helpers/branches_helper.rb">app/helpers/branches_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#bb8b6bba49b2e888884ce3c374648ec8aa18972b" class="src_link" title="app/helpers/camp_badges_helper.rb">app/helpers/camp_badges_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#efac7b12125ff0a97b7f371e2a9c76150f32b48e" class="src_link" title="app/helpers/camp_counselors_helper.rb">app/helpers/camp_counselors_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#ffb321b5982f2f8afdbb878748a870d0a3731ea4" class="src_link" title="app/helpers/camper_camp_badge_tasks_helper.rb">app/helpers/camper_camp_badge_tasks_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#e7e03db045939370ab99003265a6c3cf81ec1e21" class="src_link" title="app/helpers/camper_camp_badges_helper.rb">app/helpers/camper_camp_badges_helper.rb</a></td>
-        <td class="red strong">33.33 %</td>
-        <td>10</td>
-        <td>6</td>
-        <td>2</td>
-        <td>4</td>
-        <td>0.3</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#44af896624fb3700a7b2d62de0c08649f3022ac7" class="src_link" title="app/helpers/camper_registrations_helper.rb">app/helpers/camper_registrations_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#b7e91500706b2376fa1b16055d2ef922618224dc" class="src_link" title="app/helpers/campers_helper.rb">app/helpers/campers_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#0ec9e4237d8a6389e2ea38c12aa0a462dc1d2e3a" class="src_link" title="app/helpers/camps_helper.rb">app/helpers/camps_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#f7165e923aa9a72405279e79426d9ac85c7d91eb" class="src_link" title="app/helpers/counselor_camp_badges_helper.rb">app/helpers/counselor_camp_badges_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#24ff42dd245b102678607731434f0b94b5c58198" class="src_link" title="app/helpers/counselors_helper.rb">app/helpers/counselors_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#5d2ae1b69daae9ed72aa5bbfbbb769c0c30c8eda" class="src_link" title="app/helpers/home_helper.rb">app/helpers/home_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#f2710348eaa8173275d4dce74d9763e010a50e9a" class="src_link" title="app/helpers/locations_helper.rb">app/helpers/locations_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#cb4f4223738512e26cb7cf950fa0a0007d6fb0aa" class="src_link" title="app/helpers/parents_helper.rb">app/helpers/parents_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#1ae9052f0755753e85eefe1a453ebe20a54b185b" class="src_link" title="app/helpers/sessions_helper.rb">app/helpers/sessions_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#620e54fe42db71bf6ff85250b9992ba8704bc4f5" class="src_link" title="app/helpers/skills_helper.rb">app/helpers/skills_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#5d3649506ebcb0b38f816889020f4709f329056a" class="src_link" title="app/helpers/tasks_helper.rb">app/helpers/tasks_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#0d6e446aa093a7967c362e6834125e738a2af1ac" class="src_link" title="app/helpers/users_helper.rb">app/helpers/users_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#86795ba6ce26cd309f8400f57c32ccf5df28bf76" class="src_link" title="app/jobs/application_job.rb">app/jobs/application_job.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>2</td>
-        <td>2</td>
-        <td>0</td>
-        <td>2</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#02b91061a51f3ac06ca0c0d449530a573358e0f1" class="src_link" title="app/mailers/application_mailer.rb">app/mailers/application_mailer.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>4</td>
-        <td>4</td>
-        <td>0</td>
-        <td>4</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#d5ddb0214ce5e7fbe3fadc3db12d15d34efcbe09" class="src_link" title="app/models/ability.rb">app/models/ability.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>77</td>
-        <td>51</td>
-        <td>0</td>
-        <td>51</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#f9dc112b4ff50dc643a71f91225322368f519a17" class="src_link" title="app/models/application_record.rb">app/models/application_record.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>3</td>
-        <td>2</td>
-        <td>2</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#8abdbd38381557c078768535060cf599aa2d3e61" class="src_link" title="app/models/badge.rb">app/models/badge.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>36</td>
-        <td>17</td>
-        <td>17</td>
-        <td>0</td>
-        <td>20.5</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#ed5d3f3ac6366ab10312847bde2e286beab021c1" class="src_link" title="app/models/branch.rb">app/models/branch.rb</a></td>
-        <td class="green strong">93.33 %</td>
-        <td>35</td>
-        <td>15</td>
-        <td>14</td>
-        <td>1</td>
-        <td>18.5</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#8b4eb23e53d26cf34925d1dbc676b571dc2a4393" class="src_link" title="app/models/camp.rb">app/models/camp.rb</a></td>
-        <td class="green strong">98.08 %</td>
-        <td>86</td>
-        <td>52</td>
-        <td>51</td>
-        <td>1</td>
-        <td>15.4</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#44adeff6576384eba800d955df44efd0c11dc996" class="src_link" title="app/models/camp_badge.rb">app/models/camp_badge.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>20</td>
-        <td>8</td>
-        <td>8</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#0e169678383e26fa6654058413907bd812abd732" class="src_link" title="app/models/camp_counselor.rb">app/models/camp_counselor.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>26</td>
-        <td>16</td>
-        <td>16</td>
-        <td>0</td>
-        <td>2.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#63034dbee34ab7d169cfde08484113f6f8ecbcfb" class="src_link" title="app/models/camper.rb">app/models/camper.rb</a></td>
-        <td class="green strong">97.22 %</td>
-        <td>63</td>
-        <td>36</td>
-        <td>35</td>
-        <td>1</td>
-        <td>9.7</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#8e1c27b325b19f8ba9a74e6deb9f19aa357096ac" class="src_link" title="app/models/camper_camp_badge.rb">app/models/camper_camp_badge.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>46</td>
-        <td>22</td>
-        <td>22</td>
-        <td>0</td>
-        <td>13.5</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#9bc999b076eaeb24799433287f388b5333e869b9" class="src_link" title="app/models/camper_camp_badge_task.rb">app/models/camper_camp_badge_task.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>47</td>
-        <td>23</td>
-        <td>23</td>
-        <td>0</td>
-        <td>5.6</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#70827ba45ce4f0c010c550d4b90861e1a77e0fec" class="src_link" title="app/models/camper_registration.rb">app/models/camper_registration.rb</a></td>
-        <td class="green strong">94.12 %</td>
-        <td>32</td>
-        <td>17</td>
-        <td>16</td>
-        <td>1</td>
-        <td>2.1</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#6b4086a7ee3356cfa06bc6679581f6e97da70907" class="src_link" title="app/models/counselor.rb">app/models/counselor.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>32</td>
-        <td>18</td>
-        <td>18</td>
-        <td>0</td>
-        <td>2.7</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#56e6b66b4ea59be55c70e8b8120c583f0d9ac5e2" class="src_link" title="app/models/counselor_camp_badge.rb">app/models/counselor_camp_badge.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>16</td>
-        <td>4</td>
-        <td>4</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#b5e92c50d7fc7be92e3d7d78d8739b07e56549e2" class="src_link" title="app/models/location.rb">app/models/location.rb</a></td>
-        <td class="green strong">93.75 %</td>
-        <td>36</td>
-        <td>16</td>
-        <td>15</td>
-        <td>1</td>
-        <td>19.4</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#9a7ef1ae8bcf114d9f6332d490e0ced81366f07d" class="src_link" title="app/models/parent.rb">app/models/parent.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>30</td>
-        <td>15</td>
-        <td>15</td>
-        <td>0</td>
-        <td>3.1</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#612927d4e98b7960b4d0c06a04342bd129142ac4" class="src_link" title="app/models/skill.rb">app/models/skill.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>34</td>
-        <td>14</td>
-        <td>14</td>
-        <td>0</td>
-        <td>8.7</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#a6848f2736afe8b2aecdd95f4dc435e5e997da54" class="src_link" title="app/models/task.rb">app/models/task.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>30</td>
-        <td>12</td>
-        <td>12</td>
-        <td>0</td>
-        <td>14.3</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#bd92babe1d65ee093d9607040994837d6b2e2344" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
-        <td class="green strong">96.15 %</td>
-        <td>49</td>
-        <td>26</td>
-        <td>25</td>
-        <td>1</td>
-        <td>62.4</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#6c8e5c9e82387bf293a4d9a08e98798c20c1c2e6" class="src_link" title="app/services/importer.rb">app/services/importer.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>111</td>
-        <td>95</td>
-        <td>0</td>
-        <td>95</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#7e9cb890d58a4f71849bdea89ccf200d3ae938f9" class="src_link" title="app/services/student.rb">app/services/student.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>14</td>
-        <td>12</td>
-        <td>0</td>
-        <td>12</td>
-        <td>0.0</td>
-      </tr>
-      
-    </tbody>
-  </table>
-</div>
+            </h2>
+            <a name="AllFiles"></a>
+            <div>
+                <b>64</b> files in total.
+                <b>1461</b> relevant lines.
+                <span class="green"><b>334</b> lines covered</span> and
+                <span class="red"><b>1127</b> lines missed </span>
+            </div>
+            <table class="file_list">
+                <thead>
+                <tr>
+                    <th>File</th>
+                    <th>% covered</th>
+                    <th>Lines</th>
+                    <th>Relevant Lines</th>
+                    <th>Lines covered</th>
+                    <th>Lines missed</th>
+                    <th>Avg. Hits / Line</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#1bcbf7f2354cb82c0d93b3341c242933e3b827e7"
+                                          title="app/channels/application_cable/channel.rb">app/channels/application_cable/channel.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#24b045e1ff6fc53eeb187a2996340736c65d37b3"
+                                          title="app/channels/application_cable/connection.rb">app/channels/application_cable/connection.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#2874aaac538bc8cdaca790204447e7a1ae087bea"
+                                          title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>21</td>
+                    <td>15</td>
+                    <td>0</td>
+                    <td>15</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#59d2966f7d5ef2a2d20b991fa1ba33843d3979ea"
+                                          title="app/controllers/assign_milestone_controller.rb">app/controllers/assign_milestone_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>27</td>
+                    <td>21</td>
+                    <td>0</td>
+                    <td>21</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#706e600d6b4ef064b4c40c3624e45e8746a20c7c"
+                                          title="app/controllers/badges_controller.rb">app/controllers/badges_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>80</td>
+                    <td>55</td>
+                    <td>0</td>
+                    <td>55</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#f5abe50059f0ad79c342cbd263c2b11c34a40a7d"
+                                          title="app/controllers/branches_controller.rb">app/controllers/branches_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>77</td>
+                    <td>52</td>
+                    <td>0</td>
+                    <td>52</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#0a12220f18a00a0c9da2fc2e3b33064304597a09"
+                                          title="app/controllers/camp_badges_controller.rb">app/controllers/camp_badges_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>92</td>
+                    <td>67</td>
+                    <td>0</td>
+                    <td>67</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#8c69b5334d5205ca71f52855e1a72f5a749db718"
+                                          title="app/controllers/camp_counselors_controller.rb">app/controllers/camp_counselors_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>93</td>
+                    <td>53</td>
+                    <td>0</td>
+                    <td>53</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#90968b32c4fb60557016f2482991ae5fa3d674c3"
+                                          title="app/controllers/camper_camp_badge_tasks_controller.rb">app/controllers/camper_camp_badge_tasks_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>75</td>
+                    <td>50</td>
+                    <td>0</td>
+                    <td>50</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#c54061d5179f124ab899805ed1475357421930dc"
+                                          title="app/controllers/camper_camp_badges_controller.rb">app/controllers/camper_camp_badges_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>80</td>
+                    <td>53</td>
+                    <td>0</td>
+                    <td>53</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#47953c8153b117cdc84f4412906d8caa57a04162"
+                                          title="app/controllers/camper_registrations_controller.rb">app/controllers/camper_registrations_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>72</td>
+                    <td>47</td>
+                    <td>0</td>
+                    <td>47</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#1d7a24a769501cd7b91af8dfe2bee8918d4c150a"
+                                          title="app/controllers/campers_controller.rb">app/controllers/campers_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>90</td>
+                    <td>65</td>
+                    <td>0</td>
+                    <td>65</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#ecbaf29195902196c1dd181eb75e8326587fca7d"
+                                          title="app/controllers/camps_controller.rb">app/controllers/camps_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>87</td>
+                    <td>60</td>
+                    <td>0</td>
+                    <td>60</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#fce7c6e24bfb705163f5758f6fd40f05577b9f5f"
+                                          title="app/controllers/counselor_camp_badges_controller.rb">app/controllers/counselor_camp_badges_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>73</td>
+                    <td>49</td>
+                    <td>0</td>
+                    <td>49</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#3245384c72abd774f71bc3c7c629417a19822944"
+                                          title="app/controllers/counselors_controller.rb">app/controllers/counselors_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>86</td>
+                    <td>59</td>
+                    <td>0</td>
+                    <td>59</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#fc1d05bd68c58861eef3665e94f0c11ea11f3946"
+                                          title="app/controllers/home_controller.rb">app/controllers/home_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>16</td>
+                    <td>16</td>
+                    <td>0</td>
+                    <td>16</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#4d8c85ab62233e24264dd80821c048c879788966"
+                                          title="app/controllers/locations_controller.rb">app/controllers/locations_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>75</td>
+                    <td>49</td>
+                    <td>0</td>
+                    <td>49</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#2f58d8df7c7625851d90b2de61c8938a41ef2ed6"
+                                          title="app/controllers/parents_controller.rb">app/controllers/parents_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>76</td>
+                    <td>51</td>
+                    <td>0</td>
+                    <td>51</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#742e689099c4f55299f5f51c29535547893f7891"
+                                          title="app/controllers/sessions_controller.rb">app/controllers/sessions_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>20</td>
+                    <td>18</td>
+                    <td>0</td>
+                    <td>18</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#06151f5a25e3bec616474f418b5f351c94c50a35"
+                                          title="app/controllers/skills_controller.rb">app/controllers/skills_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>76</td>
+                    <td>51</td>
+                    <td>0</td>
+                    <td>51</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#be31d727363cbe27ec538c2d1155ad5093c6aef4"
+                                          title="app/controllers/tasks_controller.rb">app/controllers/tasks_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>71</td>
+                    <td>45</td>
+                    <td>0</td>
+                    <td>45</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#86845895bceb0505f53b340478373eb0720318e2"
+                                          title="app/controllers/users_controller.rb">app/controllers/users_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>93</td>
+                    <td>69</td>
+                    <td>0</td>
+                    <td>69</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#b6baec91f865be058e1f00c09f420f19a8272864"
+                                          title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#6d6700356d6ef2d6ee156159d359ea7bcb35fd59"
+                                          title="app/helpers/assign_milestone_helper.rb">app/helpers/assign_milestone_helper.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>10</td>
+                    <td>7</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#81bfba9e73fc6b83bd2dd742e1f4bd0a14cefd46"
+                                          title="app/helpers/badges_helper.rb">app/helpers/badges_helper.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#683e36138ebe134b27827db33a471c4641cbc2b4"
+                                          title="app/helpers/branches_helper.rb">app/helpers/branches_helper.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#bb8b6bba49b2e888884ce3c374648ec8aa18972b"
+                                          title="app/helpers/camp_badges_helper.rb">app/helpers/camp_badges_helper.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#efac7b12125ff0a97b7f371e2a9c76150f32b48e"
+                                          title="app/helpers/camp_counselors_helper.rb">app/helpers/camp_counselors_helper.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#ffb321b5982f2f8afdbb878748a870d0a3731ea4"
+                                          title="app/helpers/camper_camp_badge_tasks_helper.rb">app/helpers/camper_camp_badge_tasks_helper.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#e7e03db045939370ab99003265a6c3cf81ec1e21"
+                                          title="app/helpers/camper_camp_badges_helper.rb">app/helpers/camper_camp_badges_helper.rb</a>
+                    </td>
+                    <td class="red strong">33.33 %</td>
+                    <td>10</td>
+                    <td>6</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>0.3</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#44af896624fb3700a7b2d62de0c08649f3022ac7"
+                                          title="app/helpers/camper_registrations_helper.rb">app/helpers/camper_registrations_helper.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#b7e91500706b2376fa1b16055d2ef922618224dc"
+                                          title="app/helpers/campers_helper.rb">app/helpers/campers_helper.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#0ec9e4237d8a6389e2ea38c12aa0a462dc1d2e3a"
+                                          title="app/helpers/camps_helper.rb">app/helpers/camps_helper.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#f7165e923aa9a72405279e79426d9ac85c7d91eb"
+                                          title="app/helpers/counselor_camp_badges_helper.rb">app/helpers/counselor_camp_badges_helper.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#24ff42dd245b102678607731434f0b94b5c58198"
+                                          title="app/helpers/counselors_helper.rb">app/helpers/counselors_helper.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#5d2ae1b69daae9ed72aa5bbfbbb769c0c30c8eda"
+                                          title="app/helpers/home_helper.rb">app/helpers/home_helper.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#f2710348eaa8173275d4dce74d9763e010a50e9a"
+                                          title="app/helpers/locations_helper.rb">app/helpers/locations_helper.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#cb4f4223738512e26cb7cf950fa0a0007d6fb0aa"
+                                          title="app/helpers/parents_helper.rb">app/helpers/parents_helper.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#1ae9052f0755753e85eefe1a453ebe20a54b185b"
+                                          title="app/helpers/sessions_helper.rb">app/helpers/sessions_helper.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#620e54fe42db71bf6ff85250b9992ba8704bc4f5"
+                                          title="app/helpers/skills_helper.rb">app/helpers/skills_helper.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#5d3649506ebcb0b38f816889020f4709f329056a"
+                                          title="app/helpers/tasks_helper.rb">app/helpers/tasks_helper.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#0d6e446aa093a7967c362e6834125e738a2af1ac"
+                                          title="app/helpers/users_helper.rb">app/helpers/users_helper.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#86795ba6ce26cd309f8400f57c32ccf5df28bf76"
+                                          title="app/jobs/application_job.rb">app/jobs/application_job.rb</a></td>
+                    <td class="red strong">0.0 %</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#02b91061a51f3ac06ca0c0d449530a573358e0f1"
+                                          title="app/mailers/application_mailer.rb">app/mailers/application_mailer.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#d5ddb0214ce5e7fbe3fadc3db12d15d34efcbe09"
+                                          title="app/models/ability.rb">app/models/ability.rb</a></td>
+                    <td class="red strong">0.0 %</td>
+                    <td>77</td>
+                    <td>51</td>
+                    <td>0</td>
+                    <td>51</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#f9dc112b4ff50dc643a71f91225322368f519a17"
+                                          title="app/models/application_record.rb">app/models/application_record.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#8abdbd38381557c078768535060cf599aa2d3e61"
+                                          title="app/models/badge.rb">app/models/badge.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>36</td>
+                    <td>17</td>
+                    <td>17</td>
+                    <td>0</td>
+                    <td>20.5</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#ed5d3f3ac6366ab10312847bde2e286beab021c1"
+                                          title="app/models/branch.rb">app/models/branch.rb</a></td>
+                    <td class="green strong">93.33 %</td>
+                    <td>35</td>
+                    <td>15</td>
+                    <td>14</td>
+                    <td>1</td>
+                    <td>18.5</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#8b4eb23e53d26cf34925d1dbc676b571dc2a4393"
+                                          title="app/models/camp.rb">app/models/camp.rb</a></td>
+                    <td class="green strong">98.08 %</td>
+                    <td>86</td>
+                    <td>52</td>
+                    <td>51</td>
+                    <td>1</td>
+                    <td>15.4</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#44adeff6576384eba800d955df44efd0c11dc996"
+                                          title="app/models/camp_badge.rb">app/models/camp_badge.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>20</td>
+                    <td>8</td>
+                    <td>8</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#0e169678383e26fa6654058413907bd812abd732"
+                                          title="app/models/camp_counselor.rb">app/models/camp_counselor.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>26</td>
+                    <td>16</td>
+                    <td>16</td>
+                    <td>0</td>
+                    <td>2.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#63034dbee34ab7d169cfde08484113f6f8ecbcfb"
+                                          title="app/models/camper.rb">app/models/camper.rb</a></td>
+                    <td class="green strong">97.22 %</td>
+                    <td>63</td>
+                    <td>36</td>
+                    <td>35</td>
+                    <td>1</td>
+                    <td>9.7</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#8e1c27b325b19f8ba9a74e6deb9f19aa357096ac"
+                                          title="app/models/camper_camp_badge.rb">app/models/camper_camp_badge.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>46</td>
+                    <td>22</td>
+                    <td>22</td>
+                    <td>0</td>
+                    <td>13.5</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#9bc999b076eaeb24799433287f388b5333e869b9"
+                                          title="app/models/camper_camp_badge_task.rb">app/models/camper_camp_badge_task.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>47</td>
+                    <td>23</td>
+                    <td>23</td>
+                    <td>0</td>
+                    <td>5.6</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#70827ba45ce4f0c010c550d4b90861e1a77e0fec"
+                                          title="app/models/camper_registration.rb">app/models/camper_registration.rb</a>
+                    </td>
+                    <td class="green strong">94.12 %</td>
+                    <td>32</td>
+                    <td>17</td>
+                    <td>16</td>
+                    <td>1</td>
+                    <td>2.1</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#6b4086a7ee3356cfa06bc6679581f6e97da70907"
+                                          title="app/models/counselor.rb">app/models/counselor.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>32</td>
+                    <td>18</td>
+                    <td>18</td>
+                    <td>0</td>
+                    <td>2.7</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#56e6b66b4ea59be55c70e8b8120c583f0d9ac5e2"
+                                          title="app/models/counselor_camp_badge.rb">app/models/counselor_camp_badge.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>16</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#b5e92c50d7fc7be92e3d7d78d8739b07e56549e2"
+                                          title="app/models/location.rb">app/models/location.rb</a></td>
+                    <td class="green strong">93.75 %</td>
+                    <td>36</td>
+                    <td>16</td>
+                    <td>15</td>
+                    <td>1</td>
+                    <td>19.4</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#9a7ef1ae8bcf114d9f6332d490e0ced81366f07d"
+                                          title="app/models/parent.rb">app/models/parent.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>30</td>
+                    <td>15</td>
+                    <td>15</td>
+                    <td>0</td>
+                    <td>3.1</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#612927d4e98b7960b4d0c06a04342bd129142ac4"
+                                          title="app/models/skill.rb">app/models/skill.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>34</td>
+                    <td>14</td>
+                    <td>14</td>
+                    <td>0</td>
+                    <td>8.7</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#a6848f2736afe8b2aecdd95f4dc435e5e997da54"
+                                          title="app/models/task.rb">app/models/task.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>30</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>0</td>
+                    <td>14.3</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#bd92babe1d65ee093d9607040994837d6b2e2344"
+                                          title="app/models/user.rb">app/models/user.rb</a></td>
+                    <td class="green strong">96.15 %</td>
+                    <td>49</td>
+                    <td>26</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>62.4</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#6c8e5c9e82387bf293a4d9a08e98798c20c1c2e6"
+                                          title="app/services/importer.rb">app/services/importer.rb</a></td>
+                    <td class="red strong">0.0 %</td>
+                    <td>111</td>
+                    <td>95</td>
+                    <td>0</td>
+                    <td>95</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#7e9cb890d58a4f71849bdea89ccf200d3ae938f9"
+                                          title="app/services/student.rb">app/services/student.rb</a></td>
+                    <td class="red strong">0.0 %</td>
+                    <td>14</td>
+                    <td>12</td>
+                    <td>0</td>
+                    <td>12</td>
+                    <td>0.0</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
 
 
-        
-          <div class="file_list_container" id="Controllers">
-  <h2>
-    <span class="group_name">Controllers</span>
-    (<span class="covered_percent"><span class="red">0.0%</span></span>
-     covered at
-     <span class="covered_strength">
+        <div class="file_list_container" id="Controllers">
+            <h2>
+                <span class="group_name">Controllers</span>
+                (<span class="covered_percent"><span class="red">0.0%</span></span>
+                covered at
+                <span class="covered_strength">
        <span class="red">
          0.0
        </span>
     </span> hits/line)
-  </h2>
-  <a name="Controllers"></a>
-  <div>
-    <b>20</b> files in total.
-    <b>945</b> relevant lines. 
-    <span class="green"><b>0</b> lines covered</span> and
-    <span class="red"><b>945</b> lines missed </span>
-  </div>
-  <table class="file_list">
-    <thead>
-      <tr>
-        <th>File</th>
-        <th>% covered</th>
-        <th>Lines</th>
-        <th>Relevant Lines</th>
-        <th>Lines covered</th>
-        <th>Lines missed</th>
-        <th>Avg. Hits / Line</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-      <tr>
-        <td class="strong"><a href="#2874aaac538bc8cdaca790204447e7a1ae087bea" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>21</td>
-        <td>15</td>
-        <td>0</td>
-        <td>15</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#59d2966f7d5ef2a2d20b991fa1ba33843d3979ea" class="src_link" title="app/controllers/assign_milestone_controller.rb">app/controllers/assign_milestone_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>27</td>
-        <td>21</td>
-        <td>0</td>
-        <td>21</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#706e600d6b4ef064b4c40c3624e45e8746a20c7c" class="src_link" title="app/controllers/badges_controller.rb">app/controllers/badges_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>80</td>
-        <td>55</td>
-        <td>0</td>
-        <td>55</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#f5abe50059f0ad79c342cbd263c2b11c34a40a7d" class="src_link" title="app/controllers/branches_controller.rb">app/controllers/branches_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>77</td>
-        <td>52</td>
-        <td>0</td>
-        <td>52</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#0a12220f18a00a0c9da2fc2e3b33064304597a09" class="src_link" title="app/controllers/camp_badges_controller.rb">app/controllers/camp_badges_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>92</td>
-        <td>67</td>
-        <td>0</td>
-        <td>67</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#8c69b5334d5205ca71f52855e1a72f5a749db718" class="src_link" title="app/controllers/camp_counselors_controller.rb">app/controllers/camp_counselors_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>93</td>
-        <td>53</td>
-        <td>0</td>
-        <td>53</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#90968b32c4fb60557016f2482991ae5fa3d674c3" class="src_link" title="app/controllers/camper_camp_badge_tasks_controller.rb">app/controllers/camper_camp_badge_tasks_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>75</td>
-        <td>50</td>
-        <td>0</td>
-        <td>50</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#c54061d5179f124ab899805ed1475357421930dc" class="src_link" title="app/controllers/camper_camp_badges_controller.rb">app/controllers/camper_camp_badges_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>80</td>
-        <td>53</td>
-        <td>0</td>
-        <td>53</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#47953c8153b117cdc84f4412906d8caa57a04162" class="src_link" title="app/controllers/camper_registrations_controller.rb">app/controllers/camper_registrations_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>72</td>
-        <td>47</td>
-        <td>0</td>
-        <td>47</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#1d7a24a769501cd7b91af8dfe2bee8918d4c150a" class="src_link" title="app/controllers/campers_controller.rb">app/controllers/campers_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>90</td>
-        <td>65</td>
-        <td>0</td>
-        <td>65</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#ecbaf29195902196c1dd181eb75e8326587fca7d" class="src_link" title="app/controllers/camps_controller.rb">app/controllers/camps_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>87</td>
-        <td>60</td>
-        <td>0</td>
-        <td>60</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#fce7c6e24bfb705163f5758f6fd40f05577b9f5f" class="src_link" title="app/controllers/counselor_camp_badges_controller.rb">app/controllers/counselor_camp_badges_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>73</td>
-        <td>49</td>
-        <td>0</td>
-        <td>49</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#3245384c72abd774f71bc3c7c629417a19822944" class="src_link" title="app/controllers/counselors_controller.rb">app/controllers/counselors_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>86</td>
-        <td>59</td>
-        <td>0</td>
-        <td>59</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#fc1d05bd68c58861eef3665e94f0c11ea11f3946" class="src_link" title="app/controllers/home_controller.rb">app/controllers/home_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>16</td>
-        <td>16</td>
-        <td>0</td>
-        <td>16</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#4d8c85ab62233e24264dd80821c048c879788966" class="src_link" title="app/controllers/locations_controller.rb">app/controllers/locations_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>75</td>
-        <td>49</td>
-        <td>0</td>
-        <td>49</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#2f58d8df7c7625851d90b2de61c8938a41ef2ed6" class="src_link" title="app/controllers/parents_controller.rb">app/controllers/parents_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>76</td>
-        <td>51</td>
-        <td>0</td>
-        <td>51</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#742e689099c4f55299f5f51c29535547893f7891" class="src_link" title="app/controllers/sessions_controller.rb">app/controllers/sessions_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>20</td>
-        <td>18</td>
-        <td>0</td>
-        <td>18</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#06151f5a25e3bec616474f418b5f351c94c50a35" class="src_link" title="app/controllers/skills_controller.rb">app/controllers/skills_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>76</td>
-        <td>51</td>
-        <td>0</td>
-        <td>51</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#be31d727363cbe27ec538c2d1155ad5093c6aef4" class="src_link" title="app/controllers/tasks_controller.rb">app/controllers/tasks_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>71</td>
-        <td>45</td>
-        <td>0</td>
-        <td>45</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#86845895bceb0505f53b340478373eb0720318e2" class="src_link" title="app/controllers/users_controller.rb">app/controllers/users_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>93</td>
-        <td>69</td>
-        <td>0</td>
-        <td>69</td>
-        <td>0.0</td>
-      </tr>
-      
-    </tbody>
-  </table>
-</div>
+            </h2>
+            <a name="Controllers"></a>
+            <div>
+                <b>20</b> files in total.
+                <b>945</b> relevant lines.
+                <span class="green"><b>0</b> lines covered</span> and
+                <span class="red"><b>945</b> lines missed </span>
+            </div>
+            <table class="file_list">
+                <thead>
+                <tr>
+                    <th>File</th>
+                    <th>% covered</th>
+                    <th>Lines</th>
+                    <th>Relevant Lines</th>
+                    <th>Lines covered</th>
+                    <th>Lines missed</th>
+                    <th>Avg. Hits / Line</th>
+                </tr>
+                </thead>
+                <tbody>
 
-        
-          <div class="file_list_container" id="Channels">
-  <h2>
-    <span class="group_name">Channels</span>
-    (<span class="covered_percent"><span class="red">0.0%</span></span>
-     covered at
-     <span class="covered_strength">
+                <tr>
+                    <td class="strong"><a class="src_link" href="#2874aaac538bc8cdaca790204447e7a1ae087bea"
+                                          title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>21</td>
+                    <td>15</td>
+                    <td>0</td>
+                    <td>15</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#59d2966f7d5ef2a2d20b991fa1ba33843d3979ea"
+                                          title="app/controllers/assign_milestone_controller.rb">app/controllers/assign_milestone_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>27</td>
+                    <td>21</td>
+                    <td>0</td>
+                    <td>21</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#706e600d6b4ef064b4c40c3624e45e8746a20c7c"
+                                          title="app/controllers/badges_controller.rb">app/controllers/badges_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>80</td>
+                    <td>55</td>
+                    <td>0</td>
+                    <td>55</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#f5abe50059f0ad79c342cbd263c2b11c34a40a7d"
+                                          title="app/controllers/branches_controller.rb">app/controllers/branches_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>77</td>
+                    <td>52</td>
+                    <td>0</td>
+                    <td>52</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#0a12220f18a00a0c9da2fc2e3b33064304597a09"
+                                          title="app/controllers/camp_badges_controller.rb">app/controllers/camp_badges_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>92</td>
+                    <td>67</td>
+                    <td>0</td>
+                    <td>67</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#8c69b5334d5205ca71f52855e1a72f5a749db718"
+                                          title="app/controllers/camp_counselors_controller.rb">app/controllers/camp_counselors_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>93</td>
+                    <td>53</td>
+                    <td>0</td>
+                    <td>53</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#90968b32c4fb60557016f2482991ae5fa3d674c3"
+                                          title="app/controllers/camper_camp_badge_tasks_controller.rb">app/controllers/camper_camp_badge_tasks_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>75</td>
+                    <td>50</td>
+                    <td>0</td>
+                    <td>50</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#c54061d5179f124ab899805ed1475357421930dc"
+                                          title="app/controllers/camper_camp_badges_controller.rb">app/controllers/camper_camp_badges_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>80</td>
+                    <td>53</td>
+                    <td>0</td>
+                    <td>53</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#47953c8153b117cdc84f4412906d8caa57a04162"
+                                          title="app/controllers/camper_registrations_controller.rb">app/controllers/camper_registrations_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>72</td>
+                    <td>47</td>
+                    <td>0</td>
+                    <td>47</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#1d7a24a769501cd7b91af8dfe2bee8918d4c150a"
+                                          title="app/controllers/campers_controller.rb">app/controllers/campers_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>90</td>
+                    <td>65</td>
+                    <td>0</td>
+                    <td>65</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#ecbaf29195902196c1dd181eb75e8326587fca7d"
+                                          title="app/controllers/camps_controller.rb">app/controllers/camps_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>87</td>
+                    <td>60</td>
+                    <td>0</td>
+                    <td>60</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#fce7c6e24bfb705163f5758f6fd40f05577b9f5f"
+                                          title="app/controllers/counselor_camp_badges_controller.rb">app/controllers/counselor_camp_badges_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>73</td>
+                    <td>49</td>
+                    <td>0</td>
+                    <td>49</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#3245384c72abd774f71bc3c7c629417a19822944"
+                                          title="app/controllers/counselors_controller.rb">app/controllers/counselors_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>86</td>
+                    <td>59</td>
+                    <td>0</td>
+                    <td>59</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#fc1d05bd68c58861eef3665e94f0c11ea11f3946"
+                                          title="app/controllers/home_controller.rb">app/controllers/home_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>16</td>
+                    <td>16</td>
+                    <td>0</td>
+                    <td>16</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#4d8c85ab62233e24264dd80821c048c879788966"
+                                          title="app/controllers/locations_controller.rb">app/controllers/locations_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>75</td>
+                    <td>49</td>
+                    <td>0</td>
+                    <td>49</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#2f58d8df7c7625851d90b2de61c8938a41ef2ed6"
+                                          title="app/controllers/parents_controller.rb">app/controllers/parents_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>76</td>
+                    <td>51</td>
+                    <td>0</td>
+                    <td>51</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#742e689099c4f55299f5f51c29535547893f7891"
+                                          title="app/controllers/sessions_controller.rb">app/controllers/sessions_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>20</td>
+                    <td>18</td>
+                    <td>0</td>
+                    <td>18</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#06151f5a25e3bec616474f418b5f351c94c50a35"
+                                          title="app/controllers/skills_controller.rb">app/controllers/skills_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>76</td>
+                    <td>51</td>
+                    <td>0</td>
+                    <td>51</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#be31d727363cbe27ec538c2d1155ad5093c6aef4"
+                                          title="app/controllers/tasks_controller.rb">app/controllers/tasks_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>71</td>
+                    <td>45</td>
+                    <td>0</td>
+                    <td>45</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#86845895bceb0505f53b340478373eb0720318e2"
+                                          title="app/controllers/users_controller.rb">app/controllers/users_controller.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>93</td>
+                    <td>69</td>
+                    <td>0</td>
+                    <td>69</td>
+                    <td>0.0</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="file_list_container" id="Channels">
+            <h2>
+                <span class="group_name">Channels</span>
+                (<span class="covered_percent"><span class="red">0.0%</span></span>
+                covered at
+                <span class="covered_strength">
        <span class="red">
          0.0
        </span>
     </span> hits/line)
-  </h2>
-  <a name="Channels"></a>
-  <div>
-    <b>2</b> files in total.
-    <b>8</b> relevant lines. 
-    <span class="green"><b>0</b> lines covered</span> and
-    <span class="red"><b>8</b> lines missed </span>
-  </div>
-  <table class="file_list">
-    <thead>
-      <tr>
-        <th>File</th>
-        <th>% covered</th>
-        <th>Lines</th>
-        <th>Relevant Lines</th>
-        <th>Lines covered</th>
-        <th>Lines missed</th>
-        <th>Avg. Hits / Line</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-      <tr>
-        <td class="strong"><a href="#1bcbf7f2354cb82c0d93b3341c242933e3b827e7" class="src_link" title="app/channels/application_cable/channel.rb">app/channels/application_cable/channel.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>4</td>
-        <td>4</td>
-        <td>0</td>
-        <td>4</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#24b045e1ff6fc53eeb187a2996340736c65d37b3" class="src_link" title="app/channels/application_cable/connection.rb">app/channels/application_cable/connection.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>4</td>
-        <td>4</td>
-        <td>0</td>
-        <td>4</td>
-        <td>0.0</td>
-      </tr>
-      
-    </tbody>
-  </table>
-</div>
+            </h2>
+            <a name="Channels"></a>
+            <div>
+                <b>2</b> files in total.
+                <b>8</b> relevant lines.
+                <span class="green"><b>0</b> lines covered</span> and
+                <span class="red"><b>8</b> lines missed </span>
+            </div>
+            <table class="file_list">
+                <thead>
+                <tr>
+                    <th>File</th>
+                    <th>% covered</th>
+                    <th>Lines</th>
+                    <th>Relevant Lines</th>
+                    <th>Lines covered</th>
+                    <th>Lines missed</th>
+                    <th>Avg. Hits / Line</th>
+                </tr>
+                </thead>
+                <tbody>
 
-        
-          <div class="file_list_container" id="Models">
-  <h2>
-    <span class="group_name">Models</span>
-    (<span class="covered_percent"><span class="yellow">84.34%</span></span>
-     covered at
-     <span class="covered_strength">
+                <tr>
+                    <td class="strong"><a class="src_link" href="#1bcbf7f2354cb82c0d93b3341c242933e3b827e7"
+                                          title="app/channels/application_cable/channel.rb">app/channels/application_cable/channel.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#24b045e1ff6fc53eeb187a2996340736c65d37b3"
+                                          title="app/channels/application_cable/connection.rb">app/channels/application_cable/connection.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>0.0</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="file_list_container" id="Models">
+            <h2>
+                <span class="group_name">Models</span>
+                (<span class="covered_percent"><span class="yellow">84.34%</span></span>
+                covered at
+                <span class="covered_strength">
        <span class="green">
          12.65
        </span>
     </span> hits/line)
-  </h2>
-  <a name="Models"></a>
-  <div>
-    <b>18</b> files in total.
-    <b>364</b> relevant lines. 
-    <span class="green"><b>307</b> lines covered</span> and
-    <span class="red"><b>57</b> lines missed </span>
-  </div>
-  <table class="file_list">
-    <thead>
-      <tr>
-        <th>File</th>
-        <th>% covered</th>
-        <th>Lines</th>
-        <th>Relevant Lines</th>
-        <th>Lines covered</th>
-        <th>Lines missed</th>
-        <th>Avg. Hits / Line</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-      <tr>
-        <td class="strong"><a href="#d5ddb0214ce5e7fbe3fadc3db12d15d34efcbe09" class="src_link" title="app/models/ability.rb">app/models/ability.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>77</td>
-        <td>51</td>
-        <td>0</td>
-        <td>51</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#f9dc112b4ff50dc643a71f91225322368f519a17" class="src_link" title="app/models/application_record.rb">app/models/application_record.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>3</td>
-        <td>2</td>
-        <td>2</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#8abdbd38381557c078768535060cf599aa2d3e61" class="src_link" title="app/models/badge.rb">app/models/badge.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>36</td>
-        <td>17</td>
-        <td>17</td>
-        <td>0</td>
-        <td>20.5</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#ed5d3f3ac6366ab10312847bde2e286beab021c1" class="src_link" title="app/models/branch.rb">app/models/branch.rb</a></td>
-        <td class="green strong">93.33 %</td>
-        <td>35</td>
-        <td>15</td>
-        <td>14</td>
-        <td>1</td>
-        <td>18.5</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#8b4eb23e53d26cf34925d1dbc676b571dc2a4393" class="src_link" title="app/models/camp.rb">app/models/camp.rb</a></td>
-        <td class="green strong">98.08 %</td>
-        <td>86</td>
-        <td>52</td>
-        <td>51</td>
-        <td>1</td>
-        <td>15.4</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#44adeff6576384eba800d955df44efd0c11dc996" class="src_link" title="app/models/camp_badge.rb">app/models/camp_badge.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>20</td>
-        <td>8</td>
-        <td>8</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#0e169678383e26fa6654058413907bd812abd732" class="src_link" title="app/models/camp_counselor.rb">app/models/camp_counselor.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>26</td>
-        <td>16</td>
-        <td>16</td>
-        <td>0</td>
-        <td>2.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#63034dbee34ab7d169cfde08484113f6f8ecbcfb" class="src_link" title="app/models/camper.rb">app/models/camper.rb</a></td>
-        <td class="green strong">97.22 %</td>
-        <td>63</td>
-        <td>36</td>
-        <td>35</td>
-        <td>1</td>
-        <td>9.7</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#8e1c27b325b19f8ba9a74e6deb9f19aa357096ac" class="src_link" title="app/models/camper_camp_badge.rb">app/models/camper_camp_badge.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>46</td>
-        <td>22</td>
-        <td>22</td>
-        <td>0</td>
-        <td>13.5</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#9bc999b076eaeb24799433287f388b5333e869b9" class="src_link" title="app/models/camper_camp_badge_task.rb">app/models/camper_camp_badge_task.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>47</td>
-        <td>23</td>
-        <td>23</td>
-        <td>0</td>
-        <td>5.6</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#70827ba45ce4f0c010c550d4b90861e1a77e0fec" class="src_link" title="app/models/camper_registration.rb">app/models/camper_registration.rb</a></td>
-        <td class="green strong">94.12 %</td>
-        <td>32</td>
-        <td>17</td>
-        <td>16</td>
-        <td>1</td>
-        <td>2.1</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#6b4086a7ee3356cfa06bc6679581f6e97da70907" class="src_link" title="app/models/counselor.rb">app/models/counselor.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>32</td>
-        <td>18</td>
-        <td>18</td>
-        <td>0</td>
-        <td>2.7</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#56e6b66b4ea59be55c70e8b8120c583f0d9ac5e2" class="src_link" title="app/models/counselor_camp_badge.rb">app/models/counselor_camp_badge.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>16</td>
-        <td>4</td>
-        <td>4</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#b5e92c50d7fc7be92e3d7d78d8739b07e56549e2" class="src_link" title="app/models/location.rb">app/models/location.rb</a></td>
-        <td class="green strong">93.75 %</td>
-        <td>36</td>
-        <td>16</td>
-        <td>15</td>
-        <td>1</td>
-        <td>19.4</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#9a7ef1ae8bcf114d9f6332d490e0ced81366f07d" class="src_link" title="app/models/parent.rb">app/models/parent.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>30</td>
-        <td>15</td>
-        <td>15</td>
-        <td>0</td>
-        <td>3.1</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#612927d4e98b7960b4d0c06a04342bd129142ac4" class="src_link" title="app/models/skill.rb">app/models/skill.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>34</td>
-        <td>14</td>
-        <td>14</td>
-        <td>0</td>
-        <td>8.7</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#a6848f2736afe8b2aecdd95f4dc435e5e997da54" class="src_link" title="app/models/task.rb">app/models/task.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>30</td>
-        <td>12</td>
-        <td>12</td>
-        <td>0</td>
-        <td>14.3</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#bd92babe1d65ee093d9607040994837d6b2e2344" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
-        <td class="green strong">96.15 %</td>
-        <td>49</td>
-        <td>26</td>
-        <td>25</td>
-        <td>1</td>
-        <td>62.4</td>
-      </tr>
-      
-    </tbody>
-  </table>
-</div>
+            </h2>
+            <a name="Models"></a>
+            <div>
+                <b>18</b> files in total.
+                <b>364</b> relevant lines.
+                <span class="green"><b>307</b> lines covered</span> and
+                <span class="red"><b>57</b> lines missed </span>
+            </div>
+            <table class="file_list">
+                <thead>
+                <tr>
+                    <th>File</th>
+                    <th>% covered</th>
+                    <th>Lines</th>
+                    <th>Relevant Lines</th>
+                    <th>Lines covered</th>
+                    <th>Lines missed</th>
+                    <th>Avg. Hits / Line</th>
+                </tr>
+                </thead>
+                <tbody>
 
-        
-          <div class="file_list_container" id="Mailers">
-  <h2>
-    <span class="group_name">Mailers</span>
-    (<span class="covered_percent"><span class="red">0.0%</span></span>
-     covered at
-     <span class="covered_strength">
+                <tr>
+                    <td class="strong"><a class="src_link" href="#d5ddb0214ce5e7fbe3fadc3db12d15d34efcbe09"
+                                          title="app/models/ability.rb">app/models/ability.rb</a></td>
+                    <td class="red strong">0.0 %</td>
+                    <td>77</td>
+                    <td>51</td>
+                    <td>0</td>
+                    <td>51</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#f9dc112b4ff50dc643a71f91225322368f519a17"
+                                          title="app/models/application_record.rb">app/models/application_record.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#8abdbd38381557c078768535060cf599aa2d3e61"
+                                          title="app/models/badge.rb">app/models/badge.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>36</td>
+                    <td>17</td>
+                    <td>17</td>
+                    <td>0</td>
+                    <td>20.5</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#ed5d3f3ac6366ab10312847bde2e286beab021c1"
+                                          title="app/models/branch.rb">app/models/branch.rb</a></td>
+                    <td class="green strong">93.33 %</td>
+                    <td>35</td>
+                    <td>15</td>
+                    <td>14</td>
+                    <td>1</td>
+                    <td>18.5</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#8b4eb23e53d26cf34925d1dbc676b571dc2a4393"
+                                          title="app/models/camp.rb">app/models/camp.rb</a></td>
+                    <td class="green strong">98.08 %</td>
+                    <td>86</td>
+                    <td>52</td>
+                    <td>51</td>
+                    <td>1</td>
+                    <td>15.4</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#44adeff6576384eba800d955df44efd0c11dc996"
+                                          title="app/models/camp_badge.rb">app/models/camp_badge.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>20</td>
+                    <td>8</td>
+                    <td>8</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#0e169678383e26fa6654058413907bd812abd732"
+                                          title="app/models/camp_counselor.rb">app/models/camp_counselor.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>26</td>
+                    <td>16</td>
+                    <td>16</td>
+                    <td>0</td>
+                    <td>2.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#63034dbee34ab7d169cfde08484113f6f8ecbcfb"
+                                          title="app/models/camper.rb">app/models/camper.rb</a></td>
+                    <td class="green strong">97.22 %</td>
+                    <td>63</td>
+                    <td>36</td>
+                    <td>35</td>
+                    <td>1</td>
+                    <td>9.7</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#8e1c27b325b19f8ba9a74e6deb9f19aa357096ac"
+                                          title="app/models/camper_camp_badge.rb">app/models/camper_camp_badge.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>46</td>
+                    <td>22</td>
+                    <td>22</td>
+                    <td>0</td>
+                    <td>13.5</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#9bc999b076eaeb24799433287f388b5333e869b9"
+                                          title="app/models/camper_camp_badge_task.rb">app/models/camper_camp_badge_task.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>47</td>
+                    <td>23</td>
+                    <td>23</td>
+                    <td>0</td>
+                    <td>5.6</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#70827ba45ce4f0c010c550d4b90861e1a77e0fec"
+                                          title="app/models/camper_registration.rb">app/models/camper_registration.rb</a>
+                    </td>
+                    <td class="green strong">94.12 %</td>
+                    <td>32</td>
+                    <td>17</td>
+                    <td>16</td>
+                    <td>1</td>
+                    <td>2.1</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#6b4086a7ee3356cfa06bc6679581f6e97da70907"
+                                          title="app/models/counselor.rb">app/models/counselor.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>32</td>
+                    <td>18</td>
+                    <td>18</td>
+                    <td>0</td>
+                    <td>2.7</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#56e6b66b4ea59be55c70e8b8120c583f0d9ac5e2"
+                                          title="app/models/counselor_camp_badge.rb">app/models/counselor_camp_badge.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>16</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#b5e92c50d7fc7be92e3d7d78d8739b07e56549e2"
+                                          title="app/models/location.rb">app/models/location.rb</a></td>
+                    <td class="green strong">93.75 %</td>
+                    <td>36</td>
+                    <td>16</td>
+                    <td>15</td>
+                    <td>1</td>
+                    <td>19.4</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#9a7ef1ae8bcf114d9f6332d490e0ced81366f07d"
+                                          title="app/models/parent.rb">app/models/parent.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>30</td>
+                    <td>15</td>
+                    <td>15</td>
+                    <td>0</td>
+                    <td>3.1</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#612927d4e98b7960b4d0c06a04342bd129142ac4"
+                                          title="app/models/skill.rb">app/models/skill.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>34</td>
+                    <td>14</td>
+                    <td>14</td>
+                    <td>0</td>
+                    <td>8.7</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#a6848f2736afe8b2aecdd95f4dc435e5e997da54"
+                                          title="app/models/task.rb">app/models/task.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>30</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>0</td>
+                    <td>14.3</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#bd92babe1d65ee093d9607040994837d6b2e2344"
+                                          title="app/models/user.rb">app/models/user.rb</a></td>
+                    <td class="green strong">96.15 %</td>
+                    <td>49</td>
+                    <td>26</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>62.4</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="file_list_container" id="Mailers">
+            <h2>
+                <span class="group_name">Mailers</span>
+                (<span class="covered_percent"><span class="red">0.0%</span></span>
+                covered at
+                <span class="covered_strength">
        <span class="red">
          0.0
        </span>
     </span> hits/line)
-  </h2>
-  <a name="Mailers"></a>
-  <div>
-    <b>1</b> files in total.
-    <b>4</b> relevant lines. 
-    <span class="green"><b>0</b> lines covered</span> and
-    <span class="red"><b>4</b> lines missed </span>
-  </div>
-  <table class="file_list">
-    <thead>
-      <tr>
-        <th>File</th>
-        <th>% covered</th>
-        <th>Lines</th>
-        <th>Relevant Lines</th>
-        <th>Lines covered</th>
-        <th>Lines missed</th>
-        <th>Avg. Hits / Line</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-      <tr>
-        <td class="strong"><a href="#02b91061a51f3ac06ca0c0d449530a573358e0f1" class="src_link" title="app/mailers/application_mailer.rb">app/mailers/application_mailer.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>4</td>
-        <td>4</td>
-        <td>0</td>
-        <td>4</td>
-        <td>0.0</td>
-      </tr>
-      
-    </tbody>
-  </table>
-</div>
+            </h2>
+            <a name="Mailers"></a>
+            <div>
+                <b>1</b> files in total.
+                <b>4</b> relevant lines.
+                <span class="green"><b>0</b> lines covered</span> and
+                <span class="red"><b>4</b> lines missed </span>
+            </div>
+            <table class="file_list">
+                <thead>
+                <tr>
+                    <th>File</th>
+                    <th>% covered</th>
+                    <th>Lines</th>
+                    <th>Relevant Lines</th>
+                    <th>Lines covered</th>
+                    <th>Lines missed</th>
+                    <th>Avg. Hits / Line</th>
+                </tr>
+                </thead>
+                <tbody>
 
-        
-          <div class="file_list_container" id="Helpers">
-  <h2>
-    <span class="group_name">Helpers</span>
-    (<span class="covered_percent"><span class="yellow">87.1%</span></span>
-     covered at
-     <span class="covered_strength">
+                <tr>
+                    <td class="strong"><a class="src_link" href="#02b91061a51f3ac06ca0c0d449530a573358e0f1"
+                                          title="app/mailers/application_mailer.rb">app/mailers/application_mailer.rb</a>
+                    </td>
+                    <td class="red strong">0.0 %</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>0.0</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="file_list_container" id="Helpers">
+            <h2>
+                <span class="group_name">Helpers</span>
+                (<span class="covered_percent"><span class="yellow">87.1%</span></span>
+                covered at
+                <span class="covered_strength">
        <span class="red">
          0.86
        </span>
     </span> hits/line)
-  </h2>
-  <a name="Helpers"></a>
-  <div>
-    <b>20</b> files in total.
-    <b>31</b> relevant lines. 
-    <span class="green"><b>27</b> lines covered</span> and
-    <span class="red"><b>4</b> lines missed </span>
-  </div>
-  <table class="file_list">
-    <thead>
-      <tr>
-        <th>File</th>
-        <th>% covered</th>
-        <th>Lines</th>
-        <th>Relevant Lines</th>
-        <th>Lines covered</th>
-        <th>Lines missed</th>
-        <th>Avg. Hits / Line</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-      <tr>
-        <td class="strong"><a href="#b6baec91f865be058e1f00c09f420f19a8272864" class="src_link" title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#6d6700356d6ef2d6ee156159d359ea7bcb35fd59" class="src_link" title="app/helpers/assign_milestone_helper.rb">app/helpers/assign_milestone_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>10</td>
-        <td>7</td>
-        <td>7</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#81bfba9e73fc6b83bd2dd742e1f4bd0a14cefd46" class="src_link" title="app/helpers/badges_helper.rb">app/helpers/badges_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#683e36138ebe134b27827db33a471c4641cbc2b4" class="src_link" title="app/helpers/branches_helper.rb">app/helpers/branches_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#bb8b6bba49b2e888884ce3c374648ec8aa18972b" class="src_link" title="app/helpers/camp_badges_helper.rb">app/helpers/camp_badges_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#efac7b12125ff0a97b7f371e2a9c76150f32b48e" class="src_link" title="app/helpers/camp_counselors_helper.rb">app/helpers/camp_counselors_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#ffb321b5982f2f8afdbb878748a870d0a3731ea4" class="src_link" title="app/helpers/camper_camp_badge_tasks_helper.rb">app/helpers/camper_camp_badge_tasks_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#e7e03db045939370ab99003265a6c3cf81ec1e21" class="src_link" title="app/helpers/camper_camp_badges_helper.rb">app/helpers/camper_camp_badges_helper.rb</a></td>
-        <td class="red strong">33.33 %</td>
-        <td>10</td>
-        <td>6</td>
-        <td>2</td>
-        <td>4</td>
-        <td>0.3</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#44af896624fb3700a7b2d62de0c08649f3022ac7" class="src_link" title="app/helpers/camper_registrations_helper.rb">app/helpers/camper_registrations_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#b7e91500706b2376fa1b16055d2ef922618224dc" class="src_link" title="app/helpers/campers_helper.rb">app/helpers/campers_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#0ec9e4237d8a6389e2ea38c12aa0a462dc1d2e3a" class="src_link" title="app/helpers/camps_helper.rb">app/helpers/camps_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#f7165e923aa9a72405279e79426d9ac85c7d91eb" class="src_link" title="app/helpers/counselor_camp_badges_helper.rb">app/helpers/counselor_camp_badges_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#24ff42dd245b102678607731434f0b94b5c58198" class="src_link" title="app/helpers/counselors_helper.rb">app/helpers/counselors_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#5d2ae1b69daae9ed72aa5bbfbbb769c0c30c8eda" class="src_link" title="app/helpers/home_helper.rb">app/helpers/home_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#f2710348eaa8173275d4dce74d9763e010a50e9a" class="src_link" title="app/helpers/locations_helper.rb">app/helpers/locations_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#cb4f4223738512e26cb7cf950fa0a0007d6fb0aa" class="src_link" title="app/helpers/parents_helper.rb">app/helpers/parents_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#1ae9052f0755753e85eefe1a453ebe20a54b185b" class="src_link" title="app/helpers/sessions_helper.rb">app/helpers/sessions_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#620e54fe42db71bf6ff85250b9992ba8704bc4f5" class="src_link" title="app/helpers/skills_helper.rb">app/helpers/skills_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#5d3649506ebcb0b38f816889020f4709f329056a" class="src_link" title="app/helpers/tasks_helper.rb">app/helpers/tasks_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#0d6e446aa093a7967c362e6834125e738a2af1ac" class="src_link" title="app/helpers/users_helper.rb">app/helpers/users_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-    </tbody>
-  </table>
-</div>
+            </h2>
+            <a name="Helpers"></a>
+            <div>
+                <b>20</b> files in total.
+                <b>31</b> relevant lines.
+                <span class="green"><b>27</b> lines covered</span> and
+                <span class="red"><b>4</b> lines missed </span>
+            </div>
+            <table class="file_list">
+                <thead>
+                <tr>
+                    <th>File</th>
+                    <th>% covered</th>
+                    <th>Lines</th>
+                    <th>Relevant Lines</th>
+                    <th>Lines covered</th>
+                    <th>Lines missed</th>
+                    <th>Avg. Hits / Line</th>
+                </tr>
+                </thead>
+                <tbody>
 
-        
-          <div class="file_list_container" id="Jobs">
-  <h2>
-    <span class="group_name">Jobs</span>
-    (<span class="covered_percent"><span class="red">0.0%</span></span>
-     covered at
-     <span class="covered_strength">
+                <tr>
+                    <td class="strong"><a class="src_link" href="#b6baec91f865be058e1f00c09f420f19a8272864"
+                                          title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#6d6700356d6ef2d6ee156159d359ea7bcb35fd59"
+                                          title="app/helpers/assign_milestone_helper.rb">app/helpers/assign_milestone_helper.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>10</td>
+                    <td>7</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#81bfba9e73fc6b83bd2dd742e1f4bd0a14cefd46"
+                                          title="app/helpers/badges_helper.rb">app/helpers/badges_helper.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#683e36138ebe134b27827db33a471c4641cbc2b4"
+                                          title="app/helpers/branches_helper.rb">app/helpers/branches_helper.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#bb8b6bba49b2e888884ce3c374648ec8aa18972b"
+                                          title="app/helpers/camp_badges_helper.rb">app/helpers/camp_badges_helper.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#efac7b12125ff0a97b7f371e2a9c76150f32b48e"
+                                          title="app/helpers/camp_counselors_helper.rb">app/helpers/camp_counselors_helper.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#ffb321b5982f2f8afdbb878748a870d0a3731ea4"
+                                          title="app/helpers/camper_camp_badge_tasks_helper.rb">app/helpers/camper_camp_badge_tasks_helper.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#e7e03db045939370ab99003265a6c3cf81ec1e21"
+                                          title="app/helpers/camper_camp_badges_helper.rb">app/helpers/camper_camp_badges_helper.rb</a>
+                    </td>
+                    <td class="red strong">33.33 %</td>
+                    <td>10</td>
+                    <td>6</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>0.3</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#44af896624fb3700a7b2d62de0c08649f3022ac7"
+                                          title="app/helpers/camper_registrations_helper.rb">app/helpers/camper_registrations_helper.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#b7e91500706b2376fa1b16055d2ef922618224dc"
+                                          title="app/helpers/campers_helper.rb">app/helpers/campers_helper.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#0ec9e4237d8a6389e2ea38c12aa0a462dc1d2e3a"
+                                          title="app/helpers/camps_helper.rb">app/helpers/camps_helper.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#f7165e923aa9a72405279e79426d9ac85c7d91eb"
+                                          title="app/helpers/counselor_camp_badges_helper.rb">app/helpers/counselor_camp_badges_helper.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#24ff42dd245b102678607731434f0b94b5c58198"
+                                          title="app/helpers/counselors_helper.rb">app/helpers/counselors_helper.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#5d2ae1b69daae9ed72aa5bbfbbb769c0c30c8eda"
+                                          title="app/helpers/home_helper.rb">app/helpers/home_helper.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#f2710348eaa8173275d4dce74d9763e010a50e9a"
+                                          title="app/helpers/locations_helper.rb">app/helpers/locations_helper.rb</a>
+                    </td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#cb4f4223738512e26cb7cf950fa0a0007d6fb0aa"
+                                          title="app/helpers/parents_helper.rb">app/helpers/parents_helper.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#1ae9052f0755753e85eefe1a453ebe20a54b185b"
+                                          title="app/helpers/sessions_helper.rb">app/helpers/sessions_helper.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#620e54fe42db71bf6ff85250b9992ba8704bc4f5"
+                                          title="app/helpers/skills_helper.rb">app/helpers/skills_helper.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#5d3649506ebcb0b38f816889020f4709f329056a"
+                                          title="app/helpers/tasks_helper.rb">app/helpers/tasks_helper.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#0d6e446aa093a7967c362e6834125e738a2af1ac"
+                                          title="app/helpers/users_helper.rb">app/helpers/users_helper.rb</a></td>
+                    <td class="green strong">100.0 %</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1.0</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="file_list_container" id="Jobs">
+            <h2>
+                <span class="group_name">Jobs</span>
+                (<span class="covered_percent"><span class="red">0.0%</span></span>
+                covered at
+                <span class="covered_strength">
        <span class="red">
          0.0
        </span>
     </span> hits/line)
-  </h2>
-  <a name="Jobs"></a>
-  <div>
-    <b>1</b> files in total.
-    <b>2</b> relevant lines. 
-    <span class="green"><b>0</b> lines covered</span> and
-    <span class="red"><b>2</b> lines missed </span>
-  </div>
-  <table class="file_list">
-    <thead>
-      <tr>
-        <th>File</th>
-        <th>% covered</th>
-        <th>Lines</th>
-        <th>Relevant Lines</th>
-        <th>Lines covered</th>
-        <th>Lines missed</th>
-        <th>Avg. Hits / Line</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-      <tr>
-        <td class="strong"><a href="#86795ba6ce26cd309f8400f57c32ccf5df28bf76" class="src_link" title="app/jobs/application_job.rb">app/jobs/application_job.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>2</td>
-        <td>2</td>
-        <td>0</td>
-        <td>2</td>
-        <td>0.0</td>
-      </tr>
-      
-    </tbody>
-  </table>
-</div>
+            </h2>
+            <a name="Jobs"></a>
+            <div>
+                <b>1</b> files in total.
+                <b>2</b> relevant lines.
+                <span class="green"><b>0</b> lines covered</span> and
+                <span class="red"><b>2</b> lines missed </span>
+            </div>
+            <table class="file_list">
+                <thead>
+                <tr>
+                    <th>File</th>
+                    <th>% covered</th>
+                    <th>Lines</th>
+                    <th>Relevant Lines</th>
+                    <th>Lines covered</th>
+                    <th>Lines missed</th>
+                    <th>Avg. Hits / Line</th>
+                </tr>
+                </thead>
+                <tbody>
 
-        
-          <div class="file_list_container" id="Libraries">
-  <h2>
-    <span class="group_name">Libraries</span>
-    (<span class="covered_percent"><span class="green">100.0%</span></span>
-     covered at
-     <span class="covered_strength">
+                <tr>
+                    <td class="strong"><a class="src_link" href="#86795ba6ce26cd309f8400f57c32ccf5df28bf76"
+                                          title="app/jobs/application_job.rb">app/jobs/application_job.rb</a></td>
+                    <td class="red strong">0.0 %</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>0.0</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="file_list_container" id="Libraries">
+            <h2>
+                <span class="group_name">Libraries</span>
+                (<span class="covered_percent"><span class="green">100.0%</span></span>
+                covered at
+                <span class="covered_strength">
        <span class="red">
          0.0
        </span>
     </span> hits/line)
-  </h2>
-  <a name="Libraries"></a>
-  <div>
-    <b>0</b> files in total.
-    <b>0.0</b> relevant lines. 
-    <span class="green"><b>0.0</b> lines covered</span> and
-    <span class="red"><b>0.0</b> lines missed </span>
-  </div>
-  <table class="file_list">
-    <thead>
-      <tr>
-        <th>File</th>
-        <th>% covered</th>
-        <th>Lines</th>
-        <th>Relevant Lines</th>
-        <th>Lines covered</th>
-        <th>Lines missed</th>
-        <th>Avg. Hits / Line</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-    </tbody>
-  </table>
-</div>
+            </h2>
+            <a name="Libraries"></a>
+            <div>
+                <b>0</b> files in total.
+                <b>0.0</b> relevant lines.
+                <span class="green"><b>0.0</b> lines covered</span> and
+                <span class="red"><b>0.0</b> lines missed </span>
+            </div>
+            <table class="file_list">
+                <thead>
+                <tr>
+                    <th>File</th>
+                    <th>% covered</th>
+                    <th>Lines</th>
+                    <th>Relevant Lines</th>
+                    <th>Lines covered</th>
+                    <th>Lines missed</th>
+                    <th>Avg. Hits / Line</th>
+                </tr>
+                </thead>
+                <tbody>
 
-        
-          <div class="file_list_container" id="Ungrouped">
-  <h2>
-    <span class="group_name">Ungrouped</span>
-    (<span class="covered_percent"><span class="red">0.0%</span></span>
-     covered at
-     <span class="covered_strength">
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="file_list_container" id="Ungrouped">
+            <h2>
+                <span class="group_name">Ungrouped</span>
+                (<span class="covered_percent"><span class="red">0.0%</span></span>
+                covered at
+                <span class="covered_strength">
        <span class="red">
          0.0
        </span>
     </span> hits/line)
-  </h2>
-  <a name="Ungrouped"></a>
-  <div>
-    <b>2</b> files in total.
-    <b>107</b> relevant lines. 
-    <span class="green"><b>0</b> lines covered</span> and
-    <span class="red"><b>107</b> lines missed </span>
-  </div>
-  <table class="file_list">
-    <thead>
-      <tr>
-        <th>File</th>
-        <th>% covered</th>
-        <th>Lines</th>
-        <th>Relevant Lines</th>
-        <th>Lines covered</th>
-        <th>Lines missed</th>
-        <th>Avg. Hits / Line</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-      <tr>
-        <td class="strong"><a href="#6c8e5c9e82387bf293a4d9a08e98798c20c1c2e6" class="src_link" title="app/services/importer.rb">app/services/importer.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>111</td>
-        <td>95</td>
-        <td>0</td>
-        <td>95</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#7e9cb890d58a4f71849bdea89ccf200d3ae938f9" class="src_link" title="app/services/student.rb">app/services/student.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>14</td>
-        <td>12</td>
-        <td>0</td>
-        <td>12</td>
-        <td>0.0</td>
-      </tr>
-      
-    </tbody>
-  </table>
-</div>
+            </h2>
+            <a name="Ungrouped"></a>
+            <div>
+                <b>2</b> files in total.
+                <b>107</b> relevant lines.
+                <span class="green"><b>0</b> lines covered</span> and
+                <span class="red"><b>107</b> lines missed </span>
+            </div>
+            <table class="file_list">
+                <thead>
+                <tr>
+                    <th>File</th>
+                    <th>% covered</th>
+                    <th>Lines</th>
+                    <th>Relevant Lines</th>
+                    <th>Lines covered</th>
+                    <th>Lines missed</th>
+                    <th>Avg. Hits / Line</th>
+                </tr>
+                </thead>
+                <tbody>
 
-        
-      </div>
-    
-      <div id="footer">
-        Generated by <a href="http://github.com/colszowka/simplecov">simplecov</a> v0.15.1 
+                <tr>
+                    <td class="strong"><a class="src_link" href="#6c8e5c9e82387bf293a4d9a08e98798c20c1c2e6"
+                                          title="app/services/importer.rb">app/services/importer.rb</a></td>
+                    <td class="red strong">0.0 %</td>
+                    <td>111</td>
+                    <td>95</td>
+                    <td>0</td>
+                    <td>95</td>
+                    <td>0.0</td>
+                </tr>
+
+                <tr>
+                    <td class="strong"><a class="src_link" href="#7e9cb890d58a4f71849bdea89ccf200d3ae938f9"
+                                          title="app/services/student.rb">app/services/student.rb</a></td>
+                    <td class="red strong">0.0 %</td>
+                    <td>14</td>
+                    <td>12</td>
+                    <td>0</td>
+                    <td>12</td>
+                    <td>0.0</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+    <div id="footer">
+        Generated by <a href="http://github.com/colszowka/simplecov">simplecov</a> v0.15.1
         and simplecov-html v0.10.2<br/>
         using MiniTest
-      </div>
-    
-      <div class="source_files">
-      
-        <div class="source_table" id="1bcbf7f2354cb82c0d93b3341c242933e3b827e7">
-  <div class="header">
-    <h3>app/channels/application_cable/channel.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>4</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
     </div>
-  </div>
-  
-  <pre>
+
+    <div class="source_files">
+
+        <div class="source_table" id="1bcbf7f2354cb82c0d93b3341c242933e3b827e7">
+            <div class="header">
+                <h3>app/channels/application_cable/channel.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>4</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>4</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -1682,21 +1886,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="24b045e1ff6fc53eeb187a2996340736c65d37b3">
-  <div class="header">
-    <h3>app/channels/application_cable/connection.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>4</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/channels/application_cable/connection.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>4</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>4</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -1725,21 +1929,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="2874aaac538bc8cdaca790204447e7a1ae087bea">
-  <div class="header">
-    <h3>app/controllers/application_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>15</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>15</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/controllers/application_controller.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>15</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>15</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -1870,21 +2074,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="59d2966f7d5ef2a2d20b991fa1ba33843d3979ea">
-  <div class="header">
-    <h3>app/controllers/assign_milestone_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>21</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>21</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/controllers/assign_milestone_controller.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>21</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>21</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -2051,21 +2255,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="706e600d6b4ef064b4c40c3624e45e8746a20c7c">
-  <div class="header">
-    <h3>app/controllers/badges_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>55</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>55</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/controllers/badges_controller.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>55</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>55</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -2550,21 +2754,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="f5abe50059f0ad79c342cbd263c2b11c34a40a7d">
-  <div class="header">
-    <h3>app/controllers/branches_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>52</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>52</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/controllers/branches_controller.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>52</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>52</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -3031,21 +3235,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="0a12220f18a00a0c9da2fc2e3b33064304597a09">
-  <div class="header">
-    <h3>app/controllers/camp_badges_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>67</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>67</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/controllers/camp_badges_controller.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>67</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>67</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -3602,21 +3806,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="8c69b5334d5205ca71f52855e1a72f5a749db718">
-  <div class="header">
-    <h3>app/controllers/camp_counselors_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>53</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>53</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/controllers/camp_counselors_controller.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>53</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>53</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -4179,21 +4383,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="90968b32c4fb60557016f2482991ae5fa3d674c3">
-  <div class="header">
-    <h3>app/controllers/camper_camp_badge_tasks_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>50</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>50</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/controllers/camper_camp_badge_tasks_controller.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>50</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>50</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -4648,21 +4852,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="c54061d5179f124ab899805ed1475357421930dc">
-  <div class="header">
-    <h3>app/controllers/camper_camp_badges_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>53</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>53</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/controllers/camper_camp_badges_controller.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>53</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>53</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -5147,21 +5351,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="47953c8153b117cdc84f4412906d8caa57a04162">
-  <div class="header">
-    <h3>app/controllers/camper_registrations_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>47</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>47</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/controllers/camper_registrations_controller.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>47</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>47</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -5598,21 +5802,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="1d7a24a769501cd7b91af8dfe2bee8918d4c150a">
-  <div class="header">
-    <h3>app/controllers/campers_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>65</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>65</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/controllers/campers_controller.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>65</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>65</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -6157,21 +6361,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="ecbaf29195902196c1dd181eb75e8326587fca7d">
-  <div class="header">
-    <h3>app/controllers/camps_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>60</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>60</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/controllers/camps_controller.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>60</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>60</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -6698,21 +6902,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="fce7c6e24bfb705163f5758f6fd40f05577b9f5f">
-  <div class="header">
-    <h3>app/controllers/counselor_camp_badges_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>49</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>49</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/controllers/counselor_camp_badges_controller.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>49</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>49</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -7155,21 +7359,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="3245384c72abd774f71bc3c7c629417a19822944">
-  <div class="header">
-    <h3>app/controllers/counselors_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>59</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>59</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/controllers/counselors_controller.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>59</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>59</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -7690,21 +7894,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="fc1d05bd68c58861eef3665e94f0c11ea11f3946">
-  <div class="header">
-    <h3>app/controllers/home_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>16</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>16</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/controllers/home_controller.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>16</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>16</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -7805,21 +8009,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="4d8c85ab62233e24264dd80821c048c879788966">
-  <div class="header">
-    <h3>app/controllers/locations_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>49</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>49</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/controllers/locations_controller.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>49</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>49</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -8274,21 +8478,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="2f58d8df7c7625851d90b2de61c8938a41ef2ed6">
-  <div class="header">
-    <h3>app/controllers/parents_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>51</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>51</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/controllers/parents_controller.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>51</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>51</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -8749,21 +8953,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="742e689099c4f55299f5f51c29535547893f7891">
-  <div class="header">
-    <h3>app/controllers/sessions_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>18</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>18</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/controllers/sessions_controller.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>18</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>18</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -8888,21 +9092,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="06151f5a25e3bec616474f418b5f351c94c50a35">
-  <div class="header">
-    <h3>app/controllers/skills_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>51</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>51</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/controllers/skills_controller.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>51</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>51</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -9363,21 +9567,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="be31d727363cbe27ec538c2d1155ad5093c6aef4">
-  <div class="header">
-    <h3>app/controllers/tasks_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>45</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>45</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/controllers/tasks_controller.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>45</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>45</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -9808,21 +10012,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="86845895bceb0505f53b340478373eb0720318e2">
-  <div class="header">
-    <h3>app/controllers/users_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>69</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>69</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/controllers/users_controller.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>69</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>69</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -10385,21 +10589,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="b6baec91f865be058e1f00c09f420f19a8272864">
-  <div class="header">
-    <h3>app/helpers/application_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/helpers/application_helper.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>1</b> relevant lines.
+                    <span class="green"><b>1</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -10416,21 +10620,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="6d6700356d6ef2d6ee156159d359ea7bcb35fd59">
-  <div class="header">
-    <h3>app/helpers/assign_milestone_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>7</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/helpers/assign_milestone_helper.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>7</b> relevant lines.
+                    <span class="green"><b>7</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -10495,21 +10699,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="81bfba9e73fc6b83bd2dd742e1f4bd0a14cefd46">
-  <div class="header">
-    <h3>app/helpers/badges_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/helpers/badges_helper.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>1</b> relevant lines.
+                    <span class="green"><b>1</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -10526,21 +10730,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="683e36138ebe134b27827db33a471c4641cbc2b4">
-  <div class="header">
-    <h3>app/helpers/branches_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/helpers/branches_helper.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>1</b> relevant lines.
+                    <span class="green"><b>1</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -10557,21 +10761,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="bb8b6bba49b2e888884ce3c374648ec8aa18972b">
-  <div class="header">
-    <h3>app/helpers/camp_badges_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/helpers/camp_badges_helper.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>1</b> relevant lines.
+                    <span class="green"><b>1</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -10588,21 +10792,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="efac7b12125ff0a97b7f371e2a9c76150f32b48e">
-  <div class="header">
-    <h3>app/helpers/camp_counselors_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/helpers/camp_counselors_helper.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>1</b> relevant lines.
+                    <span class="green"><b>1</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -10619,21 +10823,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="ffb321b5982f2f8afdbb878748a870d0a3731ea4">
-  <div class="header">
-    <h3>app/helpers/camper_camp_badge_tasks_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/helpers/camper_camp_badge_tasks_helper.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>1</b> relevant lines.
+                    <span class="green"><b>1</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -10650,21 +10854,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="e7e03db045939370ab99003265a6c3cf81ec1e21">
-  <div class="header">
-    <h3>app/helpers/camper_camp_badges_helper.rb</h3>
-    <h4><span class="red">33.33 %</span> covered</h4>
-    <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>2</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/helpers/camper_camp_badges_helper.rb</h3>
+                <h4><span class="red">33.33 %</span> covered</h4>
+                <div>
+                    <b>6</b> relevant lines.
+                    <span class="green"><b>2</b> lines covered</span> and
+                    <span class="red"><b>4</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -10729,21 +10933,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="44af896624fb3700a7b2d62de0c08649f3022ac7">
-  <div class="header">
-    <h3>app/helpers/camper_registrations_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/helpers/camper_registrations_helper.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>1</b> relevant lines.
+                    <span class="green"><b>1</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -10760,21 +10964,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="b7e91500706b2376fa1b16055d2ef922618224dc">
-  <div class="header">
-    <h3>app/helpers/campers_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/helpers/campers_helper.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>1</b> relevant lines.
+                    <span class="green"><b>1</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -10791,21 +10995,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="0ec9e4237d8a6389e2ea38c12aa0a462dc1d2e3a">
-  <div class="header">
-    <h3>app/helpers/camps_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/helpers/camps_helper.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>1</b> relevant lines.
+                    <span class="green"><b>1</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -10822,21 +11026,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="f7165e923aa9a72405279e79426d9ac85c7d91eb">
-  <div class="header">
-    <h3>app/helpers/counselor_camp_badges_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/helpers/counselor_camp_badges_helper.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>1</b> relevant lines.
+                    <span class="green"><b>1</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -10853,21 +11057,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="24ff42dd245b102678607731434f0b94b5c58198">
-  <div class="header">
-    <h3>app/helpers/counselors_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/helpers/counselors_helper.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>1</b> relevant lines.
+                    <span class="green"><b>1</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -10884,21 +11088,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="5d2ae1b69daae9ed72aa5bbfbbb769c0c30c8eda">
-  <div class="header">
-    <h3>app/helpers/home_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/helpers/home_helper.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>1</b> relevant lines.
+                    <span class="green"><b>1</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -10915,21 +11119,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="f2710348eaa8173275d4dce74d9763e010a50e9a">
-  <div class="header">
-    <h3>app/helpers/locations_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/helpers/locations_helper.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>1</b> relevant lines.
+                    <span class="green"><b>1</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -10946,21 +11150,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="cb4f4223738512e26cb7cf950fa0a0007d6fb0aa">
-  <div class="header">
-    <h3>app/helpers/parents_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/helpers/parents_helper.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>1</b> relevant lines.
+                    <span class="green"><b>1</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -10977,21 +11181,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="1ae9052f0755753e85eefe1a453ebe20a54b185b">
-  <div class="header">
-    <h3>app/helpers/sessions_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/helpers/sessions_helper.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>1</b> relevant lines.
+                    <span class="green"><b>1</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -11008,21 +11212,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="620e54fe42db71bf6ff85250b9992ba8704bc4f5">
-  <div class="header">
-    <h3>app/helpers/skills_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/helpers/skills_helper.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>1</b> relevant lines.
+                    <span class="green"><b>1</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -11039,21 +11243,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="5d3649506ebcb0b38f816889020f4709f329056a">
-  <div class="header">
-    <h3>app/helpers/tasks_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/helpers/tasks_helper.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>1</b> relevant lines.
+                    <span class="green"><b>1</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -11070,21 +11274,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="0d6e446aa093a7967c362e6834125e738a2af1ac">
-  <div class="header">
-    <h3>app/helpers/users_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/helpers/users_helper.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>1</b> relevant lines.
+                    <span class="green"><b>1</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -11101,21 +11305,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="86795ba6ce26cd309f8400f57c32ccf5df28bf76">
-  <div class="header">
-    <h3>app/jobs/application_job.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>2</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/jobs/application_job.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>2</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>2</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -11132,21 +11336,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="02b91061a51f3ac06ca0c0d449530a573358e0f1">
-  <div class="header">
-    <h3>app/mailers/application_mailer.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>4</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/mailers/application_mailer.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>4</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>4</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -11175,21 +11379,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="d5ddb0214ce5e7fbe3fadc3db12d15d34efcbe09">
-  <div class="header">
-    <h3>app/models/ability.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>51</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>51</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/models/ability.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>51</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>51</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -11656,21 +11860,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="f9dc112b4ff50dc643a71f91225322368f519a17">
-  <div class="header">
-    <h3>app/models/application_record.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>2</b> relevant lines. 
-      <span class="green"><b>2</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/models/application_record.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>2</b> relevant lines.
+                    <span class="green"><b>2</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -11693,21 +11897,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="8abdbd38381557c078768535060cf599aa2d3e61">
-  <div class="header">
-    <h3>app/models/badge.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>17</b> relevant lines. 
-      <span class="green"><b>17</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/models/badge.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>17</b> relevant lines.
+                    <span class="green"><b>17</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="never" data-hits="" data-linenumber="1">
@@ -11928,21 +12132,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="ed5d3f3ac6366ab10312847bde2e286beab021c1">
-  <div class="header">
-    <h3>app/models/branch.rb</h3>
-    <h4><span class="green">93.33 %</span> covered</h4>
-    <div>
-      <b>15</b> relevant lines. 
-      <span class="green"><b>14</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/models/branch.rb</h3>
+                <h4><span class="green">93.33 %</span> covered</h4>
+                <div>
+                    <b>15</b> relevant lines.
+                    <span class="green"><b>14</b> lines covered</span> and
+                    <span class="red"><b>1</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="never" data-hits="" data-linenumber="1">
@@ -12157,21 +12361,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="8b4eb23e53d26cf34925d1dbc676b571dc2a4393">
-  <div class="header">
-    <h3>app/models/camp.rb</h3>
-    <h4><span class="green">98.08 %</span> covered</h4>
-    <div>
-      <b>52</b> relevant lines. 
-      <span class="green"><b>51</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/models/camp.rb</h3>
+                <h4><span class="green">98.08 %</span> covered</h4>
+                <div>
+                    <b>52</b> relevant lines.
+                    <span class="green"><b>51</b> lines covered</span> and
+                    <span class="red"><b>1</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="never" data-hits="" data-linenumber="1">
@@ -12692,21 +12896,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="44adeff6576384eba800d955df44efd0c11dc996">
-  <div class="header">
-    <h3>app/models/camp_badge.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>8</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/models/camp_badge.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>8</b> relevant lines.
+                    <span class="green"><b>8</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="never" data-hits="" data-linenumber="1">
@@ -12831,21 +13035,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="0e169678383e26fa6654058413907bd812abd732">
-  <div class="header">
-    <h3>app/models/camp_counselor.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>16</b> relevant lines. 
-      <span class="green"><b>16</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/models/camp_counselor.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>16</b> relevant lines.
+                    <span class="green"><b>16</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -13006,21 +13210,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="63034dbee34ab7d169cfde08484113f6f8ecbcfb">
-  <div class="header">
-    <h3>app/models/camper.rb</h3>
-    <h4><span class="green">97.22 %</span> covered</h4>
-    <div>
-      <b>36</b> relevant lines. 
-      <span class="green"><b>35</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/models/camper.rb</h3>
+                <h4><span class="green">97.22 %</span> covered</h4>
+                <div>
+                    <b>36</b> relevant lines.
+                    <span class="green"><b>35</b> lines covered</span> and
+                    <span class="red"><b>1</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="never" data-hits="" data-linenumber="1">
@@ -13403,21 +13607,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="8e1c27b325b19f8ba9a74e6deb9f19aa357096ac">
-  <div class="header">
-    <h3>app/models/camper_camp_badge.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>22</b> relevant lines. 
-      <span class="green"><b>22</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/models/camper_camp_badge.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>22</b> relevant lines.
+                    <span class="green"><b>22</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="never" data-hits="" data-linenumber="1">
@@ -13698,21 +13902,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="9bc999b076eaeb24799433287f388b5333e869b9">
-  <div class="header">
-    <h3>app/models/camper_camp_badge_task.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>23</b> relevant lines. 
-      <span class="green"><b>23</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/models/camper_camp_badge_task.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>23</b> relevant lines.
+                    <span class="green"><b>23</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="never" data-hits="" data-linenumber="1">
@@ -13999,21 +14203,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="70827ba45ce4f0c010c550d4b90861e1a77e0fec">
-  <div class="header">
-    <h3>app/models/camper_registration.rb</h3>
-    <h4><span class="green">94.12 %</span> covered</h4>
-    <div>
-      <b>17</b> relevant lines. 
-      <span class="green"><b>16</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/models/camper_registration.rb</h3>
+                <h4><span class="green">94.12 %</span> covered</h4>
+                <div>
+                    <b>17</b> relevant lines.
+                    <span class="green"><b>16</b> lines covered</span> and
+                    <span class="red"><b>1</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="never" data-hits="" data-linenumber="1">
@@ -14210,21 +14414,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="6b4086a7ee3356cfa06bc6679581f6e97da70907">
-  <div class="header">
-    <h3>app/models/counselor.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>18</b> relevant lines. 
-      <span class="green"><b>18</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/models/counselor.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>18</b> relevant lines.
+                    <span class="green"><b>18</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -14421,21 +14625,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="56e6b66b4ea59be55c70e8b8120c583f0d9ac5e2">
-  <div class="header">
-    <h3>app/models/counselor_camp_badge.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>4</b> relevant lines. 
-      <span class="green"><b>4</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/models/counselor_camp_badge.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>4</b> relevant lines.
+                    <span class="green"><b>4</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -14536,21 +14740,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="b5e92c50d7fc7be92e3d7d78d8739b07e56549e2">
-  <div class="header">
-    <h3>app/models/location.rb</h3>
-    <h4><span class="green">93.75 %</span> covered</h4>
-    <div>
-      <b>16</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/models/location.rb</h3>
+                <h4><span class="green">93.75 %</span> covered</h4>
+                <div>
+                    <b>16</b> relevant lines.
+                    <span class="green"><b>15</b> lines covered</span> and
+                    <span class="red"><b>1</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="never" data-hits="" data-linenumber="1">
@@ -14771,21 +14975,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="9a7ef1ae8bcf114d9f6332d490e0ced81366f07d">
-  <div class="header">
-    <h3>app/models/parent.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>15</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/models/parent.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>15</b> relevant lines.
+                    <span class="green"><b>15</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="covered" data-hits="1" data-linenumber="1">
@@ -14970,21 +15174,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="612927d4e98b7960b4d0c06a04342bd129142ac4">
-  <div class="header">
-    <h3>app/models/skill.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>14</b> relevant lines. 
-      <span class="green"><b>14</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/models/skill.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>14</b> relevant lines.
+                    <span class="green"><b>14</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="never" data-hits="" data-linenumber="1">
@@ -15193,21 +15397,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="a6848f2736afe8b2aecdd95f4dc435e5e997da54">
-  <div class="header">
-    <h3>app/models/task.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/models/task.rb</h3>
+                <h4><span class="green">100.0 %</span> covered</h4>
+                <div>
+                    <b>12</b> relevant lines.
+                    <span class="green"><b>12</b> lines covered</span> and
+                    <span class="red"><b>0</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="never" data-hits="" data-linenumber="1">
@@ -15392,21 +15596,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="bd92babe1d65ee093d9607040994837d6b2e2344">
-  <div class="header">
-    <h3>app/models/user.rb</h3>
-    <h4><span class="green">96.15 %</span> covered</h4>
-    <div>
-      <b>26</b> relevant lines. 
-      <span class="green"><b>25</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/models/user.rb</h3>
+                <h4><span class="green">96.15 %</span> covered</h4>
+                <div>
+                    <b>26</b> relevant lines.
+                    <span class="green"><b>25</b> lines covered</span> and
+                    <span class="red"><b>1</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="never" data-hits="" data-linenumber="1">
@@ -15705,21 +15909,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="6c8e5c9e82387bf293a4d9a08e98798c20c1c2e6">
-  <div class="header">
-    <h3>app/services/importer.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>95</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>95</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/services/importer.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>95</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>95</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="never" data-hits="" data-linenumber="1">
@@ -16390,21 +16594,21 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
+
         <div class="source_table" id="7e9cb890d58a4f71849bdea89ccf200d3ae938f9">
-  <div class="header">
-    <h3>app/services/student.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
-    <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>12</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
+            <div class="header">
+                <h3>app/services/student.rb</h3>
+                <h4><span class="red">0.0 %</span> covered</h4>
+                <div>
+                    <b>12</b> relevant lines.
+                    <span class="green"><b>0</b> lines covered</span> and
+                    <span class="red"><b>12</b> lines missed.</span>
+                </div>
+            </div>
+
+            <pre>
     <ol>
       
         <li class="missed" data-hits="0" data-linenumber="1">
@@ -16493,10 +16697,10 @@
       
     </ol>
   </pre>
-</div>
+        </div>
 
-      
-      </div>
+
     </div>
-  </body>
+</div>
+</body>
 </html>

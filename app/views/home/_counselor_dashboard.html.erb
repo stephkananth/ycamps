@@ -15,7 +15,8 @@
               You are not a counselor for any camp at this time.
             <% else %>
               <%= @current_camp.name %><br/>
-              <%= @current_camp.start_date.strftime("%A, %b %d") %> - <%= @current_camp.end_date.strftime("%A, %b %d") %> <br/>
+              <%= @current_camp.start_date.strftime("%A, %b %d") %>
+              - <%= @current_camp.end_date.strftime("%A, %b %d") %> <br/>
               <%= @current_camp.location.name %>
             <% end %>
           </p>
@@ -26,36 +27,36 @@
 
     <% if !@current_camp.nil? %>
       <div class="section-header">Your Class</div>
-        <% if !@current_camp.nil? && @counselor.camp_badges.empty? %>
+      <% if !@current_camp.nil? && @counselor.camp_badges.empty? %>
+        <div class="card page-card">
+          <div class="card-body">
+            <h5 class="card-title">Create Your Class for the Week</h5>
+            <%= link_to "Begin", new_camp_badge_path(:camp_id => @current_camp.id), class: "btn btn-primary btn-block btn-sm" %>
+          </div>
+        </div>
+      <% else %>
+        <%= link_to @class do %>
           <div class="card page-card">
             <div class="card-body">
-              <h5 class="card-title">Create Your Class for the Week</h5>
-              <%= link_to "Begin", new_camp_badge_path(:camp_id => @current_camp.id), class: "btn btn-primary btn-block btn-sm" %>
-            </div>
-          </div>
-        <% else %>
-          <%= link_to @class do %>
-            <div class="card page-card">
-              <div class="card-body">
-                  <div class="row">
-                    <div class="col-3">
-                      <%= image_tag 'badge-icon.svg', class: 'img-responsive' %><br/>
-                    </div>
-                    <div class="col-9">
-                      <h5 class="card-title"><%= @class.badge.name %></h5>
-                      <p class="card-text">
-                        <%= @class.camper_camp_badges.count %> students<br/>
-                      </p>
-                    </div>
-                  </div>
+              <div class="row">
+                <div class="col-3">
+                  <%= image_tag 'badge-icon.svg', class: 'img-responsive' %><br/>
+                </div>
+                <div class="col-9">
+                  <h5 class="card-title"><%= @class.badge.name %></h5>
+                  <p class="card-text">
+                    <%= @class.camper_camp_badges.count %> students<br/>
+                  </p>
+                </div>
               </div>
             </div>
-          <% end %>
+          </div>
         <% end %>
+      <% end %>
     <% end %>
 
   </div>
 </div>
 
-  <div class="pad-bottom">
-  </div>
+<div class="pad-bottom">
+</div>

@@ -38,8 +38,8 @@ class CampBadgesController < ApplicationController
     if @camp_badge.save
       if current_user.role?(:counselor)
         @counselor_camp_badge = CounselorCampBadge.new(
-                                    counselor_id: Counselor.where(user_id: current_user.id).first.id,
-                                    camp_badge_id: @camp_badge.id) 
+            counselor_id: Counselor.where(user_id: current_user.id).first.id,
+            camp_badge_id: @camp_badge.id)
         if @counselor_camp_badge.save
           redirect_to new_camper_camp_badge_path(:camp_badge_id => @camp_badge.id)
         else

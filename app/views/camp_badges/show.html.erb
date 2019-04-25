@@ -15,7 +15,7 @@
       <% end %>
     <% elsif logged_in? && (current_user.role?(:counselor)) %>
       <% if (@counselor_cb.include? @camp_badge) && (!@ccbs.empty?) %>
-          <%= link_to 'Assign Milestone to Campers', assign_milestones_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block" %>
+        <%= link_to 'Assign Milestone to Campers', assign_milestones_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block" %>
       <% end %>
     <% end %>
     <div class="card page-card">
@@ -84,9 +84,9 @@
         <h5 class="card-title">Campers</h5>
         <div class="container">
           <% if @ccbs.empty? %>
-              <p class="card-text">
-                There are no campers assigned to this badge at this time.
-              </p>
+            <p class="card-text">
+              There are no campers assigned to this badge at this time.
+            </p>
             </div>
           <% else %>
             <% @ccbs.each_with_index do |ccb, index| %>
@@ -103,9 +103,9 @@
               </div>
               <% if ccb == @ccbs.last and (index + 1) % 3 != 0 %>
                 <div class="col"></div>
-                  <% if (index + 1) % 3 == 1 %>
-                    <div class="col"></div>
-                  <% end %>
+                <% if (index + 1) % 3 == 1 %>
+                  <div class="col"></div>
+                <% end %>
                 </div>
               <% end %>
               <% if ccb == @ccbs.last or (index + 1) % 3 == 0 %>
@@ -114,21 +114,21 @@
             <% end %>
           <% end %>
 
-        <% if logged_in? && (current_user.role?(:admin)) %>
-          <br/>
-          <%= link_to 'Add Campers', new_camper_camp_badge_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block btn-sm" %>
-        <% elsif logged_in? && (current_user.role?(:counselor)) %>
-          <% if @counselor_cb.include? @camp_badge %>
+          <% if logged_in? && (current_user.role?(:admin)) %>
             <br/>
-          <%= link_to 'Add Campers', new_camper_camp_badge_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block btn-sm" %>
+            <%= link_to 'Add Campers', new_camper_camp_badge_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block btn-sm" %>
+          <% elsif logged_in? && (current_user.role?(:counselor)) %>
+            <% if @counselor_cb.include? @camp_badge %>
+              <br/>
+              <%= link_to 'Add Campers', new_camper_camp_badge_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block btn-sm" %>
+            <% end %>
           <% end %>
-        <% end %>
-      </div>
-    </div>
-
-    </div>
-    </div>
+          </div>
   </div>
+
+</div>
+</div>
+</div>
 </div>
 </div>
 
