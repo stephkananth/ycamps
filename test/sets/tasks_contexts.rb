@@ -2,11 +2,9 @@
 
 module Contexts
   module TasksContexts
-    def create_tasks;
-    end
+    def create_tasks; end
 
-    def delete_tasks;
-    end
+    def delete_tasks; end
 
     def create_generic_tasks
       @task1 = FactoryBot.create(:task, badge: @badge3a, name: 'Task 1', order: 1)

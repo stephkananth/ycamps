@@ -61,6 +61,7 @@ class BadgeTest < ActiveSupport::TestCase
 
       @bad = FactoryBot.build(:badge, skill: @skill, name: 'Badge 1', level: 1)
       deny @bad.valid?
+      @bad.delete
 
       delete_generic_badges
       delete_generic_skill

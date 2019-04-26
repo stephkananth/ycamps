@@ -34,17 +34,40 @@ module Contexts
 
   def create_all
     create_users
+    create_generic_user
+
     create_parents
+    create_generic_parent
     create_campers
+    create_generic_camper
+
     create_counselors
+
     create_branches
+    create_more_branches
+    create_generic_branch
     create_locations
+    create_more_locations
+    create_generic_location
     create_camps
+    create_generic_camps
+
     create_skills
+    create_generic_skill
     create_badges
+    create_generic_badges
     create_tasks
+    create_generic_tasks
+
     create_camp_badges
+    create_generic_camp_badges
+    create_more_camp_badges
+
     create_camper_camp_badges
+    create_generic_camper_camp_badges
+    create_more_semi_generic_camper_camp_badges
+    create_incomplete_camper_camp_badges
+
     create_camper_camp_badge_tasks
     create_counselor_camp_badges
   end
@@ -52,17 +75,33 @@ module Contexts
   def delete_all
     delete_counselor_camp_badges
     delete_camper_camp_badge_tasks
+    delete_incomplete_camper_camp_badges
+    delete_more_semi_generic_camper_camp_badges
+    delete_generic_camper_camp_badges
     delete_camper_camp_badges
+    delete_more_camp_badges
+    delete_generic_camp_badges
     delete_camp_badges
+    delete_generic_tasks
     delete_tasks
+    delete_generic_badges
     delete_badges
+    delete_generic_skill
     delete_skills
+    delete_generic_camps
     delete_camps
+    delete_generic_location
+    delete_more_locations
     delete_locations
+    delete_generic_branch
+    delete_more_branches
     delete_branches
     delete_counselors
+    delete_generic_camper
     delete_campers
+    delete_generic_parent
     delete_parents
+    delete_generic_user
     delete_users
   end
 end

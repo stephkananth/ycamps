@@ -11,8 +11,8 @@ class CamperCampBadge < ApplicationRecord
   validate :camper_camp_badge_is_not_a_duplicate, on: :create
 
   # scopes
-  scope :completed, -> {where(completed: true)}
-  scope :incomplete, -> {where(completed: false)}
+  scope :completed, -> { where(completed: true) }
+  scope :incomplete, -> { where(completed: false) }
 
   # callbacks
 
