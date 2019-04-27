@@ -1,12 +1,14 @@
 # frozen_string_literal: true
 
 class CamperRegistrationsController < ApplicationController
+  include CamperRegistrationsHelper
   before_action :set_camper_registration, only: %i[show edit update destroy]
 
   # GET /camper_registrations
   # GET /camper_registrations.json
   def index
     @camper_registrations = CamperRegistration.where(camp_id: params[:camp_id])
+    @camp = Camp.find(params[:camp_id])
   end
 
   # GET /camper_registrations/1
@@ -17,6 +19,8 @@ class CamperRegistrationsController < ApplicationController
   # GET /camper_registrations/new
   def new
     @camper_registration = CamperRegistration.new
+    @camp = Camp.find(params[:camp_id])
+    @campers = Camper.all
   end
 
   # GET /camper_registrations/1/edit
@@ -26,14 +30,9 @@ class CamperRegistrationsController < ApplicationController
   # POST /camper_registrations
   # POST /camper_registrations.json
   def create
-    @camper_registration = CamperRegistration.new(camper_registration_params)
-
-    if @camper_registration.save
-      @camp = @camper_registration.camp
-      redirect_to @camp, notice: 'Camper registration was successfully created.'
-    else
-      render :new
-    end
+    @campers = params[:camper_registration][:camper_id].map(&:to_i).drop(1) - [0]
+    @camp = Camp.find(params[:camper_registration][:camp_id])
+    create_camper_registrations(@camp.id, @campers)
   end
 
   # PATCH/PUT /camper_registrations/1
@@ -68,7 +67,7 @@ class CamperRegistrationsController < ApplicationController
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def camper_registration_params
-    params.require(:camper_registration).permit(:camp_id, :camper_id)
-  end
+  # def camper_registration_params
+  #   params.require(:camper_registration).permit(:camp_id, :camper_id)
+  # end
 end
