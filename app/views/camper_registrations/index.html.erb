@@ -7,7 +7,7 @@
     <div class="header-subtitle">
       <br/>
       <% if logged_in? && current_user.role?(:admin) %>
-        <%= link_to 'Add New Camper to this Camp', new_camper_registration_path, class: "btn-sm btn-primary btn-block btn-sm" %>
+        <%= link_to 'Add New Camper to this Camp', new_camper_registration_path(:camp_id => @camp.id), class: "btn-sm btn-primary btn-block btn-sm" %>
       <% end %>
     </div>
   </div>

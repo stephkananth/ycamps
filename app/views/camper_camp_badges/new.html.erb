@@ -15,6 +15,16 @@
     <div class="card page-card">
       <div class="card-body">
         <h5 class="card-title">Add a Camper to a Camp Badge</h5>
+        <h6 class="card-subtitle">
+          Camp Badge
+        </h6>
+        <p class="card-text">
+          <%= @camp_badge.camp.name %><br/>
+          <%= @camp_badge.badge.name %>
+        </p>
+        <h6 class="card-subtitle">
+          Select campers to add to this badge.
+        </h6>
         <p class="card-text">
           <%= render 'form', camper_camp_badge: @camper_camp_badge %>
         </p>
