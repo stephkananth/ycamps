@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
+  factory :roster do
+    file './test_roster.csv'
+  end
+
   factory :camp_counselor do
     camp nil
     counselor nil
