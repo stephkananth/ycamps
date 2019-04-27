@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to home_path, notice: 'Logged in!'
     else
-      flash.now.alert = 'Username and/or password is invalid'
+      flash[:error] = 'Username and/or password is invalid'
       render 'new'
     end
   end
