@@ -126,6 +126,6 @@ class Importer
     # puts "user.last_name = #{@user_last}"
     @user_email = data[44]
     # puts "user.email = #{@user_email}"
-    puts ' '
+    # puts ' '
   end
 end
