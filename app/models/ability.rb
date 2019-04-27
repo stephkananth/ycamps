@@ -71,7 +71,8 @@ class Ability
         my_campers = Camper.where(parent_id: pid).first.campers.map(&:id)
         my_campers.include? this_camper.id
       end
-
+    else
+      nil
     end
   end
 end
