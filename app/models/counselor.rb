@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Counselor < ApplicationRecord
+  # relationships
   belongs_to :user
   has_many :counselor_camp_badges
   has_many :camp_badges, through: :counselor_camp_badges
@@ -11,11 +12,11 @@ class Counselor < ApplicationRecord
   validates_numericality_of :user_id, only_integer: true, greater_than: 0
 
   # scopes
-  scope :active, -> {where(active: true)}
-  scope :inactive, -> {where(active: false)}
-  scope :alphabetical, -> {joins(:user).order('last_name, first_name')}
+  scope :active, -> { where(active: true) }
+  scope :inactive, -> { where(active: false) }
+  scope :alphabetical, -> { joins(:user).order('last_name, first_name') }
 
-  # methods
+  # public methods
   def name
     user.last_name + ', ' + user.first_name
   end

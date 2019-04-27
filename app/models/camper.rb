@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Camper < ApplicationRecord
+  # relationships
   belongs_to :parent
   has_many :camper_registrations
   has_many :camps, through: :camper_registrations
@@ -8,15 +9,19 @@ class Camper < ApplicationRecord
   has_many :camp_badges, through: :camper_camp_badges
   has_many :badges, through: :camp_badges
 
+  # validations
   validates_presence_of :first_name, :last_name
   validates_numericality_of :parent_id, only_integer: true, greater_than: 0
   validate :camper_is_not_a_duplicate, on: :create
 
-  scope :active, -> {where(active: true)}
-  scope :inactive, -> {where(active: false)}
-  scope :alphabetical, -> {order('last_name, first_name')}
+  # scopes
+  scope :active, -> { where(active: true) }
+  scope :inactive, -> { where(active: false) }
+  scope :alphabetical, -> { order('last_name, first_name') }
 
+  # public methods
   def self.not_in_system?(camper)
+    # used in importer
     Camper.where(first_name: camper.first_name, last_name: camper.last_name).empty?
   end
 
@@ -50,6 +55,9 @@ class Camper < ApplicationRecord
     end
   end
 
+  private
+
+  # private methods
   def camper_is_not_a_duplicate
     return true if first_name.nil? || last_name.nil? || parent_id.nil?
 

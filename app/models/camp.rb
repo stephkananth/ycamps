@@ -20,13 +20,13 @@ class Camp < ApplicationRecord
   validate :camp_is_not_a_duplicate, on: :create
 
   # scopes
-  scope :active, -> {where(active: true)}
-  scope :inactive, -> {where(active: false)}
-  scope :alphabetical, -> {order('name')}
-  scope :chronological, -> {order('start_date', 'end_date')}
-  scope :upcoming, -> {where('start_date > ?', Date.today)}
-  scope :past, -> {where('end_date < ?', Date.today)}
-  scope :current, -> {where('start_date <= ? and end_date > ?', Date.today, Date.today)}
+  scope :active, -> { where(active: true) }
+  scope :inactive, -> { where(active: false) }
+  scope :alphabetical, -> { order('name') }
+  scope :chronological, -> { order('start_date', 'end_date') }
+  scope :upcoming, -> { where('start_date > ?', Date.today) }
+  scope :past, -> { where('end_date < ?', Date.today) }
+  scope :current, -> { where('start_date <= ? and end_date > ?', Date.today, Date.today) }
 
   # callbacks
   before_destroy do
@@ -39,6 +39,7 @@ class Camp < ApplicationRecord
 
   # public methods
   def self.not_in_system?(camp)
+    # used in importer
     Camp.where(location: camp.location, name: camp.name, program: camp.program, start_date: camp.start_date, end_date: camp.end_date).empty?
   end
 
@@ -55,29 +56,28 @@ class Camp < ApplicationRecord
 
   def counselors
     result = []
-    camp_badges.each {|camp_badge| result << CounselorCampBadge.where(camp_badge_id: camp_badge.id).map(&:counselor).flatten}
+    camp_badges.each { |camp_badge| result << CounselorCampBadge.where(camp_badge_id: camp_badge.id).map(&:counselor).flatten }
     camp_counselors.each do |camp_counselor|
       result << camp_counselor.counselor
     end
     result.flatten
   end
 
-  def already_exists?
-    Camp.where(location_id: location_id, name: name, program: program, start_date: start_date, end_date: end_date).size == 1
-  end
-
   def current?
     (start_date <= Date.today) && (end_date > Date.today)
   end
 
-  # private methods
-
   private
 
+  # private methods
   def camp_is_not_a_duplicate
     return true if start_date.nil? || location_id.nil?
 
     errors.add(:start_date, 'already exists for start date and location') if already_exists?
+  end
+
+  def already_exists?
+    Camp.where(location_id: location_id, name: name, program: program, start_date: start_date, end_date: end_date).size == 1
   end
 
   def check_if_has_registrations

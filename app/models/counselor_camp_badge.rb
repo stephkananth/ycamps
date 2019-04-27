@@ -5,12 +5,4 @@ class CounselorCampBadge < ApplicationRecord
 
   # validations
   validates_presence_of :camp_badge_id, :counselor_id
-
-  # scopes
-
-  # callbacks
-
-  # public methods
-
-  # private methods
 end

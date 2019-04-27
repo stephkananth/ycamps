@@ -7,20 +7,21 @@ class Location < ApplicationRecord
 
   # validations
   validates_presence_of :branch_id
-  validates :name, presence: true, uniqueness: {case_sensitive: false}
+  validates :name, presence: true, uniqueness: { case_sensitive: false }
   validate :location_is_not_a_duplicate, on: :create
 
   # scopes
-  scope :alphabetical, -> {order('name')}
-  scope :search, ->(term) {where('name LIKE ?', "#{term}%")}
-
-  # callbacks
+  scope :alphabetical, -> { order('name') }
 
   # public methods
   def self.not_in_system?(location)
+    # used in importer
     Location.where(name: location.name).empty?
   end
 
+  private
+
+  # private methods
   def location_is_not_a_duplicate
     return true if branch_id.nil? || name.nil?
 
@@ -30,6 +31,4 @@ class Location < ApplicationRecord
   def already_exists?
     Location.where(branch_id: branch_id, name: name).size == 1
   end
-
-  # private methods
 end

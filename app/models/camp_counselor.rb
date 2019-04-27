@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class CampCounselor < ApplicationRecord
+  # relationships
   belongs_to :camp
   belongs_to :counselor
 
@@ -10,6 +11,9 @@ class CampCounselor < ApplicationRecord
   validate :counselor_is_not_already_assigned_to_camp, on: :create
   validate :counselor_is_not_already_assigned_to_another_camp_at_same_time, on: :create
 
+  private
+
+  # private methods
   def counselor_is_not_already_assigned_to_camp
     return true if camp.nil? || counselor.nil?
 
