@@ -443,6 +443,11 @@ li {
   background-color: #99E078;
 }
 
+/* Alert */
+.alert {
+  margin-bottom: 0;
+}
+
 /*** MEDIA QUERIES ***/
 
 /* Mobile View Styling */
@@ -465,6 +470,8 @@ li {
     margin-right: 0;
   }
 }
+
+
 
 /* Tablet View Styling */
 @media (min-width: 768px) and (max-width: 1024px) {

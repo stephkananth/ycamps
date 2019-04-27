@@ -22,3 +22,6 @@ $('[data-behaviour="select-all"][value=0]').on('change', function () {
         $(this).prop('checked', checked);
     });
 });
+
+$(".alert").fadeOut('slow').delay(2000);
+
