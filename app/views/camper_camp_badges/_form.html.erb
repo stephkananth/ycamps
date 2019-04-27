@@ -2,8 +2,7 @@
   <%= f.error_notification %>
   <%= f.hidden_field :camp_badge_id, value: params['camp_badge_id'] %>
   <div class="form-group">
-    <%= f.label :camper_id %>
-    <%= f.input :camper_id, collection: @campers, input_html: {class: 'form-control'}, label: false %>
+    <%= f.input :camper_id,  collection: [Camper.new(id: 0, first_name: 'Select', last_name: 'All', parent_id: 0)] + @campers, as: :check_boxes, :label_method => :proper_name, :value_method => :id, label: false, input_html: {data: {behaviour: 'select-all'}} %>
   </div>
   <div class="form-group">
     <%= f.label :completed, label: "badge completed?" %>

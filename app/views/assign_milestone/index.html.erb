@@ -13,12 +13,14 @@
   <div class="col">
     <%= simple_form_for :user, url: create_milestones_path(:camp_badge_id => @camp_badge.id) do |f| %>
       <%= f.simple_fields_for :other do |o| %>
-        <%= o.input :task, collection: @tasks, :value_method => :id, input_html: {class: 'form-control'} %>
         <div class="card page-card">
           <div class="card-body">
-            <div class="card-text">
+            <h5 class="card-title">Assign Milestone</h5>
+            <h6 class="card-subtitle">Select students to assign a milestone to. </h6>
+            <p class="card-text">
+              <%= o.input :task, collection: @tasks, :value_method => :id, input_html: {class: 'form-control'} %>
               <%= o.input :campers, collection: [Camper.new(id: 0, first_name: 'Select', last_name: 'All', parent_id: 0)] + @campers, as: :check_boxes, :label_method => :proper_name, :value_method => :id, label: false, input_html: {data: {behaviour: 'select-all'}} %>
-            </div>
+            </p>
           </div>
         </div>
       <% end %>
