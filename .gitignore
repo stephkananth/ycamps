@@ -3,12 +3,12 @@
 *.log
 *.sqlite3
 *.xml
-YCHAT/coverage/.resultset.json
-YCHAT/coverage/index.html
-YCHAT/db/development.sqlite3
-YCHAT/db/test.sqlite3
-YCHAT/log/development.log
-YCHAT/log/test.log
+/coverage/.resultset.json
+/coverage/index.html
+/db/development.sqlite3
+/db/test.sqlite3
+/log/development.log
+/log/test.log
 *.rbc
 capybara-*.html
 .rspec
@@ -23,10 +23,7 @@ capybara-*.html
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
-!/log/.keep
-!/tmp/.keep
 /coverage/*
-/.idea/*
 
 /node_modules
 /yarn-error.log
