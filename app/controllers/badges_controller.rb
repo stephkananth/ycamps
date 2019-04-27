@@ -6,7 +6,7 @@ class BadgesController < ApplicationController
   # GET /badges
   # GET /badges.json
   def index
-    @badges = Badge.all
+    @badges = Badge.all.paginate(:page => params[:badges]).per_page(10)
   end
 
   # GET /badges/1
@@ -35,28 +35,24 @@ class BadgesController < ApplicationController
     level = params[:badge][:level]
     @badge = Badge.new(name: badge_name, skill_id: skill_id, level: level, description: description)
 
-    respond_to do |format|
-      if @badge.save
-        format.html {redirect_to @badge, notice: 'Badge was successfully created.'}
-        format.json {render :show, status: :created, location: @badge}
-      else
-        format.html {render :new}
-        format.json {render json: @badge.errors, status: :unprocessable_entity}
-      end
+    if @badge.save
+      flash[:notice] = "Successfully created badge."
+      redirect_to badge_path(@badge)
+    else
+      flash[:notice] = "Failed to create badge."
+      redirect_to new_badge_path
     end
   end
 
   # PATCH/PUT /badges/1
   # PATCH/PUT /badges/1.json
   def update
-    respond_to do |format|
-      if @badge.update(badge_params)
-        format.html {redirect_to @badge, notice: 'Badge was successfully updated.'}
-        format.json {render :show, status: :ok, location: @badge}
-      else
-        format.html {render :edit}
-        format.json {render json: @badge.errors, status: :unprocessable_entity}
-      end
+    if @badge.update(badge_params)
+      flash[:notice] = "Successfully updated badge."
+      redirect_to badge_path(@badge)
+    else
+      flash[:notice] = "Failed to update badge."
+      redirect_to edit_badge_path(@badge)
     end
   end
 

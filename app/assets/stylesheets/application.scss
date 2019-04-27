@@ -37,7 +37,7 @@ a:hover {
 .home-container {
   min-height: 100vh;
   min-width: 100vw;
-  background-image: url("/assets/grass-background.svg");
+  background-image: url("/assets/grass-background.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -116,7 +116,7 @@ h5.card-title {
 }
 
 #dashboard-header {
-  background: url("/assets/dashboard-header.svg");
+  background: url("/assets/dashboard-header.png");
   height: 25vh;
   min-width: 100vw;
   background-position: center;
@@ -126,7 +126,7 @@ h5.card-title {
 }
 
 #barn-header {
-  background: url("/assets/barn-header.svg");
+  background: url("/assets/barn-header.png");
   height: 25vh;
   min-width: 100vw;
   background-position: center;
@@ -136,7 +136,7 @@ h5.card-title {
 }
 
 #profile-header {
-  background: url("/assets/profile-header.svg");
+  background: url("/assets/profile-header.png");
   height: 25vh;
   min-width: 100vw;
   background-position: center;
@@ -146,7 +146,17 @@ h5.card-title {
 }
 
 #assign-milestone-header {
-  background: url("/assets/assign-milestone-header.svg");
+  background: url("/assets/assign-milestone-header.png");
+  height: 25vh;
+  min-width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: auto;
+  background-size: cover;
+}
+
+#camp-badge-header {
+  background: url("/assets/camp-badge-header.png");
   height: 25vh;
   min-width: 100vw;
   background-position: center;
@@ -236,7 +246,7 @@ h5.card-title {
 }
 
 .back-btn {
-  background: url("/assets/back-arrow.svg");
+  background: url("/assets/back-arrow.png");
   max-width: 100%;
   max-height: 30vh;
   background-position: top;
@@ -364,16 +374,6 @@ input.form-control {
   font-weight: 700;
 }
 
-.camp-badge-header {
-  background: url("/assets/camp-badge-header.svg");
-  max-width: 100%;
-  max-height: 30vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: auto;
-  background-size: cover;
-}
-
 .accordion-section {
   font-size: 14px;
 }
@@ -423,11 +423,11 @@ input.form-control {
 
 /* Lists */
 .incomplete-bullet {
-  list-style-image: url("/assets/incomplete-bubble.svg");
+  list-style-image: url("/assets/incomplete-bubble.png");
 }
 
 .completed-bullet {
-  list-style-image: url("/assets/complete-bubble.svg");
+  list-style-image: url("/assets/complete-bubble.png");
 }
 
 li {

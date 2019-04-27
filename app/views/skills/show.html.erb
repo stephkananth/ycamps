@@ -13,6 +13,14 @@
 
 <div class="row page-row">
   <div class="col">
+    <% if logged_in? && current_user.role?(:admin) %>
+      <div class="row btn-group">
+        <div class="col">
+          <%= link_to 'Add New Badge', new_badge_path, class: "btn btn-primary btn-block btn-right" %>
+        </div>
+      </div>
+    <% end %>
+    
     <div class="card page-card">
       <div class="card-body">
         <h5 class="card-title">Badges</h5>

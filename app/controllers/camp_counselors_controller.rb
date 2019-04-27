@@ -6,7 +6,7 @@ class CampCounselorsController < ApplicationController
   # GET /camp_counselors
   # GET /camp_counselors.json
   def index
-    @camp_counselors = CampCounselor.where(camp_id: params[:camp_id])
+    @camp_counselors = CampCounselor.where(camp_id: params[:camp_id]).paginate(:page => params[:camp_counselors]).per_page(10)
     @camp_id = params[:camp_id]
   end
 
