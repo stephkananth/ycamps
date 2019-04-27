@@ -61,9 +61,6 @@
         <div class="col">
           <%= link_to 'Edit', edit_camp_path(:camp_id => @camp.id), class: "btn btn-primary btn-block btn-right" %>
         </div>
-        <div class="col">
-          <%= link_to 'Delete', @camp, method: :delete, data: {confirm: 'Are you sure you want to delete this camp?'}, class: "btn btn-primary btn-block btn-left" %>
-        </div>
       </div>
     <% end %>
   </div>
