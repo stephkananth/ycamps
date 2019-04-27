@@ -33,7 +33,7 @@ class CamperRegistrationsController < ApplicationController
       @camp = @camper_registration.camp
       redirect_to @camp, notice: 'Camper registration was successfully created.'
     else
-      flash[:notice] = "Failed to create camper_registration."
+      flash[:error] = "Failed to create camper_registration."
       render :new
     end
   end
@@ -45,7 +45,7 @@ class CamperRegistrationsController < ApplicationController
       flash[:notice] = "Successfully updated camper registration."
       redirect_to camper_registration_path(@camper_registration)
     else
-      flash[:notice] = "Failed to update camper registration."
+      flash[:error] = "Failed to update camper registration."
       redirect_to edit_camper_registration_path(@camper_registration)
     end
   end

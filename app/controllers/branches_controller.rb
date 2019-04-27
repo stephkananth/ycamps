@@ -34,7 +34,7 @@ class BranchesController < ApplicationController
       flash[:notice] = "Successfully created branch."
       redirect_to branch_path(@branch)
     else
-      flash[:notice] = "Failed to create branch."
+      flash[:error] = "Failed to create branch."
       redirect_to new_branch_path
     end
   end
@@ -46,7 +46,7 @@ class BranchesController < ApplicationController
       flash[:notice] = "Successfully updated branch."
       redirect_to branch_path(@branch)
     else
-      flash[:notice] = "Failed to update branch."
+      flash[:error] = "Failed to update branch."
       redirect_to edit_branch_path(@branch)
     end
   end

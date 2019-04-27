@@ -36,6 +36,7 @@ class LocationsController < ApplicationController
       flash[:notice] = "Successfully created location."
       redirect_to location_path(@location), notice: "#{@location.name} location was added to the system."
     else
+      flash[:error] = "Failed to create location."
       render action: 'new'
     end
   end
@@ -47,7 +48,7 @@ class LocationsController < ApplicationController
       flash[:notice] = "Successfully updated location."
       redirect_to location_path(@location)
     else
-      flash[:notice] = "Failed to update location."
+      flash[:error] = "Failed to update location."
       redirect_to edit_location_path(@location)
     end
   end

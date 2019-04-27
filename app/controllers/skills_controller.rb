@@ -33,7 +33,7 @@ class SkillsController < ApplicationController
       flash[:notice] = "Successfully created skill."
       redirect_to skill_path(@skill)
     else
-      flash[:notice] = "Failed to create skill."
+      flash[:error] = "Failed to create skill."
       redirect_to new_skill_path
     end
   end
@@ -45,7 +45,7 @@ class SkillsController < ApplicationController
       flash[:notice] = "Successfully updated skill."
       redirect_to skill_path(@skill)
     else
-      flash[:notice] = "Failed to update skill."
+      flash[:error] = "Failed to update skill."
       redirect_to edit_skill_path(@skill)
     end
   end

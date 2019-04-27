@@ -47,7 +47,7 @@ class CampBadgesController < ApplicationController
           flash[:notice] = "Successfully create counselor camp badge."
           redirect_to new_camper_camp_badge_path(camp_badge_id: @camp_badge.id)
         else
-          flash[:notice] = "Failed to create counselor camp badge."
+          flash[:error] = "Failed to create counselor camp badge."
           redirect_to new_camp_badge_path(camp_id: params[:camp_badge][:camp_id])
         end
       elsif current_user.role?(:admin)
@@ -65,7 +65,7 @@ class CampBadgesController < ApplicationController
       flash[:notice] = "Successfully updated camp badge."
       redirect_to camp_path(@camp_badge.camp)
     else
-      flash[:notice] = "Failed to update camp badge."
+      flash[:error] = "Failed to update camp badge."
       redirect_to edit_camp_badge_path(@camp_badge)
     end
   end

@@ -448,6 +448,19 @@ li {
   margin-bottom: 0;
 }
 
+.alert-success {
+  color: #696969;
+  background-color: rgba(153, 224, 120, 0.7);
+  font-weight: 700;
+  border: none;
+}
+
+.alert-danger {
+  color: #696969;
+  font-weight: 700;
+  border: none;
+}
+
 /*** MEDIA QUERIES ***/
 
 /* Mobile View Styling */

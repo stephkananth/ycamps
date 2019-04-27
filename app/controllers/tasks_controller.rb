@@ -37,7 +37,7 @@ class TasksController < ApplicationController
       flash[:notice] = "Successfully created task."
       redirect_to badge_path(badge_id), notice: "Task — #{@task.name} was added to the system."
     else
-      flash[:notice] = "Failed to create task."
+      flash[:error] = "Failed to create task."
       render action: 'new'
     end
   end
@@ -50,7 +50,7 @@ class TasksController < ApplicationController
       flash[:notice] = "Successfully updated task."
       redirect_to badge_path(badge_id), notice: "#{@task.name} task was updated in the system."
     else
-      flash[:notice] = "Failed to update task."
+      flash[:error] = "Failed to update task."
       render action: 'new'
     end
   end
