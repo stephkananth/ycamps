@@ -1,8 +1,5 @@
+<%= f.hidden_field :camp_id, value: params['camp_id'] %>
 <div class="form-group">
-  <%= f.label :camp_id %>
-  <%= f.input :camp_id, label: false, collection: Camp.alphabetical.to_a, include_blank: true, :label_method => :name, input_html: {class: 'form-control'} %>
-</div>
-<div class="form-group">
-  <%= f.label :camper_id %>
-  <%= f.input :camper_id, label: false, collection: Camper.alphabetical.to_a, include_blank: true, :label_method => :proper_name, input_html: {class: 'form-control'} %>
+  <label>Select students to add to this camp </label>
+  <%= f.input :camper_id, collection: [Camper.new(id: 0, first_name: 'Select', last_name: 'All', parent_id: 0)] + @campers, as: :check_boxes, :label_method => :proper_name, :value_method => :id, label: false, input_html: {data: {behaviour: 'select-all'}} %>
 </div>

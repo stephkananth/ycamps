@@ -14,12 +14,11 @@
     <div class="card page-card">
       <div class="card-body">
         <h5 class="card-title">Create New Camper Registration</h5>
-
-        <p class="card-text">
+        <% if @camp %>
           <%= render partial: "partials/form_structure", locals: {object: @camper_registration,
-                                                                  type_of_form: "New Camper Registration",
-                                                                  fields: "camper_registration_fields"} %>
-        </p>
+                                                                    type_of_form: "New Camper Registration",
+                                                                    fields: "camper_registration_fields"}   %>
+        <% end %>
 
       </div>
     </div>
