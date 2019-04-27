@@ -9,17 +9,16 @@ class Task < ApplicationRecord
   validate :task_is_not_a_duplicate, on: :create
 
   # scopes
-  scope :alphabetical, -> {order(name: :asc)}
-  scope :in_order, -> {order(order: :asc)}
+  scope :alphabetical, -> { order(name: :asc) }
+  scope :in_order, -> { order(order: :asc) }
 
   # callbacks
 
   # public methods
   def task_is_not_a_duplicate
     return true if badge_id.nil? || name.nil? || order.nil?
-    if already_exists?
-      errors.add(:base, 'already exists')
-    end
+
+    errors.add(:base, 'already exists') if already_exists?
   end
 
   def already_exists?

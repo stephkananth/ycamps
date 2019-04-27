@@ -11,8 +11,8 @@ class CamperCampBadgeTask < ApplicationRecord
   validate :camper_camp_badge_task_is_not_a_duplicate, on: :create
 
   # scopes
-  scope :completed, -> {where(completed: true)}
-  scope :incomplete, -> {where(completed: false)}
+  scope :completed, -> { where(completed: true) }
+  scope :incomplete, -> { where(completed: false) }
 
   # callbacks
   after_update do
@@ -22,9 +22,8 @@ class CamperCampBadgeTask < ApplicationRecord
   # public methods
   def camper_camp_badge_task_is_not_a_duplicate
     return true if camper_camp_badge_id.nil? || task_id.nil?
-    if already_exists?
-      errors.add(:base, 'already exists')
-    end
+
+    errors.add(:base, 'already exists') if already_exists?
   end
 
   def already_exists?

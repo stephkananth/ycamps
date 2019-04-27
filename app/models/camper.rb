@@ -13,9 +13,9 @@ class Camper < ApplicationRecord
   validates_numericality_of :parent_id, only_integer: true, greater_than: 0
   validate :camper_is_not_a_duplicate, on: :create
 
-  scope :active, -> {where(active: true)}
-  scope :inactive, -> {where(active: false)}
-  scope :alphabetical, -> {order('last_name, first_name')}
+  scope :active, -> { where(active: true) }
+  scope :inactive, -> { where(active: false) }
+  scope :alphabetical, -> { order('last_name, first_name') }
 
   def name
     last_name + ', ' + first_name
@@ -47,9 +47,8 @@ class Camper < ApplicationRecord
 
   def camper_is_not_a_duplicate
     return true if first_name.nil? || last_name.nil? || parent_id.nil?
-    if already_exists?
-      errors.add(:base, 'already exists')
-    end
+
+    errors.add(:base, 'already exists') if already_exists?
   end
 
   def already_exists?

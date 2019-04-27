@@ -5,8 +5,8 @@ class User < ApplicationRecord
 
   # validations
   validates_presence_of :first_name, :last_name
-  validates :email, presence: true, uniqueness: {case_sensitive: false}
-  validates :role, inclusion: {in: %w[admin counselor parent], message: 'is not a recognized role in system'}
+  validates :email, presence: true, uniqueness: { case_sensitive: false }
+  validates :role, inclusion: { in: %w[admin counselor parent], message: 'is not a recognized role in system' }
   validates_presence_of :password, on: :create
   validates_presence_of :password_confirmation, on: :create
   validates_confirmation_of :password, message: 'does not match'
@@ -15,7 +15,7 @@ class User < ApplicationRecord
   validate :user_is_not_a_duplicate, on: :create
 
   # scopes
-  scope :search, ->(term) {where('email LIKE ?', "#{term}%")}
+  scope :search, ->(term) { where('email LIKE ?', "#{term}%") }
 
   # for use in authorizing with CanCan
   ROLES = [['Admin', :admin], ['Counselor', :counselor], ['Parent', :parent]].freeze
@@ -23,9 +23,8 @@ class User < ApplicationRecord
   # additional functions
   def user_is_not_a_duplicate
     return true if email.nil?
-    if already_exists?
-      errors.add(:base, 'already exists')
-    end
+
+    errors.add(:base, 'already exists') if already_exists?
   end
 
   def already_exists?
