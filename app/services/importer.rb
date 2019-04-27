@@ -105,27 +105,27 @@ class Importer
 
   def read_data(data)
     @camper_first = data[2]
-    puts "camper.first_name = #{@camper_first}"
+    # puts "camper.first_name = #{@camper_first}"
     @camper_last = data[3]
-    puts "camper.last_name = #{@camper_last}"
+    # puts "camper.last_name = #{@camper_last}"
     @branch_name = data[23]
-    puts "branch.name = #{@branch_name}"
+    # puts "branch.name = #{@branch_name}"
     @location_name = data[24]
-    puts "location.name = #{@location_name}"
+    # puts "location.name = #{@location_name}"
     @camp_program = data[25]
-    puts "camp.program = #{@camp_program}"
+    # puts "camp.program = #{@camp_program}"
     @camp_start = Date.strptime(data[31], '%m/%d/%Y')
-    puts "camp.start = #{@camp_start}"
+    # puts "camp.start = #{@camp_start}"
     @camp_end = Date.strptime(data[32], '%m/%d/%Y')
-    puts "camp.end = #{@camp_end}"
+    # puts "camp.end = #{@camp_end}"
     @camp_name = data[30]
-    puts "camp.name = #{@camp_name}"
+    # puts "camp.name = #{@camp_name}"
     @user_first = data[42]
-    puts "user.first_name = #{@user_first}"
+    # puts "user.first_name = #{@user_first}"
     @user_last = data[43]
-    puts "user.last_name = #{@user_last}"
+    # puts "user.last_name = #{@user_last}"
     @user_email = data[44]
-    puts "user.email = #{@user_email}"
+    # puts "user.email = #{@user_email}"
     puts ' '
   end
 end
