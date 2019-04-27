@@ -6,13 +6,13 @@ class ParentsController < ApplicationController
   # GET /parents
   # GET /parents.json
   def index
-    @parents = Parent.all
+    @parents = Parent.all.paginate(:page => params[:parents]).per_page(10)
   end
 
   # GET /parents/1
   # GET /parents/1.json
   def show
-    @campers = @parent.campers
+    @campers = @parent.campers.paginate(:page => params[:campers]).per_page(10)
   end
 
   # GET /parents/new
@@ -29,13 +29,12 @@ class ParentsController < ApplicationController
   def create
     @parent = Parent.new(parent_params)
 
-    respond_to do |format|
       if @parent.save
-        format.html {redirect_to @parent, notice: 'Parent was successfully created.'}
-        format.json {render :show, status: :created, location: @parent}
+        flash[:notice] = "Successfully created parent."
+        redirect_to parent_path(@parent
       else
-        format.html {render :new}
-        format.json {render json: @parent.errors, status: :unprocessable_entity}
+        flash[:notice] = "Failed to create parent."
+        redirect_to new_parent_path
       end
     end
   end
@@ -43,13 +42,12 @@ class ParentsController < ApplicationController
   # PATCH/PUT /parents/1
   # PATCH/PUT /parents/1.json
   def update
-    respond_to do |format|
       if @parent.update(parent_params)
-        format.html {redirect_to @parent, notice: 'Parent was successfully updated.'}
-        format.json {render :show, status: :ok, location: @parent}
+        flash[:notice] = "Successfully updated parent."
+        redirect_to parent_path(@parent)
       else
-        format.html {render :edit}
-        format.json {render json: @parent.errors, status: :unprocessable_entity}
+        flash[:notice] = "Failed to update parent."
+        redirect_to edit_parent_path(@parent)
       end
     end
   end

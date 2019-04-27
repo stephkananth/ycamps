@@ -34,8 +34,10 @@ class TasksController < ApplicationController
     @task = Task.new(name: task_name, badge_id: badge_id, description: description)
 
     if @task.save
+      flash[:notice] = "Successfully created task."
       redirect_to badge_path(badge_id), notice: "Task — #{@task.name} was added to the system."
     else
+      flash[:notice] = "Failed to create task."
       render action: 'new'
     end
   end
@@ -45,8 +47,10 @@ class TasksController < ApplicationController
   def update
     badge_id = @task.badge.id
     if @task.update(task_params)
+      flash[:notice] = "Successfully updated task."
       redirect_to badge_path(badge_id), notice: "#{@task.name} task was updated in the system."
     else
+      flash[:notice] = "Failed to update task."
       render action: 'new'
     end
   end

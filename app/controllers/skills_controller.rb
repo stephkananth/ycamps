@@ -6,13 +6,13 @@ class SkillsController < ApplicationController
   # GET /skills
   # GET /skills.json
   def index
-    @skills = Skill.all
+    @skills = Skill.all.paginate(:page => params[:skills]).per_page(10)
   end
 
   # GET /skills/1
   # GET /skills/1.json
   def show
-    @badges = @skill.badges
+    @badges = @skill.badges.paginate(:page => params[:badges]).per_page(10)
   end
 
   # GET /skills/new
@@ -29,28 +29,24 @@ class SkillsController < ApplicationController
   def create
     @skill = Skill.new(skill_params)
 
-    respond_to do |format|
-      if @skill.save
-        format.html {redirect_to @skill, notice: 'Skill was successfully created.'}
-        format.json {render :show, status: :created, location: @skill}
-      else
-        format.html {render :new}
-        format.json {render json: @skill.errors, status: :unprocessable_entity}
-      end
+    if @skill.save
+      flash[:notice] = "Successfully created skill."
+      redirect_to skill_path(@skill)
+    else
+      flash[:notice] = "Failed to create skill."
+      redirect_to new_skill_path
     end
   end
 
   # PATCH/PUT /skills/1
   # PATCH/PUT /skills/1.json
   def update
-    respond_to do |format|
-      if @skill.update(skill_params)
-        format.html {redirect_to @skill, notice: 'Skill was successfully updated.'}
-        format.json {render :show, status: :ok, location: @skill}
-      else
-        format.html {render :edit}
-        format.json {render json: @skill.errors, status: :unprocessable_entity}
-      end
+    if @skill.update(skill_params)
+      flash[:notice] = "Successfully updated skill."
+      redirect_to skill_path(@skill)
+    else
+      flash[:notice] = "Failed to update skill."
+      redirect_to edit_skill_path(@skill)
     end
   end
 

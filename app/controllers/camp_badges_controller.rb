@@ -44,8 +44,10 @@ class CampBadgesController < ApplicationController
             camp_badge_id: @camp_badge.id
         )
         if @counselor_camp_badge.save
+          flash[:notice] = "Successfully create counselor camp badge."
           redirect_to new_camper_camp_badge_path(camp_badge_id: @camp_badge.id)
         else
+          flash[:notice] = "Failed to create counselor camp badge."
           redirect_to new_camp_badge_path(camp_id: params[:camp_badge][:camp_id])
         end
       elsif current_user.role?(:admin)
@@ -59,14 +61,12 @@ class CampBadgesController < ApplicationController
   # PATCH/PUT /camp_badges/1
   # PATCH/PUT /camp_badges/1.json
   def update
-    respond_to do |format|
-      if @camp_badge.update(camp_badge_params)
-        format.html {redirect_to @camp_badge, notice: 'Camp badge was successfully updated.'}
-        format.json {render :show, status: :ok, location: @camp_badge}
-      else
-        format.html {render :edit}
-        format.json {render json: @camp_badge.errors, status: :unprocessable_entity}
-      end
+    if @camp_badge.update(camp_badge_params)
+      flash[:notice] = "Successfully updated camp badge."
+      redirect_to camp_path(@camp_badge.camp)
+    else
+      flash[:notice] = "Failed to update camp badge."
+      redirect_to edit_camp_badge_path(@camp_badge)
     end
   end
 

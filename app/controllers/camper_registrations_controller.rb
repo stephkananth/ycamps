@@ -7,8 +7,7 @@ class CamperRegistrationsController < ApplicationController
   # GET /camper_registrations
   # GET /camper_registrations.json
   def index
-    @camper_registrations = CamperRegistration.where(camp_id: params[:camp_id])
-    @camp = Camp.find(params[:camp_id])
+    @camper_registrations = CamperRegistration.where(camp_id: params[:camp_id]).paginate(:page => params[:camper_registrations]).per_page(10)
   end
 
   # GET /camper_registrations/1
@@ -38,14 +37,12 @@ class CamperRegistrationsController < ApplicationController
   # PATCH/PUT /camper_registrations/1
   # PATCH/PUT /camper_registrations/1.json
   def update
-    respond_to do |format|
-      if @camper_registration.update(camper_registration_params)
-        format.html {redirect_to @camper_registration, notice: 'Camper registration was successfully updated.'}
-        format.json {render :show, status: :ok, location: @camper_registration}
-      else
-        format.html {render :edit}
-        format.json {render json: @camper_registration.errors, status: :unprocessable_entity}
-      end
+    if @camper_registration.update(camper_registration_params)
+      flash[:notice] = "Successfully updated camper registration."
+      redirect_to camper_registration_path(@camper_registration)
+    else
+      flash[:notice] = "Failed to update camper registration."
+      redirect_to edit_camper_registration_path(@camper_registration)
     end
   end
 

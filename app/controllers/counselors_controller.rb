@@ -8,16 +8,16 @@ class CounselorsController < ApplicationController
   # GET /counselors
   # GET /counselors.json
   def index
-    @counselors = Counselor.all.alphabetical
+    @counselors = Counselor.all.alphabetical.paginate(:page => params[:counselors]).per_page(10)
   end
 
   # GET /counselors/1
   # GET /counselors/1.json
   def show
-    @camps = @counselor.camps
-    @past_camps = @counselor.camps.past.chronological
-    @upcoming_camps = @counselor.camps.upcoming.chronological
-    @current_camps = @counselor.camps.current.chronological
+    @camps = @counselor.camps.paginate(:page => params[:camps]).per_page(10)
+    @past_camps = @counselor.camps.past.chronological.paginate(:page => params[:past_camps]).per_page(10)
+    @upcoming_camps = @counselor.camps.upcoming.chronological.paginate(:page => params[:upcoming_camps]).per_page(10)
+    @current_camps = @counselor.camps.current.chronological.paginate(:page => params[:current_camps]).per_page(10)
     # @campers = @
   end
 
@@ -38,6 +38,7 @@ class CounselorsController < ApplicationController
     @user.role = 'counselor'
     if !@user.save
       @counselor.valid?
+      flash[:notice] = "Successfully created counselor."
       render action: 'new'
     else
       @counselor.user_id = @user.id
@@ -53,14 +54,12 @@ class CounselorsController < ApplicationController
   # PATCH/PUT /counselors/1
   # PATCH/PUT /counselors/1.json
   def update
-    respond_to do |format|
-      if @counselor.update(counselor_params)
-        format.html {redirect_to @counselor, notice: 'Counselor was successfully updated.'}
-        format.json {render :show, status: :ok, location: @counselor}
-      else
-        format.html {render :edit}
-        format.json {render json: @counselor.errors, status: :unprocessable_entity}
-      end
+    if @counselor.update(counselor_params)
+      flash[:notice] = "Successfully updated counselor."
+      redirect_to counselor_path(@counselor)
+    else
+      flash[:notice] = "Failed to update counselor."
+      redirect_to edit_counselor_path(@counselor)
     end
   end
 
