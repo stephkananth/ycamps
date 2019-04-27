@@ -1,17 +1,56 @@
-<div class="row main-view barn-header" id="admin-camp-view">
-  <div class="header"></div>
-  <%= link_to 'Back', :back %>
+<div class="header" id="barn-header">
+  <%#= link_to 'Back', :back %>
   <div class="btn-wrapper">
-    <%= link_to '+ Add New Camper', new_camper_path, class: "btn-sm btn-primary btn-block" %>
   </div>
-  <div class="header-text">
-    <h2 class="header-title">Campers</h2>
+  <div class="header-body">
+    <div class="header-title">Campers</div>
     <div class="header-subtitle">
-      <br/>
-      <% if logged_in? && current_user.role?(:admin) %>
-        <%= link_to 'Create New Camper', new_camper_path, class: "btn btn-primary btn-block btn-sm" %>
-      <% end %>
     </div>
   </div>
-  <%= render :partial => "partials/camper_index", locals: {campers: @campers, state: "Current"} %>
+</div>
+
+<div class="row page-row">
+  <div class="col">
+    <%= link_to 'Create New Camper', new_camper_path, class: "btn btn-primary btn-block" %>
+    <div class="card page-card">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">
+          <% if @campers.count != 0 %>
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Camper Name</th>
+              <th>Parent</th>
+              <th colspan="3"></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <% @campers.each do |camper| %>
+              <tr>
+                <td>
+                  <%= link_to camper do %>
+                    <%= camper.proper_name %>
+                  <% end %>
+                </td>
+                <td>
+                  <%= link_to camper.parent do %>
+                    <%= camper.parent.proper_name %>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+        <% else %>
+          There are no campers in the system.
+        <% end %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pad-bottom">
 </div>

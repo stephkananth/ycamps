@@ -26,11 +26,6 @@
                   <%= link_to camp_badge.badge.name, camp_badge %><br/>
                   <%= camp_badge.camp.name %>
                 </td>
-                <td>
-                  <% if logged_in? && current_user.role?(:admin) %>
-                    <%= link_to 'Delete', camp_badge_path(camp_badge), method: :delete, data: {confirm: 'Are you sure you want to delete this camp badge?'}, class: "btn btn-primary btn-block btn-sm" %>
-                  <% end %>
-                </td>
               </tr>
             <% end %>
             </tbody>
