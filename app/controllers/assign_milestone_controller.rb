@@ -9,14 +9,13 @@ class AssignMilestoneController < ApplicationController
     @tasks = @camp_badge.badge.tasks
   end
 
-  def new;
-  end
+  def new; end
 
   def create
     @camp_badge = params[:camp_badge_id].to_i
     @campers = params[:user][:other][:campers].map(&:to_i).drop(1) - [0]
     @task = params[:user][:other][:task].to_i
-    flash[:notice] = "Successfully added milestone."
+    flash[:notice] = 'Successfully added milestone.'
     assign_milestones_to_campers(@task, @camp_badge, @campers)
     redirect_to "/camp_badges/#{@camp_badge}"
   end

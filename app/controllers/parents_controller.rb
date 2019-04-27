@@ -6,13 +6,13 @@ class ParentsController < ApplicationController
   # GET /parents
   # GET /parents.json
   def index
-    @parents = Parent.all.paginate(:page => params[:parents]).per_page(10)
+    @parents = Parent.all.paginate(page: params[:parents]).per_page(10)
   end
 
   # GET /parents/1
   # GET /parents/1.json
   def show
-    @campers = @parent.campers.paginate(:page => params[:campers]).per_page(10)
+    @campers = @parent.campers.paginate(page: params[:campers]).per_page(10)
   end
 
   # GET /parents/new
@@ -21,34 +21,31 @@ class ParentsController < ApplicationController
   end
 
   # GET /parents/1/edit
-  def edit;
-  end
+  def edit; end
 
   # POST /parents
   # POST /parents.json
   def create
     @parent = Parent.new(parent_params)
 
-      if @parent.save
-        flash[:notice] = "Successfully created parent."
-        redirect_to parent_path(@parent
-      else
-        flash[:error] = "Failed to create parent."
-        redirect_to new_parent_path
-      end
+    if @parent.save
+      flash[:notice] = 'Successfully created parent.'
+      redirect_to parent_path(@parent)
+    else
+      flash[:error] = 'Failed to create parent.'
+      redirect_to new_parent_path
     end
   end
 
   # PATCH/PUT /parents/1
   # PATCH/PUT /parents/1.json
   def update
-      if @parent.update(parent_params)
-        flash[:notice] = "Successfully updated parent."
-        redirect_to parent_path(@parent)
-      else
-        flash[:error] = "Failed to update parent."
-        redirect_to edit_parent_path(@parent)
-      end
+    if @parent.update(parent_params)
+      flash[:notice] = 'Successfully updated parent.'
+      redirect_to parent_path(@parent)
+    else
+      flash[:error] = 'Failed to update parent.'
+      redirect_to edit_parent_path(@parent)
     end
   end
 
@@ -57,8 +54,8 @@ class ParentsController < ApplicationController
   def destroy
     @parent.destroy
     respond_to do |format|
-      format.html {redirect_to parents_url, notice: 'Parent was successfully destroyed.'}
-      format.json {head :no_content}
+      format.html { redirect_to parents_url, notice: 'Parent was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 
