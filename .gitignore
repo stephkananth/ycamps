@@ -24,6 +24,7 @@ capybara-*.html
 /log/*
 /tmp/*
 /coverage/*
+/.idea/*
 
 /node_modules
 /yarn-error.log
