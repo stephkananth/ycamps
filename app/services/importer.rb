@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'roo'
 require 'time'
 
@@ -34,7 +35,7 @@ class Importer
     data = Roo::Spreadsheet.open(file, extension: :csv)
     data.each_with_pagename do |_name, sheet|
       data.last_row.times do |i|
-        @data << sheet.row(i + 1) unless i == 0
+        @data << sheet.row(i + 1) unless i.zero?
       end
     end
     @data
