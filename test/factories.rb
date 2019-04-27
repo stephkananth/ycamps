@@ -2,7 +2,7 @@
 
 FactoryBot.define do
   factory :roster do
-    file './test_roster.csv'
+    file ''
   end
 
   factory :camp_counselor do
