@@ -6,10 +6,10 @@ class CampsController < ApplicationController
   # GET /camps
   # GET /camps.json
   def index
-    @camps = Camp.all
-    @upcoming_camps = Camp.upcoming.chronological
-    @past_camps = Camp.past.chronological
-    @current_camps = Camp.current.chronological
+    @camps = Camp.all.paginate(:page => params[:camps]).per_page(10)
+    @upcoming_camps = Camp.upcoming.chronological.paginate(:page => params[:upcoming_camps]).per_page(10)
+    @past_camps = Camp.past.chronological.paginate(:page => params[:past_camps]).per_page(10)
+    @current_camps = Camp.current.chronological.paginate(:page => params[:current_camps]).per_page(10)
   end
 
   # GET /camps/1

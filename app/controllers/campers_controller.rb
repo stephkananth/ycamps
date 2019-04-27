@@ -6,7 +6,7 @@ class CampersController < ApplicationController
   # GET /campers
   # GET /campers.json
   def index
-    @campers = Camper.all.alphabetical
+    @campers = Camper.all.alphabetical.paginate(:page => params[:campers]).per_page(10)
   end
 
   # GET /campers/1

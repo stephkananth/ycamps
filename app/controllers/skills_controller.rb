@@ -6,13 +6,13 @@ class SkillsController < ApplicationController
   # GET /skills
   # GET /skills.json
   def index
-    @skills = Skill.all
+    @skills = Skill.all.paginate(:page => params[:skills]).per_page(10)
   end
 
   # GET /skills/1
   # GET /skills/1.json
   def show
-    @badges = @skill.badges
+    @badges = @skill.badges.paginate(:page => params[:badges]).per_page(10)
   end
 
   # GET /skills/new

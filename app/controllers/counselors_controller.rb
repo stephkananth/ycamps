@@ -8,16 +8,16 @@ class CounselorsController < ApplicationController
   # GET /counselors
   # GET /counselors.json
   def index
-    @counselors = Counselor.all.alphabetical
+    @counselors = Counselor.all.alphabetical.paginate(:page => params[:counselors]).per_page(10)
   end
 
   # GET /counselors/1
   # GET /counselors/1.json
   def show
-    @camps = @counselor.camps
-    @past_camps = @counselor.camps.past.chronological
-    @upcoming_camps = @counselor.camps.upcoming.chronological
-    @current_camps = @counselor.camps.current.chronological
+    @camps = @counselor.camps.paginate(:page => params[:camps]).per_page(10)
+    @past_camps = @counselor.camps.past.chronological.paginate(:page => params[:past_camps]).per_page(10)
+    @upcoming_camps = @counselor.camps.upcoming.chronological.paginate(:page => params[:upcoming_camps]).per_page(10)
+    @current_camps = @counselor.camps.current.chronological.paginate(:page => params[:current_camps]).per_page(10)
     # @campers = @
   end
 

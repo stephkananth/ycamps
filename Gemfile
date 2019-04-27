@@ -79,6 +79,7 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'validates_timeliness', '~> 5.0.0.alpha3'
+gem 'will_paginate', '3.1.6'
 
 ruby '2.4.3'
 

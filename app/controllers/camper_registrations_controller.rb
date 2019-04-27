@@ -6,7 +6,7 @@ class CamperRegistrationsController < ApplicationController
   # GET /camper_registrations
   # GET /camper_registrations.json
   def index
-    @camper_registrations = CamperRegistration.where(camp_id: params[:camp_id])
+    @camper_registrations = CamperRegistration.where(camp_id: params[:camp_id]).paginate(:page => params[:camper_registrations]).per_page(10)
   end
 
   # GET /camper_registrations/1

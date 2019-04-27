@@ -6,13 +6,13 @@ class ParentsController < ApplicationController
   # GET /parents
   # GET /parents.json
   def index
-    @parents = Parent.all
+    @parents = Parent.all.paginate(:page => params[:parents]).per_page(10)
   end
 
   # GET /parents/1
   # GET /parents/1.json
   def show
-    @campers = @parent.campers
+    @campers = @parent.campers.paginate(:page => params[:campers]).per_page(10)
   end
 
   # GET /parents/new

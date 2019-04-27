@@ -6,13 +6,13 @@ class BranchesController < ApplicationController
   # GET /branches
   # GET /branches.json
   def index
-    @branches = Branch.all.alphabetical
+    @branches = Branch.all.alphabetical.paginate(:page => params[:branches]).per_page(10)
   end
 
   # GET /branches/1
   # GET /branches/1.json
   def show
-    @locations = @branch.locations
+    @locations = @branch.locations.paginate(:page => params[:locations]).per_page(10)
     @camps = @branch.camps
   end
 

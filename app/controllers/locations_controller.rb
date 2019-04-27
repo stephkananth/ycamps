@@ -12,7 +12,7 @@ class LocationsController < ApplicationController
   # GET /locations/1
   # GET /locations/1.json
   def show
-    @camps = @location.camps
+    @camps = @location.camps.paginate(:page => params[:camps]).per_page(10)
   end
 
   # GET /locations/new
