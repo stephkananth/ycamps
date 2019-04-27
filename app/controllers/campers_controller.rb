@@ -41,28 +41,24 @@ class CampersController < ApplicationController
     active = params[:camper][:active]
     @camper = Camper.new(first_name: first_name, last_name: last_name, parent_id: parent_id, active: active)
 
-    respond_to do |format|
-      if @camper.save
-        format.html {redirect_to @camper, notice: 'Camper was successfully created.'}
-        format.json {render :show, status: :created, location: @camper}
-      else
-        format.html {render :new}
-        format.json {render json: @camper.errors, status: :unprocessable_entity}
-      end
+    if @camper.save
+      flash[:notice] = "Successfully created camper."
+      redirect_to camper_path(@camper)
+    else
+      flash[:notice] = "Failed to create camper."
+      redirect_to new_camper_path
     end
   end
 
   # PATCH/PUT /campers/1
   # PATCH/PUT /campers/1.json
   def update
-    respond_to do |format|
-      if @camper.update(camper_params)
-        format.html {redirect_to @camper, notice: 'Camper was successfully updated.'}
-        format.json {render :show, status: :ok, location: @camper}
-      else
-        format.html {render :edit}
-        format.json {render json: @camper.errors, status: :unprocessable_entity}
-      end
+    if @camper.update(camper_params)
+      flash[:notice] = "Successfully updated camper."
+      redirect_to camper_path(@camper)
+    else
+      flash[:notice] = "Failed to update camper."
+      redirect_to edit_camper_path(@camper)
     end
   end
 

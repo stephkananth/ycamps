@@ -30,28 +30,24 @@ class BranchesController < ApplicationController
   def create
     @branch = Branch.new(branch_params)
 
-    respond_to do |format|
-      if @branch.save
-        format.html {redirect_to @branch, notice: 'Branch was successfully created.'}
-        format.json {render :show, status: :created, location: @branch}
-      else
-        format.html {render :new}
-        format.json {render json: @branch.errors, status: :unprocessable_entity}
-      end
+    if @branch.save
+      flash[:notice] = "Successfully created branch."
+      redirect_to branch_path(@branch)
+    else
+      flash[:notice] = "Failed to create branch."
+      redirect_to new_branch_path
     end
   end
 
   # PATCH/PUT /branches/1
   # PATCH/PUT /branches/1.json
   def update
-    respond_to do |format|
-      if @branch.update(branch_params)
-        format.html {redirect_to @branch, notice: 'Branch was successfully updated.'}
-        format.json {render :show, status: :ok, location: @branch}
-      else
-        format.html {render :edit}
-        format.json {render json: @branch.errors, status: :unprocessable_entity}
-      end
+    if @branch.update(branch_params)
+      flash[:notice] = "Successfully updated branch."
+      redirect_to branch_path(@branch)
+    else
+      flash[:notice] = "Failed to update branch."
+      redirect_to edit_branch_path(@branch)
     end
   end
 

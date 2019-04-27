@@ -29,9 +29,11 @@ class CamperRegistrationsController < ApplicationController
     @camper_registration = CamperRegistration.new(camper_registration_params)
 
     if @camper_registration.save
+      flash[:notice] = "Successfully added camper registration."
       @camp = @camper_registration.camp
       redirect_to @camp, notice: 'Camper registration was successfully created.'
     else
+      flash[:notice] = "Failed to create camper_registration."
       render :new
     end
   end
@@ -39,14 +41,12 @@ class CamperRegistrationsController < ApplicationController
   # PATCH/PUT /camper_registrations/1
   # PATCH/PUT /camper_registrations/1.json
   def update
-    respond_to do |format|
-      if @camper_registration.update(camper_registration_params)
-        format.html {redirect_to @camper_registration, notice: 'Camper registration was successfully updated.'}
-        format.json {render :show, status: :ok, location: @camper_registration}
-      else
-        format.html {render :edit}
-        format.json {render json: @camper_registration.errors, status: :unprocessable_entity}
-      end
+    if @camper_registration.update(camper_registration_params)
+      flash[:notice] = "Successfully updated camper registration."
+      redirect_to camper_registration_path(@camper_registration)
+    else
+      flash[:notice] = "Failed to update camper registration."
+      redirect_to edit_camper_registration_path(@camper_registration)
     end
   end
 

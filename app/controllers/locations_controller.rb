@@ -33,6 +33,7 @@ class LocationsController < ApplicationController
     @location = Location.new(name: location_name, branch_id: branch_id)
 
     if @location.save
+      flash[:notice] = "Successfully created location."
       redirect_to location_path(@location), notice: "#{@location.name} location was added to the system."
     else
       render action: 'new'
@@ -42,14 +43,12 @@ class LocationsController < ApplicationController
   # PATCH/PUT /locations/1
   # PATCH/PUT /locations/1.json
   def update
-    respond_to do |format|
-      if @location.update(location_params)
-        format.html {redirect_to @location, notice: 'Location was successfully updated.'}
-        format.json {render :show, status: :ok, location: @location}
-      else
-        format.html {render :edit}
-        format.json {render json: @location.errors, status: :unprocessable_entity}
-      end
+    if @location.update(location_params)
+      flash[:notice] = "Successfully updated location."
+      redirect_to location_path(@location)
+    else
+      flash[:notice] = "Failed to update location."
+      redirect_to edit_location_path(@location)
     end
   end
 

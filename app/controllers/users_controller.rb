@@ -34,14 +34,17 @@ class UsersController < ApplicationController
         @parent = Parent.new
         @parent.user_id = @user.id
         @parent.save
+        flash[:notice] = "Successfully create parent user."
       elsif @user.role == 'counselor'
         @counselor = Counselor.new
         @counselor.user_id = @user.id
         @counselor.save
+        flash[:notice] = "Successfully created counselor user."
       end
       flash[:notice] = "Successfully added #{@user.email} as a user."
       redirect_to users_url
     else
+      flash[:notice] = "Failed to create new user."
       render action: 'new'
     end
   end
@@ -53,6 +56,7 @@ class UsersController < ApplicationController
       flash[:notice] = 'Successfully updated your profile.'
       render action: 'show'
     else
+      flash[:notice] = "Failed to update your profile."
       render action: 'edit'
     end
   end
