@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-04-26T22:19:11-04:00">2019-04-26T22:19:11-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-04-26T22:26:54-04:00">2019-04-26T22:26:54-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -673,7 +673,7 @@
       <tr>
         <td class="strong"><a href="#6c8e5c9e82387bf293a4d9a08e98798c20c1c2e6" class="src_link" title="app/services/importer.rb">app/services/importer.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>130</td>
+        <td>131</td>
         <td>97</td>
         <td>97</td>
         <td>0</td>
@@ -1610,7 +1610,7 @@
       <tr>
         <td class="strong"><a href="#6c8e5c9e82387bf293a4d9a08e98798c20c1c2e6" class="src_link" title="app/services/importer.rb">app/services/importer.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>130</td>
+        <td>131</td>
         <td>97</td>
         <td>97</td>
         <td>0</td>
@@ -15968,775 +15968,781 @@
           <code class="ruby"># frozen_string_literal: true</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="2">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="2">
           
-          <code class="ruby">require &#39;roo&#39;</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
+          <code class="ruby">require &#39;roo&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
           <code class="ruby">require &#39;time&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
-          
-          <code class="ruby">class Importer</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">  attr_accessor :file</code>
+          <code class="ruby">class Importer</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
+          <code class="ruby">  attr_accessor :file</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
           <code class="ruby">  attr_reader :data</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
           <code class="ruby">  def initialize(file)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="10">
+        <li class="covered" data-hits="5" data-linenumber="11">
           <span class="hits">5</span>
           
           <code class="ruby">    @file = file</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
           <code class="ruby">  def import_csv_data</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">    # rows is 2D array</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
+        <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
           <code class="ruby">    rows = open_file_as_csv</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">    rows&amp;.each do |row|</code>
         </li>
       
-        <li class="covered" data-hits="310" data-linenumber="17">
+        <li class="covered" data-hits="310" data-linenumber="18">
           <span class="hits">310</span>
           
           <code class="ruby">      create_user_and_parent_from(row)</code>
         </li>
       
-        <li class="covered" data-hits="310" data-linenumber="18">
+        <li class="covered" data-hits="310" data-linenumber="19">
           <span class="hits">310</span>
           
           <code class="ruby">      unless User.where(email: @user_email).empty?</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="19">
+        <li class="covered" data-hits="306" data-linenumber="20">
           <span class="hits">306</span>
           
           <code class="ruby">        create_camper_from(row)</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="20">
+        <li class="covered" data-hits="306" data-linenumber="21">
           <span class="hits">306</span>
           
           <code class="ruby">        create_branch_from(row)</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="21">
+        <li class="covered" data-hits="306" data-linenumber="22">
           <span class="hits">306</span>
           
           <code class="ruby">        create_location_from(row)</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="22">
+        <li class="covered" data-hits="306" data-linenumber="23">
           <span class="hits">306</span>
           
           <code class="ruby">        create_camp_from(row)</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="23">
+        <li class="covered" data-hits="306" data-linenumber="24">
           <span class="hits">306</span>
           
           <code class="ruby">        create_registration_from(row)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="28">
+        <li class="covered" data-hits="1" data-linenumber="29">
           <span class="hits">1</span>
           
           <code class="ruby">  private</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="30">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def open_file_as_csv</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
           
+          <code class="ruby">  def open_file_as_csv</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
           <code class="ruby">    return false if file.nil?</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="33">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="33">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    @data = []</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="34">
           <span class="hits">1</span>
           
-          <code class="ruby">    data = Roo::Spreadsheet.open(file, extension: :csv)</code>
+          <code class="ruby">    @data = []</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="35">
           <span class="hits">1</span>
           
-          <code class="ruby">    data.each_with_pagename do |_name, sheet|</code>
+          <code class="ruby">    data = Roo::Spreadsheet.open(file, extension: :csv)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
+          <code class="ruby">    data.each_with_pagename do |_name, sheet|</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
+          
           <code class="ruby">      data.last_row.times do |i|</code>
         </li>
       
-        <li class="covered" data-hits="311" data-linenumber="37">
+        <li class="covered" data-hits="311" data-linenumber="38">
           <span class="hits">311</span>
           
-          <code class="ruby">        @data &lt;&lt; sheet.row(i + 1) unless i == 0</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="38">
-          
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">        @data &lt;&lt; sheet.row(i + 1) unless i.zero?</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="39">
           
           
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="40">
+        <li class="covered" data-hits="1" data-linenumber="41">
           <span class="hits">1</span>
           
           <code class="ruby">    @data</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
+        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="43">
+        <li class="covered" data-hits="1" data-linenumber="44">
           <span class="hits">1</span>
           
           <code class="ruby">  def create_user_and_parent_from(data)</code>
         </li>
       
-        <li class="covered" data-hits="310" data-linenumber="44">
+        <li class="covered" data-hits="310" data-linenumber="45">
           <span class="hits">310</span>
           
           <code class="ruby">    read_data(data)</code>
         </li>
       
-        <li class="covered" data-hits="310" data-linenumber="45">
+        <li class="covered" data-hits="310" data-linenumber="46">
           <span class="hits">310</span>
           
           <code class="ruby">    unless @user_email.blank?</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="46">
+        <li class="covered" data-hits="306" data-linenumber="47">
           <span class="hits">306</span>
           
           <code class="ruby">      @user = User.new</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="47">
+        <li class="covered" data-hits="306" data-linenumber="48">
           <span class="hits">306</span>
           
           <code class="ruby">      @user.email = @user_email</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="48">
+        <li class="covered" data-hits="306" data-linenumber="49">
           <span class="hits">306</span>
           
           <code class="ruby">      @user.password = &#39;secret123&#39;</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="49">
+        <li class="covered" data-hits="306" data-linenumber="50">
           <span class="hits">306</span>
           
           <code class="ruby">      @user.password_confirmation = &#39;secret123&#39;</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="50">
+        <li class="covered" data-hits="306" data-linenumber="51">
           <span class="hits">306</span>
           
           <code class="ruby">      @user.first_name = @user_first</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="51">
+        <li class="covered" data-hits="306" data-linenumber="52">
           <span class="hits">306</span>
           
           <code class="ruby">      @user.last_name = @user_last</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="52">
+        <li class="covered" data-hits="306" data-linenumber="53">
           <span class="hits">306</span>
           
           <code class="ruby">      @user.role = &#39;parent&#39;</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="53">
+        <li class="covered" data-hits="306" data-linenumber="54">
           <span class="hits">306</span>
           
           <code class="ruby">      save_user_and_parent if User.not_in_system?(@user)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="54">
+        <li class="never" data-hits="" data-linenumber="55">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="56">
+        <li class="never" data-hits="" data-linenumber="57">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="57">
+        <li class="covered" data-hits="1" data-linenumber="58">
           <span class="hits">1</span>
           
           <code class="ruby">  def save_user_and_parent</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="58">
+        <li class="covered" data-hits="33" data-linenumber="59">
           <span class="hits">33</span>
           
           <code class="ruby">    @user.save!</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="59">
+        <li class="covered" data-hits="33" data-linenumber="60">
           <span class="hits">33</span>
           
           <code class="ruby">    @parent = Parent.new(user: User.where(email: @user_email).first, active: true)</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="60">
+        <li class="covered" data-hits="33" data-linenumber="61">
           <span class="hits">33</span>
           
           <code class="ruby">    @parent.save!</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="61">
+        <li class="never" data-hits="" data-linenumber="62">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="62">
+        <li class="never" data-hits="" data-linenumber="63">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="63">
+        <li class="covered" data-hits="1" data-linenumber="64">
           <span class="hits">1</span>
           
           <code class="ruby">  def create_camper_from(data)</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="64">
-          <span class="hits">306</span>
-          
-          <code class="ruby">    read_data(data)</code>
-        </li>
-      
         <li class="covered" data-hits="306" data-linenumber="65">
           <span class="hits">306</span>
           
-          <code class="ruby">    @camper = Camper.new</code>
+          <code class="ruby">    read_data(data)</code>
         </li>
       
         <li class="covered" data-hits="306" data-linenumber="66">
           <span class="hits">306</span>
           
-          <code class="ruby">    @camper.parent = Parent.where(user: User.where(email: @user_email).first).first</code>
+          <code class="ruby">    @camper = Camper.new</code>
         </li>
       
         <li class="covered" data-hits="306" data-linenumber="67">
           <span class="hits">306</span>
           
-          <code class="ruby">    @camper.first_name = @camper_first</code>
+          <code class="ruby">    @camper.parent = Parent.where(user: User.where(email: @user_email).first).first</code>
         </li>
       
         <li class="covered" data-hits="306" data-linenumber="68">
           <span class="hits">306</span>
           
-          <code class="ruby">    @camper.last_name = @camper_last</code>
+          <code class="ruby">    @camper.first_name = @camper_first</code>
         </li>
       
         <li class="covered" data-hits="306" data-linenumber="69">
           <span class="hits">306</span>
           
-          <code class="ruby">    @camper.active = true</code>
+          <code class="ruby">    @camper.last_name = @camper_last</code>
         </li>
       
         <li class="covered" data-hits="306" data-linenumber="70">
           <span class="hits">306</span>
           
-          <code class="ruby">    @camper.save! if Camper.not_in_system?(@camper)</code>
+          <code class="ruby">    @camper.active = true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="71">
+        <li class="covered" data-hits="306" data-linenumber="71">
+          <span class="hits">306</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    @camper.save! if Camper.not_in_system?(@camper)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="72">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="73">
+        <li class="covered" data-hits="1" data-linenumber="74">
           <span class="hits">1</span>
           
           <code class="ruby">  def create_branch_from(data)</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="74">
-          <span class="hits">306</span>
-          
-          <code class="ruby">    read_data(data)</code>
-        </li>
-      
         <li class="covered" data-hits="306" data-linenumber="75">
           <span class="hits">306</span>
           
-          <code class="ruby">    @branch = Branch.new(name: @branch_name)</code>
+          <code class="ruby">    read_data(data)</code>
         </li>
       
         <li class="covered" data-hits="306" data-linenumber="76">
           <span class="hits">306</span>
           
-          <code class="ruby">    @branch.save! if Branch.not_in_system?(@branch)</code>
+          <code class="ruby">    @branch = Branch.new(name: @branch_name)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="77">
+        <li class="covered" data-hits="306" data-linenumber="77">
+          <span class="hits">306</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    @branch.save! if Branch.not_in_system?(@branch)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="78">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="79">
+        <li class="covered" data-hits="1" data-linenumber="80">
           <span class="hits">1</span>
           
           <code class="ruby">  def create_location_from(data)</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="80">
-          <span class="hits">306</span>
-          
-          <code class="ruby">    read_data(data)</code>
-        </li>
-      
         <li class="covered" data-hits="306" data-linenumber="81">
           <span class="hits">306</span>
           
-          <code class="ruby">    @location = Location.new(branch: @branch, name: @location_name)</code>
+          <code class="ruby">    read_data(data)</code>
         </li>
       
         <li class="covered" data-hits="306" data-linenumber="82">
           <span class="hits">306</span>
           
-          <code class="ruby">    @location.save! if Location.not_in_system?(@location)</code>
+          <code class="ruby">    @location = Location.new(branch: @branch, name: @location_name)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="83">
+        <li class="covered" data-hits="306" data-linenumber="83">
+          <span class="hits">306</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    @location.save! if Location.not_in_system?(@location)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="84">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="85">
+        <li class="covered" data-hits="1" data-linenumber="86">
           <span class="hits">1</span>
           
           <code class="ruby">  def create_camp_from(data)</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="86">
-          <span class="hits">306</span>
-          
-          <code class="ruby">    read_data(data)</code>
-        </li>
-      
         <li class="covered" data-hits="306" data-linenumber="87">
           <span class="hits">306</span>
           
-          <code class="ruby">    @camp = Camp.new</code>
+          <code class="ruby">    read_data(data)</code>
         </li>
       
         <li class="covered" data-hits="306" data-linenumber="88">
           <span class="hits">306</span>
           
-          <code class="ruby">    @camp.location = Location.where(name: @location_name).first</code>
+          <code class="ruby">    @camp = Camp.new</code>
         </li>
       
         <li class="covered" data-hits="306" data-linenumber="89">
           <span class="hits">306</span>
           
-          <code class="ruby">    @camp.name = @camp_name</code>
+          <code class="ruby">    @camp.location = Location.where(name: @location_name).first</code>
         </li>
       
         <li class="covered" data-hits="306" data-linenumber="90">
           <span class="hits">306</span>
           
-          <code class="ruby">    @camp.program = @camp_program</code>
+          <code class="ruby">    @camp.name = @camp_name</code>
         </li>
       
         <li class="covered" data-hits="306" data-linenumber="91">
           <span class="hits">306</span>
           
-          <code class="ruby">    @camp.start_date = @camp_start</code>
+          <code class="ruby">    @camp.program = @camp_program</code>
         </li>
       
         <li class="covered" data-hits="306" data-linenumber="92">
           <span class="hits">306</span>
           
-          <code class="ruby">    @camp.end_date = @camp_end</code>
+          <code class="ruby">    @camp.start_date = @camp_start</code>
         </li>
       
         <li class="covered" data-hits="306" data-linenumber="93">
           <span class="hits">306</span>
           
-          <code class="ruby">    @camp.active = true</code>
+          <code class="ruby">    @camp.end_date = @camp_end</code>
         </li>
       
         <li class="covered" data-hits="306" data-linenumber="94">
           <span class="hits">306</span>
           
-          <code class="ruby">    @camp.save! if Camp.not_in_system?(@camp)</code>
+          <code class="ruby">    @camp.active = true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="95">
+        <li class="covered" data-hits="306" data-linenumber="95">
+          <span class="hits">306</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    @camp.save! if Camp.not_in_system?(@camp)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="96">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="97">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="97">
+        <li class="covered" data-hits="1" data-linenumber="98">
           <span class="hits">1</span>
           
           <code class="ruby">  def create_registration_from(data)</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="98">
+        <li class="covered" data-hits="306" data-linenumber="99">
           <span class="hits">306</span>
           
           <code class="ruby">    read_data(data)</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="99">
+        <li class="covered" data-hits="306" data-linenumber="100">
           <span class="hits">306</span>
           
           <code class="ruby">    @registration = CamperRegistration.new</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="100">
+        <li class="covered" data-hits="306" data-linenumber="101">
           <span class="hits">306</span>
           
           <code class="ruby">    @registration.camp = @camp</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="101">
+        <li class="covered" data-hits="306" data-linenumber="102">
           <span class="hits">306</span>
           
           <code class="ruby">    @registration.camper = @camper</code>
         </li>
       
-        <li class="covered" data-hits="306" data-linenumber="102">
+        <li class="covered" data-hits="306" data-linenumber="103">
           <span class="hits">306</span>
           
           <code class="ruby">    @registration.save! if CamperRegistration.not_in_system?(@camp, @camper)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="103">
+        <li class="never" data-hits="" data-linenumber="104">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="104">
+        <li class="never" data-hits="" data-linenumber="105">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="105">
+        <li class="covered" data-hits="1" data-linenumber="106">
           <span class="hits">1</span>
           
           <code class="ruby">  def read_data(data)</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="106">
+        <li class="covered" data-hits="1840" data-linenumber="107">
           <span class="hits">1840</span>
           
           <code class="ruby">    @camper_first = data[2]</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="107">
+        <li class="covered" data-hits="1840" data-linenumber="108">
           <span class="hits">1840</span>
           
           <code class="ruby">    puts &quot;camper.first_name = #{@camper_first}&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="108">
+        <li class="covered" data-hits="1840" data-linenumber="109">
           <span class="hits">1840</span>
           
           <code class="ruby">    @camper_last = data[3]</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="109">
+        <li class="covered" data-hits="1840" data-linenumber="110">
           <span class="hits">1840</span>
           
           <code class="ruby">    puts &quot;camper.last_name = #{@camper_last}&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="110">
+        <li class="covered" data-hits="1840" data-linenumber="111">
           <span class="hits">1840</span>
           
           <code class="ruby">    @branch_name = data[23]</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="111">
+        <li class="covered" data-hits="1840" data-linenumber="112">
           <span class="hits">1840</span>
           
           <code class="ruby">    puts &quot;branch.name = #{@branch_name}&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="112">
+        <li class="covered" data-hits="1840" data-linenumber="113">
           <span class="hits">1840</span>
           
           <code class="ruby">    @location_name = data[24]</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="113">
+        <li class="covered" data-hits="1840" data-linenumber="114">
           <span class="hits">1840</span>
           
           <code class="ruby">    puts &quot;location.name = #{@location_name}&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="114">
+        <li class="covered" data-hits="1840" data-linenumber="115">
           <span class="hits">1840</span>
           
           <code class="ruby">    @camp_program = data[25]</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="115">
+        <li class="covered" data-hits="1840" data-linenumber="116">
           <span class="hits">1840</span>
           
           <code class="ruby">    puts &quot;camp.program = #{@camp_program}&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="116">
+        <li class="covered" data-hits="1840" data-linenumber="117">
           <span class="hits">1840</span>
           
           <code class="ruby">    @camp_start = Date.strptime(data[31], &#39;%m/%d/%Y&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="117">
+        <li class="covered" data-hits="1840" data-linenumber="118">
           <span class="hits">1840</span>
           
           <code class="ruby">    puts &quot;camp.start = #{@camp_start}&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="118">
+        <li class="covered" data-hits="1840" data-linenumber="119">
           <span class="hits">1840</span>
           
           <code class="ruby">    @camp_end = Date.strptime(data[32], &#39;%m/%d/%Y&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="119">
+        <li class="covered" data-hits="1840" data-linenumber="120">
           <span class="hits">1840</span>
           
           <code class="ruby">    puts &quot;camp.end = #{@camp_end}&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="120">
+        <li class="covered" data-hits="1840" data-linenumber="121">
           <span class="hits">1840</span>
           
           <code class="ruby">    @camp_name = data[30]</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="121">
+        <li class="covered" data-hits="1840" data-linenumber="122">
           <span class="hits">1840</span>
           
           <code class="ruby">    puts &quot;camp.name = #{@camp_name}&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="122">
+        <li class="covered" data-hits="1840" data-linenumber="123">
           <span class="hits">1840</span>
           
           <code class="ruby">    @user_first = data[42]</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="123">
+        <li class="covered" data-hits="1840" data-linenumber="124">
           <span class="hits">1840</span>
           
           <code class="ruby">    puts &quot;user.first_name = #{@user_first}&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="124">
+        <li class="covered" data-hits="1840" data-linenumber="125">
           <span class="hits">1840</span>
           
           <code class="ruby">    @user_last = data[43]</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="125">
+        <li class="covered" data-hits="1840" data-linenumber="126">
           <span class="hits">1840</span>
           
           <code class="ruby">    puts &quot;user.last_name = #{@user_last}&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="126">
+        <li class="covered" data-hits="1840" data-linenumber="127">
           <span class="hits">1840</span>
           
           <code class="ruby">    @user_email = data[44]</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="127">
+        <li class="covered" data-hits="1840" data-linenumber="128">
           <span class="hits">1840</span>
           
           <code class="ruby">    puts &quot;user.email = #{@user_email}&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1840" data-linenumber="128">
+        <li class="covered" data-hits="1840" data-linenumber="129">
           <span class="hits">1840</span>
           
           <code class="ruby">    puts &#39; &#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="129">
+        <li class="never" data-hits="" data-linenumber="130">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="130">
+        <li class="never" data-hits="" data-linenumber="131">
           
           
           <code class="ruby">end</code>
