@@ -41,7 +41,7 @@ class CamperRegistrationsController < ApplicationController
       flash[:notice] = "Successfully updated camper registration."
       redirect_to camper_registration_path(@camper_registration)
     else
-      flash[:notice] = "Failed to update camper registration."
+      flash[:error] = "Failed to update camper registration."
       redirect_to edit_camper_registration_path(@camper_registration)
     end
   end

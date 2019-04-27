@@ -33,7 +33,7 @@ class ParentsController < ApplicationController
         flash[:notice] = "Successfully created parent."
         redirect_to parent_path(@parent
       else
-        flash[:notice] = "Failed to create parent."
+        flash[:error] = "Failed to create parent."
         redirect_to new_parent_path
       end
     end
@@ -46,7 +46,7 @@ class ParentsController < ApplicationController
         flash[:notice] = "Successfully updated parent."
         redirect_to parent_path(@parent)
       else
-        flash[:notice] = "Failed to update parent."
+        flash[:error] = "Failed to update parent."
         redirect_to edit_parent_path(@parent)
       end
     end

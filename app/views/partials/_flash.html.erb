@@ -1,7 +1,15 @@
 <% flash.each do |name, msg| %>
-  <div class="alert alert-warning alert-dismissible fade show" role="alert" >
-    <%= flash[:notice] %>
-    <!-- <a href="#" class="close">&times;</a> -->
-    <%#= msg %>
-  </div>
+  <% if flash[:notice] %>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <%= flash[:notice] %>
+      <!-- <a href="#" class="close">&times;</a> -->
+      <%#= msg %>
+    </div>
+  <% else %>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <%= flash[:error] %>
+      <!-- <a href="#" class="close">&times;</a> -->
+      <%#= msg %>
+    </div>
+  <% end %>
 <% end %>

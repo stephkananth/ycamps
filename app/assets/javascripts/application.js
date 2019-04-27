@@ -23,5 +23,5 @@ $('[data-behaviour="select-all"][value=0]').on('change', function () {
     });
 });
 
-$(".alert").fadeOut('slow').delay(2000);
+$(".alert").delay(2000).fadeOut('slow');
 

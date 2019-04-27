@@ -46,6 +46,7 @@ class CounselorsController < ApplicationController
         flash[:notice] = "#{@counselor.first_name} #{@counselor.last_name} was added to the system."
         redirect_to counselor_path(@counselor)
       else
+        flash[:error] = "Failed to create counselor."
         render action: 'new'
       end
     end
@@ -58,7 +59,7 @@ class CounselorsController < ApplicationController
       flash[:notice] = "Successfully updated counselor."
       redirect_to counselor_path(@counselor)
     else
-      flash[:notice] = "Failed to update counselor."
+      flash[:error] = "Failed to update counselor."
       redirect_to edit_counselor_path(@counselor)
     end
   end

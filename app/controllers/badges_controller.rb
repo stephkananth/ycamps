@@ -39,7 +39,7 @@ class BadgesController < ApplicationController
       flash[:notice] = "Successfully created badge."
       redirect_to badge_path(@badge)
     else
-      flash[:notice] = "Failed to create badge."
+      flash[:error] = "Failed to create badge."
       redirect_to new_badge_path
     end
   end
@@ -51,7 +51,7 @@ class BadgesController < ApplicationController
       flash[:notice] = "Successfully updated badge."
       redirect_to badge_path(@badge)
     else
-      flash[:notice] = "Failed to update badge."
+      flash[:error] = "Failed to update badge."
       redirect_to edit_badge_path(@badge)
     end
   end

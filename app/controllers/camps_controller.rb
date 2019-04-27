@@ -45,7 +45,7 @@ class CampsController < ApplicationController
       flash[:notice] = "Successfully created camp."
       redirect_to @camp, notice: 'Camp was successfully created.'
     else
-      flash[:notice] = "Failed to create camp."
+      flash[:error] = "Failed to create camp."
       render :new
     end
   end
@@ -64,7 +64,7 @@ class CampsController < ApplicationController
       flash[:notice] = "Successfully updated camp."
       redirect_to @camp, notice: 'Camp was successfully updated.'
     else
-      flash[:notice] = "Failed to update camp."
+      flash[:error] = "Failed to update camp."
       render :edit
     end
   end

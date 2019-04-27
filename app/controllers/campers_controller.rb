@@ -45,7 +45,7 @@ class CampersController < ApplicationController
       flash[:notice] = "Successfully created camper."
       redirect_to camper_path(@camper)
     else
-      flash[:notice] = "Failed to create camper."
+      flash[:error] = "Failed to create camper."
       redirect_to new_camper_path
     end
   end
@@ -57,7 +57,7 @@ class CampersController < ApplicationController
       flash[:notice] = "Successfully updated camper."
       redirect_to camper_path(@camper)
     else
-      flash[:notice] = "Failed to update camper."
+      flash[:error] = "Failed to update camper."
       redirect_to edit_camper_path(@camper)
     end
   end

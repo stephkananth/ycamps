@@ -44,7 +44,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Successfully added #{@user.email} as a user."
       redirect_to users_url
     else
-      flash[:notice] = "Failed to create new user."
+      flash[:error] = "Failed to create new user."
       render action: 'new'
     end
   end
@@ -56,7 +56,7 @@ class UsersController < ApplicationController
       flash[:notice] = 'Successfully updated your profile.'
       render action: 'show'
     else
-      flash[:notice] = "Failed to update your profile."
+      flash[:error] = "Failed to update your profile."
       render action: 'edit'
     end
   end
