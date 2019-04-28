@@ -11,8 +11,7 @@ class CounselorCampBadgesController < ApplicationController
 
   # GET /counselor_camp_badges/1
   # GET /counselor_camp_badges/1.json
-  def show;
-  end
+  def show; end
 
   # GET /counselor_camp_badges/new
   def new
@@ -22,8 +21,7 @@ class CounselorCampBadgesController < ApplicationController
   end
 
   # GET /counselor_camp_badges/1/edit
-  def edit;
-  end
+  def edit; end
 
   # POST /counselor_camp_badges
   # POST /counselor_camp_badges.json
@@ -42,11 +40,11 @@ class CounselorCampBadgesController < ApplicationController
   def update
     respond_to do |format|
       if @counselor_camp_badge.update(counselor_camp_badge_params)
-        format.html {redirect_to @counselor_camp_badge, notice: 'Counselor camp badge was successfully updated.'}
-        format.json {render :show, status: :ok, location: @counselor_camp_badge}
+        format.html { redirect_to @counselor_camp_badge, notice: 'Counselor camp badge was successfully updated.' }
+        format.json { render :show, status: :ok, location: @counselor_camp_badge }
       else
-        format.html {render :edit}
-        format.json {render json: @counselor_camp_badge.errors, status: :unprocessable_entity}
+        format.html { render :edit }
+        format.json { render json: @counselor_camp_badge.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,8 +54,8 @@ class CounselorCampBadgesController < ApplicationController
   def destroy
     @counselor_camp_badge.destroy
     respond_to do |format|
-      format.html {redirect_to counselor_camp_badges_url, notice: 'Counselor camp badge was successfully destroyed.'}
-      format.json {head :no_content}
+      format.html { redirect_to counselor_camp_badges_url, notice: 'Counselor camp badge was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 

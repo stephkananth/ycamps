@@ -6,13 +6,13 @@ class SkillsController < ApplicationController
   # GET /skills
   # GET /skills.json
   def index
-    @skills = Skill.all.paginate(:page => params[:skills]).per_page(10)
+    @skills = Skill.all.paginate(page: params[:skills]).per_page(10)
   end
 
   # GET /skills/1
   # GET /skills/1.json
   def show
-    @badges = @skill.badges.paginate(:page => params[:badges]).per_page(10)
+    @badges = @skill.badges.paginate(page: params[:badges]).per_page(10)
   end
 
   # GET /skills/new
@@ -21,8 +21,7 @@ class SkillsController < ApplicationController
   end
 
   # GET /skills/1/edit
-  def edit;
-  end
+  def edit; end
 
   # POST /skills
   # POST /skills.json
@@ -30,10 +29,10 @@ class SkillsController < ApplicationController
     @skill = Skill.new(skill_params)
 
     if @skill.save
-      flash[:notice] = "Successfully created skill."
+      flash[:notice] = 'Successfully created skill.'
       redirect_to skill_path(@skill)
     else
-      flash[:error] = "Failed to create skill."
+      flash[:error] = 'Failed to create skill.'
       redirect_to new_skill_path
     end
   end
@@ -42,10 +41,10 @@ class SkillsController < ApplicationController
   # PATCH/PUT /skills/1.json
   def update
     if @skill.update(skill_params)
-      flash[:notice] = "Successfully updated skill."
+      flash[:notice] = 'Successfully updated skill.'
       redirect_to skill_path(@skill)
     else
-      flash[:error] = "Failed to update skill."
+      flash[:error] = 'Failed to update skill.'
       redirect_to edit_skill_path(@skill)
     end
   end
@@ -55,8 +54,8 @@ class SkillsController < ApplicationController
   def destroy
     @skill.destroy
     respond_to do |format|
-      format.html {redirect_to skills_url, notice: 'Skill was successfully destroyed.'}
-      format.json {head :no_content}
+      format.html { redirect_to skills_url, notice: 'Skill was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 

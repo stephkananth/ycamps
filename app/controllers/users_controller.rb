@@ -8,13 +8,12 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all.paginate(:page => params[:users]).per_page(10)
+    @users = User.all.paginate(page: params[:users]).per_page(10)
   end
 
   # GET /users/1
   # GET /users/1.json
-  def show;
-  end
+  def show; end
 
   # GET /users/new
   def new
@@ -22,8 +21,7 @@ class UsersController < ApplicationController
   end
 
   # GET /users/1/edit
-  def edit;
-  end
+  def edit; end
 
   # POST /users
   # POST /users.json
@@ -34,17 +32,17 @@ class UsersController < ApplicationController
         @parent = Parent.new
         @parent.user_id = @user.id
         @parent.save
-        flash[:notice] = "Successfully create parent user."
+        flash[:notice] = 'Successfully create parent user.'
       elsif @user.role == 'counselor'
         @counselor = Counselor.new
         @counselor.user_id = @user.id
         @counselor.save
-        flash[:notice] = "Successfully created counselor user."
+        flash[:notice] = 'Successfully created counselor user.'
       end
       flash[:notice] = "Successfully added #{@user.email} as a user."
       redirect_to users_url
     else
-      flash[:error] = "Failed to create new user."
+      flash[:error] = 'Failed to create new user.'
       render action: 'new'
     end
   end
@@ -56,7 +54,7 @@ class UsersController < ApplicationController
       flash[:notice] = 'Successfully updated your profile.'
       render action: 'show'
     else
-      flash[:error] = "Failed to update your profile."
+      flash[:error] = 'Failed to update your profile.'
       render action: 'edit'
     end
   end

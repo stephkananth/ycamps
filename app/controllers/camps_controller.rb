@@ -6,10 +6,10 @@ class CampsController < ApplicationController
   # GET /camps
   # GET /camps.json
   def index
-    @camps = Camp.all.paginate(:page => params[:camps]).per_page(10)
-    @upcoming_camps = Camp.upcoming.chronological.paginate(:page => params[:upcoming_camps]).per_page(10)
-    @past_camps = Camp.past.chronological.paginate(:page => params[:past_camps]).per_page(10)
-    @current_camps = Camp.current.chronological.paginate(:page => params[:current_camps]).per_page(10)
+    @camps = Camp.all.paginate(page: params[:camps]).per_page(10)
+    @upcoming_camps = Camp.upcoming.chronological.paginate(page: params[:upcoming_camps]).per_page(10)
+    @past_camps = Camp.past.chronological.paginate(page: params[:past_camps]).per_page(10)
+    @current_camps = Camp.current.chronological.paginate(page: params[:current_camps]).per_page(10)
   end
 
   # GET /camps/1
@@ -26,8 +26,7 @@ class CampsController < ApplicationController
   end
 
   # GET /camps/1/edit
-  def edit;
-  end
+  def edit; end
 
   # POST /camps
   # POST /camps.json
@@ -42,10 +41,10 @@ class CampsController < ApplicationController
     @camp = Camp.new(name: camp_name, program: camp_program, start_date: start_date, end_date: end_date, location_id: location_id, active: active_status)
 
     if @camp.save
-      flash[:notice] = "Successfully created camp."
+      flash[:notice] = 'Successfully created camp.'
       redirect_to @camp, notice: 'Camp was successfully created.'
     else
-      flash[:error] = "Failed to create camp."
+      flash[:error] = 'Failed to create camp.'
       render :new
     end
   end
@@ -61,10 +60,10 @@ class CampsController < ApplicationController
     location_id = params[:camp][:location]
 
     if @camp.update(name: camp_name, program: camp_program, start_date: start_date, end_date: end_date, location_id: location_id, active: active_status)
-      flash[:notice] = "Successfully updated camp."
+      flash[:notice] = 'Successfully updated camp.'
       redirect_to @camp, notice: 'Camp was successfully updated.'
     else
-      flash[:error] = "Failed to update camp."
+      flash[:error] = 'Failed to update camp.'
       render :edit
     end
   end
@@ -74,8 +73,8 @@ class CampsController < ApplicationController
   def destroy
     @camp.destroy
     respond_to do |format|
-      format.html {redirect_to camps_url, notice: 'Camp was successfully destroyed.'}
-      format.json {head :no_content}
+      format.html { redirect_to camps_url, notice: 'Camp was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 

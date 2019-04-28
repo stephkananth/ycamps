@@ -29,8 +29,7 @@ class CampBadgesController < ApplicationController
   end
 
   # GET /camp_badges/1/edit
-  def edit;
-  end
+  def edit; end
 
   # POST /camp_badges
   # POST /camp_badges.json
@@ -40,14 +39,14 @@ class CampBadgesController < ApplicationController
     if @camp_badge.save
       if current_user.role?(:counselor)
         @counselor_camp_badge = CounselorCampBadge.new(
-            counselor_id: Counselor.where(user_id: current_user.id).first.id,
-            camp_badge_id: @camp_badge.id
+          counselor_id: Counselor.where(user_id: current_user.id).first.id,
+          camp_badge_id: @camp_badge.id
         )
         if @counselor_camp_badge.save
-          flash[:notice] = "Successfully create counselor camp badge."
+          flash[:notice] = 'Successfully create counselor camp badge.'
           redirect_to new_camper_camp_badge_path(camp_badge_id: @camp_badge.id)
         else
-          flash[:error] = "Failed to create counselor camp badge."
+          flash[:error] = 'Failed to create counselor camp badge.'
           redirect_to new_camp_badge_path(camp_id: params[:camp_badge][:camp_id])
         end
       elsif current_user.role?(:admin)
@@ -62,10 +61,10 @@ class CampBadgesController < ApplicationController
   # PATCH/PUT /camp_badges/1.json
   def update
     if @camp_badge.update(camp_badge_params)
-      flash[:notice] = "Successfully updated camp badge."
+      flash[:notice] = 'Successfully updated camp badge.'
       redirect_to camp_path(@camp_badge.camp)
     else
-      flash[:error] = "Failed to update camp badge."
+      flash[:error] = 'Failed to update camp badge.'
       redirect_to edit_camp_badge_path(@camp_badge)
     end
   end
@@ -76,8 +75,8 @@ class CampBadgesController < ApplicationController
     @camp_badge = CampBadge.find(params[:id])
     @camp_badge.destroy
     respond_to do |format|
-      format.html {redirect_to camp_badges_url, notice: 'Camp badge was successfully destroyed.'}
-      format.json {head :no_content}
+      format.html { redirect_to camp_badges_url, notice: 'Camp badge was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 

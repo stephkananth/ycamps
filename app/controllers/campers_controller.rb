@@ -6,7 +6,7 @@ class CampersController < ApplicationController
   # GET /campers
   # GET /campers.json
   def index
-    @campers = Camper.all.alphabetical.paginate(:page => params[:campers]).per_page(10)
+    @campers = Camper.all.alphabetical.paginate(page: params[:campers]).per_page(10)
   end
 
   # GET /campers/1
@@ -42,10 +42,10 @@ class CampersController < ApplicationController
     @camper = Camper.new(first_name: first_name, last_name: last_name, parent_id: parent_id, active: active)
 
     if @camper.save
-      flash[:notice] = "Successfully created camper."
+      flash[:notice] = 'Successfully created camper.'
       redirect_to camper_path(@camper)
     else
-      flash[:error] = "Failed to create camper."
+      flash[:error] = 'Failed to create camper.'
       redirect_to new_camper_path
     end
   end
@@ -54,10 +54,10 @@ class CampersController < ApplicationController
   # PATCH/PUT /campers/1.json
   def update
     if @camper.update(camper_params)
-      flash[:notice] = "Successfully updated camper."
+      flash[:notice] = 'Successfully updated camper.'
       redirect_to camper_path(@camper)
     else
-      flash[:error] = "Failed to update camper."
+      flash[:error] = 'Failed to update camper.'
       redirect_to edit_camper_path(@camper)
     end
   end
@@ -67,8 +67,8 @@ class CampersController < ApplicationController
   def destroy
     @camper.destroy
     respond_to do |format|
-      format.html {redirect_to campers_url, notice: 'Camper was successfully destroyed.'}
-      format.json {head :no_content}
+      format.html { redirect_to campers_url, notice: 'Camper was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 

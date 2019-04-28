@@ -6,14 +6,13 @@ class CampCounselorsController < ApplicationController
   # GET /camp_counselors
   # GET /camp_counselors.json
   def index
-    @camp_counselors = CampCounselor.where(camp_id: params[:camp_id]).paginate(:page => params[:camp_counselors]).per_page(10)
+    @camp_counselors = CampCounselor.where(camp_id: params[:camp_id]).paginate(page: params[:camp_counselors]).per_page(10)
     @camp_id = params[:camp_id]
   end
 
   # GET /camp_counselors/1
   # GET /camp_counselors/1.json
-  def show;
-  end
+  def show; end
 
   # GET /camp_counselors/new
   def new
@@ -23,8 +22,7 @@ class CampCounselorsController < ApplicationController
   end
 
   # GET /camp_counselors/1/edit
-  def edit;
-  end
+  def edit; end
 
   # POST /camp_counselors
   # POST /camp_counselors.json
@@ -36,7 +34,7 @@ class CampCounselorsController < ApplicationController
     else
       @camp = Camp.find(params[:camp_counselor][:camp_id])
       @other_counselors = @camp.counselors
-      render action: 'new', locals: {camp: @camp, other_counselors: @other_counselors}
+      render action: 'new', locals: { camp: @camp, other_counselors: @other_counselors }
     end
     # respond_to do |format|
     #   if @camp_counselor.save
@@ -54,11 +52,11 @@ class CampCounselorsController < ApplicationController
   def update
     respond_to do |format|
       if @camp_counselor.update(camp_counselor_params)
-        format.html {redirect_to @camp_counselor, notice: 'Camp counselor was successfully updated.'}
-        format.json {render :show, status: :ok, location: @camp_counselor}
+        format.html { redirect_to @camp_counselor, notice: 'Camp counselor was successfully updated.' }
+        format.json { render :show, status: :ok, location: @camp_counselor }
       else
-        format.html {render :edit}
-        format.json {render json: @camp_counselor.errors, status: :unprocessable_entity}
+        format.html { render :edit }
+        format.json { render json: @camp_counselor.errors, status: :unprocessable_entity }
       end
     end
   end

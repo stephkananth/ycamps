@@ -6,7 +6,7 @@ class BadgesController < ApplicationController
   # GET /badges
   # GET /badges.json
   def index
-    @badges = Badge.all.paginate(:page => params[:badges]).per_page(10)
+    @badges = Badge.all.paginate(page: params[:badges]).per_page(10)
   end
 
   # GET /badges/1
@@ -23,8 +23,7 @@ class BadgesController < ApplicationController
   end
 
   # GET /badges/1/edit
-  def edit;
-  end
+  def edit; end
 
   # POST /badges
   # POST /badges.json
@@ -36,10 +35,10 @@ class BadgesController < ApplicationController
     @badge = Badge.new(name: badge_name, skill_id: skill_id, level: level, description: description)
 
     if @badge.save
-      flash[:notice] = "Successfully created badge."
+      flash[:notice] = 'Successfully created badge.'
       redirect_to badge_path(@badge)
     else
-      flash[:error] = "Failed to create badge."
+      flash[:error] = 'Failed to create badge.'
       redirect_to new_badge_path
     end
   end
@@ -48,10 +47,10 @@ class BadgesController < ApplicationController
   # PATCH/PUT /badges/1.json
   def update
     if @badge.update(badge_params)
-      flash[:notice] = "Successfully updated badge."
+      flash[:notice] = 'Successfully updated badge.'
       redirect_to badge_path(@badge)
     else
-      flash[:error] = "Failed to update badge."
+      flash[:error] = 'Failed to update badge.'
       redirect_to edit_badge_path(@badge)
     end
   end

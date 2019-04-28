@@ -7,14 +7,13 @@ class CamperRegistrationsController < ApplicationController
   # GET /camper_registrations
   # GET /camper_registrations.json
   def index
-    @camper_registrations = CamperRegistration.where(camp_id: params[:camp_id]).paginate(:page => params[:camper_registrations]).per_page(10)
+    @camper_registrations = CamperRegistration.where(camp_id: params[:camp_id]).paginate(page: params[:camper_registrations]).per_page(10)
     @camp = Camp.find(params[:camp_id])
   end
 
   # GET /camper_registrations/1
   # GET /camper_registrations/1.json
-  def show;
-  end
+  def show; end
 
   # GET /camper_registrations/new
   def new
@@ -24,8 +23,7 @@ class CamperRegistrationsController < ApplicationController
   end
 
   # GET /camper_registrations/1/edit
-  def edit;
-  end
+  def edit; end
 
   # POST /camper_registrations
   # POST /camper_registrations.json
@@ -39,10 +37,10 @@ class CamperRegistrationsController < ApplicationController
   # PATCH/PUT /camper_registrations/1.json
   def update
     if @camper_registration.update(camper_registration_params)
-      flash[:notice] = "Successfully updated camper registration."
+      flash[:notice] = 'Successfully updated camper registration.'
       redirect_to camper_registration_path(@camper_registration)
     else
-      flash[:error] = "Failed to update camper registration."
+      flash[:error] = 'Failed to update camper registration.'
       redirect_to edit_camper_registration_path(@camper_registration)
     end
   end
@@ -52,8 +50,8 @@ class CamperRegistrationsController < ApplicationController
   def destroy
     @camper_registration.destroy
     respond_to do |format|
-      format.html {redirect_to camper_registrations_url, notice: 'Camper registration was successfully destroyed.'}
-      format.json {head :no_content}
+      format.html { redirect_to camper_registrations_url, notice: 'Camper registration was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 
