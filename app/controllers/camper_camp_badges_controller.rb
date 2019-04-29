@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 class CamperCampBadgesController < ApplicationController
-  before_action :set_camper_camp_badge, only: %i[show edit update destroy]
   include CamperCampBadgesHelper
+  before_action :set_camper_camp_badge, only: %i[show edit update destroy]
+  before_action :check_login
+  authorize_resource
+
 
   # GET /camper_camp_badges
   # GET /camper_camp_badges.json

@@ -2,6 +2,8 @@
 
 class SkillsController < ApplicationController
   before_action :set_skill, only: %i[show edit update destroy]
+  before_action :check_login
+  authorize_resource
 
   # GET /skills
   # GET /skills.json

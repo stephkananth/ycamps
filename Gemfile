@@ -87,6 +87,6 @@ group :assets do
   gem 'mini_racer'
 end
 
-gem 'cancan'
+gem 'cancancan'
 gem 'carrierwave', '~> 1.0'
 gem 'roo'

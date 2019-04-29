@@ -2,6 +2,8 @@
 
 class CampersController < ApplicationController
   before_action :set_camper, only: %i[show edit update destroy]
+  before_action :check_login
+  authorize_resource
 
   # GET /campers
   # GET /campers.json

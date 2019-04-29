@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class RostersController < ApplicationController
+  before_action :check_login
+  authorize_resource
   before_action :set_roster, only: %i[show edit update destroy]
 
   # GET /rosters

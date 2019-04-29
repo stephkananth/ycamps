@@ -2,6 +2,9 @@
 
 class CampsController < ApplicationController
   before_action :set_camp, only: %i[show edit update destroy]
+  before_action :check_login
+  authorize_resource
+
 
   # GET /camps
   # GET /camps.json
@@ -17,7 +20,7 @@ class CampsController < ApplicationController
   def show
     @camp_badges = @camp.badges
     @campers = @camp.camper_registrations
-    @counselors = @camp.counselors
+    @counselors = @camp.camp_counselors
   end
 
   # GET /camps/new

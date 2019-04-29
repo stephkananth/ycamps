@@ -3,7 +3,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
   # before_action :check_login, only: [:show, :edit, :update, :destroy]
-  # authorize_resource
+  before_action :check_login
+  authorize_resource
 
   # GET /users
   # GET /users.json
