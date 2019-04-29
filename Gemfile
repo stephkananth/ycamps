@@ -85,9 +85,8 @@ ruby '2.4.3'
 
 group :assets do
   gem 'mini_racer'
-  # gem 'sass-rails', "  ~> 3.1.0"
-  # gem 'coffee-rails', "~> 3.1.0"
-  # gem 'uglifier'
 end
 
+gem 'cancancan'
+gem 'carrierwave', '~> 1.0'
 gem 'roo'

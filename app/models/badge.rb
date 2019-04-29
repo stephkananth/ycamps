@@ -15,12 +15,13 @@ class Badge < ApplicationRecord
   # scopes
   scope :alphabetical, -> { order('name') }
 
-  # callbacks
-
   # public methods
   def camps
+    # gets camps where this badge is / was being taught at
     CampBadge.where(badge_id: id).map(&:camp)
   end
+
+  private
 
   # private methods
   def badge_is_not_a_duplicate

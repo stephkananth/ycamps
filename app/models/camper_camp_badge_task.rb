@@ -11,8 +11,8 @@ class CamperCampBadgeTask < ApplicationRecord
   validate :camper_camp_badge_task_is_not_a_duplicate, on: :create
 
   # scopes
-  scope :completed, -> {where(completed: true)}
-  scope :incomplete, -> {where(completed: false)}
+  scope :completed, -> { where(completed: true) }
+  scope :incomplete, -> { where(completed: false) }
 
   # callbacks
   after_update do
@@ -20,6 +20,15 @@ class CamperCampBadgeTask < ApplicationRecord
   end
 
   # public methods
+  def complete
+    self.completed = true
+    camper_camp_badge.complete if camper_camp_badge.completed?
+    save!
+  end
+
+  private
+
+  # private methods
   def camper_camp_badge_task_is_not_a_duplicate
     return true if camper_camp_badge_id.nil? || task_id.nil?
 
@@ -30,17 +39,7 @@ class CamperCampBadgeTask < ApplicationRecord
     CamperCampBadgeTask.where(camper_camp_badge_id: camper_camp_badge_id, task_id: task_id).size == 1
   end
 
-  def complete
-    self.completed = true
-    camper_camp_badge.complete if camper_camp_badge.completed?
-    save!
-  end
-
-  private
-
   def mark_as_completed
     camper_camp_badge.complete
   end
-
-  # private methods
 end

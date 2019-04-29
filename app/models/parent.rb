@@ -6,14 +6,14 @@ class Parent < ApplicationRecord
   has_many :campers
 
   # scopes
-  scope :active, -> {where(active: true)}
-  scope :inactive, -> {where(active: false)}
-  scope :alphabetical, -> {joins(:user).order('last_name, first_name')}
+  scope :active, -> { where(active: true) }
+  scope :inactive, -> { where(active: false) }
+  scope :alphabetical, -> { joins(:user).order('last_name, first_name') }
 
   # validations
   validates_numericality_of :user_id, only_integer: true, greater_than: 0
 
-  # methods
+  # public methods
   def name
     user.last_name + ', ' + user.first_name
   end

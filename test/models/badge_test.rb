@@ -26,7 +26,6 @@ class BadgeTest < ActiveSupport::TestCase
     end
 
     should 'show that camps method works' do
-      # TODO: error
       create_generic_branch
       create_more_branches
       create_generic_location

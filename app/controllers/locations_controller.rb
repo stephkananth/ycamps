@@ -2,6 +2,8 @@
 
 class LocationsController < ApplicationController
   before_action :set_location, only: %i[show edit update destroy]
+  before_action :check_login
+  authorize_resource
 
   # GET /locations
   # GET /locations.json
@@ -12,7 +14,7 @@ class LocationsController < ApplicationController
   # GET /locations/1
   # GET /locations/1.json
   def show
-    @camps = @location.camps.paginate(:page => params[:camps]).per_page(10)
+    @camps = @location.camps.paginate(page: params[:camps]).per_page(10)
   end
 
   # GET /locations/new
@@ -21,8 +23,7 @@ class LocationsController < ApplicationController
   end
 
   # GET /locations/1/edit
-  def edit;
-  end
+  def edit; end
 
   # POST /locations
   # POST /locations.json
@@ -33,10 +34,10 @@ class LocationsController < ApplicationController
     @location = Location.new(name: location_name, branch_id: branch_id)
 
     if @location.save
-      flash[:notice] = "Successfully created location."
+      flash[:notice] = 'Successfully created location.'
       redirect_to location_path(@location), notice: "#{@location.name} location was added to the system."
     else
-      flash[:error] = "Failed to create location."
+      flash[:error] = 'Failed to create location.'
       render action: 'new'
     end
   end
@@ -45,10 +46,10 @@ class LocationsController < ApplicationController
   # PATCH/PUT /locations/1.json
   def update
     if @location.update(location_params)
-      flash[:notice] = "Successfully updated location."
+      flash[:notice] = 'Successfully updated location.'
       redirect_to location_path(@location)
     else
-      flash[:error] = "Failed to update location."
+      flash[:error] = 'Failed to update location.'
       redirect_to edit_location_path(@location)
     end
   end
@@ -58,8 +59,8 @@ class LocationsController < ApplicationController
   def destroy
     @location.destroy
     respond_to do |format|
-      format.html {redirect_to locations_url, notice: 'Location was successfully destroyed.'}
-      format.json {head :no_content}
+      format.html { redirect_to locations_url, notice: 'Location was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 

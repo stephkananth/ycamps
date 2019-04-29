@@ -14,12 +14,23 @@
     <div class="card page-card">
       <div class="card-body">
         <h5 class="card-title">Create New Camper Registration</h5>
-
-        <p class="card-text">
+        <% if @camp %>
+          <h6 class="card-subtitle">
+            Camp
+          </h6>
+          <p class="card-text">
+            <%= @camp.name %><br/>
+            <%= @camp.start_date.strftime("%A, %b %d") %> - <%= @camp.end_date.strftime("%A, %b %d") %><br/>
+            <%= @camp.location.name %> <br/>
+            <%= @camp.program %>
+          </p>
+          <h6 class="card-subtitle">
+            Add students to this camp.
+          </h6>
           <%= render partial: "partials/form_structure", locals: {object: @camper_registration,
                                                                   type_of_form: "New Camper Registration",
                                                                   fields: "camper_registration_fields"} %>
-        </p>
+        <% end %>
 
       </div>
     </div>

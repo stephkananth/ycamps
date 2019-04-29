@@ -2,22 +2,22 @@
 
 class CounselorsController < ApplicationController
   before_action :set_counselor, only: %i[show edit update destroy]
-  # before_action :check_login
-  # authorize_resource
+  before_action :check_login
+  authorize_resource
 
   # GET /counselors
   # GET /counselors.json
   def index
-    @counselors = Counselor.all.alphabetical.paginate(:page => params[:counselors]).per_page(10)
+    @counselors = Counselor.all.alphabetical.paginate(page: params[:counselors]).per_page(10)
   end
 
   # GET /counselors/1
   # GET /counselors/1.json
   def show
-    @camps = @counselor.camps.paginate(:page => params[:camps]).per_page(10)
-    @past_camps = @counselor.camps.past.chronological.paginate(:page => params[:past_camps]).per_page(10)
-    @upcoming_camps = @counselor.camps.upcoming.chronological.paginate(:page => params[:upcoming_camps]).per_page(10)
-    @current_camps = @counselor.camps.current.chronological.paginate(:page => params[:current_camps]).per_page(10)
+    @camps = @counselor.camps.paginate(page: params[:camps]).per_page(10)
+    @past_camps = @counselor.camps.past.chronological.paginate(page: params[:past_camps]).per_page(10)
+    @upcoming_camps = @counselor.camps.upcoming.chronological.paginate(page: params[:upcoming_camps]).per_page(10)
+    @current_camps = @counselor.camps.current.chronological.paginate(page: params[:current_camps]).per_page(10)
     # @campers = @
   end
 
@@ -27,8 +27,7 @@ class CounselorsController < ApplicationController
   end
 
   # GET /counselors/1/edit
-  def edit;
-  end
+  def edit; end
 
   # POST /counselors
   # POST /counselors.json
@@ -38,7 +37,7 @@ class CounselorsController < ApplicationController
     @user.role = 'counselor'
     if !@user.save
       @counselor.valid?
-      flash[:notice] = "Successfully created counselor."
+      flash[:notice] = 'Successfully created counselor.'
       render action: 'new'
     else
       @counselor.user_id = @user.id
@@ -46,7 +45,7 @@ class CounselorsController < ApplicationController
         flash[:notice] = "#{@counselor.first_name} #{@counselor.last_name} was added to the system."
         redirect_to counselor_path(@counselor)
       else
-        flash[:error] = "Failed to create counselor."
+        flash[:error] = 'Failed to create counselor.'
         render action: 'new'
       end
     end
@@ -56,10 +55,10 @@ class CounselorsController < ApplicationController
   # PATCH/PUT /counselors/1.json
   def update
     if @counselor.update(counselor_params)
-      flash[:notice] = "Successfully updated counselor."
+      flash[:notice] = 'Successfully updated counselor.'
       redirect_to counselor_path(@counselor)
     else
-      flash[:error] = "Failed to update counselor."
+      flash[:error] = 'Failed to update counselor.'
       redirect_to edit_counselor_path(@counselor)
     end
   end
@@ -69,8 +68,8 @@ class CounselorsController < ApplicationController
   def destroy
     @counselor.destroy
     respond_to do |format|
-      format.html {redirect_to counselors_url, notice: 'Counselor was successfully destroyed.'}
-      format.json {head :no_content}
+      format.html { redirect_to counselors_url, notice: 'Counselor was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 

@@ -14,8 +14,6 @@ class CamperCampBadge < ApplicationRecord
   scope :completed, -> { where(completed: true) }
   scope :incomplete, -> { where(completed: false) }
 
-  # callbacks
-
   # public methods
   def completed?
     camper_camp_badge_tasks.completed.count == camp_badge.badge.tasks.count
@@ -32,6 +30,9 @@ class CamperCampBadge < ApplicationRecord
     camper_camp_badge_tasks
   end
 
+  private
+
+  # private methods
   def camper_camp_badge_is_not_a_duplicate
     return true if camp_badge_id.nil? || camper_id.nil?
 
@@ -41,5 +42,4 @@ class CamperCampBadge < ApplicationRecord
   def already_exists?
     CamperCampBadge.where(camp_badge_id: camp_badge_id, camper_id: camper_id).size == 1
   end
-  # private methods
 end

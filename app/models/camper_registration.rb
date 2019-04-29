@@ -1,16 +1,23 @@
 # frozen_string_literal: true
 
 class CamperRegistration < ApplicationRecord
+  # relationships
   belongs_to :camp
   belongs_to :camper
 
+  # validations
   validate :camper_is_not_already_registered_to_another_camp_at_same_time, on: :create
   validate :registration_is_not_a_duplicate, on: :create
 
+  # public methods
   def self.not_in_system?(camp, camper)
+    # used in importer
     CamperRegistration.where(camp: camp, camper: camper).empty?
   end
 
+  private
+
+  # private methods
   def registration_is_not_a_duplicate
     return true if camp_id.nil? || camper_id.nil?
 

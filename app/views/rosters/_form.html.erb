@@ -1,0 +1,10 @@
+<%= form_with(model: roster, local: true) do |form| %>
+  <div class="form-group">
+    <label>Select a file to upload</label><br/>
+    <%= form.file_field :file, class: "form-control-file" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Upload Roster", class: 'btn btn-primary btn-block' %>
+  </div>
+<% end %>
