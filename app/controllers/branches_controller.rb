@@ -2,6 +2,8 @@
 
 class BranchesController < ApplicationController
   before_action :set_branch, only: %i[show edit update destroy]
+  before_action :check_login
+  authorize_resource
 
   # GET /branches
   # GET /branches.json

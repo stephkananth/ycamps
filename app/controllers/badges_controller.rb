@@ -2,6 +2,8 @@
 
 class BadgesController < ApplicationController
   before_action :set_badge, only: %i[show edit update destroy]
+  before_action :check_login
+  authorize_resource
 
   # GET /badges
   # GET /badges.json

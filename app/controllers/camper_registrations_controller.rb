@@ -3,6 +3,8 @@
 class CamperRegistrationsController < ApplicationController
   include CamperRegistrationsHelper
   before_action :set_camper_registration, only: %i[show edit update destroy]
+  before_action :check_login
+  authorize_resource
 
   # GET /camper_registrations
   # GET /camper_registrations.json

@@ -2,8 +2,8 @@
 
 class CounselorsController < ApplicationController
   before_action :set_counselor, only: %i[show edit update destroy]
-  # before_action :check_login
-  # authorize_resource
+  before_action :check_login
+  authorize_resource
 
   # GET /counselors
   # GET /counselors.json

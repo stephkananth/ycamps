@@ -2,6 +2,8 @@
 
 class CounselorCampBadgesController < ApplicationController
   before_action :set_counselor_camp_badge, only: %i[show edit update destroy]
+  before_action :check_login
+  authorize_resource
 
   # GET /counselor_camp_badges
   # GET /counselor_camp_badges.json

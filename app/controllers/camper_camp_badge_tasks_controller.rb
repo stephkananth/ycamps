@@ -2,6 +2,8 @@
 
 class CamperCampBadgeTasksController < ApplicationController
   before_action :set_camper_camp_badge_task, only: %i[show edit update destroy]
+  before_action :check_login
+  authorize_resource
 
   # GET /camper_camp_badge_tasks
   # GET /camper_camp_badge_tasks.json

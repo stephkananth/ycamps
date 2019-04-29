@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CampCounselorsController < ApplicationController
+  before_action :check_login
+  authorize_resource
   # before_action :set_camp_counselor, only: [:show, :edit, :update, :destroy]
 
   # GET /camp_counselors
