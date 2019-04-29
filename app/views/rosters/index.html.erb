@@ -1,27 +1,52 @@
-<p id="notice"><%= notice %></p>
+<div class="header" id="barn-header">
+  <%#= link_to 'Back', :back %>
+  <div class="btn-wrapper">
+  </div>
+  <div class="header-body">
+    <div class="header-title">Rosters</div>
+    <div class="header-subtitle">
+    </div>
+  </div>
+</div>
 
-<h1>Rosters</h1>
+<div class="row page-row">
+  <div class="col">
+    <% if logged_in? && current_user.role?(:admin) %>
+      <%= link_to 'New Roster', new_roster_path, class: "btn btn-primary btn-block"%>
+    <% end %>
 
-<table>
-  <thead>
-  <tr>
-    <th>File</th>
-    <th colspan="3"></th>
-  </tr>
-  </thead>
+    <div class="card page-card">
+        <div class="card-body">
+          <h5 class="card-title">Uploaded Rosters</h5>
+          <p class="card-text">
+            <% if @rosters.count == 0 %>
+              There are no files uploaded at this time.
+            <% else %>
+              <table>
+                <thead>
+                <tr>
+                  <th>File</th>
+                  <th colspan="3"></th>
+                </tr>
+                </thead>
 
-  <tbody>
-  <% @rosters.each do |roster| %>
-    <tr>
-      <td><%= roster.file %></td>
-      <td><%= link_to 'Show', roster %></td>
-      <td><%= link_to 'Edit', edit_roster_path(roster) %></td>
-      <td><%= link_to 'Destroy', roster, method: :delete, data: {confirm: 'Are you sure?'} %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+                <tbody>
+                  <% @rosters.each do |roster| %>
+                    <tr>
+                      <td><%= roster.file %></td>
+                      <td><%= link_to 'Show', roster %></td>
+                      <td><%= link_to 'Edit', edit_roster_path(roster) %></td>
+                      <td><%= link_to 'Destroy', roster, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            <% end %>
+          </p>
+        </div>
+      </div>
+  </div>
+</div>
 
-<br>
-
-<%= link_to 'New Roster', new_roster_path %>
+<div class="pad-bottom">
+</div>

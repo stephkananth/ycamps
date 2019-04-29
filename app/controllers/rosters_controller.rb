@@ -28,11 +28,11 @@ class RostersController < ApplicationController
 
     respond_to do |format|
       if @roster.save
-        format.html { redirect_to @roster, notice: 'Roster was successfully created.' }
-        format.json { render :show, status: :created, location: @roster }
+        flash[:notice] = 'Roster was successfully created.'
+        redirect_to home_path
       else
         format.html { render :new }
-        format.json { render json: @roster.errors, status: :unprocessable_entity }
+        flash[:error] = 'Roster could not be created.'
       end
     end
   end
