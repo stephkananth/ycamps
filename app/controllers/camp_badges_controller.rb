@@ -8,7 +8,7 @@ class CampBadgesController < ApplicationController
   # GET /camp_badges
   # GET /camp_badges.json
   def index
-    @camp_badges = CampBadge.all
+    @camp_badges = CampBadge.all.alphabetical.paginate(page: params[:camp_badges]).per_page(10)
   end
 
   # GET /camp_badges/1
@@ -17,7 +17,7 @@ class CampBadgesController < ApplicationController
     @camp = @camp_badge.camp
     @badge = @camp_badge.badge
     @tasks = @badge.tasks
-    @ccbs = @camp_badge.camper_camp_badges
+    @ccbs = @camp_badge.camper_camp_badges.paginate(page: params[:ccbs]).per_page(10)
     @counselors = @camp_badge.counselors
     if logged_in? && current_user.role?(:counselor)
       @counselor = Counselor.where(user_id: current_user).first

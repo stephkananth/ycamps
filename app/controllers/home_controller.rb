@@ -3,7 +3,7 @@
 class HomeController < ApplicationController
   def index
     if logged_in? && current_user.role?(:admin)
-      @current_camps = Camp.all.current.alphabetical
+      @current_camps = Camp.all.current.alphabetical.paginate(page: params[:current_camps]).per_page(5)
     elsif logged_in? && current_user.role?(:parent)
       @parent = Parent.where(user_id: current_user).first
       @campers = @parent.campers
