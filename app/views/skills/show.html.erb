@@ -25,10 +25,10 @@
       <div class="card-body">
         <h5 class="card-title">Badges</h5>
         <p class="card-text">
-          <% if @skill.badges.count != 0 %>
+          <% if @badges.count != 0 %>
           <table class="table">
             <tbody>
-            <% @skill.badges.each do |badge| %>
+            <% @badges.each do |badge| %>
               <tr>
                 <td>
                   <%= link_to badge do %>
@@ -43,15 +43,11 @@
           <%= @skill.name %> currently does not have any badges. <br/>
         <% end %>
         </p>
+        <span class="paginate center paginate-style">
+          <%= will_paginate @badges, :previous_label => "<", :next_label => ">", :param_name => 'badges' %>
+        </span>
       </div>
     </div>
-    <% if logged_in? && current_user.role?(:admin) %>
-      <div class="row btn-group">
-        <div class="col">
-          <%= link_to 'Add New Badge', new_badge_path, class: "btn btn-primary btn-block btn-right" %>
-        </div>
-      </div>
-    <% end %>
   </div>
 </div>
 

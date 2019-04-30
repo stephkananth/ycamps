@@ -41,6 +41,9 @@
           There are no branches in the system.
         <% end %>
         </p>
+        <span class="paginate center paginate-style">
+          <%= will_paginate @branches, :previous_label => "<", :next_label => ">", :param_name => 'branches' %>
+        </span>
       </div>
     </div>
   </div>

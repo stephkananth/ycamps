@@ -10,6 +10,7 @@
 
 <div class="row page-row">
   <div class="col">
+
     <div class="card page-card">
       <div class="card-body">
         <h5 class="card-title">Locations</h5>
@@ -32,6 +33,9 @@
           <%= @branch.name %> currently does not have any locations. <br/>
         <% end %>
         </p>
+        <span class="paginate center paginate-style">
+          <%= will_paginate @locations, :previous_label => "<", :next_label => ">", :param_name => 'locations' %>
+        </span>
       </div>
     </div>
 

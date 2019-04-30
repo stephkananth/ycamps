@@ -24,6 +24,9 @@
         <% end %>
       <% end %>
     <% end %>
+    <span class="paginate center paginate-style">
+      <%= will_paginate @current_camps, :previous_label => "<", :next_label => ">", :param_name => 'current_camps' %>
+    </span>
     </div>
   </div>
 

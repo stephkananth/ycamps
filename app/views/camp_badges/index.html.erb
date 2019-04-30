@@ -31,6 +31,9 @@
             </tbody>
           </table>
           </p>
+          <span class="paginate center paginate-style">
+            <%= will_paginate @camp_badges, :previous_label => "<", :next_label => ">", :param_name => 'camp_badges' %>
+          </span>
         </div>
       </div>
     <% end %>

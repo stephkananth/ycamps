@@ -47,7 +47,11 @@
           There are no campers in the system.
         <% end %>
         </p>
+        <span class="paginate center paginate-style">
+          <%= will_paginate @campers, :previous_label => "<", :next_label => ">", :param_name => 'campers' %>
+        </span>
       </div>
+
     </div>
   </div>
 </div>
