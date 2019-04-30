@@ -28,14 +28,12 @@ class RostersController < ApplicationController
   def create
     @roster = Roster.new(roster_params)
 
-    respond_to do |format|
-      if @roster.save
-        flash[:notice] = 'Roster was successfully created.'
-        redirect_to home_path
-      else
-        format.html { render :new }
-        flash[:error] = 'Roster could not be created.'
-      end
+    if @roster.save
+      flash[:notice] = 'Roster was successfully created.'
+      redirect_to home_path
+    else
+      format.html { render :new }
+      flash[:error] = 'Roster could not be created.'
     end
   end
 

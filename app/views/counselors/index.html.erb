@@ -43,6 +43,9 @@
           There are no counselors in the system.
         <% end %>
         </p>
+        <span class="paginate center paginate-style">
+          <%= will_paginate @counselors, :previous_label => "<", :next_label => ">", :param_name => 'counselors' %>
+        </span>
       </div>
     </div>
   </div>

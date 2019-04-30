@@ -46,6 +46,9 @@
           Add some to begin!
         <% end %>
         </p>
+        <span class="paginate center paginate-style">
+          <%= will_paginate @skills, :previous_label => "<", :next_label => ">", :param_name => 'skills' %>
+        </span>
       </div>
     </div>
   </div>

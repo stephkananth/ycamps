@@ -43,6 +43,9 @@
           There are no users in the system.
         <% end %>
         </p>
+        <span class="paginate center paginate-style">
+          <%= will_paginate @users, :previous_label => "<", :next_label => ">", :param_name => 'users' %>
+        </span>
       </div>
     </div>
   </div>

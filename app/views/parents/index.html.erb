@@ -43,6 +43,9 @@
           Add some to begin!
         <% end %>
         </p>
+        <span class="paginate center paginate-style">
+          <%= will_paginate @parents, :previous_label => "<", :next_label => ">", :param_name => 'parents' %>
+        </span>
       </div>
     </div>
   </div>

@@ -123,7 +123,10 @@
               <%= link_to 'Add Campers', new_camper_camp_badge_path(:camp_badge_id => @camp_badge.id), class: "btn btn-primary btn-block btn-sm" %>
             <% end %>
           <% end %>
-          </div>
+      <span class="paginate center paginate-style">
+        <%= will_paginate @ccbs, :previous_label => "<", :next_label => ">", :param_name => 'ccbs' %>
+      </span>
+    </div>
   </div>
 
 </div>
