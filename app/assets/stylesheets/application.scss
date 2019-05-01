@@ -116,7 +116,7 @@ h5.card-title {
 }
 
 #dashboard-header {
-  background: url("/assets/dashboard-header.png");
+  background: url("/assets/images/dashboard-header.png");
   height: 25vh;
   min-width: 100vw;
   background-position: center;
@@ -126,7 +126,7 @@ h5.card-title {
 }
 
 #barn-header {
-  background: url("/assets/barn-header.png");
+  background: url("/assets/images/barn-header.png");
   height: 25vh;
   min-width: 100vw;
   background-position: center;
@@ -136,7 +136,7 @@ h5.card-title {
 }
 
 #profile-header {
-  background: url("/assets/profile-header.png");
+  background: url("/assets/images/profile-header.png");
   height: 25vh;
   min-width: 100vw;
   background-position: center;
@@ -146,7 +146,7 @@ h5.card-title {
 }
 
 #assign-milestone-header {
-  background: url("/assets/assign-milestone-header.png");
+  background: url("/assets/images/assign-milestone-header.png");
   height: 25vh;
   min-width: 100vw;
   background-position: center;
@@ -156,7 +156,7 @@ h5.card-title {
 }
 
 #camp-badge-header {
-  background: url("/assets/camp-badge-header.png");
+  background: url("/assets/images/camp-badge-header.png");
   height: 25vh;
   min-width: 100vw;
   background-position: center;
@@ -246,7 +246,7 @@ h5.card-title {
 }
 
 .back-btn {
-  background: url("/assets/back-arrow.png");
+  background: url("/assets/images/back-arrow.png");
   max-width: 100%;
   max-height: 30vh;
   background-position: top;
@@ -423,11 +423,11 @@ input.form-control {
 
 /* Lists */
 .incomplete-bullet {
-  list-style-image: url("/assets/incomplete-bubble.png");
+  list-style-image: url("/assets/images/incomplete-bubble.png");
 }
 
 .completed-bullet {
-  list-style-image: url("/assets/complete-bubble.png");
+  list-style-image: url("/assets/images/complete-bubble.png");
 }
 
 li {
