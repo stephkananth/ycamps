@@ -90,3 +90,5 @@ end
 gem 'cancancan'
 gem 'carrierwave', '~> 1.0'
 gem 'roo'
+gem 'rails_12factor', group: :production
+
