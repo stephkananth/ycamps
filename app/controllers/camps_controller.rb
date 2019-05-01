@@ -36,8 +36,17 @@ class CampsController < ApplicationController
   def create
     camp_name = params[:camp][:name]
     camp_program = params[:camp][:program]
-    start_date = Date.new(params[:camp]['start_date(1i)'].to_i, params[:camp]['start_date(2i)'].to_i, params[:camp]['start_date(3i)'].to_i)
-    end_date = Date.new(params[:camp]['end_date(1i)'].to_i, params[:camp]['end_date(2i)'].to_i, params[:camp]['end_date(3i)'].to_i)
+    begin
+      start_date = Date.new(params[:camp]['start_date(1i)'].to_i, params[:camp]['start_date(2i)'].to_i, params[:camp]['start_date(3i)'].to_i)
+    rescue ArgumentError
+      flash[:error] = 'Invalid date.'
+    end
+    begin
+      end_date = Date.new(params[:camp]['end_date(1i)'].to_i, params[:camp]['end_date(2i)'].to_i, params[:camp]['end_date(3i)'].to_i)
+    rescue ArgumentError
+      flash[:error] = 'Invalid date.'
+    end
+    
     active_status = params[:camp][:active]
     location_id = params[:camp][:location]
 
@@ -57,8 +66,16 @@ class CampsController < ApplicationController
   def update
     camp_name = params[:camp][:name]
     camp_program = params[:camp][:program]
-    start_date = Date.new(params[:camp]['start_date(1i)'].to_i, params[:camp]['start_date(2i)'].to_i, params[:camp]['start_date(3i)'].to_i)
-    end_date = Date.new(params[:camp]['end_date(1i)'].to_i, params[:camp]['end_date(2i)'].to_i, params[:camp]['end_date(3i)'].to_i)
+    begin
+      start_date = Date.new(params[:camp]['start_date(1i)'].to_i, params[:camp]['start_date(2i)'].to_i, params[:camp]['start_date(3i)'].to_i)
+    rescue ArgumentError
+      flash[:error] = 'Invalid date.'
+    end
+    begin
+      end_date = Date.new(params[:camp]['end_date(1i)'].to_i, params[:camp]['end_date(2i)'].to_i, params[:camp]['end_date(3i)'].to_i)
+    rescue ArgumentError
+      flash[:error] = 'Invalid date.'
+    end
     active_status = params[:camp][:active]
     location_id = params[:camp][:location]
 
