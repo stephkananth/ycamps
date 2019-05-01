@@ -40,7 +40,7 @@ class Camp < ApplicationRecord
   # public methods
   def self.not_in_system?(camp)
     # used in importer
-    Camp.where(location: camp.location, name: camp.name, program: camp.program, start_date: camp.start_date, end_date: camp.end_date).empty?
+    Camp.where(location: camp.location, name: camp.name, start_date: camp.start_date, end_date: camp.end_date).empty?
   end
 
   def campers
