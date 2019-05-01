@@ -1,5 +1,8 @@
 @import "bootstrap";
 
+//= depend_on_asset "dashboard-header.png"
+
+
 /* General Presets for Pages */
 html, body {
   height: 100%;
@@ -116,7 +119,7 @@ h5.card-title {
 }
 
 #dashboard-header {
-  background: image-url("dashboard-header.png");
+  background-image:url('<%= asset_path("dashboard-header.png") %> ');
   height: 25vh;
   min-width: 100vw;
   background-position: center;
