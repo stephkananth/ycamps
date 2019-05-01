@@ -77,7 +77,7 @@ class Camp < ApplicationRecord
   end
 
   def already_exists?
-    Camp.where(location_id: location_id, name: name, program: program, start_date: start_date, end_date: end_date).size == 1
+    Camp.where(location_id: location_id, name: name, start_date: start_date, end_date: end_date).size == 1
   end
 
   def check_if_has_registrations
