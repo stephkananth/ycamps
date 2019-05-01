@@ -6,6 +6,8 @@
 //= depend_on_asset "profile-header.png"
 //= depend_on_asset "assign-milestone-header.png"
 //= depend_on_asset "camp-badge-header.png"
+//= depend_on_asset "incomplete-bubble.png"
+//= depend_on_asset "complete-bubble.png"
 
 
 /* General Presets for Pages */
@@ -431,11 +433,11 @@ input.form-control {
 
 /* Lists */
 .incomplete-bullet {
-  list-style-image: url("/assets/images/incomplete-bubble.png") %> ');
+  list-style-image:url('<%= asset_path("incomplete-bubble.png") %> ');
 }
 
 .completed-bullet {
-  list-style-image: url("/assets/images/complete-bubble.png") %> ');
+  list-style-image:url('<%= asset_path("complete-bubble.png") %> ');
 }
 
 li {
