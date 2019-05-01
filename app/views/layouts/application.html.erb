@@ -12,6 +12,7 @@
 <body>
 <%= render :partial => "partials/flash" %>
 <div class="container" id="main_content">
+  <%= image_tag("dashboard_header.png") %>
   <%= yield %>
 </div>
 <% if logged_in? && (current_user.role?(:admin)) %>
