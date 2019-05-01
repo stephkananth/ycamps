@@ -1,5 +1,15 @@
 @import "bootstrap";
 
+//= depend_on_asset "grass-background.png"
+//= depend_on_asset "dashboard-header.png"
+//= depend_on_asset "barn-header.png"
+//= depend_on_asset "profile-header.png"
+//= depend_on_asset "assign-milestone-header.png"
+//= depend_on_asset "camp-badge-header.png"
+//= depend_on_asset "incomplete-bubble.png"
+//= depend_on_asset "complete-bubble.png"
+
+
 /* General Presets for Pages */
 html, body {
   height: 100%;
@@ -37,7 +47,7 @@ a:hover {
 .home-container {
   min-height: 100vh;
   min-width: 100vw;
-  background-image: url("/assets/grass-background.png");
+  background-image:url('<%= asset_path("grass-background.png") %> ');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -116,7 +126,7 @@ h5.card-title {
 }
 
 #dashboard-header {
-  background: url("/assets/dashboard-header.png");
+  background-image:url('<%= asset_path("dashboard-header.png") %> ');
   height: 25vh;
   min-width: 100vw;
   background-position: center;
@@ -126,7 +136,7 @@ h5.card-title {
 }
 
 #barn-header {
-  background: url("/assets/barn-header.png");
+  background-image:url('<%= asset_path("barn-header.png") %> ');
   height: 25vh;
   min-width: 100vw;
   background-position: center;
@@ -136,7 +146,7 @@ h5.card-title {
 }
 
 #profile-header {
-  background: url("/assets/profile-header.png");
+  background-image:url('<%= asset_path("profile-header.png") %> ');
   height: 25vh;
   min-width: 100vw;
   background-position: center;
@@ -146,7 +156,7 @@ h5.card-title {
 }
 
 #assign-milestone-header {
-  background: url("/assets/assign-milestone-header.png");
+  background-image:url('<%= asset_path("assign-milestone-header.png") %> ');
   height: 25vh;
   min-width: 100vw;
   background-position: center;
@@ -156,7 +166,7 @@ h5.card-title {
 }
 
 #camp-badge-header {
-  background: url("/assets/camp-badge-header.png");
+  background-image:url('<%= asset_path("camp-badge-header.png") %> ');
   height: 25vh;
   min-width: 100vw;
   background-position: center;
@@ -246,7 +256,7 @@ h5.card-title {
 }
 
 .back-btn {
-  background: url("/assets/back-arrow.png");
+  background-image:url('<%= asset_path("back-arrow.png") %> ');
   max-width: 100%;
   max-height: 30vh;
   background-position: top;
@@ -423,11 +433,11 @@ input.form-control {
 
 /* Lists */
 .incomplete-bullet {
-  list-style-image: url("/assets/incomplete-bubble.png");
+  list-style-image:url('<%= asset_path("incomplete-bubble.png") %> ');
 }
 
 .completed-bullet {
-  list-style-image: url("/assets/complete-bubble.png");
+  list-style-image:url('<%= asset_path("complete-bubble.png") %> ');
 }
 
 li {
