@@ -13,6 +13,16 @@ class PopulateDatabase < ActiveRecord::Migration[5.1]
     kim_user.save!
     puts 'Created admin user, Kim'
 
+    sara_user = User.new
+    sara_user.role = 'admin'
+    sara_user.email = 'sara7@cmu.edu'
+    sara_user.password = 'secret123'
+    sara_user.password_confirmation = 'secret123'
+    sara_user.first_name = 'Sara'
+    sara_user.last_name = 'Moussawi'
+    sara_user.save!
+    puts 'Created admin user, Sara'
+
     # kelly_user = User.new
     # kelly_user.role = 'parent'
     # kelly_user.email = 'kgreen@gmail.com'
