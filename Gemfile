@@ -88,7 +88,7 @@ group :assets do
 end
 
 gem 'cancancan'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'roo'
 gem 'rails_12factor', group: :production
 
